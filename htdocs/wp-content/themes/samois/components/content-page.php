@@ -9,24 +9,21 @@
 
 ?>
 
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+
+
+	<header class="entry-header wrapper">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php samois_post_thumbnail(); ?>
+	
+	<div class="wrapper">
+		<?php samois_post_thumbnail(); ?>
+	</div>
 
-	<div class="entry-content">
-		<?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'samois' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+	<div class="entry-content wrapper">
+		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

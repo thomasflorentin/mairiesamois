@@ -489,9 +489,6 @@ select { border: 1px solid #ccc; }
 textarea { width: 100%; }
 
 /*--------------------------------------------------------------
-# Layouts
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 /* Navigation
@@ -528,18 +525,6 @@ textarea { width: 100%; }
 
 .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next { text-align: end; flex: 1 0 50%; }
 
-/* Posts and pages
---------------------------------------------- */
-.sticky { display: block; }
-
-.post, .page { margin: 0 0 1.5em; }
-
-.updated:not(.published) { display: none; }
-
-.page-content, .entry-content, .entry-summary { margin: 1.5em 0 0; }
-
-.page-links { clear: both; margin: 0 0 1.5em; }
-
 /* Comments
 --------------------------------------------- */
 .comment-content a { word-wrap: break-word; }
@@ -569,41 +554,9 @@ textarea { width: 100%; }
 
 .wp-caption-text { text-align: center; }
 
-/* Galleries
---------------------------------------------- */
-.gallery { margin-bottom: 1.5em; display: grid; grid-gap: 1.5em; }
-
-.gallery-item { display: inline-block; text-align: center; width: 100%; }
-
-.gallery-columns-2 { grid-template-columns: repeat(2, 1fr); }
-
-.gallery-columns-3 { grid-template-columns: repeat(3, 1fr); }
-
-.gallery-columns-4 { grid-template-columns: repeat(4, 1fr); }
-
-.gallery-columns-5 { grid-template-columns: repeat(5, 1fr); }
-
-.gallery-columns-6 { grid-template-columns: repeat(6, 1fr); }
-
-.gallery-columns-7 { grid-template-columns: repeat(7, 1fr); }
-
-.gallery-columns-8 { grid-template-columns: repeat(8, 1fr); }
-
-.gallery-columns-9 { grid-template-columns: repeat(9, 1fr); }
-
-.gallery-caption { display: block; }
-
 /*--------------------------------------------------------------
-# Plugins
+# Layouts
 --------------------------------------------------------------*/
-/* Jetpack infinite scroll
---------------------------------------------- */
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation, .infinite-scroll.neverending .site-footer { display: none; }
-
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer { display: block; }
-
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
