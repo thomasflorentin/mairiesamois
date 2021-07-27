@@ -1,2 +1,246 @@
-$size__site-main: 100%;
-$size__site-sidebar: 25%;
+
+
+
+$max-width: 1400px;
+$marge_wrapper: 60px;
+
+
+
+// CLASSES
+
+.wrapper {
+    max-width: $max-width;
+    width: calc(100% - #{$marge_wrapper * 2});
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.hidden,
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    opacity: 0;
+}
+
+
+// POSITIONS
+
+.is-relative {
+    position: relative;
+}
+
+.is-absolute {
+    position: absolute;
+}
+
+
+
+
+// MARGINS
+
+$marge: 20px;
+$marge-medium: 40px;
+$marge-large: 60px;
+$marge-xlarge: 120px;
+$marge-xxlarge: 240px;
+
+
+.mb-small {
+    margin-bottom: $marge;
+}
+.mb-medium {
+    margin-bottom: $marge-medium;
+}
+.mb-large {
+    @include at-least(medium) {
+        margin-bottom: $marge-large;
+    }
+    @include up-to(medium) {
+        margin-bottom: $marge-medium;
+    }
+}
+.mb-xlarge {
+    @include at-least(medium) {
+        margin-bottom: $marge-xlarge;
+    }
+    @include up-to(medium) {
+        margin-bottom: $marge * 5;
+    }
+}
+.mb-xxlarge {
+    @include at-least(medium) {
+        margin-bottom: $marge-xxlarge;
+    }
+    @include up-to(medium) {
+        margin-bottom: $marge-xlarge;
+    }
+}
+
+
+
+// FLEX
+
+.flex {
+    display: flex;
+}
+
+.fl-col {
+    flex-direction: column;
+}
+
+.fl-top {
+    @extend .flex;
+    align-items: flex-start;
+}
+.fl-hcentered {
+    @extend .flex;
+    align-items: center;
+}
+.fl-bottom {
+    @extend .flex;
+    align-items: flex-end;
+}
+
+.fl-justify {
+    @extend .flex;
+    justify-content: space-between;
+}
+
+.fl-vcentered {
+    @extend .flex;
+    justify-content: center;
+}
+.fl-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.fl-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fl-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+// RATIO
+
+.square {
+    position: relative;
+    
+    .inner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+
+    img {
+        object-fit: contain;
+        height: auto;
+        width: auto;
+    }
+}
+
+
+
+
+
+// GRID
+// https://css-tricks.com/snippets/css/complete-guide-grid/
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat($cols, minmax(0, calc(1fr - 20px) ) );
+    grid-template-columns: repeat($cols, 1fr);
+    grid-row-gap: 0;
+
+    @include at-least(medium) {
+        grid-column-gap: $marge_wrapper;
+    }
+    @include up-to(medium) {
+        grid-column-gap: 5px;
+    }
+}
+
+
+.m_last {
+    grid-row-end: $cols;
+}
+
+
+
+@mixin parse-columns($suffix: ''){
+
+        .#{$suffix}_0col {
+            display: none;
+        }
+        .#{$suffix}_hide {
+            display: none;
+        }
+        .#{$suffix}_show {
+            display: block;
+        }
+        
+        @for $i from 1 through $cols {
+
+            .#{$suffix}_#{$i}col {
+                grid-column: span #{$i};
+                max-width: 100%;
+                display: block;
+            
+                .grid {
+                    grid-template-columns: repeat(#{$i}, 1fr);
+
+                    // We don't need that....
+                    // @for $j from 1 through ($i - 1) {
+                    //     .#{$suffix}-#{$j}col {
+                    //         grid-column: span #{$j};
+                    //     }
+                    // }
+                }
+            }
+
+        }
+}
+
+@include at-least(minimal) {
+    @include parse-columns('s');
+}
+@include at-least(medium) {
+    @include parse-columns('m');
+}
+@include at-least(large) {
+    @include parse-columns('l');
+}
+@include at-least(wide) {
+    @include parse-columns('w');
+}
+
+
+
