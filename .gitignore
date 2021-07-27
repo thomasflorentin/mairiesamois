@@ -1,3 +1,5 @@
 .DS_Store
-wp-config.php
 /htdocs/wp-config.php
+/htdocs/node_modules/
+/.DS_Store
+/samois.code-workspace
