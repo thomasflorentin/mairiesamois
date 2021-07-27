@@ -2,7 +2,7 @@
 
 // les dépendances du fichier gulp
 const { src, dest , series , watch } = require("gulp");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require('sass'));
 const rename = require("gulp-rename");
 const del = require('del');
 const autoprefixer = require('gulp-autoprefixer');
@@ -27,7 +27,6 @@ var alljs = [mainjs];
 var sassfolder = assets_folder + 'stylesheets/';
 var sassfiles = sassfolder + '**/*.scss';
 var sassMain = sassfolder + 'style.scss';
-var sassWC = sassfolder + 'woocommerce.scss';
 
 
 
@@ -48,14 +47,7 @@ function sassMainTask(){
     .pipe(rename("./style.css"))
     .pipe(dest("./"));
 }
-// task2.1 : compiler les fichiers dans le dossier scss => style.css
-function sassWCTask(){
-    const flags = {outputStyle: 'compact'};
-    return src( sassWC )
-    .pipe(sass(flags).on('error', sass.logError))
-    .pipe(rename("./woocommerce.css"))
-    .pipe(dest("./"));
-}
+
 
 // task3 : ajouter les vendors prefix sur les règles css pour le fichier style.css
 // voir le fichier package.json pour voir les paramètres 
@@ -99,7 +91,6 @@ function defaultTask() {
 // Ensemble des tâches pouvant être appelée via la commande npx gulp 
 module.exports = {
     sassmain : sassMainTask,
-    sasswc : sassWCTask,
     jsBundle : jsBundle,
     clean : cleanTask ,
     run : run,
