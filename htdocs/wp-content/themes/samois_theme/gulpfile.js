@@ -14,8 +14,8 @@ sass.compiler = require("node-sass");
 
 
 // VARIABLES
-var theme_folder = '/';
-var assets_folder = theme_folder + 'assets/';
+var theme_folder = __dirname;
+var assets_folder = theme_folder + '/assets/';
 
 var jsfolder = assets_folder + 'js/';
 var mainjs = jsfolder + 'scripts.js';
@@ -35,7 +35,7 @@ function sassMainTask(){
     .pipe(sourcemaps.init())
     .pipe(sass(flags).on('error', sass.logError))
     .pipe(sourcemaps.write('./maps'))
-    .pipe(rename("./main.css"))
+    .pipe(rename("main.css"))
     .pipe(dest(assets_folder));
 }
 
