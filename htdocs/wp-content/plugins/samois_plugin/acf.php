@@ -1,23 +1,23 @@
 <?php
 
-function mep_acf_load_json($paths) {
+function samois_acf_load_json($paths) {
 	$paths = array(
-		MEP_DIR.'/acf-json'
+		SAMOIS_DIR.'/acf-json'
 	);
 
 	return $paths;
 }
 
-function mep_acf_save_json($paths) {
+function samois_acf_save_json($paths) {
 
-	$paths = MEP_DIR.'/acf-json';
+	$paths = SAMOIS_DIR.'/acf-json';
 
 	return $paths;
 }
 
 
-add_filter('acf/settings/save_json', 'mep_acf_save_json');
-add_filter('acf/settings/load_json', 'mep_acf_load_json');
+add_filter('acf/settings/save_json', 'samois_acf_save_json');
+add_filter('acf/settings/load_json', 'samois_acf_load_json');
 
 add_filter('acf/save_post', function($post_id) {
 	$format = function(&$date) {
