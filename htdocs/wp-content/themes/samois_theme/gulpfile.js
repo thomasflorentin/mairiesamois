@@ -14,8 +14,6 @@ sass.compiler = require("node-sass");
 
 
 // VARIABLES
-var app_folder = '';
-var public_folder = '';
 var theme_folder = '/';
 var assets_folder = theme_folder + 'assets/';
 
@@ -33,7 +31,7 @@ var sassMain = sassfolder + 'main.scss';
 // task2 : compiler les fichiers dans le dossier scss => style.css
 function sassMainTask(){
     const flags = {outputStyle: 'compact'};
-    return src( sassMain )
+    return src( sassfiles )
     .pipe(sourcemaps.init())
     .pipe(sass(flags).on('error', sass.logError))
     .pipe(sourcemaps.write('./maps'))
@@ -89,5 +87,4 @@ module.exports = {
     default : defaultTask,
     watchcss : watchCSS,
     watchjs : watchJS,
-    //myFont : Iconfont,
   }
