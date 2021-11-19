@@ -1,5 +1,7 @@
 .DS_Store
 /htdocs/wp-config.php
 /htdocs/node_modules/
+/htdocs/wp-content/themes/samois_theme/node_modules/
+/htdocs/wp-content/themes/samois/node_modules/
 /.DS_Store
 /samois.code-workspace
