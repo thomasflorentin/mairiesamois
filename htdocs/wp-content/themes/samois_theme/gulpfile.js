@@ -17,7 +17,7 @@ sass.compiler = require("node-sass");
 var app_folder = '';
 var public_folder = '';
 var theme_folder = '/';
-var assets_folder = 'assets/';
+var assets_folder = theme_folder + 'assets/';
 
 var jsfolder = assets_folder + 'js/';
 var mainjs = jsfolder + 'scripts.js';
@@ -26,15 +26,8 @@ var alljs = [mainjs];
 
 var sassfolder = assets_folder + 'stylesheets/';
 var sassfiles = sassfolder + '**/*.scss';
-var sassMain = sassfolder + 'style.scss';
+var sassMain = sassfolder + 'main.scss';
 
-
-
-
-// task 1 : supprimer le fichier style.css
-function cleanTask(){
-    return del("./style.css");
-}
 
 
 // task2 : compiler les fichiers dans le dossier scss => style.css
@@ -44,32 +37,32 @@ function sassMainTask(){
     .pipe(sourcemaps.init())
     .pipe(sass(flags).on('error', sass.logError))
     .pipe(sourcemaps.write('./maps'))
-    .pipe(rename("./style.css"))
-    .pipe(dest("./"));
+    .pipe(rename("./main.css"))
+    .pipe(dest(assets_folder));
 }
 
 
 // task3 : ajouter les vendors prefix sur les règles css pour le fichier style.css
 // voir le fichier package.json pour voir les paramètres 
 function autoprefixerTask(){
-    return src("./style.css")
+    return src("./main.css")
     .pipe(autoprefixer())
-    .pipe(dest("."));
+    .pipe(dest(assets_folder));
 }
 
 // task3.1
 const jsBundle = () =>
   src(alljs)
-    .pipe(concat('all.js'))
-    .pipe(dest(jsfolder));
+    .pipe(concat('main.min.js'))
+    .pipe(dest(assets_folder));
 
 
 
 // task4 : mettre en série les tasks 1, 2 et 3
 // pas possible serie() dans une fonction, il FAUT l'associer à une variable 
-const run = series( cleanTask , sassMainTask, autoprefixerTask, jsBundle ); 
+const run = series( sassMainTask, autoprefixerTask, jsBundle ); 
 const runjs = series( jsBundle ); 
-const runcss = series( cleanTask , sassMainTask, autoprefixerTask ); 
+const runcss = series( sassMainTask, autoprefixerTask ); 
 
 
 // task5 : si modification dans le dossier scss , lancer la task4
@@ -92,7 +85,6 @@ function defaultTask() {
 module.exports = {
     sassmain : sassMainTask,
     jsBundle : jsBundle,
-    clean : cleanTask ,
     run : run,
     default : defaultTask,
     watchcss : watchCSS,
