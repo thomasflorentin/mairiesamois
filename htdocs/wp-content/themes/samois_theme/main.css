@@ -75,7 +75,7 @@
 
 .square::after { content: ""; display: block; padding-bottom: 100%; }
 
-.square img { -o-object-fit: contain; object-fit: contain; height: auto; width: auto; }
+.square img { object-fit: contain; height: auto; width: auto; }
 
 .grid { display: flex; flex-wrap: wrap; display: grid; grid-template-columns: repeat(20, minmax(0, calc(1fr - 20px))); grid-template-columns: repeat(20, 1fr); grid-row-gap: 0; }
 
@@ -293,7 +293,7 @@ pre { font-family: monospace, monospace; font-size: 1em; }
 a { background-color: transparent; }
 
 /** 1. Remove the bottom border in Chrome 57- 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
-abbr[title] { border-bottom: none; text-decoration: underline; -webkit-text-decoration: underline dotted; text-decoration: underline dotted; }
+abbr[title] { border-bottom: none; text-decoration: underline; text-decoration: underline dotted; }
 
 /** Add the correct font weight in Chrome, Edge, and Safari. */
 b, strong { font-weight: bolder; }
@@ -540,9 +540,9 @@ textarea { width: 100%; }
 /* Accessibility
 --------------------------------------------- */
 /* Text meant only for screen readers. */
-.screen-reader-text { border: 0; clip: rect(1px, 1px, 1px, 1px); -webkit-clip-path: inset(50%); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; width: 1px; word-wrap: normal !important; }
+.screen-reader-text { border: 0; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; width: 1px; word-wrap: normal !important; }
 
-.screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; -webkit-clip-path: none; clip-path: none; color: #21759b; display: block; font-size: 0.875rem; font-weight: 700; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; }
+.screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; clip-path: none; color: #21759b; display: block; font-size: 0.875rem; font-weight: 700; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; }
 
 /* Do not show the outline on the skip link target. */
 #primary[tabindex="-1"]:focus { outline: 0; }
@@ -554,3 +554,5 @@ textarea { width: 100%; }
 .alignright { /*rtl:ignore*/ float: right; /*rtl:ignore*/ margin-left: 1.5em; margin-bottom: 1.5em; }
 
 .aligncenter { clear: both; display: block; margin-left: auto; margin-right: auto; margin-bottom: 1.5em; }
+
+/*# sourceMappingURL=maps/main.css.map */
