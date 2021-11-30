@@ -23,7 +23,9 @@
 	</div>
 
 	<div class="entry-content wrapper">
-		<?php the_content(); ?>
+		<?php the_content();             the_field('test1');the_field('test');
+?>
+?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
