@@ -11,6 +11,6 @@ define('SAMOIS_URL', WP_PLUGIN_URL.'/samois_plugin');
 
 
 require_once(SAMOIS_DIR.'/acf.php');
-require_once(SAMOIS_DIR.'/cpt/cpt-events.php');
-require_once(SAMOIS_DIR.'/cpt/cpt-informations.php');
+require_once(SAMOIS_DIR.'/cpt/cpt-event.php');
+require_once(SAMOIS_DIR.'/cpt/cpt-information.php');
 

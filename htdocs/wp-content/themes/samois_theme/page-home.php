@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page Agenda
+ * Template Name: Page Accueil 
  * 
  * Template Post Type: page
  * 
@@ -13,7 +13,6 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
 		<?php
 		while ( have_posts() ) :
 			the_post();

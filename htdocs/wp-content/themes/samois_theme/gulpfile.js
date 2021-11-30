@@ -14,8 +14,8 @@ sass.compiler = require("node-sass");
 
 
 // VARIABLES
-var theme_folder = __dirname;
-var assets_folder = theme_folder + '/assets/';
+var theme_folder = './';
+var assets_folder = theme_folder + 'assets/';
 
 var jsfolder = assets_folder + 'js/';
 var mainjs = jsfolder + 'scripts.js';
@@ -66,6 +66,8 @@ const runcss = series( sassMainTask, autoprefixerTask );
 // task5 : si modification dans le dossier scss , lancer la task4
 function watchCSS(){
     watch(sassfiles, runcss);
+    console.log(sassfiles);
+    console.log(assets_folder);
 }
 // task6 : si modification dans le dossier JS , lancer la task4
 function watchJS(){

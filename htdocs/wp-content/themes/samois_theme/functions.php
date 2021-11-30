@@ -50,7 +50,8 @@ if ( ! function_exists( 'samois_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'samois' ),
+				'primary-menu' => esc_html__( 'Menu primaire', 'samois' ),
+				'primany-dropdown-men' => esc_html__( 'Menu primaire Drop-down', 'samois' )
 			)
 		);
 
@@ -103,10 +104,6 @@ if ( ! function_exists( 'samois_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'samois_setup' );
-
-
-
-
 
 /**
  * Enqueue scripts and styles.

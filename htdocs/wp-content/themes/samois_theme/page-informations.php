@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page Agenda
+ * Template Name: Page Informations 
  * 
  * Template Post Type: page
  * 
