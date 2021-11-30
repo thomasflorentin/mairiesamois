@@ -139,6 +139,65 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_61a638d06cfa2": {
+                    "key": "layout_61a638d06cfa2",
+                    "name": "mod_list_events",
+                    "label": "Liste événements",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_61a63ce36cfa4",
+                            "label": "Titre",
+                            "name": "mod_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_61a63cee6cfa5",
+                            "label": "Liste des événements à afficher",
+                            "name": "mod_list_events",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post",
+                                "event"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "min": "",
+                            "max": "",
+                            "return_format": "object"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Ajouter un élément",
@@ -185,5 +244,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1638283079
+    "modified": 1638285400
 }
