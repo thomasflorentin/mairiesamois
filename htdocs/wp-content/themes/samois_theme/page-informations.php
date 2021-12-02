@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: Page Informations 
  * 
@@ -12,18 +13,18 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+    <?php
+    while (have_posts()) :
+        the_post();
 
-			get_template_part( 'components/content', 'page' );
+        get_template_part('components/content', 'page');
 
-		endwhile; // End of the loop.
-		?>
+    endwhile; // End of the loop.
+    ?>
 
-	</main><!-- #main -->
+</main><!-- #main -->
 
 <?php
 get_footer();

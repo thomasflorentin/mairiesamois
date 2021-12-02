@@ -18,7 +18,7 @@
             "layouts": {
                 "layout_61a6341ac3375": {
                     "key": "layout_61a6341ac3375",
-                    "name": "featured",
+                    "name": "mod_featured",
                     "label": "Mise en avant",
                     "display": "block",
                     "sub_fields": [
@@ -142,7 +142,7 @@
                 },
                 "layout_61a638d06cfa2": {
                     "key": "layout_61a638d06cfa2",
-                    "name": "mod_list_events",
+                    "name": "mod_list_event",
                     "label": "Liste événements",
                     "display": "block",
                     "sub_fields": [
@@ -244,5 +244,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1638285400
+    "modified": 1638460652
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,16 +12,17 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info wrapper">
+<footer id="colophon" class="site-footer">
+    <div class="site-info wrapper">
 
-			© Samois sur Seine | 2021
+        © Samois sur Seine | 2021
 
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+    </div><!-- .site-info -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
