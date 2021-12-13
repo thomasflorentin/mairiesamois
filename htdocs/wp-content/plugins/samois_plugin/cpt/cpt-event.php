@@ -17,7 +17,7 @@ function event_register_post_types() {
         'public' => true,
         'show_in_rest' => true,
         'has_archive' => true,
-        'supports' => array( 'title', 'editor','thumbnail','custom-fields'),
+        'supports' => array( 'title', 'editor','thumbnail','custom-fields','excerpt'),
         'taxonomies' => array('category', 'post_tag'),
         'rewrite' => array('slug' => 'evenement','with_front' => true),
         'menu_position' => 5, 

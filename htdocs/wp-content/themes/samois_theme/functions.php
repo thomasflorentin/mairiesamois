@@ -151,3 +151,4 @@ function add_taxonomies_to_pages()
 }
 add_action('init', 'add_taxonomies_to_pages');
 
+add_post_type_support( 'page', 'excerpt' );

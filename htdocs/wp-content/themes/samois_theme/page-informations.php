@@ -16,7 +16,8 @@ $post_slug = $post->post_name;
 ?>
 
 <main id="primary" class="site-main <?= $post_slug ?>">
-
+    <h1><?= the_title() ?></h1>
+    <p><?= the_excerpt() ?></p>
     <?php
 
     $categories = get_the_category();

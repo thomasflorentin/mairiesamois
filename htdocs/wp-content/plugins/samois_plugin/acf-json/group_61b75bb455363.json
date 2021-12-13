@@ -1,0 +1,83 @@
+{
+    "key": "group_61b75bb455363",
+    "title": "Contenu Single",
+    "fields": [
+        {
+            "key": "field_61b7321539a5e",
+            "label": "Image pour l'affichage des images pour les informations, événements et les articles",
+            "name": "single_img",
+            "type": "gallery",
+            "instructions": "Image pour l'affichage des images pour les informations, événements et les articles ne rien mettre si l'on est sur la page d'accueil",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "insert": "append",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61b7388811037",
+            "label": "Aplat de couleur",
+            "name": "flat_color",
+            "type": "color_picker",
+            "instructions": "Aplat de couleur uniquement pour les informations, événements et les articles ne rien mettre si l'on est sur la page d'accueil comme les images au desssus",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "event"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "information"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1639408519
+}
