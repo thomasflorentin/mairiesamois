@@ -18,6 +18,7 @@ function event_register_post_types() {
         'show_in_rest' => true,
         'has_archive' => true,
         'supports' => array( 'title', 'editor','thumbnail','custom-fields'),
+        'taxonomies' => array('category', 'post_tag'),
         'rewrite' => array('slug' => 'evenement','with_front' => true),
         'menu_position' => 5, 
         'menu_icon' => 'dashicons-calendar',

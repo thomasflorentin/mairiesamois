@@ -19,6 +19,10 @@ get_header();
 
         get_template_part('template-parts/content', get_post_type());
 
+        get_template_part('components/blocs/bloc', 'rebound');
+
+
+
         the_post_navigation(
             array(
                 'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'samois') . '</span> <span class="nav-title">%title</span>',

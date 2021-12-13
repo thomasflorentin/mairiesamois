@@ -56,7 +56,6 @@ if (!function_exists('samois_setup')) :
                 'primany-dropdown-men' => esc_html__('Menu primaire Drop-down', 'samois')
             )
         );
-
         /*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -151,3 +150,4 @@ function add_taxonomies_to_pages()
     register_taxonomy_for_object_type('category', 'page');
 }
 add_action('init', 'add_taxonomies_to_pages');
+
