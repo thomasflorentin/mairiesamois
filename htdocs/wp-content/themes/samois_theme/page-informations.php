@@ -11,9 +11,11 @@
  */
 
 get_header();
+global $post;
+$post_slug = $post->post_name;
 ?>
 
-<main id="primary" class="site-main">
+<main id="primary" class="site-main <?= $post_slug ?>">
 
     <?php
 
@@ -28,18 +30,12 @@ get_header();
         )
     );
 
-    /**echo '<pre>';
-    var_dump($categoriesChild);
-    echo '</pre>';
-    die(); */
-    echo '<ul>';
     foreach ($categoriesChild as $c) {
 
         $taxonomy = $c->taxonomy;
         $term_id = $c->term_id;
         $slug =  $taxonomy . '_' . $term_id;
         $img = get_field('image', $slug);
-
 
         $args = array(
             'post_type' => 'information',
@@ -48,25 +44,37 @@ get_header();
             'posts_per_page' => -1,
         );
 
-        $the_query = new WP_Query($args);
+        $the_query = new WP_Query($args); ?>
 
+        <div class="<?= $c->slug ?>">
 
+            <?php if ($img) : ?>
+                <figure>
+                    <img src="<?= $img ?>" alt="">
+                </figure>
+            <?php endif; ?>
 
-        echo "<img src=" . $img . ">";
-        echo '<li>' . $c->cat_name . '</li>';
+            <p><?= $c->cat_name ?></p>
 
-        if ($the_query->have_posts()) :
+            <ul>
+                <?php
 
-            while ($the_query->have_posts()) :
-                $the_query->the_post(); ?>
+                if ($the_query->have_posts()) :
 
-                <?php the_title(); ?>
+                    while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-    <?php endwhile;
-        endif;
-    }
-    echo '</ul>';
+                        <a href="<?php the_permalink() ?>"> <?php the_title() ?></a>
 
+                <?php endwhile;
+                    wp_reset_postdata();
+                endif;
+
+                ?>
+            </ul>
+
+        </div>
+
+    <?php }
     ?>
 
 </main><!-- #main -->
