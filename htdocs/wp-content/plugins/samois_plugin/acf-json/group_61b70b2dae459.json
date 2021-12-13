@@ -1,6 +1,6 @@
 {
     "key": "group_61b70b2dae459",
-    "title": "Image",
+    "title": "Image Catégorie",
     "fields": [
         {
             "key": "field_61b70b8c7fdb9",
@@ -45,5 +45,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639389294
+    "modified": 1639395822
 }

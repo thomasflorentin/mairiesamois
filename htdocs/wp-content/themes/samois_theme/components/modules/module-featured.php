@@ -1,11 +1,24 @@
 <?php
 $title = $args['title'];
+$imgs = $args['imgs'];
 $content = $args['content'];
 $link = $args['link'];
+
+
+
 ?>
 
 
 <section class="mod_featured">
+
+    
+    <?php if($imgs):?>
+        <figure>
+            <?php foreach($imgs as $img): ?>
+                <img src="<?= $img['url']?>" alt="">
+            <?php endforeach;?>
+        </figure>
+    <?php endif; ?>
 
     <h2 class="mod_title"><?php echo $title; ?></h2>
 

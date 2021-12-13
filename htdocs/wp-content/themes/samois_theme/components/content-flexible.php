@@ -9,11 +9,13 @@ if (have_rows('flex-content')) :
 
         if (get_row_layout() == 'mod_featured') :
             $title = get_sub_field('mod_title');
+            $imgs = get_sub_field('mod_img');
             $content = get_sub_field('mod_content');
             $link = get_sub_field('mod_link');
 
             $args = array(
                 'title'   => $title,
+                'imgs' => $imgs,
                 'content'   => $content,
                 'link'   => $link
             );

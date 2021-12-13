@@ -74,6 +74,33 @@
                                 "id": ""
                             },
                             "return_format": "array"
+                        },
+                        {
+                            "key": "field_61b7321539a5e",
+                            "label": "Image pour l'affichage des images pour les informations, événements et les articles",
+                            "name": "mod_img",
+                            "type": "gallery",
+                            "instructions": "Image pour l'affichage des images pour les informations, événements et les articles",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "insert": "append",
+                            "library": "all",
+                            "min": "",
+                            "max": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         }
                     ],
                     "min": "",
@@ -244,5 +271,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1638460652
+    "modified": 1639396337
 }
