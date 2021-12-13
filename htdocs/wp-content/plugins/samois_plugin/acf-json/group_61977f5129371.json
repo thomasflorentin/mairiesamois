@@ -80,7 +80,7 @@
                             "label": "Image pour l'affichage des images pour les informations, événements et les articles",
                             "name": "mod_img",
                             "type": "gallery",
-                            "instructions": "Image pour l'affichage des images pour les informations, événements et les articles",
+                            "instructions": "Image pour l'affichage des images pour les informations, événements et les articles ne rien mettre si l'on est sur la page d'accueil",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -89,7 +89,7 @@
                                 "id": ""
                             },
                             "return_format": "array",
-                            "preview_size": "medium",
+                            "preview_size": "thumbnail",
                             "insert": "append",
                             "library": "all",
                             "min": "",
@@ -101,6 +101,23 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_61b7388811037",
+                            "label": "Aplat de couleur",
+                            "name": "mod_flat_color",
+                            "type": "color_picker",
+                            "instructions": "Aplat de couleur uniquement pour les informations, événements et les articles ne rien mettre si l'on est sur la page d'accueil comme les images au desssus",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string"
                         }
                     ],
                     "min": "",
@@ -271,5 +288,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639396337
+    "modified": 1639401457
 }
