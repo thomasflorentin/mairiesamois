@@ -36,14 +36,7 @@
             "type": "select",
             "instructions": "Se champs est destinée à être utilisé uniquement sur les actualités",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_61b7321539a5e",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -117,5 +110,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639488121
+    "modified": 1639488410
 }
