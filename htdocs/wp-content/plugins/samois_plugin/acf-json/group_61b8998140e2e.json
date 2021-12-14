@@ -1,9 +1,9 @@
 {
-    "key": "group_61b75bb455363",
-    "title": "Single Post",
+    "key": "group_61b8998140e2e",
+    "title": "Single Information",
     "fields": [
         {
-            "key": "field_61b7321539a5e",
+            "key": "field_61b89981999f0",
             "label": "Image pour l'affichage des images pour les informations, événements et les articles",
             "name": "single_img",
             "type": "gallery",
@@ -30,42 +30,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_61b89688ee574",
-            "label": "Type",
-            "name": "type",
-            "type": "select",
-            "instructions": "Se champs est destinée à être utilisé uniquement sur les actualités",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_61b7321539a5e",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Exposition": "Exposition",
-                "Commémoration": "Commémoration",
-                "Vide-Grenier": "Vide-Grenier",
-                "Vaccination": "Vaccination",
-                "Conférence": "Conférence"
-            },
-            "default_value": false,
-            "allow_null": 1,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "label",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_61b7388811037",
+            "key": "field_61b89981a1199",
             "label": "Aplat de couleur",
             "name": "flat_color",
             "type": "color_picker",
@@ -82,7 +47,7 @@
             "return_format": "string"
         },
         {
-            "key": "field_61b87534aff64",
+            "key": "field_61b89981a4da9",
             "label": "Date",
             "name": "date",
             "type": "date_picker",
@@ -104,7 +69,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "information"
             }
         ]
     ],
@@ -117,5 +82,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639488121
+    "modified": 1639487926
 }

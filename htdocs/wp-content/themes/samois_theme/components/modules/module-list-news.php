@@ -19,8 +19,10 @@ $posts = $args['list_news'];
 
                     <p>
                     <figure><?php the_post_thumbnail(); ?></figure>
+                    <p><?= the_field('type'); ?></p>
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    <p><?php the_content(); ?></p>
+                    <p><?php the_excerpt(); ?></p>
+                    <p><?= the_field('date'); ?></p>
                     </p>
 
                     <?php endforeach; ?>
