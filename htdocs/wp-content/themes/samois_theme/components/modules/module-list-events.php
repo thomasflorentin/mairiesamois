@@ -18,8 +18,7 @@ $posts = $args['list_events'];
                     setup_postdata($post); ?>
 
                     <li>
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                        <span>A custom field from this post: <?php the_field('field_name'); ?></span>
+                        <?= the_field('date') ?> - <a href="<?= the_permalink() ?>"><?= the_title() ?></a> - <?php the_field('location') ?> - <a href="<?= the_permalink() ?>">-></a>
                     </li>
 
                 <?php endforeach; ?>
