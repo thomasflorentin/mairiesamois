@@ -1,9 +1,9 @@
 {
-    "key": "group_61b8998140e2e",
-    "title": "Single Information",
+    "key": "group_61b8a091744e2",
+    "title": "Single Event",
     "fields": [
         {
-            "key": "field_61b89981999f0",
+            "key": "field_61b8a091966c1",
             "label": "Image pour l'affichage des images pour les informations, événements et les articles",
             "name": "single_img",
             "type": "gallery",
@@ -30,7 +30,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_61b89981a1199",
+            "key": "field_61b8a0919de98",
             "label": "Aplat de couleur",
             "name": "flat_color",
             "type": "color_picker",
@@ -47,7 +47,7 @@
             "return_format": "string"
         },
         {
-            "key": "field_61b89981a4da9",
+            "key": "field_61b8a091a1bba",
             "label": "Date",
             "name": "date",
             "type": "date_picker",
@@ -62,6 +62,25 @@
             "display_format": "l j F Y",
             "return_format": "l j F Y",
             "first_day": 1
+        },
+        {
+            "key": "field_61b879c808abc",
+            "label": "Lieux",
+            "name": "location",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -69,7 +88,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "information"
+                "value": "event"
             }
         ]
     ],
@@ -82,5 +101,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639489804
+    "modified": 1639489830
 }

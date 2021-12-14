@@ -16,68 +16,73 @@ $post_slug = $post->post_name;
 ?>
 
 <main id="primary" class="site-main <?= $post_slug ?>">
-    <h1><?= the_title() ?></h1>
-    <p><?= the_excerpt() ?></p>
     <?php
+    while (have_posts()) :
+        the_post(); ?>
 
-    $categories = get_the_category();
-    $category_id = $categories[0]->cat_ID;
+        <h1><?= the_title() ?></h1>
+        <p><?= the_excerpt() ?></p>
+        <?php
+
+        $categories = get_the_category();
+        $category_id = $categories[0]->cat_ID;
 
 
-    $categoriesChild = get_categories(
-        array(
-            'hide_empty' => false,
-            'parent' => $category_id
-        )
-    );
-
-    foreach ($categoriesChild as $c) {
-
-        $taxonomy = $c->taxonomy;
-        $term_id = $c->term_id;
-        $slug =  $taxonomy . '_' . $term_id;
-        $img = get_field('image', $slug);
-
-        $args = array(
-            'post_type' => 'information',
-            'post_status' => 'publish',
-            'category_name' => $c->cat_name,
-            'posts_per_page' => -1,
+        $categoriesChild = get_categories(
+            array(
+                'hide_empty' => false,
+                'parent' => $category_id
+            )
         );
 
-        $the_query = new WP_Query($args); ?>
+        foreach ($categoriesChild as $c) {
 
-        <div class="<?= $c->slug ?>">
+            $taxonomy = $c->taxonomy;
+            $term_id = $c->term_id;
+            $slug =  $taxonomy . '_' . $term_id;
+            $img = get_field('image', $slug);
 
-            <?php if ($img) : ?>
-                <figure>
-                    <img src="<?= $img ?>" alt="">
-                </figure>
-            <?php endif; ?>
+            $args = array(
+                'post_type' => 'information',
+                'post_status' => 'publish',
+                'category_name' => $c->cat_name,
+                'posts_per_page' => -1,
+            );
 
-            <p><?= $c->cat_name ?></p>
+            $the_query = new WP_Query($args); ?>
 
-            <ul>
-                <?php
+            <div class="<?= $c->slug ?>">
 
-                if ($the_query->have_posts()) :
+                <?php if ($img) : ?>
+                    <figure>
+                        <img src="<?= $img ?>" alt="">
+                    </figure>
+                <?php endif; ?>
 
-                    while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                <p><?= $c->cat_name ?></p>
 
-                        <a href="<?php the_permalink() ?>"> <?php the_title() ?></a>
+                <ul>
+                    <?php
 
-                <?php endwhile;
-                    wp_reset_postdata();
-                endif;
+                    if ($the_query->have_posts()) :
 
-                ?>
-            </ul>
+                        while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-        </div>
+                            <a href="<?php the_permalink() ?>"> <?php the_title() ?></a>
+
+                    <?php endwhile;
+                        wp_reset_postdata();
+                    endif;
+
+                    ?>
+                </ul>
+
+            </div>
 
     <?php }
-    ?>
 
+    endwhile; // End of the loop.
+    ?>
 </main><!-- #main -->
 
 <?php
