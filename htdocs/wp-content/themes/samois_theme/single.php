@@ -41,7 +41,7 @@ $flat_color = get_field('flat_color');
 
         the_post_navigation(
             array(
-                'prev_text' => '<span class="nav-subtitle">' . esc_html__('<-', 'samois') . '</span> <span class="nav-title"></span>',
+                'prev_text' => '<span class="nav-subtitle">' . esc_html__('<-', 'samois') . '</span> <span class="nav-title">%date</span>',
                 'next_text' => '<span class="nav-subtitle">' . esc_html__('->', 'samois') . '</span> <span class="nav-title">%date</span>',
             )
         );
