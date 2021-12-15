@@ -9,6 +9,8 @@
  */
 
 get_header();
+$imgs = get_field('single_img');
+$flat_color = get_field('flat_color');
 ?>
 
 <main id="primary" class="site-main">
@@ -17,23 +19,32 @@ get_header();
     while (have_posts()) :
         the_post();
 
-        get_template_part('template-parts/content', get_post_type());
+        if ($imgs) : ?>
+            <figure>
+                <?php foreach ($imgs as $img) : ?>
+                    <img src="<?= $img['url'] ?>" alt="">
+                <?php endforeach; ?>
+            </figure>
+        <?php endif;
 
-        get_template_part('components/blocs/bloc', 'rebound');
+        if ($flat_color) : ?>
+            <div class="" style="height: 100px;width: 300px;background-color: <?= $flat_color ?>;">
 
+            </div>
+    <?php endif;
 
+        the_title();
+
+        the_excerpt();
+
+        the_content();
 
         the_post_navigation(
             array(
-                'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'samois') . '</span> <span class="nav-title">%title</span>',
-                'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'samois') . '</span> <span class="nav-title">%title</span>',
+                'prev_text' => '<span class="nav-subtitle">' . esc_html__('<-', 'samois') . '</span> <span class="nav-title"></span>',
+                'next_text' => '<span class="nav-subtitle">' . esc_html__('->', 'samois') . '</span> <span class="nav-title">%date</span>',
             )
         );
-
-        // If comments are open or we have at least one comment, load up the comment template.
-        if (comments_open() || get_comments_number()) :
-            comments_template();
-        endif;
 
     endwhile; // End of the loop.
     ?>
