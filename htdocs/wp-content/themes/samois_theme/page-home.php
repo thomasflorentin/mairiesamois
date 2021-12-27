@@ -18,7 +18,7 @@ get_header();
     while (have_posts()) :
         the_post();
 
-        get_template_part('components/content', 'page');
+        get_template_part('components/content', 'flexible');
 
     endwhile; // End of the loop.
     ?>

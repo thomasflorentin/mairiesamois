@@ -554,3 +554,79 @@ textarea { width: 100%; }
 .alignright { /*rtl:ignore*/ float: right; /*rtl:ignore*/ margin-left: 1.5em; margin-bottom: 1.5em; }
 
 .aligncenter { clear: both; display: block; margin-left: auto; margin-right: auto; margin-bottom: 1.5em; }
+
+.site-main{
+    margin-top: 150px;
+    margin-left: 200px;
+    color: black;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.header-container{
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0px; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    box-shadow: 0 4px 2px -2px gray;
+    background-color: white;
+}
+
+.header-container .header-branding{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+.header-container .header-branding img{
+    width: 120px;
+}
+
+.header-container .header-alert{
+    display: flex;
+    justify-content: end;
+    padding: 30px 0px ;
+}
+
+.header-container .header-alert .alert-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: yellow;
+    width: 50%;
+    padding: 5px 10px;
+    margin: 0 10px 0 0;
+    border-radius: 15px;
+}
+.header-container .header-banner{
+    overflow: hidden;
+    height: 172px;
+}
+.header-container .header-banner figure{
+    margin: 0;
+}
+.header-container .header-banner figure img{
+    width: auto;
+    height: 100%;
+}
+.header-container .nav-links{
+    display: flex;
+    align-items: baseline;
+    margin-left: 200px;
+    padding: 10px 0;
+}
+
+.header-container .nav-links > i{
+    margin-right: 15px;
+}
+
+.header-container .navigation-links ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header-container .navigation-links ul li{
+    margin: 0 30px 0 0;
+}
