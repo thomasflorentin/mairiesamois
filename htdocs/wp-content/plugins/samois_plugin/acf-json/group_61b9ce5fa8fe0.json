@@ -25,7 +25,7 @@
             "key": "field_61b9d3f52b295",
             "label": "Adresse de la structure",
             "name": "structure_adress",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,9 +36,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
             "key": "field_61b9cec2e6967",
@@ -166,5 +166,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639569004
+    "modified": 1639578614
 }

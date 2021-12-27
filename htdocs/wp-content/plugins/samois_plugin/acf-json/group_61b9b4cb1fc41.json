@@ -75,24 +75,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_61b9b60f8fc99",
-            "label": "Email",
-            "name": "mail",
-            "type": "email",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_61b9b67c9e07c",
             "label": "Alerte",
             "name": "alert",
@@ -131,5 +113,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639569056
+    "modified": 1639578070
 }
