@@ -557,7 +557,14 @@ textarea { width: 100%; }
 
 .site-main{
     margin-top: 150px;
+    width: 80%;
     margin-left: 200px;
+    color: black;
+}
+.site-footer{
+    margin-top: 100px;
+    margin-left: 200px;
+    width: 80%;
     color: black;
 }
 a{
@@ -629,4 +636,120 @@ a{
 
 .header-container .navigation-links ul li{
     margin: 0 30px 0 0;
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+}
+.site-footer .search-container p, .site-footer p{
+    margin: 0px;
+}
+.site-footer .search-container .searchform{ 
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px 0 0;
+    border-radius: 10px;
+    padding: 0px 10px;
+    width: 50%;
+}
+.site-footer .search-container .searchform input{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.site-footer .search-container .searchform button{
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+.site-footer .section-search, .site-footer .news-infos{
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.site-footer .news-infos{
+    display: flex;
+}
+.site-footer .news-infos form label{
+    display: block;
+}
+.site-footer .news-infos .number-phone{
+    display: flex;
+}
+.newsletter-form-container{
+    margin-right: 15px;
+}
+.site-footer .news-infos .form-newsletter button{
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+.site-footer .news-infos .form-newsletter input{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.site-footer .news-infos .form-newsletter{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin-bottom: 15px;
+}
+
+.site-footer .news-infos .newsletter-form-container{
+    width: 40%;
+}
+
+.site-footer .number-section .number-rescue{
+    margin-right: 30px;
+}
+
+.site-footer .number-section .number-phone{
+    font-size: 12px;
+    margin: 0 0 15px 0;
+}
+
+.site-footer .number-section ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-qrcode{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-qrcode img{
+    height: 113px;
+}
+
+
+.social{
+    display: inline-block;
+  align-self: flex-end;
+  font-size: 20px;
+}
+
+.qrcode i{
+    font-size: 125px;
+}
+
+.hourly-adress{
+    margin-right: 15px;
+}
+
+.adresse-hourly-link{
+    display: flex;
 }
