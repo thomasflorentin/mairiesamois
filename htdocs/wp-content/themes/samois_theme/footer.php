@@ -13,58 +13,80 @@ $useful_links = get_field('util_link', 'options')
 ?>
 
 <footer id="colophon" class="site-footer">
+
     <div class="section-search">
-        <p>Vous n'avez pas trouvé l'information recherchée ?</p>
-        <div class="search-container">
-            <?php get_search_form(); ?>
-            <div class="search-link">
+        <h3 class="h3">Vous n'avez pas trouvé l'information recherchée ?</h3>
+        <div class="search-container fl-hcentered grid">
+            <div class="m_6col">
+                <?php get_search_form(); ?>
+            </div>
+            
+            <div class="m_6col search-link">
                 <p><a href="">> Posez vos questions en ligne</a></p>
                 <p><a href="">> Questions fréquement posées</a></p>
             </div>
         </div>
     </div>
-    <div class="news-infos">
 
-        <div class="newsletter-form-container">
-            <p>Restez toujours informé.e !</p>
-            <label for="s">Recevez notre Newsletter</label>
-            <form class="form-newsletter" method="get" action="">
-                <input type="text" class="search-field" name="s" placeholder="Recherher">
-                <button type="submit"><i class="fas fa-arrow-right"></i></button>
-            </form>
-            <div class="social-qrcode">
-                <div class="social">
+    <div class="news-infos grid">
+
+        <div class="m_5col">
+            
+            <div class="mb-medium">
+                <h3 class="h3">Restez toujours informé.e !</h3>
+                <p>Recevez notre Newsletter</p>
+                <form class="form-newsletter fl-justify" method="get" action="">
+                    <input type="text" class="search-field" name="s" placeholder="Recherher">
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+
+            <div class="social-qrcode fl-justify">
+                <div class="social p2">
                     <a href="<?= the_field('facebook_link', 'options') ?>"><i class="fab fa-facebook-square"></i></a>
                     <a href="<?= the_field('instagram_url', 'options') ?>"><i class="fab fa-instagram"></i></a>
                 </div>
                 <img src="<?= the_field('qrcode_notif', 'options') ?>" alt="">
             </div>
+
         </div>
 
-        <div class="number-section">
-            <p>Numéros indispensables</p>
-            <div class="number-phone">
-                <div class="number-rescue">
-                    <p>Police > 17</p>
-                    <p>Pompier > 18</p>
-                    <p>Samu > 15</p>
-                </div>
-                <div class="number-doc">
-                    <?php the_field('number_indispensable', 'options') ?>
+
+        <div class="m_7col">
+
+            <div class="mb-small">
+                <h3 class="h3">Numéros indispensables</h3>
+                <div class="number-phone flex p1">
+                    <div class="number-rescue">
+                        <p>Police > 17</p>
+                        <p>Pompier > 18</p>
+                        <p>Samu > 15</p>
+                    </div>
+                    <div class="number-doc">
+                        <?php the_field('number_indispensable', 'options') ?>
+                    </div>
                 </div>
             </div>
-            <p>Activer les notifications sur votre mobile </p>
-            <ul>
-                <li>1. Scanner ce QR code avec votre mobile</li>
-                <li>2. Une alerte vous demander d'activer les notifications.</li>
-                <li>3. Cliquez sur "J'accepte".</li>
-                <li>4. Recevez automatiquement actualités et événements !</li>
-            </ul>
+
+            <div>
+                <h3 class="h3">Activer les notifications sur votre mobile </h3>
+                <ul class="">
+                    <li>1. Scanner ce QR code avec votre mobile</li>
+                    <li>2. Une alerte vous demander d'activer les notifications.</li>
+                    <li>3. Cliquez sur "J'accepte".</li>
+                    <li>4. Recevez automatiquement actualités et événements !</li>
+                </ul>
+            </div>
+
         </div>
     </div>
-    <div class="adresse-hourly-link">
-        <div class="hourly-adress">
-            <h3><?php the_field('structur_name', 'options') ?></h3>
+
+
+
+    <div class="adresse-hourly-link grid">
+
+        <div class="hourly-adress m_5col">
+            <h3 class="h3"><?php the_field('structur_name', 'options') ?></h3>
             <p><?php the_field('hour_opening', 'options') ?></p>
             <p><?php the_field('structure_adress', 'options') ?></p>
             <p><?php the_field('mail', 'options') ?></p>
@@ -72,9 +94,10 @@ $useful_links = get_field('util_link', 'options')
             <p>Std : <?php the_field('Phone', 'options') ?></p>
             <p>Télécopie : <?php the_field('telecopie', 'options') ?></p>
         </div>
-        <div class="link">
+
+        <div class="footer_links m_5col fl-col fl-justify">
             <div class="usefull-link">
-                <h3>Liens utiles</h3>
+                <h3 class="h3">Liens utiles</h3>
                 <?php foreach ($useful_links as $val) : ?>
                     <a href="<?= $val->guid ?>">
                         <p>> <?= $val->post_title ?></p>

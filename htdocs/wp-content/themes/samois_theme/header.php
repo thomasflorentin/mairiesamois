@@ -23,7 +23,6 @@ $mail = get_field('mail', 'option');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/assets/main.css" />
     <?php wp_head(); ?>
 </head>
 <?php
@@ -83,7 +82,8 @@ if (is_admin_bar_showing()) : ?>
                     <?php
                     wp_nav_menu(
                         array(
-                            'theme_location' => 'primary-menu'
+                            'theme_location'    => 'primary-menu',
+                            'menu_class'        => 'flex'
                         )
                     );
                     ?>

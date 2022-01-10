@@ -1,0 +1,10 @@
+
+.item_title {
+    @include center-block;
+    background: white;
+    margin-top: - $marge_big;
+    padding: 20px;
+    position: relative;
+    z-index: 9999;
+    width: 75%;
+}

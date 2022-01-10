@@ -111,7 +111,7 @@ add_action('after_setup_theme', 'samois_setup');
  */
 function samois_scripts()
 {
-    wp_enqueue_style('samois-style', get_template_directory_uri() . '/assets/main.css', array(), _S_VERSION);
+    wp_enqueue_style('samois-style', get_template_directory_uri() . '/assets/styles.css', array(), _S_VERSION);
 
     wp_enqueue_script('samois-scripts', get_template_directory_uri() . '/main.min.js', array(), _S_VERSION, true);
 }

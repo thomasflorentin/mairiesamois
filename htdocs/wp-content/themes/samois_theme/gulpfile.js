@@ -35,18 +35,10 @@ function sassMainTask(){
     .pipe(sourcemaps.init())
     .pipe(sass(flags).on('error', sass.logError))
     .pipe(sourcemaps.write('./maps'))
-    .pipe(rename("main.css"))
+    .pipe(rename("styles.css"))
     .pipe(dest(assets_folder));
 }
 
-
-// task3 : ajouter les vendors prefix sur les règles css pour le fichier style.css
-// voir le fichier package.json pour voir les paramètres 
-function autoprefixerTask(){
-    return src("./main.css")
-    .pipe(autoprefixer())
-    .pipe(dest(assets_folder));
-}
 
 // task3.1
 const jsBundle = () =>
@@ -58,9 +50,9 @@ const jsBundle = () =>
 
 // task4 : mettre en série les tasks 1, 2 et 3
 // pas possible serie() dans une fonction, il FAUT l'associer à une variable 
-const run = series( sassMainTask, autoprefixerTask, jsBundle ); 
+const run = series( sassMainTask, jsBundle ); 
 const runjs = series( jsBundle ); 
-const runcss = series( sassMainTask, autoprefixerTask ); 
+const runcss = series( sassMainTask ); 
 
 
 // task5 : si modification dans le dossier scss , lancer la task4

@@ -24,3 +24,9 @@ dt {
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
+ul[class] {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

@@ -5,4 +5,32 @@ h4,
 h5,
 h6 {
 	clear: both;
+	margin-top: 0;
 }
+
+.h1 {
+	font-size: 4rem;
+	margin-bottom: $marge;
+
+	@include at-least(wide) {
+		font-size: 6rem;
+	}
+	@include up-to(medium) {
+		font-size: 3rem;
+	}
+}
+.h2 {
+	font-size: 3rem;
+	margin-bottom: $marge_medium;
+}
+.h3 {
+	font-size: 2rem;
+	margin-bottom: $marge / 2;
+	font-weight: bold;
+}
+.h31 {
+	@extend .h3;
+	text-transform: uppercase;
+	line-height: 1;
+}
+

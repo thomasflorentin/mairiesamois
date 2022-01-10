@@ -2,7 +2,7 @@
 
 
 $max-width: 1600px;
-$marge_wrapper: 60px;
+$marge_wrapper: 40px;
 
 
 
@@ -44,46 +44,23 @@ $marge_wrapper: 60px;
 
 
 
+
+
 // MARGINS
 
 $marge: 20px;
-$marge-medium: 40px;
-$marge-large: 60px;
-$marge-xlarge: 120px;
-$marge-xxlarge: 240px;
-
+$marge_medium: $marge * 2;
+$marge_big: $marge * 4;
 
 .mb-small {
     margin-bottom: $marge;
 }
 .mb-medium {
-    margin-bottom: $marge-medium;
+    margin-bottom: $marge_medium;
 }
-.mb-large {
-    @include at-least(medium) {
-        margin-bottom: $marge-large;
-    }
-    @include up-to(medium) {
-        margin-bottom: $marge-medium;
-    }
+.mb-big {
+    margin-bottom: $marge_big;
 }
-.mb-xlarge {
-    @include at-least(medium) {
-        margin-bottom: $marge-xlarge;
-    }
-    @include up-to(medium) {
-        margin-bottom: $marge * 5;
-    }
-}
-.mb-xxlarge {
-    @include at-least(medium) {
-        margin-bottom: $marge-xxlarge;
-    }
-    @include up-to(medium) {
-        margin-bottom: $marge-xlarge;
-    }
-}
-
 
 
 // FLEX
@@ -91,11 +68,10 @@ $marge-xxlarge: 240px;
 .flex {
     display: flex;
 }
-
 .fl-col {
+    @extend .flex;
     flex-direction: column;
 }
-
 .fl-top {
     @extend .flex;
     align-items: flex-start;
@@ -108,40 +84,41 @@ $marge-xxlarge: 240px;
     @extend .flex;
     align-items: flex-end;
 }
-
 .fl-justify {
     @extend .flex;
     justify-content: space-between;
 }
-
 .fl-vcentered {
     @extend .flex;
     justify-content: center;
 }
 .fl-centered {
-    display: flex;
+    @extend .flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 100%;
 }
-
 .fl-end {
-    display: flex;
+    @extend .flex;
     justify-content: flex-end;
 }
-
 .fl-wrap {
-    display: flex;
+    @extend .flex;
     flex-wrap: wrap;
 }
 
 
+.txt-centered {
+    text-align: center;
+}
+
 
 // RATIO
 
-.square {
+.ratio {
     position: relative;
+    overflow: hidden;
     
     .inner {
         position: absolute;
@@ -154,93 +131,28 @@ $marge-xxlarge: 240px;
     &::after {
         content: "";
         display: block;
-        padding-bottom: 100%;
     }
 
     img {
-        object-fit: contain;
-        height: auto;
-        width: auto;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
     }
 }
 
+.square {
+    @extend .ratio;
 
-
-
-
-// GRID
-// https://css-tricks.com/snippets/css/complete-guide-grid/
-
-
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: repeat($cols, minmax(0, calc(1fr - 20px) ) );
-    grid-template-columns: repeat($cols, 1fr);
-    grid-row-gap: 0;
-
-    @include at-least(medium) {
-        grid-column-gap: $marge_wrapper;
-    }
-    @include up-to(medium) {
-        grid-column-gap: 5px;
+    &::after {
+        padding-bottom: 100%;
     }
 }
 
+.ratio_1 {
+    @extend .ratio;
 
-.m_last {
-    grid-row-end: $cols;
+    &::after {
+        padding-bottom: 70%;
+    }
 }
-
-
-
-@mixin parse-columns($suffix: ''){
-
-        .#{$suffix}_0col {
-            display: none;
-        }
-        .#{$suffix}_hide {
-            display: none;
-        }
-        .#{$suffix}_show {
-            display: block;
-        }
-        
-        @for $i from 1 through $cols {
-
-            .#{$suffix}_#{$i}col {
-                grid-column: span #{$i};
-                max-width: 100%;
-                display: block;
-            
-                .grid {
-                    grid-template-columns: repeat(#{$i}, 1fr);
-
-                    // We don't need that....
-                    // @for $j from 1 through ($i - 1) {
-                    //     .#{$suffix}-#{$j}col {
-                    //         grid-column: span #{$j};
-                    //     }
-                    // }
-                }
-            }
-
-        }
-}
-
-@include at-least(minimal) {
-    @include parse-columns('s');
-}
-@include at-least(medium) {
-    @include parse-columns('m');
-}
-@include at-least(large) {
-    @include parse-columns('l');
-}
-@include at-least(wide) {
-    @include parse-columns('w');
-}
-
-
 

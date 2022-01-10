@@ -2,7 +2,7 @@
 
 
 
-$cols: 20;
+$cols: 12;
 
 $mobile_first:                      true !default; 
 $minimal_breakpoint:                300px !default; 
@@ -10,17 +10,15 @@ $medium_breakpoint:                 800px !default;
 $large_breakpoint:                  1200px !default; 
 $wide_breakpoint:                   1550px !default; 
 
-$max-width: 2000px;
+$max-width: 1600px;
 $marge_wrapper: 40px;
-$marge_wrapper--mobile: 20px;
-
 
 
 
 @import "mixins/mixins";
 
 @import "variables/structure";
-
+@import "variables/grid";
 
 @import "variables/colors";
-@import "variables/typography";
+

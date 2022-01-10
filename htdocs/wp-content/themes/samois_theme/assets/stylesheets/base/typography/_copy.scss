@@ -2,6 +2,28 @@ p {
 	margin-bottom: 1.5em;
 }
 
+.p1 {
+	font-size: 1.2rem;
+}
+.p2 {
+	font-size: 2rem;
+}
+
+
+.copy {
+	a {
+		border-bottom: 1px solid $secondary_color;
+	}
+}
+
+
+
+
+
+
+
+
+
 dfn,
 cite,
 em,
@@ -18,9 +40,9 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
+	background: $gray;
 	font-family: $font__pre;
-	line-height: $font__line-height-pre;
+	line-height: $font__lh;
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
@@ -36,16 +58,7 @@ var {
 
 abbr,
 acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 1px dotted $gray;
 	cursor: help;
 }
 
-mark,
-ins {
-	background: $color__background-ins;
-	text-decoration: none;
-}
-
-big {
-	font-size: 125%;
-}

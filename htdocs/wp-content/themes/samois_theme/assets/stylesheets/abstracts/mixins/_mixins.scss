@@ -33,7 +33,7 @@
 	}
   }
   
-  @mixin up-to($point) {
+@mixin up-to($point) {
 	@if $point == wide {
 	  @media (max-width: $wide_breakpoint) { @content; }
 	}
