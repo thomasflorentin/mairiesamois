@@ -73,14 +73,23 @@ $useful_links = get_field('util_link', 'options')
             <p>Télécopie : <?php the_field('telecopie', 'options') ?></p>
         </div>
         <div class="link">
-            <h3>Liens utiles</h3>
-            <?php foreach ($useful_links as $val) :?>
-                <a href="<?= $val->guid ?>"><p>> <?= $val->post_title ?></p></a>
-            <?php endforeach; ?>
+            <div class="usefull-link">
+                <h3>Liens utiles</h3>
+                <?php foreach ($useful_links as $val) : ?>
+                    <a href="<?= $val->guid ?>">
+                        <p>> <?= $val->post_title ?></p>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+            <div class="end-link">
+                <a href="">> Mentions légales</a>
+                <a href="">> Cookie</a>
+                <a href="">> Plan du site</a>
+            </div>
         </div>
         <div class="logo-footer">
             <figure>
-                <img src="<?php the_field('logo_footer', 'options') ?>" alt="">
+                <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php the_field('logo_footer', 'options') ?>" alt=""></a>
             </figure>
         </div>
     </div>
