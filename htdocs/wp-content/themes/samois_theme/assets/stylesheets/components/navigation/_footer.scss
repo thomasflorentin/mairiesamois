@@ -1,0 +1,55 @@
+.site-footer {
+    margin-top: 100px;
+    margin-bottom: $marge_medium;
+}
+
+.site-footer .search-container p, 
+.site-footer p {
+    margin: 0px;
+}
+
+
+.site-footer .section-search, .site-footer .news-infos {
+    border-bottom: 1px solid black;
+    padding-bottom: $marge_medium;
+    margin-bottom: $marge_medium;
+}
+
+.site-footer .news-infos form label {
+    display: block;
+}
+
+
+
+.social-qrcode img {
+    height: 100px;
+}
+
+
+.social{
+    display: inline-block;
+    align-self: flex-end;
+}
+
+.qrcode i {
+    font-size: 125px;
+}
+
+.footer_links{
+    border-left: 1px solid rgb(203, 203, 203);
+    padding-left: $marge;
+
+    & > div {
+        height: 100%;
+    } 
+}
+
+.logo-footer figure {
+    text-align: end;
+}
+
+
+
+.number-rescue {
+    margin-right: $marge_medium;
+}

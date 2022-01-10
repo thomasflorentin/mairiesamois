@@ -1,4 +1,20 @@
 
+$space_top: 150px;
+
+
+
+
+// Main
+
+.site-main {
+    margin-top: $space_top;
+}
+
+
+
+
+// Cards
+
 .item_title {
     @include center-block;
     background: white;
@@ -7,4 +23,17 @@
     position: relative;
     z-index: 9999;
     width: 75%;
+}
+
+
+
+/*
+ shortcuts
+ */
+
+.shortcuts {
+    position: fixed;
+    max-width: $space_left;
+    padding: $marge;
+    left: 0;
 }

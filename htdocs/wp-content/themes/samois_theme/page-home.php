@@ -13,17 +13,24 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main">
-    <?php
-    while (have_posts()) :
-        the_post();
+    <?php 
+    $args = array( 
+        'title' => 'Prenez un raccourci',
+        'list'  => array(
+            'un', 'deux'
+        ),
+    );
+    
+    set_query_var('maList', $args);
+    get_template_part('components/shortcuts', '', $args); ?>
+
+    <?php while (have_posts()) : the_post();
 
         get_template_part('components/content', 'flexible');
 
-    endwhile; // End of the loop.
-    ?>
+    endwhile; ?>
 
-</main><!-- #main -->
+
 
 <?php
 get_footer();

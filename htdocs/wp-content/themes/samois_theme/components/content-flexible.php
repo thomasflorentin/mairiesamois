@@ -51,6 +51,16 @@ if (have_rows('flex-content')) :
             get_template_part('components/modules/module', 'list-events', $args);
 
 
+        // 
+        elseif (get_row_layout() == 'mod_list_informations') :
+            $categoriesChild = get_sub_field('XXXXXXXXXXX');
+
+            foreach ($categoriesChild as $c) :
+
+                set_query_var( 'c', $c);
+                get_template_part('components/modules/module', 'informations');
+
+            endforeach; 
 
 
 

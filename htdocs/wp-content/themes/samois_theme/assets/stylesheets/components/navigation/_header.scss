@@ -1,0 +1,70 @@
+
+.header-container{
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0px; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    box-shadow: 0 4px 2px -2px gray;
+    background-color: white;
+    z-index: 999999;
+}
+
+.header-container .header-branding{
+    position: absolute;
+    top: 10px;
+    left: 50px;
+}
+
+.site_logo {
+    width: 120px;
+}
+
+
+
+
+
+.header-container .nav-links{
+    display: flex;
+    align-items: baseline;
+    margin-left: $space_left;
+    padding: 10px 0;
+}
+
+.header-container .nav-links > i{
+    margin-right: 15px;
+}
+
+.header-container .navigation-links ul li{
+    margin: 0 30px 0 0;
+}
+
+
+
+
+/*
+ Homepage banner
+ */
+
+    .header-container .header-banner{
+        overflow: hidden;
+        height: 172px;
+    }
+    .header-container .header-banner figure{
+        margin: 0;
+    }
+    .header-container .header-banner figure img {
+        width: auto;
+        height: 100%;
+    }
+
+
+/*
+ Alert bloc
+ */
+
+    .header-container .header-alert {
+        padding: 30px 0px;
+    }
+
+    .header-alert .alert-container{
+        min-width: 50%;
+    }

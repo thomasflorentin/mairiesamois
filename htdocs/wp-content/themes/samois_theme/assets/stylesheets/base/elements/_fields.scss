@@ -15,9 +15,11 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: $gray;
-	border: 1px solid $primary_color;
-	border-radius: 3px;
-	padding: 3px;
+	border: none;
+	border-radius: 15px;
+	padding: 5px 10px;
+	outline: none;
+	width: 100%;
 
 	&:focus {
 		color: $black;
@@ -31,3 +33,29 @@ select {
 textarea {
 	width: 100%;
 }
+
+button {
+	border: none;
+	padding: 0;
+	margin: 0;
+	background: none;
+}
+
+
+
+.field {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 10px;
+	border-radius: 15px;
+}
+.field_default {
+	@extend .field;
+	border: 1px solid black;
+}
+.field_alert {
+	@extend .field;
+	background-color: $primary_color;
+}
+

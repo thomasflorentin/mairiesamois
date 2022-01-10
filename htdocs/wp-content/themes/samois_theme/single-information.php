@@ -11,7 +11,10 @@ $flat_color = get_field('flat_color');
 
 ?>
 
-<main id="primary" class="site-main">
+
+    <?php get_template_part('components/shortcuts'); ?>
+
+
     <?php while (have_posts()) : the_post(); ?>
 
         <article>
@@ -64,7 +67,6 @@ $flat_color = get_field('flat_color');
 
         </article>
 
-</main><!-- #main -->
-
+        
 <?php
 get_footer();

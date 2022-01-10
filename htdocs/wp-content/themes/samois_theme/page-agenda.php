@@ -22,7 +22,6 @@ $query = get_posts($args);
 
 ?>
 
-<main id="primary" class="site-main">
 
     <?php
     ?>
@@ -55,7 +54,8 @@ $query = get_posts($args);
 
         ?>
     </ul>
-</main><!-- #main -->
+
+    
 
 <?php
 get_footer();

@@ -14,7 +14,7 @@ $flat_color = get_field('flat_color');
 
 ?>
 
-<main id="primary" class="site-main">
+
     <?php
     while (have_posts()) :
         the_post();
@@ -55,8 +55,7 @@ $flat_color = get_field('flat_color');
     endwhile; // End of the loop.
     ?>
 
-</main><!-- #main -->
+
 
 <?php
-get_sidebar();
 get_footer();

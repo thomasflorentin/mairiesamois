@@ -46,17 +46,21 @@ if (is_admin_bar_showing()) : ?>
 
 
         <header id="masthead" class="header-container">
+
             <div class="header-branding">
                 <figure>
-                    <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?= $website_logo ?>" alt=""></a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>">
+                        <img src="<?= $website_logo ?>" alt="" class="site_logo">
+                    </a>
                 </figure>
             </div><!-- #site-logo -->
 
 
-            <div class="header-alert">
-                <?= ($alert_post) ? "<div class=\"alert-container\"><a href=\"$alert_post->guid\">[ALERTE] $alert_post->post_title</a><i class=\"fas fa-arrow-right\"></i></div>" : "" ?>
-
-            </div><!-- #site-alert -->
+            <div class="wrapper">
+                <div class="header-alert fl-end">
+                    <?= ($alert_post) ? "<div class='alert-container field_alert'><a href='$alert_post->guid'>[ALERTE] $alert_post->post_title</a><i class='fas fa-arrow-right'></i></div>" : "" ?>
+                </div><!-- #site-alert -->
+            </div>
 
             <?php if (is_front_page() && $header_banner) : ?>
 
@@ -96,3 +100,7 @@ if (is_admin_bar_showing()) : ?>
 
 
         </header><!-- #masthead -->
+
+
+
+        <main id="primary" class="site-main wrapper <?= $post_slug ?>">

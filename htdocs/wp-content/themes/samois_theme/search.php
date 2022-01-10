@@ -11,7 +11,6 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main">
 
     <?php if (have_posts()) : ?>
 
@@ -24,31 +23,24 @@ get_header();
             </h1>
         </header><!-- .page-header -->
 
-    <?php
-        /* Start the Loop */
-        while (have_posts()) :
-            the_post();
+        <div class="grid">
+            <?php while (have_posts()) : the_post(); ?>
+                <div class="m_4col mb-medium">
+                    <?php get_template_part('components/blocs/bloc', 'post'); ?>
+                </div>
+            <?php endwhile; 
 
-            /**
-             * Run the loop for the search to output the results.
-             * If you want to overload this in a child theme then include a file
-             * called content-search.php and that will be used instead.
-             */
-            get_template_part('template-parts/content', 'search');
+                the_posts_navigation();
 
-        endwhile;
+            else :
 
-        the_posts_navigation();
+                printf('Rien trouvé...');
 
-    else :
+            endif; ?>
 
-        get_template_part('template-parts/content', 'none');
+        </div><!-- .grid -->
 
-    endif;
-    ?>
 
-</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

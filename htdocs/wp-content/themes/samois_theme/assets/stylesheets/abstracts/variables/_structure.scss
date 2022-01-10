@@ -4,6 +4,7 @@
 $max-width: 1600px;
 $marge_wrapper: 40px;
 
+$space_left: 250px;
 
 
 // CLASSES
@@ -11,8 +12,7 @@ $marge_wrapper: 40px;
 .wrapper {
     max-width: $max-width;
     width: calc(100% - #{$marge_wrapper * 2});
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: $space_left;
 }
 
 

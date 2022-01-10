@@ -12,21 +12,17 @@ $posts = $args['list_news'];
     <div class="mod_list">
         <?php
         if ($posts) : ?>
-            <ul>
+            <div class="grid">
                 <?php foreach ($posts as $post) :
 
                     setup_postdata($post); ?>
 
-                    <p>
-                    <figure><?php the_post_thumbnail(); ?></figure>
-                    <p><?= the_field('type'); ?></p>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    <p><?php the_excerpt(); ?></p>
-                    <p><?= the_field('date'); ?></p>
-                    </p>
+                    <div class="m_4col mb-medium">
+                        <?php get_template_part('components/blocs/bloc', 'post'); ?>
+                    </div>
 
-                    <?php endforeach; ?>
-            </ul>
+                <?php endforeach; ?>
+            </div>
             <?php
             wp_reset_postdata(); ?>
         <?php endif; ?>
