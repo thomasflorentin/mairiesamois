@@ -11,6 +11,7 @@
  */
 
 get_header();
+$shortcuts_links = get_field('shortcuts_links');
 
 $args = array(
     'post_type' => 'event',
@@ -20,11 +21,14 @@ $args = array(
 );
 $query = get_posts($args);
 
-?>
+$args1 = array( 
+        'title' => 'Pour aller plus vite',
+        'list'  => $shortcuts_links
+    );
+    
+    set_query_var('maList', $args1);
+    get_template_part('components/shortcuts', '', $args1); ?>
 
-
-    <?php
-    ?>
 
     <h1><?= the_title() ?></h1>
     <p><?= the_excerpt() ?></p>

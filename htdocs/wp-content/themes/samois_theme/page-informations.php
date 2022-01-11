@@ -11,15 +11,14 @@
  */
 
 get_header();
+$shortcuts_links = get_field('shortcuts_links');
 ?>
 
 
 <?php 
     $args = array( 
         'title' => 'Pour aller plus vite',
-        'list'  => array(
-            'un', 'deux'
-        ),
+        'list'  => $shortcuts_links
     );
     
     set_query_var('maList', $args);
