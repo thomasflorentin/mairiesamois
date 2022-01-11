@@ -52,6 +52,10 @@ $marge: 20px;
 $marge_medium: $marge * 2;
 $marge_big: $marge * 4;
 
+.mb-none{
+    margin-bottom: 0;
+}
+
 .mb-small {
     margin-bottom: $marge;
 }
@@ -60,6 +64,12 @@ $marge_big: $marge * 4;
 }
 .mb-big {
     margin-bottom: $marge_big;
+}
+
+//PADDING
+
+.p-small{
+    padding: $marge;
 }
 
 
@@ -153,6 +163,14 @@ $marge_big: $marge * 4;
 
     &::after {
         padding-bottom: 70%;
+    }
+}
+
+.ratio_2 {
+    @extend .ratio;
+
+    &::after {
+        padding-bottom: 33%;
     }
 }
 

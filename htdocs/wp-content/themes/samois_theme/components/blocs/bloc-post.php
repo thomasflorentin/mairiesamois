@@ -1,19 +1,19 @@
 <div class="bloc">
-
-    <a href="<?php the_permalink(); ?>">
-
+    <a href="<?= get_the_permalink(); ?>">
         <?php if (has_post_thumbnail()) : ?>
-            <figure class="">
-                <?php the_post_thumbnail(); ?>
+            <figure class="<?= ($args['loop'] == 2) ? 'ratio_2' : 'ratio_1' ?>">
+                <div class="inner">
+                    <?php the_post_thumbnail(); ?>
+                </div>
             </figure>
         <?php endif; ?>
 
-        <?php //the_category(); ?>
+        <div class="bloc-footer p-small">
+            <p class="FS10_U"><?= get_field('type'); ?></p>
 
-        <h3 class="h3"><?php the_title(); ?></h3>
-        <div><?php the_excerpt(); ?></div>
-
-
+            <h3 clasvs="FS_16B"><?= get_the_title(); ?></h3>
+            <div class="FS14 mb-small"><?= get_the_excerpt(); ?></div>
+            <p class="FS_10B"><?= get_field('date')?></p>
+        </div>
     </a>
-
 </div>
