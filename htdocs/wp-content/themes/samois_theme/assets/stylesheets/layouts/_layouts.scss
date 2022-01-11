@@ -17,7 +17,7 @@ $space_top: 150px;
 
 .item_title {
     @include center-block;
-    background: white;
+    background: $white;
     margin-top: - $marge_big;
     padding: 20px;
     position: relative;
@@ -36,4 +36,15 @@ $space_top: 150px;
     max-width: $space_left;
     padding: $marge;
     left: 0;
+}
+
+/*
+    Structure_name
+*/ 
+
+.structure-infos {
+    position: fixed;
+    max-width: $space_left;
+    padding: $marge;
+    right: 0;
 }
