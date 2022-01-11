@@ -114,8 +114,8 @@ $useful_links = get_field('util_link', 'options')
                         </nav>
 
                         <nav class="end-link flex">
-                            <a href="" class="btn_inline">Mentions légales</a>
-                            <a href="" class="btn_inline">Cookie</a>
+                            <a href="" class="btn_inline mr-small">Mentions légales</a>
+                            <a href="" class="btn_inline mr-small">Cookie</a>
                             <a href="" class="btn_inline">Plan du site</a>
                         </nav>
 

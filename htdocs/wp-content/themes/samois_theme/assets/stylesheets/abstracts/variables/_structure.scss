@@ -66,6 +66,10 @@ $marge_big: $marge * 4;
     margin-bottom: $marge_big;
 }
 
+.mr-small {
+    margin-right: $marge;
+}
+
 //PADDING
 
 .p-small{
@@ -122,7 +126,12 @@ $marge_big: $marge * 4;
 .txt-centered {
     text-align: center;
 }
-
+.txt-right {
+    text-align: right;
+}
+.txt-capitalize{
+    text-transform: capitalize;
+}
 
 // RATIO
 
