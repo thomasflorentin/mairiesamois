@@ -19,13 +19,13 @@ $useful_links = get_field('util_link', 'options')
         <footer id="colophon" class="site-footer wrapper">
 
             <div class="section-search">
-                <h3 class="h3">Vous n'avez pas trouvé l'information recherchée ?</h3>
+                <h3 class="FS16_B">Vous n'avez pas trouvé l'information recherchée ?</h3>
                 <div class="search-container fl-hcentered grid">
                     <div class="m_6col">
                         <?php get_search_form(); ?>
                     </div>
                     
-                    <nav class="m_6col search-link">
+                    <nav class="m_6col search-link FS14">
                         <ul class=" fl-col">
                             <li><a href="" class="p1 btn_inline">Posez vos questions en ligne</a></li>
                             <li><a href="" class="p1 btn_inline">Questions fréquement posées</a></li>
@@ -39,7 +39,7 @@ $useful_links = get_field('util_link', 'options')
                 <div class="m_5col">
                     
                     <div class="mb-medium">
-                        <h3 class="h3">Restez toujours informé.e !</h3>
+                        <h3 class="FS16_B">Restez toujours informé.e !</h3>
                         <p class="mb-small">Recevez notre Newsletter</p>
                         <form class="form-newsletter field_default" method="get" action="">
                             <input type="text" class="search-field" name="s" placeholder="Recherher">
@@ -61,8 +61,8 @@ $useful_links = get_field('util_link', 'options')
                 <div class="m_7col">
 
                     <div class="mb-small">
-                        <h3 class="h3">Numéros indispensables</h3>
-                        <div class="number-phone flex p1">
+                        <h3 class="FS16_B">Numéros indispensables</h3>
+                        <div class="number-phone flex FS14">
                             <div class="number-rescue">
                                 <p>Police > 17</p>
                                 <p>Pompier > 18</p>
@@ -75,8 +75,8 @@ $useful_links = get_field('util_link', 'options')
                     </div>
 
                     <div>
-                        <h3 class="h3">Activer les notifications sur votre mobile </h3>
-                        <ul class="">
+                        <h3 class="FS16_B">Activer les notifications sur votre mobile </h3>
+                        <ul class="FS14">
                             <li>1. Scanner ce QR code avec votre mobile</li>
                             <li>2. Une alerte vous demander d'activer les notifications.</li>
                             <li>3. Cliquez sur "J'accepte".</li>
@@ -92,20 +92,20 @@ $useful_links = get_field('util_link', 'options')
             <div class="adresse-hourly-link grid">
 
                 <div class="hourly-adress m_5col">
-                    <h3 class="h3"><?php the_field('structur_name', 'options') ?></h3>
-                    <p><?php the_field('hour_opening', 'options') ?></p>
-                    <p><?php the_field('structure_adress', 'options') ?></p>
-                    <p><?php the_field('mail', 'options') ?></p>
+                    <h3 class="FS16_B"><?php the_field('structur_name', 'options') ?></h3>
+                    <p class="FS14"><?php the_field('hour_opening', 'options') ?></p>
+                    <p class="FS14"><?php the_field('structure_adress', 'options') ?></p>
+                    <p class="FS14"><?php the_field('mail', 'options') ?></p>
 
-                    <p>Std : <?php the_field('Phone', 'options') ?></p>
-                    <p>Télécopie : <?php the_field('telecopie', 'options') ?></p>
+                    <p class="FS14">Std : <?php the_field('Phone', 'options') ?></p>
+                    <p class="FS14">Télécopie : <?php the_field('telecopie', 'options') ?></p>
                 </div>
 
                 <div class="footer_links m_5col">
                     <div class="fl-col fl-justify">
 
-                        <nav class="usefull-link fl-col">
-                            <h3 class="h3">Liens utiles</h3>
+                        <nav class="usefull-link fl-col FS14">
+                            <h3 class="FS14">Liens utiles</h3>
                             <?php foreach ($useful_links as $val) : ?>
                                 <a href="<?= $val->guid ?>" class="btn_inline">
                                     <?= $val->post_title ?>

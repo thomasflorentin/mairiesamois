@@ -57,7 +57,7 @@ $marge_big: $marge * 4;
 }
 
 .mb-small {
-    margin-bottom: $marge;
+    margin-bottom: $marge !important;
 }
 .mb-medium {
     margin-bottom: $marge_medium;

@@ -9,7 +9,7 @@
 
 .mb-none { margin-bottom: 0; }
 
-.mb-small { margin-bottom: 20px; }
+.mb-small { margin-bottom: 20px !important; }
 
 .mb-medium { margin-bottom: 40px; }
 
@@ -468,6 +468,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 /* shortcuts */
 .shortcuts { position: fixed; max-width: 250px; padding: 20px; left: 0; }
+
+.shortcuts hr { width: 60px; }
 
 /*
     Structure_name

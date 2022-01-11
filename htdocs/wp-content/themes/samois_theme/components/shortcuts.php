@@ -5,7 +5,10 @@
     <nav class="">
         <ul class="">
             <?php foreach( $args['list'] as $value ) : ?>
-                <li><a class="FS14_B" href=""><?php echo $value->post_title; ?></a></li>
+                <li>
+                    <a class="FS14_B" href=""><?php echo $value->post_title; ?></a>
+                    <hr>
+                </li>
             <?php endforeach; ?>
         </ul>
     </nav>
