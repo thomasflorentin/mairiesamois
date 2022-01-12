@@ -18,7 +18,7 @@ $space_top: 150px;
 .item_title {
     @include center-block;
     background: $white;
-    margin-top: - $marge_big;
+    margin-top: - $marge * 3;
     padding: 20px;
     position: relative;
     z-index: 9999;

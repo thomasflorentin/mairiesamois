@@ -464,7 +464,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 --------------------------------------------------------------*/
 .site-main { margin-top: 150px; }
 
-.item_title { display: block; margin-left: auto; margin-right: auto; background: white; margin-top: -80px; padding: 20px; position: relative; z-index: 9999; width: 75%; }
+.item_title { display: block; margin-left: auto; margin-right: auto; background: white; margin-top: -60px; padding: 20px; position: relative; z-index: 9999; width: 75%; }
 
 /* shortcuts */
 .shortcuts { position: fixed; max-width: 250px; padding: 20px; left: 0; }

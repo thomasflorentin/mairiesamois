@@ -133,7 +133,7 @@
                                 "featured_image"
                             ],
                             "min": "",
-                            "max": "",
+                            "max": 5,
                             "return_format": "object"
                         }
                     ],
@@ -244,5 +244,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639489094
+    "modified": 1641910166
 }

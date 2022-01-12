@@ -30,8 +30,8 @@ $shortcuts_links = get_field('shortcuts_links');
 
         <header class="mb-medium grid">  
             <div class="s_12col m_9col">
-                <h1 class="h1"><?= the_title() ?></h1>
-                <div class="h3"><?= the_excerpt() ?></div>
+                <h1 class="FS42_B"><?= the_title() ?></h1>
+                <div class="FS14"><?= the_excerpt() ?></div>
             </div>
         </header>
 
