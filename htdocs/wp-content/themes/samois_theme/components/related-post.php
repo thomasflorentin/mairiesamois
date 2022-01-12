@@ -3,7 +3,7 @@
 $related = get_posts(array(/*'category__in' => wp_get_post_categories($post->ID),*/'numberposts' => 3, 'post__not_in' => array($post->ID), 'orderby' => 'rand',));
 
 if ($related) : ?>
-    <div class="related-posts mt-vbig">
+    <div class="related-posts mt-big">
         <h2 class="FS24_B arrow">Médias relatifs</h2>
         <ul class="grid txt-centered">
             <?php foreach ($related as $post) :

@@ -31,7 +31,7 @@ get_template_part('components/shortcuts', '', $args1); ?>
 
 
 <h1 class="FS42_B"><?= the_title() ?></h1>
-<div class="grid">
+<div class="grid mb-medium">
     <div class="m_9col">
         <p class="FS14"><?= get_the_excerpt() ?></p>
     </div>

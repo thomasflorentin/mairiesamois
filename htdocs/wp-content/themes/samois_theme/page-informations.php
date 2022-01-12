@@ -62,6 +62,7 @@ get_template_part('components/shortcuts', '', $args); ?>
 
 <?php endwhile; ?>
 
+<?php get_template_part('components/related-post'); ?>
 
 <?php
 get_footer();

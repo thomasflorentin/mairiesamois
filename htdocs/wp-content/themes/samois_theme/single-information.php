@@ -21,7 +21,7 @@ $flat_color = get_field('flat_color');
 
         <?php if ($imgs) : ?>
 
-            <div class="grid">
+            <div class="grid mb-medium">
                 <figure class="s_12col m_7col">
                     <?php foreach ($imgs as $img) : ?>
                         <img src="<?= $img['url'] ?>" alt="">
@@ -29,18 +29,18 @@ $flat_color = get_field('flat_color');
                 </figure>
 
                 <div class="s_12col m_5col">
-                    <h1 class="h1"><?php the_title(); ?></h1>
-                    <div class="h3"><?php the_excerpt(); ?></div>
+                    <h1 class="FS42_B"><?php the_title(); ?></h1>
+                    <div class="FS16"><?php the_excerpt(); ?></div>
                 </div>
             </div>
 
 
         <?php else : ?>
 
-            <div class="grid">
+            <div class="grid mb-medium">
                 <div class="s_12col m_7col col_start_2">
-                    <h1 class="h1"><?php the_title(); ?></h1>
-                    <div class="h3"><?php the_excerpt(); ?></div>
+                    <h1 class="FS42_B"><?php the_title(); ?></h1>
+                    <div class="FS16"><?php the_excerpt(); ?></div>
                 </div>
             </div>
 
@@ -48,8 +48,8 @@ $flat_color = get_field('flat_color');
 
 
         <div class="grid">
-            <div class="s_12col m_7col copy">
-                <?php the_content(); ?>
+            <div class="s_12col m_7col copy FS18_B">
+                <?= get_the_content(); ?>
             </div>
         </div>
 
