@@ -51,11 +51,14 @@ $space_left: 250px;
 $marge: 20px;
 $marge_medium: $marge * 2;
 $marge_big: $marge * 4;
+$marge_vbig: $marge * 8;
 
 .mb-none{
     margin-bottom: 0;
 }
-
+.mb-vsmall{
+    margin-bottom: $marge / 2 !important;
+}
 .mb-small {
     margin-bottom: $marge !important;
 }
@@ -64,6 +67,24 @@ $marge_big: $marge * 4;
 }
 .mb-big {
     margin-bottom: $marge_big;
+}
+
+
+
+.mt-vsmall{
+    margin-top: $marge / 2 !important;
+}
+.mt-small{
+    margin-top: $marge !important;
+}
+.mt-medium{
+    margin-top: $marge_medium!important;
+}
+.mt-big{
+    margin-top: $marge_big !important;
+}
+.mt-vbig{
+    margin-top: $marge_vbig!important;
 }
 
 .mr-small {

@@ -16,7 +16,7 @@ $shortcuts_links = get_field('shortcuts_links');
 
 <?php
 $args = array(
-    'title' => 'Prenez un raccourci',
+    'title' => 'Prenez un raccourci !',
     'list'  => $shortcuts_links
 );
 

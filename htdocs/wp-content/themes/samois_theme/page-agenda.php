@@ -21,45 +21,54 @@ $args = array(
 );
 $query = get_posts($args);
 
-$args1 = array( 
-        'title' => 'Pour aller plus vite',
-        'list'  => $shortcuts_links
-    );
-    
-    set_query_var('maList', $args1);
-    get_template_part('components/shortcuts', '', $args1); ?>
+$args1 = array(
+    'title' => 'Pour aller plus vite !',
+    'list'  => $shortcuts_links
+);
+
+set_query_var('maList', $args1);
+get_template_part('components/shortcuts', '', $args1); ?>
 
 
-    <h1><?= the_title() ?></h1>
-    <p><?= the_excerpt() ?></p>
-    <ul>
-        <?php
-        $current_header = '';
+<h1 class="FS42_B"><?= the_title() ?></h1>
+<div class="grid">
+    <div class="m_9col">
+        <p class="FS14"><?= get_the_excerpt() ?></p>
+    </div>
+</div>
+<ul class="agenda-list">
+    <?php
+    $current_header = '';
 
-        foreach ($query as $post) : setup_postdata($post);
+    foreach ($query as $post) : setup_postdata($post);
 
-            $date = get_field('date', false, false);
-            $temp_header = date_i18n('F Y', strtotime($date));
+        $date = get_field('date', false, false);
+        $temp_header = date_i18n('F Y', strtotime($date));
 
-            if ($temp_header != $current_header) {
-                $current_header = $temp_header;
-                echo "<h3>" . $current_header . '</h3>';
-            } ?>
+        if ($temp_header != $current_header) {
+            $current_header = $temp_header;
+            echo "<h3 class='agenda-month FS24_B txt-capitalize mb-vsmall'>" . $current_header . '</h3>';
+        } ?>
 
-            <li>
-                <?= the_field('date') ?> - <a href="<?= the_permalink() ?>"><?= the_title() ?></a> - <?php the_field('location') ?> - <a href="<?= the_permalink() ?>">-></a>
-            </li>
+        <li class="list-bbot">
+            <a class="grid p-small" href="<?= the_permalink() ?>">
+                <p class="m_3col txt-capitalize FS14 mb-none"><?= get_field('date') ?></p>
+                <p class="m_4col mb-none FS16_B"><?= the_title() ?></p>
+                <p class="m_4col mb-none FS14"><?= get_field('location') ?></p>
+                <div class="arrow m_1col mb-none txt-right"></div>
+            </a>
+        </li>
 
 
 
 
-        <?php endforeach;
-        wp_reset_postdata();
+    <?php endforeach;
+    wp_reset_postdata();
 
-        ?>
-    </ul>
+    ?>
+</ul>
 
-    
+<?php get_template_part('components/related-post'); ?>
 
 <?php
 get_footer();

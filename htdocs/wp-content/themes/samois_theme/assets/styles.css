@@ -9,11 +9,23 @@
 
 .mb-none { margin-bottom: 0; }
 
+.mb-vsmall { margin-bottom: 10px !important; }
+
 .mb-small { margin-bottom: 20px !important; }
 
 .mb-medium { margin-bottom: 40px; }
 
 .mb-big { margin-bottom: 80px; }
+
+.mt-vsmall { margin-top: 10px !important; }
+
+.mt-small { margin-top: 20px !important; }
+
+.mt-medium { margin-top: 40px !important; }
+
+.mt-big { margin-top: 80px !important; }
+
+.mt-vbig { margin-top: 160px !important; }
 
 .mr-small { margin-right: 20px; }
 
@@ -331,6 +343,10 @@ dd { margin: 0 1.5em 1.5em; }
 ul[class] { list-style-type: none; padding: 0; margin: 0; }
 
 .list-btop:nth-child(n+2) { border-top: 1px solid black; }
+
+.list-bbot:nth-child(n+2) { border-bottom: 1px solid black; }
+
+.agenda-list .agenda-month:nth-child(n+2) { margin-top: 80px; }
 
 /* Make sure embeds and iframes fit their containers. */
 embed, iframe, object { max-width: 100%; }

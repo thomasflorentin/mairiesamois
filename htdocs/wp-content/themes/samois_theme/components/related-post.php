@@ -1,16 +1,18 @@
 <?php
 
-$related = get_posts(array('category__in' => wp_get_post_categories($post->ID), 'numberposts' => 3, 'post__not_in' => array($post->ID), 'orderby'             => 'rand',));
+$related = get_posts(array(/*'category__in' => wp_get_post_categories($post->ID),*/'numberposts' => 3, 'post__not_in' => array($post->ID), 'orderby' => 'rand',));
 
 if ($related) : ?>
-    <h2 class="FS24_B arrow">Médias relatifs</h2>
-    <ul class="grid txt-centered">
-        <?php foreach ($related as $post) :
-            setup_postdata($post); ?>
+    <div class="related-posts mt-vbig">
+        <h2 class="FS24_B arrow">Médias relatifs</h2>
+        <ul class="grid txt-centered">
+            <?php foreach ($related as $post) :
+                setup_postdata($post); ?>
 
-            <?php get_template_part('components/blocs/bloc', 'post-related') ?>
-        <?php endforeach; ?>
-    </ul>
+                <?php get_template_part('components/blocs/bloc', 'post-related') ?>
+            <?php endforeach; ?>
+        </ul>
+    </div>
 <?php endif;
 wp_reset_postdata();
 

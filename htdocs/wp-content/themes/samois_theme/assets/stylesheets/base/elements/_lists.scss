@@ -34,3 +34,10 @@ ul[class] {
 .list-btop:nth-child(n+2){
     border-top: 1px solid $black;
 }
+.list-bbot:nth-child(n+2){
+    border-bottom: 1px solid $black;
+}
+
+.agenda-list .agenda-month:nth-child(n+2){
+    margin-top: $marge_big;
+}

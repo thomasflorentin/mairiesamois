@@ -60,7 +60,7 @@ $useful_links = get_field('util_link', 'options')
 
                 <div class="m_7col">
 
-                    <div class="mb-small">
+                    <div class="mb-medium">
                         <h3 class="FS16_B">Numéros indispensables</h3>
                         <div class="number-phone flex FS14">
                             <div class="number-rescue">
