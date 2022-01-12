@@ -286,6 +286,8 @@ h1, h2, h3, h4, h5, h6 { clear: both; margin-top: 0; }
 
 .FS14_BU { font-size: 1.4rem; font-weight: 700; text-transform: uppercase; }
 
+.FS14_U { font-size: 1.4rem; text-transform: uppercase; }
+
 .FS14 { font-size: 1.4rem; }
 
 .FS10_U { font-size: 1rem; text-transform: uppercase; margin-bottom: 0; }
@@ -465,6 +467,12 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .site-main { margin-top: 150px; }
 
 .item_title { display: block; margin-left: auto; margin-right: auto; background: white; margin-top: -60px; padding: 20px; position: relative; z-index: 9999; width: 75%; }
+
+.item_related { background: gray; position: relative; padding: 0 13.33333px 13.33333px 13.33333px; }
+
+.item_related .item_related_type { width: 50%; background: white; margin: auto; }
+
+.item_related .item_related_date { position: absolute; bottom: 0; left: 50%; transform: translate(-50%, -50%); }
 
 /* shortcuts */
 .shortcuts { position: fixed; max-width: 250px; padding: 20px; left: 0; }

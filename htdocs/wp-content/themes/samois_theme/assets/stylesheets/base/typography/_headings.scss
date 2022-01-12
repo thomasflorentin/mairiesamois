@@ -4,72 +4,86 @@ h3,
 h4,
 h5,
 h6 {
-	clear: both;
-	margin-top: 0;
+    clear: both;
+    margin-top: 0;
 }
 
 .h1 {
-	font-size: 4rem;
-	margin-bottom: $marge;
+    font-size: 4rem;
+    margin-bottom: $marge;
 
-	@include at-least(wide) {
-		font-size: 6rem;
-	}
-	@include up-to(medium) {
-		font-size: 3rem;
-	}
+    @include at-least(wide) {
+        font-size: 6rem;
+    }
+
+    @include up-to(medium) {
+        font-size: 3rem;
+    }
 }
 
 .h2 {
-	font-size: 3rem;
-	margin-bottom: $marge_medium;
+    font-size: 3rem;
+    margin-bottom: $marge_medium;
 }
+
 .h3 {
-	font-size: 2rem;
-	margin-bottom: $marge / 2;
-	font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: $marge / 2;
+    font-weight: bold;
 }
+
 .h31 {
-	@extend .h3;
-	text-transform: uppercase;
-	line-height: 1;
+    @extend .h3;
+    text-transform: uppercase;
+    line-height: 1;
 }
-.FS42_B{
+
+.FS42_B {
     font-size: 4.2rem;
     font-weight: 700;
 }
-.FS24_B{
+
+.FS24_B {
     font-size: 2.4rem;
     font-weight: 700;
 }
-.FS18{
+
+.FS18 {
     font-size: 1.8rem;
 }
-.FS16_B{
+
+.FS16_B {
     font-size: 1.6rem;
     font-weight: 700;
 }
-.FS14_B{
+
+.FS14_B {
     font-size: 1.4rem;
     font-weight: 700;
 }
-.FS14_BU{
+
+.FS14_BU {
     font-size: 1.4rem;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.FS14{
+.FS14_U {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.FS14 {
     font-size: 1.4rem;
 }
 
-.FS10_U{
+.FS10_U {
     font-size: 1rem;
     text-transform: uppercase;
     margin-bottom: 0;
 }
-.FS10_B{
+
+.FS10_B {
     font-size: 1rem;
     font-weight: 700;
 }
-

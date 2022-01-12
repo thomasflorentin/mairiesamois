@@ -49,7 +49,7 @@ while (have_posts()) :
 
 endwhile; // End of the loop.
 
-get_template_part('components/related-post')
+get_template_part('components/related-post');
 
 ?>
 
