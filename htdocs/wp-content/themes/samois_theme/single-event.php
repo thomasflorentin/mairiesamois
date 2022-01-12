@@ -15,47 +15,43 @@ $flat_color = get_field('flat_color');
 ?>
 
 
-    <?php
-    while (have_posts()) :
-        the_post();
+<?php
+while (have_posts()) :
+    the_post();
 
-        if ($imgs) : ?>
-            <figure>
-                <?php foreach ($imgs as $img) : ?>
-                    <img src="<?= $img['url'] ?>" alt="">
-                <?php endforeach; ?>
-            </figure>
-        <?php endif;
+    if ($imgs) : ?>
+        <figure>
+            <?php foreach ($imgs as $img) : ?>
+                <img src="<?= $img['url'] ?>" alt="">
+            <?php endforeach; ?>
+        </figure>
+    <?php endif;
 
-        if ($flat_color) : ?>
-            <div class="" style="height: 100px;width: 300px;background-color: <?= $flat_color ?>;">
+    if ($flat_color) : ?>
+        <div class="" style="height: 100px;width: 300px;background-color: <?= $flat_color ?>;">
 
-            </div>
-        <?php endif; ?>
+        </div>
+    <?php endif; ?>
 
-        <h1><?php the_title(); ?></h1>
+    <h1><?php the_title(); ?></h1>
 
-        <p><?php the_excerpt(); ?></p>
+    <p><?php the_excerpt(); ?></p>
 
-        <p><?php the_content();  ?></p>
+    <p><?php the_content();  ?></p>
 
-    <?php
-        the_post_navigation(
-            array(
-                'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'samois') . '</span> <span class="nav-title">%title</span>',
-                'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'samois') . '</span> <span class="nav-title">%title</span>',
-            )
-        );
+<?php
+    the_post_navigation(
+        array(
+            'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'samois') . '</span> <span class="nav-title">%title</span>',
+            'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'samois') . '</span> <span class="nav-title">%title</span>',
+        )
+    );
 
-        // If comments are open or we have at least one comment, load up the comment template.
-        if (comments_open() || get_comments_number()) :
-            comments_template();
-        endif;
+endwhile; // End of the loop.
 
-    endwhile; // End of the loop.
-    ?>
+get_template_part('components/related-post')
 
-
+?>
 
 <?php
 get_footer();

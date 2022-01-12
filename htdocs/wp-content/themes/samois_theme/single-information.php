@@ -12,61 +12,63 @@ $flat_color = get_field('flat_color');
 ?>
 
 
-    <?php get_template_part('components/shortcuts'); ?>
+<?php get_template_part('components/shortcuts'); ?>
 
 
-    <?php while (have_posts()) : the_post(); ?>
+<?php while (have_posts()) : the_post(); ?>
 
-        <article>
+    <article>
 
-            <?php if ($imgs) : ?>
-
-                <div class="grid">
-                    <figure class="s_12col m_7col">
-                        <?php foreach ($imgs as $img) : ?>
-                            <img src="<?= $img['url'] ?>" alt="">
-                        <?php endforeach; ?>
-                    </figure>
-
-                    <div class="s_12col m_5col">
-                        <h1 class="h1"><?php the_title(); ?></h1>
-                        <div class="h3"><?php the_excerpt(); ?></div>
-                    </div>
-                </div>
-
-
-            <?php else : ?>
-
-                <div class="grid">
-                    <div class="s_12col m_7col col_start_2">
-                        <h1 class="h1"><?php the_title(); ?></h1>
-                        <div class="h3"><?php the_excerpt(); ?></div>
-                    </div>
-                </div>
-
-            <?php endif; ?>
-
+        <?php if ($imgs) : ?>
 
             <div class="grid">
-                <div class="s_12col m_7col copy">
-                    <?php the_content(); ?>
+                <figure class="s_12col m_7col">
+                    <?php foreach ($imgs as $img) : ?>
+                        <img src="<?= $img['url'] ?>" alt="">
+                    <?php endforeach; ?>
+                </figure>
+
+                <div class="s_12col m_5col">
+                    <h1 class="h1"><?php the_title(); ?></h1>
+                    <div class="h3"><?php the_excerpt(); ?></div>
                 </div>
             </div>
 
-            
 
-            <?php
-                the_post_navigation(
-                    array(
-                        'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'samois') . '</span> <span class="nav-title">%title</span>',
-                        'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'samois') . '</span> <span class="nav-title">%title</span>',
-                    )
-                );
-            endwhile; // End of the loop.
-            ?>
+        <?php else : ?>
 
-        </article>
+            <div class="grid">
+                <div class="s_12col m_7col col_start_2">
+                    <h1 class="h1"><?php the_title(); ?></h1>
+                    <div class="h3"><?php the_excerpt(); ?></div>
+                </div>
+            </div>
 
-        
-<?php
-get_footer();
+        <?php endif; ?>
+
+
+        <div class="grid">
+            <div class="s_12col m_7col copy">
+                <?php the_content(); ?>
+            </div>
+        </div>
+
+
+
+    <?php
+    the_post_navigation(
+        array(
+            'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'samois') . '</span> <span class="nav-title">%title</span>',
+            'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'samois') . '</span> <span class="nav-title">%title</span>',
+        )
+    );
+endwhile; // End of the loop.
+    ?>
+
+    </article>
+
+
+    <?php get_template_part('components/related-post'); ?>
+
+    <?php
+    get_footer();

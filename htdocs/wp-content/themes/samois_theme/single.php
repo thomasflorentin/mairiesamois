@@ -15,39 +15,38 @@ $flat_color = get_field('flat_color');
 
 
 
-    <?php while (have_posts()) : the_post();
+<?php while (have_posts()) : the_post();
 
-        if ($imgs) : ?>
-            <figure>
-                <?php foreach ($imgs as $img) : ?>
-                    <img src="<?= $img['url'] ?>" alt="">
-                <?php endforeach; ?>
-            </figure>
-        <?php endif;
-
-        if ($flat_color) : ?>
-            <div class="" style="height: 100px;width: 300px;background-color: <?= $flat_color ?>;">
-
-            </div>
+    if ($imgs) : ?>
+        <figure>
+            <?php foreach ($imgs as $img) : ?>
+                <img src="<?= $img['url'] ?>" alt="">
+            <?php endforeach; ?>
+        </figure>
     <?php endif;
 
-        the_title();
+    if ($flat_color) : ?>
+        <div class="" style="height: 100px;width: 300px;background-color: <?= $flat_color ?>;">
 
-        the_excerpt();
+        </div>
+<?php endif;
 
-        the_content();
+    the_title();
 
-        the_post_navigation(
-            array(
-                'prev_text' => '<span class="nav-subtitle">' . esc_html__('<-', 'samois') . '</span> <span class="nav-title">%date</span>',
-                'next_text' => '<span class="nav-subtitle">' . esc_html__('->', 'samois') . '</span> <span class="nav-title">%date</span>',
-            )
-        );
+    the_excerpt();
 
-    endwhile; // End of the loop.
-    ?>
+    the_content();
 
+    the_post_navigation(
+        array(
+            'prev_text' => '<span class="nav-subtitle">' . esc_html__('<-', 'samois') . '</span> <span class="nav-title">%date</span>',
+            'next_text' => '<span class="nav-subtitle">' . esc_html__('->', 'samois') . '</span> <span class="nav-title">%date</span>',
+        )
+    );
 
+endwhile; // End of the loop.
+?>
 
+<?php get_template_part('components/related-post'); ?>
 <?php
 get_footer();
