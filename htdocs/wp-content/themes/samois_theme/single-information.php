@@ -21,16 +21,18 @@ $flat_color = get_field('flat_color');
 
         <?php if ($imgs) : ?>
 
-            <div class="grid mb-medium">
-                <figure class="s_12col m_7col">
+            <div class="grid mb-medium single_post">
+                <figure class="s_12col m_7col ratio_1">
                     <?php foreach ($imgs as $img) : ?>
-                        <img src="<?= $img['url'] ?>" alt="">
+                        <div class="inner">
+                            <img src="<?= $img['url'] ?>" alt="">
+                        </div>
                     <?php endforeach; ?>
                 </figure>
 
-                <div class="s_12col m_5col">
-                    <h1 class="FS42_B"><?php the_title(); ?></h1>
-                    <div class="FS16"><?php the_excerpt(); ?></div>
+                <div class="s_12col m_5col mt-big container-title-post p-small">
+                    <h1 class="FS42_B post-title"><?php the_title(); ?></h1>
+                    <div class="FS16 post-excerpt"><?php the_excerpt(); ?></div>
                 </div>
             </div>
 

@@ -1,6 +1,3 @@
-
-
-
 $max-width: 1600px;
 $marge_wrapper: 40px;
 
@@ -53,39 +50,48 @@ $marge_medium: $marge * 2;
 $marge_big: $marge * 4;
 $marge_vbig: $marge * 8;
 
-.mb-none{
+.mb-none {
     margin-bottom: 0;
 }
-.mb-vsmall{
+
+.mb-vsmall {
     margin-bottom: $marge / 2 !important;
 }
+
 .mb-small {
     margin-bottom: $marge !important;
 }
+
 .mb-medium {
     margin-bottom: $marge_medium;
 }
+
 .mb-big {
     margin-bottom: $marge_big;
 }
 
 
 
-.mt-vsmall{
+.mt-vsmall {
     margin-top: $marge / 2 !important;
 }
-.mt-small{
+
+.mt-small {
     margin-top: $marge !important;
 }
-.mt-medium{
-    margin-top: $marge_medium!important;
+
+.mt-medium {
+    margin-top: $marge_medium !important;
 }
-.mt-big{
+
+.mt-big {
     margin-top: $marge_big !important;
 }
-.mt-vbig{
-    margin-top: $marge_vbig!important;
+
+.mt-vbig {
+    margin-top: $marge_vbig !important;
 }
+
 
 .mr-small {
     margin-right: $marge;
@@ -93,7 +99,7 @@ $marge_vbig: $marge * 8;
 
 //PADDING
 
-.p-small{
+.p-small {
     padding: $marge;
 }
 
@@ -103,30 +109,37 @@ $marge_vbig: $marge * 8;
 .flex {
     display: flex;
 }
+
 .fl-col {
     @extend .flex;
     flex-direction: column;
 }
+
 .fl-top {
     @extend .flex;
     align-items: flex-start;
 }
+
 .fl-hcentered {
     @extend .flex;
     align-items: center;
 }
+
 .fl-bottom {
     @extend .flex;
     align-items: flex-end;
 }
+
 .fl-justify {
     @extend .flex;
     justify-content: space-between;
 }
+
 .fl-vcentered {
     @extend .flex;
     justify-content: center;
 }
+
 .fl-centered {
     @extend .flex;
     justify-content: center;
@@ -134,10 +147,12 @@ $marge_vbig: $marge * 8;
     text-align: center;
     height: 100%;
 }
+
 .fl-end {
     @extend .flex;
     justify-content: flex-end;
 }
+
 .fl-wrap {
     @extend .flex;
     flex-wrap: wrap;
@@ -147,10 +162,12 @@ $marge_vbig: $marge * 8;
 .txt-centered {
     text-align: center;
 }
+
 .txt-right {
     text-align: right;
 }
-.txt-capitalize{
+
+.txt-capitalize {
     text-transform: capitalize;
 }
 
@@ -159,7 +176,7 @@ $marge_vbig: $marge * 8;
 .ratio {
     position: relative;
     overflow: hidden;
-    
+
     .inner {
         position: absolute;
         width: 100%;
@@ -168,6 +185,7 @@ $marge_vbig: $marge * 8;
         justify-content: center;
         align-items: center;
     }
+
     &::after {
         content: "";
         display: block;
@@ -203,4 +221,3 @@ $marge_vbig: $marge * 8;
         padding-bottom: 33%;
     }
 }
-
