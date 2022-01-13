@@ -484,6 +484,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.breadcrumb { background: gray; padding-left: 250px; }
+
 .site-main { margin-top: 150px; }
 
 .single_post .container-title-post { margin-left: -130px; z-index: 100; background: white; }
