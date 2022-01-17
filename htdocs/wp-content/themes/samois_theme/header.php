@@ -115,7 +115,7 @@ if (is_admin_bar_showing()) : ?>
             <?php // Breadcrumb navigation
             if (is_page() && !is_front_page() || is_single() || is_category()) {
                 echo '<ul class="flex">';
-                echo '<li><a title="Accueil - NOM DU SITE" rel="nofollow" href="http://VOTRE_SITE.com/">Accueil /</a></li>';
+                echo '<li><a title="Accueil - NOM DU SITE" rel="nofollow" href="' . get_bloginfo("url") . '">Accueil / </a></li>';
 
                 if (is_page()) {
                     $ancestors = get_post_ancestors($post);
