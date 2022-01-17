@@ -1,35 +1,58 @@
 <?php
-
-/**
- * Template part for displaying page content in page.php
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package samois
- */
-
+$imgs = get_field('single_img');
+$flat_color = get_field('flat_color');
 ?>
 
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php 
+    $shortcuts_links = get_field('shortcuts_links', $root);
+    $shortcuts_args = array(
+        'title' => 'Pour aller plus vite !',
+    );
+
+    set_query_var('links', $shortcuts_links);
+    get_template_part('components/shortcuts', '', $shortcuts_args); ?>
 
 
-    <header class="entry-header">
-        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-    </header><!-- .entry-header -->
+    <article>
+
+        <?php if ($imgs) : ?>
+
+            <div class="grid mb-medium single_post">
+                <figure class="s_12col m_7col ratio_1">
+                    <?php foreach ($imgs as $img) : ?>
+                        <div class="inner">
+                            <img src="<?= $img['url'] ?>" alt="">
+                        </div>
+                    <?php endforeach; ?>
+                </figure>
+
+                <div class="s_12col m_5col mt-big container-title-post p-small">
+                    <h1 class="FS42_B post-title"><?php the_title(); ?></h1>
+                    <div class="FS16 post-excerpt"><?php the_excerpt(); ?></div>
+                </div>
+            </div>
 
 
-    <div class="">
-        <?php samois_post_thumbnail(); ?>
-    </div>
+        <?php else : ?>
 
-    <div class="entry-content">
-        <?php the_content(); ?>
-    </div><!-- .entry-content -->
+            <div class="grid mb-medium">
+                <div class="s_12col m_7col col_start_2">
+                    <h1 class="FS42_B"><?php the_title(); ?></h1>
+                    <div class="FS16"><?php the_excerpt(); ?></div>
+                </div>
+            </div>
+
+        <?php endif; ?>
 
 
-    <?php get_template_part('components/content', 'flexible'); ?>
+        <div class="grid">
+            <div class="s_12col m_7col copy FS18_B">
+                <?= get_the_content(); ?>
+            </div>
+        </div>
+
+    </article>
 
 
-
-</article><!-- #post-<?php the_ID(); ?> -->
+    <?php get_template_part('components/related-post'); ?>

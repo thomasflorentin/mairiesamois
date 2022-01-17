@@ -17,11 +17,15 @@ function information_register_post_types() {
         'public' => true,
         'show_in_rest' => true,
         'has_archive' => true,
-        'supports' => array( 'title', 'editor','thumbnail','custom-fields','excerpt' ),
+        'supports' => array( 'title', 'editor','thumbnail','custom-fields','excerpt','page-attributes' ),
         'taxonomies' => array('category', 'post_tag'),
-        'rewrite' => array('slug' => 'information','with_front' => true),
+        'rewrite' => array('slug' => 'information','with_front' => false),
         'menu_position' => 5, 
         'menu_icon' => 'dashicons-info',
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'hierarchical' => true,
 	);
 
 	register_post_type( 'information', $args );

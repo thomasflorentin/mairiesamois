@@ -1,0 +1,40 @@
+
+
+
+
+.hp_left {
+    width: calc( 100% - 400px ); 
+
+    @include at-least(medium) {
+    }
+}
+
+.hp_right {
+    width: 350px; 
+    @include at-least(medium) {
+    }
+}
+
+
+
+/*
+    Structure_name aside
+*/
+
+.structure-infos {
+    padding: $marge;
+    transition: transform .4s;
+    position: sticky;
+    top: 400px;
+
+    @include up-to(medium) {
+        transform: translateY(-100vh);
+        background-color: rgba($color: #fff, $alpha: .5);
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding-top: $space_top * 1.5;
+    }
+}

@@ -1,15 +1,12 @@
-<?php 
 
-if(is_page('accueil') || is_page('informations')) : ?>
 
 <aside id="shortcuts" class="shortcuts txt-centered">
 
     <h2 class="FS16_B"><?= $args['title']; ?></h2>
-    <?php //var_dump($args['list']) 
-    ?>
+
     <nav class="">
         <ul class="">
-            <?php foreach ($args['list'] as $value) : ?>
+            <?php foreach ($links as $value) : ?>
                 <li>
                     <a class="FS14_B" href="<?= $value->guid; ?>"><?= $value->post_title; ?></a>
                     <hr>
@@ -19,5 +16,3 @@ if(is_page('accueil') || is_page('informations')) : ?>
     </nav>
 
 </aside>
-
-<?php endif; ?>

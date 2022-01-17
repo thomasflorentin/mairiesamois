@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_61dc4e5f9fe5a",
-            "label": "Liens de raccourcis de l'accueil",
+            "label": "Liens de raccourcis",
             "name": "shortcuts_links",
             "type": "relationship",
             "instructions": "",
@@ -49,6 +49,13 @@
                 "operator": "==",
                 "value": "page-agenda.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "information"
+            }
         ]
     ],
     "menu_order": 0,
@@ -60,5 +67,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1641829129
+    "modified": 1642429681
 }

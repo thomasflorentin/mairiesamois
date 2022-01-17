@@ -21,7 +21,6 @@ $args = array(
     'list'  => $shortcuts_links
 );
 
-set_query_var('maList', $args);
 get_template_part('components/shortcuts', '', $args); ?>
 
 

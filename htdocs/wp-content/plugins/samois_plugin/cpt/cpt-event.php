@@ -22,6 +22,9 @@ function event_register_post_types() {
         'rewrite' => array('slug' => 'evenement','with_front' => true),
         'menu_position' => 5, 
         'menu_icon' => 'dashicons-calendar',
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
 	);
 
 	register_post_type( 'event', $args );

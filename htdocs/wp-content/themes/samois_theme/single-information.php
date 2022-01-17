@@ -1,76 +1,81 @@
 <?php
-
 /**
  *
  * @package samois
  */
 
-get_header();
-$imgs = get_field('single_img');
-$flat_color = get_field('flat_color');
-
-?>
+get_header(); 
 
 
-<?php get_template_part('components/shortcuts'); ?>
+while (have_posts()) : the_post(); 
 
 
-<?php while (have_posts()) : the_post(); ?>
-
-    <article>
-
-        <?php if ($imgs) : ?>
-
-            <div class="grid mb-medium single_post">
-                <figure class="s_12col m_7col ratio_1">
-                    <?php foreach ($imgs as $img) : ?>
-                        <div class="inner">
-                            <img src="<?= $img['url'] ?>" alt="">
-                        </div>
-                    <?php endforeach; ?>
-                </figure>
-
-                <div class="s_12col m_5col mt-big container-title-post p-small">
-                    <h1 class="FS42_B post-title"><?php the_title(); ?></h1>
-                    <div class="FS16 post-excerpt"><?php the_excerpt(); ?></div>
-                </div>
-            </div>
-
-
-        <?php else : ?>
-
-            <div class="grid mb-medium">
-                <div class="s_12col m_7col col_start_2">
-                    <h1 class="FS42_B"><?php the_title(); ?></h1>
-                    <div class="FS16"><?php the_excerpt(); ?></div>
-                </div>
-            </div>
-
-        <?php endif; ?>
-
-
-        <div class="grid">
-            <div class="s_12col m_7col copy FS18_B">
-                <?= get_the_content(); ?>
-            </div>
-        </div>
-
-
-
-    <?php
-    the_post_navigation(
-        array(
-            'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'samois') . '</span> <span class="nav-title">%title</span>',
-            'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'samois') . '</span> <span class="nav-title">%title</span>',
-        )
+    $args = array(
+        'post_type'   => 'information',
+        'post_parent' => $post->ID, 
+        'posts_per_page' => -1, 
+        'sort_column' => 'title', 
+        'sort_order' => 'ASC'
     );
-endwhile; // End of the loop.
-    ?>
+    $page_children = get_posts( $args );
 
-    </article>
+    
+
+    // CALLING THE BREADCRUMB MODULE
+    
+    $ancestors = get_post_ancestors($post);
+    $level = count($ancestors);
+    $ariane = '';
+
+    if( $level == 0 ) {
+        $root = get_the_ID();
+        $children = get_page_children($root, $pages);
+        $root_title = get_the_title($root);
+        $root_title_url = get_permalink($root);	
+    } 
+    else {
+        $root = end($ancestors);
+        $root_title = get_the_title($root);
+        $root_title_url = get_permalink($root);	
+    } 
+    
+    set_query_var( 'root', $root );
+    set_query_var( 'root_title', $root_title );
+    set_query_var( 'root_title_url', $root_title_url ); 
+    
+    get_template_part('components/modules/module', 'breadcrumbs');
 
 
-    <?php get_template_part('components/related-post'); ?>
 
-    <?php
-    get_footer();
+
+    // TESTING IF ROOT OR CHILDREN
+    if ( count( $page_children) > 0 ) : 
+        // C'est une page parente (donc archives des pages enfants) 
+
+
+        $shortcuts_links = get_field('shortcuts_links');
+        $shortcuts_args = array(
+            'title' => 'Pour aller plus vite !',
+        );
+        set_query_var('links', $shortcuts_links);
+        get_template_part('components/shortcuts', '', $shortcuts_args); 
+
+
+        set_query_var('page_children', $page_children);
+        get_template_part('components/archives/archive', 'informations');
+        
+
+    else : 
+        // C'est une page enfant (donc contenu normal) 
+
+        set_query_var( 'root', $root );
+        get_template_part('components/content', 'page'); 
+    
+
+    endif;
+
+
+endwhile; 
+
+
+get_footer();

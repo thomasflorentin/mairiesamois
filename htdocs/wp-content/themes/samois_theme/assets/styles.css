@@ -494,7 +494,11 @@ button { border: none; padding: 0; margin: 0; background: none; }
 --------------------------------------------------------------*/
 .breadcrumb { background: gray; padding-left: 250px; }
 
-.site-main { margin-top: 150px; }
+.site-main { margin-top: 200px; }
+
+@media (min-width: 800px) { .home .site-main { margin-top: 400px; } }
+
+@media (max-width: 800px) { .home .site-main { margin-top: 200px; } }
 
 .single_post .container-title-post { margin-left: -130px; z-index: 100; background: white; }
 
@@ -513,16 +517,18 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 800px) { .shortcuts { max-width: 250px; } }
 
-@media (max-width: 800px) { .shortcuts { transform: translateY(100vh); background-color: gray; color: white; right: 0; top: 0; bottom: 0; padding-top: 225px; } }
+@media (max-width: 800px) { .shortcuts { transform: translateY(100vh); background-color: gray; color: white; right: 0; top: 0; bottom: 0; padding-top: 300px; } }
 
 .shortcuts.open { transform: none; }
 
+.hp_left { width: calc( 100% - 400px); }
+
+.hp_right { width: 350px; }
+
 /* Structure_name aside */
-.structure-infos { position: fixed; padding: 20px; right: 0; transition: transform .4s; }
+.structure-infos { padding: 20px; transition: transform .4s; position: sticky; top: 400px; }
 
-@media (min-width: 800px) { .structure-infos { max-width: 250px; } }
-
-@media (max-width: 800px) { .structure-infos { transform: translateY(-100vh); background-color: rgba(255, 255, 255, 0.5); right: 0; top: 0; bottom: 0; padding-top: 225px; } }
+@media (max-width: 800px) { .structure-infos { transform: translateY(-100vh); background-color: rgba(255, 255, 255, 0.5); position: fixed; left: 0; right: 0; top: 0; bottom: 0; padding-top: 300px; } }
 
 /*--------------------------------------------------------------
 # Utilities
