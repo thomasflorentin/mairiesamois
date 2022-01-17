@@ -19,10 +19,10 @@ $posts = $args['list_events'];
 
                     <li class="list-btop">
                         <a class="grid p-small" href="<?= the_permalink() ?>">
-                            <p class="m_3col txt-capitalize FS14 mb-none"><?= get_field('date') ?></p>
-                            <p class="m_4col mb-none FS16_B" ><?= the_title() ?></p>
-                            <p class="m_4col mb-none FS14"><?= get_field('location') ?></p>
-                            <div class="arrow m_1col mb-none txt-right"></div>
+                            <p class="s_3col txt-capitalize FS14 mb-none"><?= get_field('date') ?></p>
+                            <p class="s_4col mb-none FS16_B" ><?= the_title() ?></p>
+                            <p class="s_4col mb-none FS14"><?= get_field('location') ?></p>
+                            <div class="arrow s_1col mb-none txt-right"></div>
                         </a>
                     </li>
 

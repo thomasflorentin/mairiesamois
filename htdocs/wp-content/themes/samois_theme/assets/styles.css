@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
-.wrapper { max-width: 1600px; width: calc(100% - 80px); padding-left: 250px; }
+.wrapper { max-width: 1600px; width: calc(100% - 40px); }
+
+@media (min-width: 800px) { .wrapper { padding-left: 250px; } }
+
+@media (max-width: 800px) { .wrapper { margin-right: auto; margin-left: auto; } }
 
 .hidden, .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; opacity: 0; }
 
@@ -69,7 +73,11 @@
 
 .ratio_1::after { padding-bottom: 70%; }
 
+@media (max-width: 800px) { .ratio_1 { width: 100vw; margin-left: -20px; } }
+
 .ratio_2::after { padding-bottom: 33%; }
+
+@media (max-width: 800px) { .ratio_2 { width: 100vw; margin-left: -20px; } }
 
 .grid { display: flex; flex-wrap: wrap; display: grid; grid-template-columns: repeat(12, minmax(0, calc(1fr - 20px))); grid-template-columns: repeat(12, 1fr); grid-row-gap: 0; }
 
@@ -424,18 +432,18 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .site_logo { width: 120px; }
 
-.header-container .nav-links { display: flex; align-items: baseline; margin-left: 250px; padding: 10px 0; }
+.nav-container { display: flex; align-items: baseline; margin-left: 250px; padding: 10px 0; }
 
-.header-container .nav-links > i { margin-right: 15px; }
+.nav-container i { margin-right: 15px; }
 
-.header-container .navigation-links ul li { margin: 0 30px 0 0; }
+.nav-container li { margin: 0 30px 0 0; }
 
 /* Homepage banner */
-.header-container .header-banner { overflow: hidden; height: 172px; }
+@media (min-width: 800px) { .header-banner { overflow: hidden; height: 172px; }
+  .header-banner figure { margin: 0; }
+  .header-banner figure img { width: auto; height: 100%; } }
 
-.header-container .header-banner figure { margin: 0; }
-
-.header-container .header-banner figure img { width: auto; height: 100%; }
+@media (max-width: 800px) { .header-banner { display: none; } }
 
 /* Alert bloc */
 .header-container .header-alert { padding: 30px 0px; }
@@ -499,14 +507,22 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .item_related .item_related_date { position: absolute; bottom: 0; left: 50%; transform: translate(-50%, -50%); }
 
 /* shortcuts aside */
-.shortcuts { position: fixed; max-width: 250px; padding: 20px; left: 0; }
+.shortcuts { position: fixed; padding: 20px; left: 0; transition: transform .4s; }
 
 .shortcuts hr { width: 60px; }
 
-/*
-    Structure_name aside
-*/
-.structure-infos { position: fixed; max-width: 250px; padding: 20px; right: 0; }
+@media (min-width: 800px) { .shortcuts { max-width: 250px; } }
+
+@media (max-width: 800px) { .shortcuts { transform: translateY(100vh); background-color: gray; color: white; right: 0; top: 0; bottom: 0; padding-top: 225px; } }
+
+.shortcuts.open { transform: none; }
+
+/* Structure_name aside */
+.structure-infos { position: fixed; padding: 20px; right: 0; transition: transform .4s; }
+
+@media (min-width: 800px) { .structure-infos { max-width: 250px; } }
+
+@media (max-width: 800px) { .structure-infos { transform: translateY(-100vh); background-color: rgba(255, 255, 255, 0.5); right: 0; top: 0; bottom: 0; padding-top: 225px; } }
 
 /*--------------------------------------------------------------
 # Utilities

@@ -8,8 +8,16 @@ $space_left: 250px;
 
 .wrapper {
     max-width: $max-width;
-    width: calc(100% - #{$marge_wrapper * 2});
-    padding-left: $space_left;
+    width: calc(100% - #{$marge_wrapper});
+
+    @include at-least(medium) {
+        padding-left: $space_left;
+    }
+
+    @include up-to(medium) {
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 
@@ -212,6 +220,11 @@ $marge_vbig: $marge * 8;
     &::after {
         padding-bottom: 70%;
     }
+
+    @include up-to(medium) {
+        width: 100vw;
+        margin-left: - $marge_wrapper / 2;
+    }
 }
 
 .ratio_2 {
@@ -219,5 +232,10 @@ $marge_vbig: $marge * 8;
 
     &::after {
         padding-bottom: 33%;
+    }
+    
+    @include up-to(medium) {
+        width: 100vw;
+        margin-left: - $marge_wrapper / 2;
     }
 }

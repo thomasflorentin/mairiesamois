@@ -24,11 +24,11 @@ $loop = count($posts) + 1;
                     ] ?>
 
                     <?php if ($loop === 2) : ?>
-                        <div class="m_8col mb-medium">
+                        <div class="s_12col m_8col mb-medium">
                             <?php get_template_part('components/blocs/bloc', 'post', $args); ?>
                         </div>
                     <?php else : ?>
-                        <div class="m_4col mb-medium">
+                        <div class="s_12col m_4col mb-medium">
                             <?php get_template_part('components/blocs/bloc', 'post', $args); ?>
                         </div>
                     <?php endif; ?>

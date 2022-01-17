@@ -78,9 +78,23 @@ if (is_admin_bar_showing()) : ?>
 
             <?php endif; ?>
 
-            <div class="nav-links">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-bars"></i>
+            <div class="nav-container">
+
+                <div>
+                    <ul class="flex">
+                        <li>
+                            <i class="fas fa-search"></i></li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-bars"></i>
+                                <?php print('Thématiques'); ?>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+
                 <nav id="header-navigation" class="navigation-links">
                     <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'samois'); ?></button>
                     <?php

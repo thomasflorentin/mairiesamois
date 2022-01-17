@@ -31,7 +31,7 @@
 	@else {
 	  @media (min-width: $point) { @content; }
 	}
-  }
+}
   
 @mixin up-to($point) {
 	@if $point == wide {
@@ -46,4 +46,4 @@
 	@else {
 	  @media (max-width: $point) { @content; }
 	}
-  }
+}

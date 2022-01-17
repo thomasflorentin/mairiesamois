@@ -22,20 +22,22 @@
 
 
 
-.header-container .nav-links{
+.nav-container {
     display: flex;
     align-items: baseline;
     margin-left: $space_left;
     padding: 10px 0;
+
+    i {
+        margin-right: 15px;
+    }
+
+    li {
+        margin: 0 30px 0 0;
+    }
 }
 
-.header-container .nav-links > i{
-    margin-right: 15px;
-}
 
-.header-container .navigation-links ul li{
-    margin: 0 30px 0 0;
-}
 
 
 
@@ -44,17 +46,28 @@
  Homepage banner
  */
 
-    .header-container .header-banner{
-        overflow: hidden;
-        height: 172px;
+    .header-banner {
+
+        @include at-least(medium) {
+            overflow: hidden;
+            height: 172px;
+
+            figure {
+                margin: 0;
+            }
+    
+            figure img {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        @include up-to(medium) {
+            display: none;
+        }
+
     }
-    .header-container .header-banner figure{
-        margin: 0;
-    }
-    .header-container .header-banner figure img {
-        width: auto;
-        height: 100%;
-    }
+
 
 
 /*

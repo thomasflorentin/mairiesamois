@@ -8,7 +8,7 @@ $link = $args['link'];
     <h2 class="mod_title FS42_B"><?php echo $title; ?></h2>
 
     <div class="grid">
-        <div class="mod_content FS14 m_9col">
+        <div class="mod_content FS14 s_12col m_9col">
             <?= $content; ?>
         </div>
 

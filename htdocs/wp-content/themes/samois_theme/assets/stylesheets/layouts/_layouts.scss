@@ -61,14 +61,33 @@ $space_top: 150px;
  */
 
 .shortcuts {
-    position: fixed;
-    max-width: $space_left;
+    position: fixed;  
     padding: $marge;
     left: 0;
+    transition: transform .4s;
 
     hr {
         width: 60px;
     }
+
+    @include at-least(medium) {
+        max-width: $space_left;
+    }
+
+    @include up-to(medium) {
+        transform: translateY(100vh);
+        background-color: gray;
+        color: white;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding-top: $space_top * 1.5;
+    }
+
+    &.open {
+        transform: none;
+    }
+
 }
 
 /*
@@ -77,7 +96,20 @@ $space_top: 150px;
 
 .structure-infos {
     position: fixed;
-    max-width: $space_left;
     padding: $marge;
     right: 0;
+    transition: transform .4s;
+
+    @include at-least(medium) {
+        max-width: $space_left;
+    }
+
+    @include up-to(medium) {
+        transform: translateY(-100vh);
+        background-color: rgba($color: #fff, $alpha: .5);
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding-top: $space_top * 1.5;
+    }
 }
