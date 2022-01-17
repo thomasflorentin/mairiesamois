@@ -70,8 +70,16 @@ get_template_part('components/shortcuts', '', $args);  ?>
             'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'samois') . '</span> <span class="nav-title">%title</span>',
         )
     );
-endwhile; // End of the loop.
-    ?>
+
+
+    $tags = wp_get_post_tags( $post->ID,
+        array(
+            'fields' => 'ids',
+        )
+    );
+
+
+endwhile; // End of the loop. ?>
 
     </article>
 

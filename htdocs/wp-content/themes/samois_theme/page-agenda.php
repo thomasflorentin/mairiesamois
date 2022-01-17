@@ -21,11 +21,9 @@ $args = array(
 $query = get_posts($args);
 
 $shortcuts_links = get_field('shortcuts_links');
-
 $shortcuts_args = array(
     'title' => 'Pour aller plus vite !',
 );
-
 set_query_var('links', $shortcuts_links);
 get_template_part('components/shortcuts', '', $shortcuts_args); ?>
 
@@ -68,7 +66,6 @@ get_template_part('components/shortcuts', '', $shortcuts_args); ?>
     ?>
 </ul>
 
-<?php get_template_part('components/related-post'); ?>
 
 <?php
 get_footer();

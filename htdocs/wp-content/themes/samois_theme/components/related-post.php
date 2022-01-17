@@ -1,10 +1,16 @@
 <?php
 
-$related = get_posts(array(/*'category__in' => wp_get_post_categories($post->ID),*/'numberposts' => 3, 'post__not_in' => array($post->ID), 'orderby' => 'rand',));
+$related = get_posts(array(
+    'post_type' => array('post', 'event', 'information', 'page'),
+    'numberposts' => 3, 
+    'post__not_in' => array($post->ID), 
+    'tag__in' => $tags,
+    'orderby' => 'rand',
+));
 
 if ($related) : ?>
     <div class="related-posts mt-big">
-        <h2 class="FS24_B arrow">Médias relatifs</h2>
+        <h2 class="FS24_B arrow"><?php print('A lire aussi'); ?></h2>
         <ul class="grid txt-centered">
             <?php foreach ($related as $post) :
                 setup_postdata($post); ?>

@@ -55,4 +55,11 @@ $flat_color = get_field('flat_color');
     </article>
 
 
-    <?php get_template_part('components/related-post'); ?>
+    <?php 
+    
+    $tags = wp_get_post_tags( $post->ID,
+        array(
+            'fields' => 'ids',
+        )
+    );
+    get_template_part('components/related-post'); ?>

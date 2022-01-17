@@ -13,12 +13,15 @@ $flat_color = get_field('flat_color');
 
 
 <?php
-$args = array(
-    'title' => 'Prenez un raccourci !',
-);
-$shortcuts_links = get_field('shortcuts_links');
-set_query_var('links', $shortcuts_links);
-get_template_part('components/shortcuts', '', $args);  ?>
+    $shortcuts_links = get_field('shortcuts_links');
+    if( $shortcuts_links ) {
+        $args = array(
+            'title' => 'Prenez un raccourci !',
+        );
+        set_query_var('links', $shortcuts_links);
+        get_template_part('components/shortcuts', '', $args); 
+    }
+?>
 
 
 <?php while (have_posts()) : the_post(); ?>
@@ -48,7 +51,7 @@ get_template_part('components/shortcuts', '', $args);  ?>
             <div class="grid mb-medium">
                 <div class="s_12col m_7col col_start_2">
                     <h1 class="FS42_B"><?php the_title(); ?></h1>
-                    <div class="FS16"><?php the_excerpt(); ?></div>
+                    <div class=" FS18_B"><?php the_excerpt(); ?></div>
                 </div>
             </div>
 
@@ -56,7 +59,7 @@ get_template_part('components/shortcuts', '', $args);  ?>
 
 
         <div class="grid">
-            <div class="s_12col m_7col copy FS18_B">
+            <div class="s_12col m_7col copy FS16">
                 <?= get_the_content(); ?>
             </div>
         </div>
@@ -70,13 +73,22 @@ get_template_part('components/shortcuts', '', $args);  ?>
             'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'samois') . '</span> <span class="nav-title">%title</span>',
         )
     );
+    
+    $tags = wp_get_post_tags( $post->ID,
+        array(
+            'fields' => 'ids',
+        )
+    );
+
 endwhile; // End of the loop.
     ?>
 
     </article>
 
 
-    <?php get_template_part('components/related-post'); ?>
+    <?php 
+    set_query_var('tags', $tags );
+    get_template_part('components/related-post'); ?>
 
     <?php
     get_footer();
