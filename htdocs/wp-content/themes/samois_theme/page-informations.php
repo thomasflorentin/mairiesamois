@@ -11,17 +11,16 @@
  */
 
 get_header();
-$shortcuts_links = get_field('shortcuts_links');
 ?>
 
 
 <?php
 $args = array(
-    'title' => 'Pour aller plus vite !',
-    'list'  => $shortcuts_links
+    'title' => 'Prenez un raccourci !',
 );
-
-get_template_part('components/shortcuts', '', $args); ?>
+$shortcuts_links = get_field('shortcuts_links');
+set_query_var('links', $shortcuts_links);
+get_template_part('components/shortcuts', '', $args);  ?>
 
 
 <?php while (have_posts()) : the_post(); ?>

@@ -19,7 +19,7 @@ function information_register_post_types() {
         'has_archive' => true,
         'supports' => array( 'title', 'editor','thumbnail','custom-fields','excerpt','page-attributes' ),
         'taxonomies' => array('category', 'post_tag'),
-        'rewrite' => array('slug' => 'information','with_front' => false),
+        'rewrite' => array('slug' => 'informations','with_front' => true),
         'menu_position' => 5, 
         'menu_icon' => 'dashicons-info',
         'show_ui' => true,

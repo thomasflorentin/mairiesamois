@@ -11,7 +11,6 @@
  */
 
 get_header();
-$shortcuts_links = get_field('shortcuts_links');
 
 $args = array(
     'post_type' => 'event',
@@ -21,13 +20,14 @@ $args = array(
 );
 $query = get_posts($args);
 
-$args1 = array(
+$shortcuts_links = get_field('shortcuts_links');
+
+$shortcuts_args = array(
     'title' => 'Pour aller plus vite !',
-    'list'  => $shortcuts_links
 );
 
-set_query_var('maList', $args1);
-get_template_part('components/shortcuts', '', $args1); ?>
+set_query_var('links', $shortcuts_links);
+get_template_part('components/shortcuts', '', $shortcuts_args); ?>
 
 
 <h1 class="FS42_B"><?= the_title() ?></h1>

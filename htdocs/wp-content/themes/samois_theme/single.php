@@ -12,7 +12,13 @@ $flat_color = get_field('flat_color');
 ?>
 
 
-<?php get_template_part('components/shortcuts'); ?>
+<?php
+$args = array(
+    'title' => 'Prenez un raccourci !',
+);
+$shortcuts_links = get_field('shortcuts_links');
+set_query_var('links', $shortcuts_links);
+get_template_part('components/shortcuts', '', $args);  ?>
 
 
 <?php while (have_posts()) : the_post(); ?>

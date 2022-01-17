@@ -39,7 +39,7 @@ $flat_color = get_field('flat_color');
             <div class="grid mb-medium">
                 <div class="s_12col m_7col col_start_2">
                     <h1 class="FS42_B"><?php the_title(); ?></h1>
-                    <div class="FS16"><?php the_excerpt(); ?></div>
+                    <div class="FS18_B"><?php the_excerpt(); ?></div>
                 </div>
             </div>
 
@@ -47,7 +47,7 @@ $flat_color = get_field('flat_color');
 
 
         <div class="grid">
-            <div class="s_12col m_7col copy FS18_B">
+            <div class="s_12col m_7col copy FS16">
                 <?= get_the_content(); ?>
             </div>
         </div>

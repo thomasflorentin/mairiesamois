@@ -492,7 +492,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-.breadcrumb { background: gray; padding-left: 250px; }
+.breadcrumb { padding-left: 250px; background: #e8e8e8; color: #909090; position: fixed; left: 0; right: 0; top: 141px; }
 
 .site-main { margin-top: 200px; }
 
