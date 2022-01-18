@@ -6,28 +6,41 @@ function init() {
 
 
 
-    /*
-     * VARIABLES
-     */
+    const app = {
 
-    const $body = document.querySelector('body');
-    const $main = document.querySelector('#page');
+        /*
+         * PARAMETRES
+         */
+
+        body: document.querySelector('body'),
+        main: document.querySelector('#page'),
+
+        dropdownBtn: document.querySelector('#js-toggleDropdown'),
+        dropdownMenu: document.querySelector('#nav_thematiques'),
+
+        searchbarBtn: document.querySelector('#js-toggleSearchbar'),
+        searchbarElement: document.querySelector('#searchbar_wrapper'),
 
 
 
 
-    /*
-     * FONCTIONS
-     */
+        /*
+         * METHODES
+         */
 
-    function toggleElement(e, el) {
-        e.preventDefault();
-        console.log('toggleElement');
+        toggleElement: function(e, el) {
 
-        el.classList.toggle('open');
-        $body.classList.toggle('el_toggled');
+            e.preventDefault();
+            console.log('toggleElement');
+    
+            el.classList.toggle('open');
+            app.body.classList.toggle('el_toggled');
+    
+        },
 
     }
+
+
 
 
 
@@ -35,13 +48,8 @@ function init() {
      * LISTENERS
      */
 
-    const $dropdownBtn = document.querySelector('#js-toggleDropdown');
-    const $ddMenu = document.querySelector('#nav_thematiques');
-    $dropdownBtn.addEventListener('click', (e) => toggleElement(e, $ddMenu) );
-
-    const $searchbarBtn = document.querySelector('#js-toggleSearchbar');
-    const $searchbarElement = document.querySelector('#searchbar_wrapper');
-    $searchbarBtn.addEventListener('click', (e) => toggleElement(e, $searchbarElement) );
+    app.dropdownBtn.addEventListener('click', (e) => app.toggleElement(e, app.dropdownMenu) );
+    app.searchbarBtn.addEventListener('click', (e) => app.toggleElement(e, app.searchbarElement) );
 
 
     // todo: A faire fonctionner : fermer le menu quand on clique sur la page
@@ -54,10 +62,11 @@ function init() {
     // })
 
 
-
     
 
 }
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => init() )

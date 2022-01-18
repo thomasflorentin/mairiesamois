@@ -4,7 +4,9 @@
         <div class="">
              <?php 
                 
-                $GLOBALS['wp_query']->max_num_pages = $posts->max_num_pages;
+                if( isset($GLOBALS['wp_query']) ) {
+                    $GLOBALS['wp_query']->max_num_pages = $posts->max_num_pages;
+                }
 
                 the_posts_pagination( array(
                    'mid_size' => 1,

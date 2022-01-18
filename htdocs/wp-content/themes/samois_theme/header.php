@@ -142,4 +142,4 @@ if (is_admin_bar_showing()) : ?>
 
         
 
-        <main id="primary" class="site-main wrapper <?= $post_slug ?>">
+        <main id="primary" class="site-main wrapper">
