@@ -47,70 +47,95 @@ if (is_admin_bar_showing()) : ?>
 
         <header id="masthead" class="header-container">
 
-            <div class="header-branding">
-                <figure>
-                    <a href="<?php echo esc_url(home_url('/')); ?>">
-                        <img src="<?= $website_logo ?>" alt="" class="site_logo">
-                    </a>
-                </figure>
-            </div><!-- #site-logo -->
+            <div class="header_inner">
+                <div class="header-branding">
+                    <figure>
+                        <a href="<?php echo esc_url(home_url('/')); ?>">
+                            <img src="<?= $website_logo ?>" alt="" class="site_logo">
+                        </a>
+                    </figure>
+                </div><!-- #site-logo -->
 
 
-            <div class="wrapper">
-                <div class="header-alert fl-end">
-                    <?= ($alert_post) ? "<div class='alert-container field_alert'><a href='$alert_post->guid'>[ALERTE] $alert_post->post_title</a><i class='fas fa-arrow-right'></i></div>" : "" ?>
-                </div><!-- #site-alert -->
+                <div class="wrapper">
+                    <div class="header-alert fl-end">
+                        <?= ($alert_post) ? "<div class='alert-container field_alert'><a href='$alert_post->guid'>[ALERTE] $alert_post->post_title</a><i class='fas fa-arrow-right'></i></div>" : "" ?>
+                    </div><!-- #site-alert -->
+                </div>
+
+
+                <?php if (is_front_page() && $header_banner) : ?>
+
+                    <div class="header-banner">
+                        <figure>
+                            <img src="<?= $header_banner ?>" alt="">
+                        </figure>
+                    </div>
+
+                <?php endif; ?>
+
+
+
+                <div class="nav-container">
+
+                    <div>
+                        <ul class="flex">
+                            <li>
+                                <a href="#" id="js-toggleSearchbar" role="button">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="js-toggleDropdown" role="button">
+                                    <i class="fas fa-bars"></i>
+                                    <?php print('Thématiques'); ?>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+
+
+                    <nav id="header-navigation" class="navigation-links">
+                        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'samois'); ?></button>
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location'    => 'primary-menu',
+                                'menu_class'        => 'flex'
+                            )
+                        );
+                        ?>
+                    </nav><!-- #site-navigation -->
+
+
+
+                    <div class="header-link">
+                        <?= ($mail) ? "<a target=\"_blank\" href=\"mailto: $mail\"><i class=\"fas fa-envelope\"></i></a>" : "" ?>
+                        <?= ($facebook_link) ? "<a target=\"_blank\" href=\"$facebook_link\"><i class=\"fab fa-facebook-square\"></i></a>" : "" ?>
+                    </div><!-- #site-link-contact -->
+
+                </div><!-- .nav-container -->
+
             </div>
 
-            <?php if (is_front_page() && $header_banner) : ?>
 
-                <div class="header-banner">
-                    <figure>
-                        <img src="<?= $header_banner ?>" alt="">
-                    </figure>
-                </div>
-
-            <?php endif; ?>
-
-            <div class="nav-container">
-
-                <div>
-                    <ul class="flex">
-                        <li>
-                            <i class="fas fa-search"></i></li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-bars"></i>
-                                <?php print('Thématiques'); ?>
-                            </a>
-                        </li>
-                    </ul>
-                    
-                </div>
-
-
-                <nav id="header-navigation" class="navigation-links">
-                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'samois'); ?></button>
-                    <?php
-                    wp_nav_menu(
-                        array(
-                            'theme_location'    => 'primary-menu',
-                            'menu_class'        => 'flex'
-                        )
-                    );
+            <nav id="nav_thematiques" class="nav_thematiques">
+                <div class="wrapper">
+                    <?php 
+                        wp_nav_menu(
+                            array(
+                                'theme_location'    => 'primany-dropdown-men',
+                                'menu_class'        => 'fl-justify'
+                            )
+                        );
                     ?>
-                </nav><!-- #site-navigation -->
+                </div>
+            </nav>
 
-                <div class="header-link">
-                    <?= ($mail) ? "<a target=\"_blank\" href=\"mailto: $mail\"><i class=\"fas fa-envelope\"></i></a>" : "" ?>
-                    <?= ($facebook_link) ? "<a target=\"_blank\" href=\"$facebook_link\"><i class=\"fab fa-facebook-square\"></i></a>" : "" ?>
-                </div><!-- #site-link-contact -->
-
-            </div><!-- .nav-container -->
-
-
-
-
+            <nav id="searchbar_wrapper" class="searchbar_wrapper">
+                <?php get_search_form(); ?>
+            </nav>
            
 
         </header><!-- #masthead -->

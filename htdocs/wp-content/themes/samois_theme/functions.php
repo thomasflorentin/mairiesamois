@@ -53,7 +53,7 @@ if (!function_exists('samois_setup')) :
         register_nav_menus(
             array(
                 'primary-menu' => esc_html__('Menu primaire', 'samois'),
-                'primany-dropdown-men' => esc_html__('Menu primaire Drop-down', 'samois')
+                'primany-dropdown-men' => esc_html__('Menu Thématiques', 'samois')
             )
         );
         /*
@@ -106,16 +106,26 @@ if (!function_exists('samois_setup')) :
 endif;
 add_action('after_setup_theme', 'samois_setup');
 
-/**
- * Enqueue scripts and styles.
- */
-function samois_scripts()
-{
-    wp_enqueue_style('samois-style', get_template_directory_uri() . '/assets/styles.css', array(), _S_VERSION);
 
-    wp_enqueue_script('samois-scripts', get_template_directory_uri() . '/main.min.js', array(), _S_VERSION, true);
+
+/**
+ * Never worry about cache again!
+ */
+function my_load_scripts($hook) {
+ 
+    // create my own version codes
+    // $my_js_ver  = date("ymd-Gis", filemtime( get_template_directory_uri() . '/assets/main.min.js' ) );
+    // $my_css_ver = date("ymd-Gis", filemtime( get_template_directory_uri() . '/assets/styles.css' ) );
+    $my_js_ver  = '220118';
+    $my_css_ver = '220118';
+    // 
+    wp_enqueue_script( 'my_js', get_template_directory_uri() . '/assets/main.min.js', array(), $my_js_ver );
+    wp_register_style( 'my_css', get_template_directory_uri() . '/assets/styles.css', false,   $my_css_ver );
+    wp_enqueue_style ( 'my_css' );
+ 
 }
-add_action('wp_enqueue_scripts', 'samois_scripts');
+add_action('wp_enqueue_scripts', 'my_load_scripts');
+
 
 /**
  * Implement the Custom Header feature.
