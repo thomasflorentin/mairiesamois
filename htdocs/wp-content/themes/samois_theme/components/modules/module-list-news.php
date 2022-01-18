@@ -8,7 +8,7 @@ $loop = count($posts) + 1;
 
 <section class="mod_featured">
 
-    <h2 class="mod_title arrow FS24_B"><?php echo $title; ?></h2>
+    <a href="/actualites" class="mod_title arrow FS24_B"><?php echo $title; ?></a>
 
 
     <div class="mod_list">

@@ -9,19 +9,7 @@ get_header();
 $imgs = get_field('single_img');
 $flat_color = get_field('flat_color');
 
-?>
-
-
-<?php
-$args = array(
-    'title' => 'Prenez un raccourci !',
-);
-$shortcuts_links = get_field('shortcuts_links');
-set_query_var('links', $shortcuts_links);
-get_template_part('components/shortcuts', '', $args);  ?>
-
-
-<?php while (have_posts()) : the_post();
+while (have_posts()) : the_post();
 
     set_query_var('root', $root);
     get_template_part('components/content', 'page');
