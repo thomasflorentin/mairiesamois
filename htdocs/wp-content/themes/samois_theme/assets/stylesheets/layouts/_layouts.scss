@@ -56,6 +56,10 @@ $space_top: 200px;
     position: relative;
     padding: 0 $marge / 1.5 $marge / 1.5 $marge / 1.5;
 
+    @include up-to(medium) {
+        margin-bottom: $marge_medium;
+    }
+
     .item_related_type {
         width: 50%;
         background: $white;

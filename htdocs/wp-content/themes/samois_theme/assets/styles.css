@@ -506,6 +506,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .item_related { background: gray; position: relative; padding: 0 13.33333px 13.33333px 13.33333px; }
 
+@media (max-width: 800px) { .item_related { margin-bottom: 40px; } }
+
 .item_related .item_related_type { width: 50%; background: white; margin: auto; }
 
 .item_related .item_related_date { position: absolute; bottom: 0; left: 50%; transform: translate(-50%, -50%); }
@@ -525,7 +527,9 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .hp_right { width: 350px; }
 
-/* Structure_name aside */
+/*
+    Structure_name aside
+*/
 .structure-infos { padding: 20px; transition: transform .4s; position: sticky; top: 400px; }
 
 @media (max-width: 800px) { .structure-infos { transform: translateY(-100vh); background-color: rgba(255, 255, 255, 0.5); position: fixed; left: 0; right: 0; top: 0; bottom: 0; padding-top: 300px; } }
