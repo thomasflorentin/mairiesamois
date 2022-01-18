@@ -1,17 +1,16 @@
 <?php
 $imgs = get_field('single_img');
 $flat_color = get_field('flat_color');
-?>
 
-
-<?php
-$shortcuts_links = get_field('shortcuts_links', $root);
+/* $shortcuts_links = get_field('shortcuts_links', $root);
 $shortcuts_args = array(
     'title' => 'Pour aller plus vite !',
 );
 
 set_query_var('links', $shortcuts_links);
-get_template_part('components/shortcuts', '', $shortcuts_args); ?>
+get_template_part('components/shortcuts', '', $shortcuts_args);  */
+
+?>
 
 
 <article>
