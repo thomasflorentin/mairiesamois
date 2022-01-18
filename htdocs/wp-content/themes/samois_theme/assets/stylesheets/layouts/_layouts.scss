@@ -23,6 +23,7 @@ $space_top: 200px;
         @include at-least(medium) {
             margin-top: $space_top * 2;
         }
+
         @include up-to(medium) {
             margin-top: $space_top;
         }
@@ -32,10 +33,12 @@ $space_top: 200px;
 // Single post
 
 .single_post {
-    .container-title-post {
-        margin-left: -130px;
-        z-index: 100;
-        background: $white;
+    @include at-least(medium) {
+        .container-title-post {
+            margin-left: -130px;
+            z-index: 100;
+            background: $white;
+        }
     }
 }
 
@@ -79,7 +82,7 @@ $space_top: 200px;
  */
 
 .shortcuts {
-    position: fixed;  
+    position: fixed;
     padding: $marge;
     left: 0;
     transition: transform .4s;

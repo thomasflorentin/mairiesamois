@@ -500,7 +500,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (max-width: 800px) { .home .site-main { margin-top: 200px; } }
 
-.single_post .container-title-post { margin-left: -130px; z-index: 100; background: white; }
+@media (min-width: 800px) { .single_post .container-title-post { margin-left: -130px; z-index: 100; background: white; } }
 
 .item_title { display: block; margin-left: auto; margin-right: auto; background: white; margin-top: -60px; padding: 20px; position: relative; z-index: 9999; width: 75%; }
 
