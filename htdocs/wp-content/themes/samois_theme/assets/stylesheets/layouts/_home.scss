@@ -1,18 +1,16 @@
-
-
-
-
 .hp_left {
-    width: calc( 100% - 400px ); 
 
-    @include at-least(medium) {
+    @include at-least(medium) {
+        width: calc(100% - 400px);
     }
 }
 
 .hp_right {
-    width: 350px; 
-    @include at-least(medium) {
+
+    @include at-least(medium) {
+        width: 350px;
     }
+
 }
 
 
