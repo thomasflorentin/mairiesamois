@@ -404,7 +404,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .field, .field_default, .wpcf7-form-control, .field_alert { display: flex; justify-content: space-between; align-items: center; padding: 5px 10px; border-radius: 15px; }
 
-.field_default, .wpcf7-form-control { border: 1px solid black !important; }
+.field_default, .wpcf7-form-control { border: 1px solid black !important; background: white; }
 
 .field_alert { background-color: yellow; }
 
@@ -416,16 +416,29 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /* DROPDOWN THÉMATIQUES */
 .nav_thematiques { position: absolute; padding: 40px 0; left: 0; right: 0; background-color: blue; transform: translateY(-100%); transition: transform .4s; z-index: 99999; }
 
+.nav_thematiques a { color: white; }
+
+.nav_thematiques a:hover { text-decoration: underline; }
+
 .nav_thematiques.open { transform: none; }
 
 @media (max-width: 800px) { .nav_thematiques { height: 100vh; }
-  .nav_thematiques ul { flex-direction: column; color: white; } }
+  .nav_thematiques ul { flex-direction: column; } }
 
-.nav_thematiques .menu-item-has-children { border-bottom: 1px solid white; padding: 20px 0; }
+.nav_thematiques .menu-item-has-children { padding: 20px 0; }
+
+@media (max-width: 800px) { .nav_thematiques .menu-item-has-children { border-bottom: 1px solid white; } }
+
+@media (min-width: 800px) { .nav_thematiques .menu-item-has-children { flex: 1; text-align: center; }
+  .nav_thematiques .menu-item-has-children:not(:last-child) { border-right: 1px solid #ffffff63; } }
 
 .nav_thematiques .menu-item-has-children > a { font-size: 2rem; }
 
-.nav_thematiques .sub-menu a { font-size: 1.6rem; padding: 5px 20px; display: inline-block; }
+.nav_thematiques .sub-menu a { font-size: 1.6rem; display: inline-block; }
+
+@media (max-width: 800px) { .nav_thematiques .sub-menu a { padding: 5px 20px; } }
+
+@media (min-width: 800px) { .nav_thematiques .sub-menu a { padding: 5px 0; } }
 
 .searchbar_wrapper { position: absolute; padding: 40px 0; opacity: 0; transform: scale(0); left: 250px; transition: opacity .4s; z-index: 9999; }
 

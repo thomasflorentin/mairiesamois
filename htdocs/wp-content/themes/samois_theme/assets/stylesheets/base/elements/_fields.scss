@@ -53,6 +53,7 @@ button {
 .field_default, .wpcf7-form-control  {
 	@extend .field;
 	border: 1px solid black !important;
+	background: white;
 }
 .field_alert {
 	@extend .field;

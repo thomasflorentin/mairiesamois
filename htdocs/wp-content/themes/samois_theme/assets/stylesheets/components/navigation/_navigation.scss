@@ -17,6 +17,14 @@
 	transition: transform .4s;
     z-index: 99999;
 
+	a {
+		color: white;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
 	&.open {
 		transform: none;
 	}
@@ -26,15 +34,26 @@
 
 		ul {
 			flex-direction: column;
-			color: white;
 		}
+		
 	}
 
 	.menu-item-has-children {
-		
-		border-bottom: 1px solid white;
 		padding: $marge 0;
 
+		@include up-to(medium) {
+			border-bottom: 1px solid white;
+		}
+
+		@include at-least(medium) {
+			flex: 1;
+			text-align: center;
+
+			&:not(:last-child) {
+				border-right: 1px solid #ffffff63;
+			}
+		}
+		
 		& > a {
 			font-size: 2rem;
 		}
@@ -44,8 +63,14 @@
 
 		a {
 			font-size: 1.6rem;
-			padding: 5px 20px;
 			display: inline-block;
+
+			@include up-to(medium) {
+				padding: 5px 20px;
+			}
+			@include at-least(medium) {
+				padding: 5px 0;
+			}
 		}
 	}
 }
