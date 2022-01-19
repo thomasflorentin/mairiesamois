@@ -27,8 +27,8 @@ $useful_links = get_field('util_link', 'options')
                     
                     <nav class="m_6col search-link FS14">
                         <ul class=" fl-col">
-                            <li><a href="" class="p1 btn_inline">Posez vos questions en ligne</a></li>
-                            <li><a href="" class="p1 btn_inline">Questions fréquement posées</a></li>
+                            <li><a href="/contact" class="p1 btn_inline">Posez vos questions en ligne</a></li>
+                            <li><a href="/faq" class="p1 btn_inline">Questions fréquement posées</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -132,6 +132,34 @@ $useful_links = get_field('util_link', 'options')
             </div>
 
         </footer>
+
+
+        <?php 
+            $alert_post = get_field('alert', 'option');
+        ?>
+
+        <nav id="footer_menu" class="footer_menu m_hide">
+            <ul class="fl-justify">
+                <li>
+                    <a href="">Insta</a>
+                </li>
+                <li>
+                    <a href="">Fb</a>
+                </li>
+
+                <li>
+                    <a href="/actualites"><?php printf('Actualités'); ?></a>
+                </li>
+
+                <li>
+                    <a href="<?php echo $alert_post->guid; ?>"><?php printf('[ALERTE]'); ?> <i class='fas fa-arrow-right'></i></a>
+                </li>
+
+                <li>
+                    <a href="#" id="js-shortcutsBtn">Prenez un raccourci</a>
+                </li>
+            </ul>
+        </nav>
 
     </div><!-- #page -->
 

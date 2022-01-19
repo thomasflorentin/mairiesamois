@@ -48,17 +48,18 @@ if (is_admin_bar_showing()) : ?>
         <header id="masthead" class="header-container">
 
             <div class="header_inner">
+
                 <div class="header-branding">
-                    <figure>
-                        <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <figure class="fl-vcentered">
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="fl-vcentered">
                             <img src="<?= $website_logo ?>" alt="" class="site_logo">
                         </a>
                     </figure>
                 </div><!-- #site-logo -->
 
 
-                <div class="wrapper">
-                    <div class="header-alert fl-end">
+                <div class="wrapper s_hide m_show">
+                    <div class="header-alert fl-end fl-hcentered">
                         <?= ($alert_post) ? "<div class='alert-container field_alert'><a href='$alert_post->guid'>[ALERTE] $alert_post->post_title</a><i class='fas fa-arrow-right'></i></div>" : "" ?>
                     </div><!-- #site-alert -->
                 </div>
@@ -78,7 +79,7 @@ if (is_admin_bar_showing()) : ?>
 
                 <div class="nav-container">
 
-                    <div>
+                    <div class="nav-upper">
                         <ul class="flex">
                             <li>
                                 <a href="#" id="js-toggleSearchbar" role="button">
@@ -86,9 +87,9 @@ if (is_admin_bar_showing()) : ?>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" id="js-toggleDropdown" role="button">
+                                <a href="#" id="js-toggleDropdown" role="button" class="">
                                     <i class="fas fa-bars"></i>
-                                    <?php print('Thématiques'); ?>
+                                    <span class="s_hide m_show"><?php print('Thématiques'); ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -97,7 +98,6 @@ if (is_admin_bar_showing()) : ?>
 
 
                     <nav id="header-navigation" class="navigation-links">
-                        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'samois'); ?></button>
                         <?php
                         wp_nav_menu(
                             array(

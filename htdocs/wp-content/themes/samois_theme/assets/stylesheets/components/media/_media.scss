@@ -11,3 +11,12 @@
 .custom-logo-link {
 	display: inline-block;
 }
+
+
+.m_full {
+	@include up-to(medium) {
+		width: 100vw;
+		max-width: none;
+		margin-left: - $marge
+	}
+}

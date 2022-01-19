@@ -21,6 +21,9 @@ function init() {
         searchbarBtn: document.querySelector('#js-toggleSearchbar'),
         searchbarElement: document.querySelector('#searchbar_wrapper'),
 
+        shortcutsBtn: document.querySelector('#js-shortcutsBtn'),
+        shortcuts: document.querySelector('#shortcuts'),
+
 
 
 
@@ -50,6 +53,7 @@ function init() {
 
     app.dropdownBtn.addEventListener('click', (e) => app.toggleElement(e, app.dropdownMenu) );
     app.searchbarBtn.addEventListener('click', (e) => app.toggleElement(e, app.searchbarElement) );
+    app.shortcutsBtn.addEventListener('click', (e) => app.toggleElement(e, app.shortcuts) );
 
 
     // todo: A faire fonctionner : fermer le menu quand on clique sur la page
