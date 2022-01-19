@@ -402,9 +402,9 @@ textarea { width: 100%; }
 
 button { border: none; padding: 0; margin: 0; background: none; }
 
-.field, .field_default, .field_alert { display: flex; justify-content: space-between; align-items: center; padding: 5px 10px; border-radius: 15px; }
+.field, .field_default, .wpcf7-form-control, .field_alert { display: flex; justify-content: space-between; align-items: center; padding: 5px 10px; border-radius: 15px; }
 
-.field_default { border: 1px solid black; }
+.field_default, .wpcf7-form-control { border: 1px solid black !important; }
 
 .field_alert { background-color: yellow; }
 
