@@ -516,6 +516,9 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .number-rescue { margin-right: 40px; }
 
+/* FOOTER MOBILE MENU */
+.footer_menu { position: fixed; padding: 10px 20px; bottom: 0; left: 0; right: 0; background-color: white; box-shadow: 0 -4px 6px -2px #8685855e; z-index: 99999; }
+
 /* Media
 --------------------------------------------- */
 .page-content .wp-smiley, .entry-content .wp-smiley, .comment-content .wp-smiley { border: none; margin-bottom: 0; margin-top: 0; padding: 0; }
