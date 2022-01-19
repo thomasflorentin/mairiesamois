@@ -1,16 +1,8 @@
 <?php
-$imgs = get_field('single_img');
-$flat_color = get_field('flat_color');
+    $imgs = get_field('single_img');
 
-/* $shortcuts_links = get_field('shortcuts_links', $root);
-$shortcuts_args = array(
-    'title' => 'Pour aller plus vite !',
-);
-
-set_query_var('links', $shortcuts_links);
-get_template_part('components/shortcuts', '', $shortcuts_args);  */
-
-?>
+    // CALLING THE BREADCRUMB MODULE 
+    get_template_part('components/modules/module', 'breadcrumbs'); ?>
 
 
 <article>
@@ -62,4 +54,5 @@ $tags = wp_get_post_tags(
         'fields' => 'ids',
     )
 );
+set_query_var('tags', $tags);
 get_template_part('components/related-post'); ?>

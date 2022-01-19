@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
 .wrapper { max-width: 1600px; width: calc(100% - 40px); }
 
@@ -412,6 +413,15 @@ button { border: none; padding: 0; margin: 0; background: none; }
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
+/* DROPDOWN THÉMATIQUES */
+.nav_thematiques { position: absolute; padding: 40px 0; left: 0; right: 0; background-color: rgba(136, 136, 136, 0.8); transform: translateY(-100%); transition: transform .4s; z-index: 99999; }
+
+.nav_thematiques.open { transform: none; }
+
+.searchbar_wrapper { position: absolute; padding: 40px 0; opacity: 0; transform: scale(0); left: 250px; transition: opacity .4s; z-index: 9999; }
+
+.searchbar_wrapper.open { opacity: 1; transform: none; }
+
 /* Small menu. */
 .menu-toggle, .main-navigation.toggled ul { display: block; }
 
@@ -426,26 +436,30 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next { text-align: end; flex: 1 0 50%; }
 
+/* Généralité HEADER */
 .header-container { position: fixed; /* Set the navbar to fixed position */ top: 0px; /* Position the navbar at the top of the page */ width: 100%; /* Full width */ box-shadow: 0 4px 2px -2px gray; background-color: white; z-index: 999999; }
 
-.header-container .header-branding { position: absolute; top: 13px; left: 60px; }
+.header_inner { background-color: white; position: relative; z-index: 999999; }
+
+.header-branding { position: absolute; top: 13px; left: 60px; }
 
 .site_logo { width: 120px; }
 
+/* NAVIGATION PRINCIPALE (3-4 entrées) */
 .nav-container { display: flex; align-items: baseline; margin-left: 250px; padding: 10px 0; }
 
 .nav-container i { margin-right: 15px; }
 
 .nav-container li { margin: 0 30px 0 0; }
 
-/* Homepage banner */
+/* HOMMEPAGE BANNIERE */
 @media (min-width: 800px) { .header-banner { overflow: hidden; height: 172px; }
   .header-banner figure { margin: 0; }
   .header-banner figure img { width: auto; height: 100%; } }
 
 @media (max-width: 800px) { .header-banner { display: none; } }
 
-/* Alert bloc */
+/* BLOC ALERT */
 .header-container .header-alert { padding: 30px 0px; }
 
 .header-alert .alert-container { min-width: 50%; }

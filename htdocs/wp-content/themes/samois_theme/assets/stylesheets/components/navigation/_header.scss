@@ -1,4 +1,8 @@
 
+/*
+ Généralité HEADER
+ */
+
 .header-container{
     position: fixed; /* Set the navbar to fixed position */
     top: 0px; /* Position the navbar at the top of the page */
@@ -8,7 +12,13 @@
     z-index: 999999;
 }
 
-.header-container .header-branding{
+.header_inner {
+    background-color: white;
+    position: relative;
+    z-index: 999999;
+}
+
+.header-branding {
     position: absolute;
     top: 13px;
     left: 60px;
@@ -21,6 +31,9 @@
 
 
 
+/*
+ NAVIGATION PRINCIPALE (3-4 entrées)
+ */
 
 .nav-container {
     display: flex;
@@ -41,9 +54,8 @@
 
 
 
-
 /*
- Homepage banner
+ HOMMEPAGE BANNIERE
  */
 
     .header-banner {
@@ -71,7 +83,7 @@
 
 
 /*
- Alert bloc
+ BLOC ALERT
  */
 
     .header-container .header-alert {

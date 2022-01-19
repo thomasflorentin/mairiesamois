@@ -14,11 +14,11 @@ get_header();
 
     <?php if (have_posts()) : ?>
 
-        <header class="page-header">
+        <header class="page-header mb-large">
             <h1 class="page-title">
                 <?php
                 /* translators: %s: search query. */
-                printf(esc_html__('Search Results for: %s', 'samois'), '<span>' . get_search_query() . '</span>');
+                printf(esc_html__('Résultats pour votre recherche : %s', 'samois'), '<span><em>' . get_search_query() . '</em></span>');
                 ?>
             </h1>
         </header><!-- .page-header -->
@@ -32,9 +32,20 @@ get_header();
 
                 the_posts_navigation();
 
-            else :
+            else : ?>
+                
+                <div class="mb-big">
+                    <h1>Nous n'avons trouvé aucun résultat...</h1>
+                    <p>Ne perdons pas espoir :) ! Réessayez avec un autre terme.</p>
 
-                printf('Rien trouvé...');
+                    <?php get_search_form(); ?>
+                </div>
+
+                <a href="/actualites" class="mod_title arrow FS24_B">
+                    <?php print('L\'actualité'); ?>
+                </a>
+
+                <?php get_template_part('components/archives/archive', 'news');
 
             endif; ?>
 
