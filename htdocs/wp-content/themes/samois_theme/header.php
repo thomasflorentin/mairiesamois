@@ -48,9 +48,10 @@ if (is_admin_bar_showing()) : ?>
         <header id="masthead" class="header-container">
 
             <div class="header_inner">
+
                 <div class="header-branding">
-                    <figure>
-                        <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <figure class="fl-vcentered">
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="fl-vcentered">
                             <img src="<?= $website_logo ?>" alt="" class="site_logo">
                         </a>
                     </figure>

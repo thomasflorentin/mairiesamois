@@ -92,7 +92,7 @@ $space_top: 200px;
     }
 
     @include at-least(medium) {
-        max-width: $space_left;
+        width: $space_left;
     }
 
     @include up-to(medium) {
