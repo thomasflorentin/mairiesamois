@@ -597,6 +597,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .shortcuts.open { transform: none; }
 
+.structure-infos { background-color: gray; color: white; border-radius: 15px; }
+
 @media (min-width: 800px) { .hp_left { width: calc(100% - 400px); } }
 
 @media (min-width: 800px) { .hp_right { width: 350px; } }
