@@ -12,13 +12,41 @@
 	padding: 40px 0;
 	left: 0;
 	right: 0;
-	background-color: rgba($color: #888, $alpha: .8);
+	background-color: $secondary_color;
 	transform: translateY(-100%);
 	transition: transform .4s;
     z-index: 99999;
 
 	&.open {
 		transform: none;
+	}
+
+	@include up-to(medium) {
+		height: 100vh;
+
+		ul {
+			flex-direction: column;
+			color: white;
+		}
+	}
+
+	.menu-item-has-children {
+		
+		border-bottom: 1px solid white;
+		padding: $marge 0;
+
+		& > a {
+			font-size: 2rem;
+		}
+	}
+
+	.sub-menu {
+
+		a {
+			font-size: 1.6rem;
+			padding: 5px 20px;
+			display: inline-block;
+		}
 	}
 }
 

@@ -5,13 +5,19 @@ $space_top: 200px;
 // Breadcrumb
 
 .breadcrumb {
-    padding-left: $space_left;
     background: #e8e8e8;
     color: #909090;
     position: fixed;
     left: 0;
     right: 0;
-    top: 141px;
+    @include at-least(medium) {
+        padding-left: $space_left;
+        top: 141px;
+    }
+    @include up-to(medium) {
+        padding-left: 125px;
+        top: 106px;
+    }
 }
 
 // Main
