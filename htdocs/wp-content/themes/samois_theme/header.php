@@ -111,7 +111,7 @@ if (is_admin_bar_showing()) : ?>
 
 
                     <div class="header-link">
-                        <?= ($mail) ? "<a target=\"_blank\" href=\"mailto: $mail\"><i class=\"fas fa-envelope\"></i></a>" : "" ?>
+                        <?= ($mail) ? "<a href=\"mailto: $mail\"><i class=\"fas fa-envelope\"></i></a>" : "" ?>
                         <?= ($facebook_link) ? "<a target=\"_blank\" href=\"$facebook_link\"><i class=\"fab fa-facebook-square\"></i></a>" : "" ?>
                     </div><!-- #site-link-contact -->
 
