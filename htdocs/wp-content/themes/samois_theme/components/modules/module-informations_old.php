@@ -18,7 +18,7 @@ $the_query = new WP_Query($args); ?>
 <div class="<?= $c->slug ?> s_5col page_item mb-big">
 
     <?php if ($img) : ?>
-        <figure class="ratio_1 item_cover">
+        <figure class="ratio_1 m_full item_cover">
             <div class="inner">
                 <img src="<?= $img ?>" alt="">
             </div>

@@ -2,9 +2,9 @@
     <a href="<?= get_the_permalink(); ?>">
         <?php if (has_post_thumbnail()) : ?>
             <?php if (is_front_page()) : ?>
-                <figure class="<?= ($args['loop'] == 2) ? 'ratio_2' : 'ratio_1' ?>">
+                <figure class="<?= ($args['loop'] == 2) ? 'ratio_2' : 'ratio_1' ?> m_full">
                 <?php else : ?>
-                    <figure class="ratio_1">
+                    <figure class="ratio_1 m_full">
                     <?php endif; ?>
                     <div class="inner">
                         <?php the_post_thumbnail(); ?>

@@ -2,6 +2,7 @@ $space_top: 200px;
 
 
 
+
 // Breadcrumb
 
 .breadcrumb {
@@ -16,7 +17,9 @@ $space_top: 200px;
     }
     @include up-to(medium) {
         padding-left: 125px;
-        top: 106px;
+        top: 80px;
+        padding-top: 30px;
+        z-index: 99999;
     }
 }
 
@@ -33,6 +36,10 @@ $space_top: 200px;
         @include up-to(medium) {
             margin-top: $space_top;
         }
+    }
+
+    @include up-to(medium) {
+        padding-bottom: $marge * 3;
     }
 }
 

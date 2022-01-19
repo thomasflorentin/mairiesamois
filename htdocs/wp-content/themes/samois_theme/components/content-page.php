@@ -10,10 +10,10 @@
     <?php if ($imgs) : ?>
 
         <div class="grid mb-medium single_post">
-            <figure class="s_12col m_7col ratio_1">
+            <figure class="s_12col m_7col ratio_1 m_full">
                 <?php foreach ($imgs as $img) : ?>
                     <div class="inner">
-                        <img src="<?= $img['url'] ?>" alt="">
+                        <img src="<?= $img['url'] ?>" alt="" class="">
                     </div>
                 <?php endforeach; ?>
             </figure>

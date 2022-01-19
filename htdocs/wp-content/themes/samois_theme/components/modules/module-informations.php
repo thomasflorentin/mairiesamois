@@ -12,7 +12,7 @@ $the_query = new WP_Query($args); ?>
 
 <div class="s_12col m_5col page_item mb-big">
 
-    <figure class="ratio_1 item_cover">
+    <figure class="ratio_1 m_full item_cover">
         <div class="inner">
             <?php echo get_the_post_thumbnail( $parent_id, '' ); ?>
         </div>
