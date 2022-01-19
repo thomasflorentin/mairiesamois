@@ -50,9 +50,9 @@ button {
 	padding: 5px 10px;
 	border-radius: 15px;
 }
-.field_default {
+.field_default, .wpcf7-form-control  {
 	@extend .field;
-	border: 1px solid black;
+	border: 1px solid black !important;
 }
 .field_alert {
 	@extend .field;

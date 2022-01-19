@@ -25,7 +25,7 @@ while (have_posts()) : the_post(); ?>
     </header>
 
 
-    <div class="games">
+    <div class="contact-form">
         <?= apply_shortcodes('[contact-form-7 id="239" title="Contact form 1"]'); ?>
     </div>
 
