@@ -71,7 +71,7 @@ $marge_vbig: $marge * 8;
 }
 
 .mb-medium {
-    margin-bottom: $marge_medium;
+    margin-bottom: $marge_medium !important;
 }
 
 .mb-big {
@@ -111,6 +111,9 @@ $marge_vbig: $marge * 8;
     padding: $marge;
 }
 
+.pb-medium{
+    padding-bottom: $marge_medium;
+}
 
 // FLEX
 

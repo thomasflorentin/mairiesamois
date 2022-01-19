@@ -16,16 +16,16 @@ $useful_links = get_field('util_link', 'options')
         </main>
 
 
-        <footer id="colophon" class="site-footer wrapper">
+        <footer id="colophon" class="site-footer wrapper ">
 
-            <div class="section-search">
+            <div class="section-search pb-medium">
                 <h3 class="FS16_B">Vous n'avez pas trouvé l'information recherchée ?</h3>
                 <div class="search-container fl-hcentered grid">
-                    <div class="m_6col">
+                    <div class="s_7col m_6col">
                         <?php get_search_form(); ?>
                     </div>
                     
-                    <nav class="m_6col search-link FS14">
+                    <nav class="s_5col m_6col search-link FS14">
                         <ul class=" fl-col">
                             <li><a href="/contact" class="p1 btn_inline">Posez vos questions en ligne</a></li>
                             <li><a href="/faq" class="p1 btn_inline">Questions fréquement posées</a></li>
@@ -36,7 +36,7 @@ $useful_links = get_field('util_link', 'options')
 
             <div class="news-infos grid">
 
-                <div class="m_5col">
+                <div class="s_12col m_5col">
                     
                     <div class="mb-medium">
                         <h3 class="FS16_B">Restez toujours informé.e !</h3>
@@ -47,7 +47,7 @@ $useful_links = get_field('util_link', 'options')
                         </form>
                     </div>
 
-                    <div class="social-qrcode fl-justify">
+                    <div class="social-qrcode fl-justify pb-medium">
                         <div class="social p2">
                             <a href="<?= the_field('facebook_link', 'options') ?>"><i class="fab fa-facebook-square"></i></a>
                             <a href="<?= the_field('instagram_url', 'options') ?>"><i class="fab fa-instagram"></i></a>
@@ -58,7 +58,7 @@ $useful_links = get_field('util_link', 'options')
                 </div>
 
 
-                <div class="m_7col">
+                <div class="s_12col m_7col">
 
                     <div class="mb-medium">
                         <h3 class="FS16_B">Numéros indispensables</h3>
@@ -74,7 +74,7 @@ $useful_links = get_field('util_link', 'options')
                         </div>
                     </div>
 
-                    <div>
+                    <div class="notification-footer pb-medium">
                         <h3 class="FS16_B">Activer les notifications sur votre mobile </h3>
                         <ul class="FS14">
                             <li>1. Scanner ce QR code avec votre mobile</li>
@@ -91,20 +91,20 @@ $useful_links = get_field('util_link', 'options')
 
             <div class="adresse-hourly-link grid">
 
-                <div class="hourly-adress m_5col">
+                <div class="hourly-adress s_12col m_5col">
                     <h3 class="FS16_B"><?php the_field('structur_name', 'options') ?></h3>
-                    <p class="FS14"><?php the_field('hour_opening', 'options') ?></p>
-                    <p class="FS14"><?php the_field('structure_adress', 'options') ?></p>
-                    <p class="FS14"><?php the_field('mail', 'options') ?></p>
+                    <p class="FS14 mb-small"><?php the_field('hour_opening', 'options') ?></p>
+                    <p class="FS14 mb-none"><?php the_field('structure_adress', 'options') ?></p>
+                    <p class="FS14 mb-small"><?php the_field('mail', 'options') ?></p>
 
-                    <p class="FS14">Std : <?php the_field('Phone', 'options') ?></p>
+                    <p class="FS14 mb-none">Std : <?php the_field('Phone', 'options') ?></p>
                     <p class="FS14">Télécopie : <?php the_field('telecopie', 'options') ?></p>
                 </div>
 
-                <div class="footer_links m_5col">
+                <div class="footer_links s_12col m_5col">
                     <div class="fl-col fl-justify">
 
-                        <nav class="usefull-link fl-col FS14">
+                        <nav class="usefull-link fl-col FS14 mb-medium">
                             <h3 class="FS14">Liens utiles</h3>
                             <?php foreach ($useful_links as $val) : ?>
                                 <a href="<?= $val->guid ?>" class="btn_inline">
@@ -123,7 +123,7 @@ $useful_links = get_field('util_link', 'options')
                 </div>
 
 
-                <div class="logo-footer m_2col">
+                <div class="logo-footer s_2col m_2col">
                     <figure>
                         <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php the_field('logo_footer', 'options') ?>" alt=""></a>
                     </figure>

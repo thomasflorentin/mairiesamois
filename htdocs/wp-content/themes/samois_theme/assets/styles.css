@@ -18,7 +18,7 @@
 
 .mb-small { margin-bottom: 20px !important; }
 
-.mb-medium { margin-bottom: 40px; }
+.mb-medium { margin-bottom: 40px !important; }
 
 .mb-big { margin-bottom: 80px; }
 
@@ -35,6 +35,8 @@
 .mr-small { margin-right: 20px; }
 
 .p-small { padding: 20px; }
+
+.pb-medium { padding-bottom: 40px; }
 
 .flex, .fl-col, .fl-top, .fl-hcentered, .fl-bottom, .fl-justify, .fl-vcentered, .fl-centered, .fl-end, .fl-wrap { display: flex; }
 
@@ -509,9 +511,9 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .site-footer { margin-top: 100px; margin-bottom: 40px; }
 
-.site-footer .search-container p, .site-footer p { margin: 0px; }
+.number-rescue p { margin: 0px !important; }
 
-.site-footer .section-search, .site-footer .news-infos { border-bottom: 1px solid black; padding-bottom: 40px; margin-bottom: 40px; }
+.site-footer .section-search, .site-footer .news-infos { border-bottom: 1px solid black; margin-bottom: 40px; }
 
 .site-footer .news-infos form label { display: block; }
 
@@ -521,13 +523,17 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .qrcode i { font-size: 125px; }
 
-.footer_links { border-left: 1px solid #cbcbcb; padding-left: 20px; }
+@media (min-width: 800px) { .footer_links { border-left: 1px solid #cbcbcb; padding-left: 20px; } }
 
 .footer_links > div { height: 100%; }
 
 .logo-footer figure { text-align: end; }
 
+@media (max-width: 800px) { .notification-footer, .social-qrcode { display: none; } }
+
 .number-rescue { margin-right: 40px; }
+
+@media (max-width: 800px) { .end-link { margin-bottom: 40px; } }
 
 /* FOOTER MOBILE MENU */
 .footer_menu { position: fixed; padding: 10px 20px; bottom: 0; left: 0; right: 0; background-color: white; box-shadow: 0 -4px 6px -2px #8685855e; z-index: 99999; }
@@ -595,7 +601,9 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 800px) { .hp_right { width: 350px; } }
 
-/* Structure_name aside */
+/*
+    Structure_name aside
+*/
 .structure-infos { padding: 20px; transition: transform .4s; position: sticky; top: 400px; }
 
 @media (max-width: 800px) { .structure-infos { transform: translateY(-100vh); background-color: rgba(255, 255, 255, 0.5); position: fixed; left: 0; right: 0; top: 0; bottom: 0; padding-top: 300px; } }
