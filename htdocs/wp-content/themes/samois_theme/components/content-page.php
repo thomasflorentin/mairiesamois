@@ -1,8 +1,8 @@
 <?php
-    $imgs = get_field('single_img');
+$imgs = get_field('single_img');
 
-    // CALLING THE BREADCRUMB MODULE 
-    get_template_part('components/modules/module', 'breadcrumbs'); ?>
+// CALLING THE BREADCRUMB MODULE 
+get_template_part('components/modules/module', 'breadcrumbs'); ?>
 
 
 <article>
@@ -25,20 +25,29 @@
         </div>
 
 
-    <?php else : ?>
-
-        <div class="grid mb-medium">
-            <div class="s_12col m_7col col_start_2">
-                <h1 class="FS42_B"><?php the_title(); ?></h1>
-                <div class="FS18_B"><?php the_excerpt(); ?></div>
+        <?php else :
+        if (is_page()) : ?>
+            <div class="grid mb-medium">
+                <div class="s_12col m_7col col_start_2">
+                    <h1 class="FS42_B"><?php the_title(); ?></h1>
+                    <div class="FS18"><?php the_excerpt(); ?></div>
+                </div>
             </div>
-        </div>
 
+        <?php else : ?>
+            <div class="grid mb-medium">
+                <div class="s_12col m_7col col_start_2">
+                    <h1 class="FS42_B"><?php the_title(); ?></h1>
+                    <div class="FS18_B"><?php the_excerpt(); ?></div>
+                </div>
+            </div>
+
+        <?php endif; ?>
     <?php endif; ?>
 
 
     <div class="grid">
-        <div class="s_12col m_8col copy FS16">
+        <div class="s_12col m_9col copy FS16">
             <?= get_the_content(); ?>
         </div>
     </div>
