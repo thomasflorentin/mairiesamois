@@ -42,11 +42,6 @@ while (have_posts()) : the_post();
         $root_title_url = get_permalink($root);	
     } 
     
-    set_query_var( 'root', $root );
-    set_query_var( 'root_title', $root_title );
-    set_query_var( 'root_title_url', $root_title_url ); 
-    
-    get_template_part('components/modules/module', 'breadcrumbs');
 
 
 
@@ -55,6 +50,12 @@ while (have_posts()) : the_post();
     if ( count( $page_children) > 0 ) : 
         // C'est une page parente (donc archives des pages enfants) 
 
+        set_query_var( 'root', $root );
+        set_query_var( 'root_title', $root_title );
+        set_query_var( 'root_title_url', $root_title_url ); 
+        
+        get_template_part('components/modules/module', 'breadcrumbs');
+    
 
         $shortcuts_links = get_field('shortcuts_links');
         $shortcuts_args = array(
