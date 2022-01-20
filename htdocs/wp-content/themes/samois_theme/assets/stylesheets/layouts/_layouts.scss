@@ -1,4 +1,3 @@
-$space_top: 200px;
 
 
 
@@ -21,7 +20,7 @@ $space_top: 200px;
     }
     @include up-to(medium) {
         padding-left: 125px;
-        top: 80px;
+        top: 84px;
         padding-top: 30px;
     }
 }
@@ -40,9 +39,7 @@ $space_top: 200px;
             margin-top: $space_top;
         }
 
-        .shortcuts{
-            padding: $marge;
-        }
+
     }
 
     @include up-to(medium) {
@@ -114,9 +111,10 @@ $space_top: 200px;
 
 .shortcuts {
     position: fixed;
-    padding: $marge * 4 $marge;
+    padding: $marge $marge;
     left: 0;
     transition: transform .4s;
+    z-index: 99999;
 
     hr {
         width: 60px;

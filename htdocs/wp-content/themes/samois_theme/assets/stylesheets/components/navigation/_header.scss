@@ -75,7 +75,7 @@
         margin-bottom: 5px;
         width: 100vw;
         font-size: 3rem;
-        padding: 0 $marge;
+        padding: 10px 0 15px;
 
         ul {
             justify-content: flex-end;
@@ -91,9 +91,12 @@
 .navigation-links {
     width: 60%;
 
+    @include up-to(large) {
+        width: 90%;
+    }
     @include up-to(medium) {
         width: 100vw;
-        padding: 0 $marge;
+        padding: 0 0 0 80px;
 
         ul {
             justify-content: flex-end;

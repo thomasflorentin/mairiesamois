@@ -9,10 +9,11 @@
  *
  * @package samois
  */
+define("FACEBOOK_LINK", get_field('facebook_link', 'option'));
+define("INSTAGRAM_LINK", get_field('instagram_link', 'option'));
 $website_logo = get_field('website_logo', 'option');
 $header_banner = get_field('banner', 'option');
 $alert_post = get_field('alert', 'option');
-$facebook_link = get_field('facebook_link', 'option');
 $mail = get_field('mail', 'option');
 ?>
 <!doctype html>
@@ -110,9 +111,9 @@ if (is_admin_bar_showing()) : ?>
 
 
 
-                    <div class="header-link">
+                    <div class="header-link s_hide l_show">
                         <?= ($mail) ? "<a href=\"mailto: $mail\"><i class=\"fas fa-envelope\"></i></a>" : "" ?>
-                        <?= ($facebook_link) ? "<a target=\"_blank\" href=\"$facebook_link\"><i class=\"fab fa-facebook-square\"></i></a>" : "" ?>
+                        <?= (FACEBOOK_LINK) ? "<a target=\"_blank\" href=\"". FACEBOOK_LINK . "\"><i class=\"fab fa-facebook-square\"></i></a>" : "" ?>
                     </div><!-- #site-link-contact -->
 
                 </div><!-- .nav-container -->
@@ -135,6 +136,10 @@ if (is_admin_bar_showing()) : ?>
 
             <nav id="searchbar_wrapper" class="searchbar_wrapper">
                 <?php get_search_form(); ?>
+
+                <div class="l_hide">
+                    <?php get_template_part('components/modules/module', 'horaires'); ?>
+                </div>
             </nav>
            
 
