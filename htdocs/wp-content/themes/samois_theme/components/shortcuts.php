@@ -6,12 +6,14 @@
 
     <nav class="">
         <ul class="">
+            <hr>
             <?php foreach ($links as $value) : ?>
                 <li>
                     <a class="FS14_B" href="<?= $value->guid; ?>"><?= $value->post_title; ?></a>
                     <hr>
                 </li>
             <?php endforeach; ?>
+            <hr>
         </ul>
     </nav>
 
