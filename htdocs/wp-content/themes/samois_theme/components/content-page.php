@@ -38,7 +38,7 @@
 
 
     <div class="grid">
-        <div class="s_12col m_7col copy FS16">
+        <div class="s_12col m_8col copy FS16">
             <?= get_the_content(); ?>
         </div>
     </div>
