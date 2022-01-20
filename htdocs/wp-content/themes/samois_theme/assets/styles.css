@@ -478,7 +478,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .site_logo { width: 80%; max-width: 150px; }
 
 /* NAVIGATION PRINCIPALE (3-4 entrées) */
-.nav-container { display: flex; align-items: baseline; padding: 10px 20px 10px 250px; }
+.nav-container { display: flex; align-items: baseline; padding: 10px 20px 10px 250px; justify-content: flex-start; }
 
 .nav-container i { margin-right: 10px; }
 
@@ -563,14 +563,26 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .wp-caption-text { text-align: center; }
 
+.js_dropdown.closed .js_dropd_content { max-height: 0 !important; }
+
+.js_dropdown .icon-chevron-down:before { transition: all .2s; }
+
+.js_dropd_link:hover, .js_dropd_link:hover * { color: yellow; }
+
+.js_dropd_content { overflow: hidden; transition: max-height .4s; }
+
+.accordeon_item { border-bottom: 1px solid rgba(128, 128, 128, 0.324); padding: 20px 0 0 0; }
+
+.accordeon_content p:first-child { padding-right: 20px; }
+
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-.breadcrumb { z-index: 10000; background: #e8e8e8; color: #909090; position: fixed; left: 0; right: 0; transition: top .4s; z-index: 9999; }
+.breadcrumb { z-index: 99999; background: #e8e8e8; color: #909090; position: fixed; left: 0; right: 0; transition: top .4s; }
 
 @media (min-width: 800px) { .breadcrumb { padding-left: 250px; top: 100px; padding-top: 50px; } }
 
-@media (max-width: 800px) { .breadcrumb { padding-left: 125px; top: 80px; padding-top: 30px; z-index: 99999; } }
+@media (max-width: 800px) { .breadcrumb { padding-left: 125px; top: 80px; padding-top: 30px; } }
 
 .site-main { margin-top: 200px; }
 
@@ -584,7 +596,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .scrolling .header-alert { min-height: 0; }
 
-.scrolling .breadcrumb { top: 68px; }
+.scrolling .breadcrumb { top: 55px; }
 
 .scrolling .header-banner { height: 0; }
 

@@ -17,7 +17,6 @@
 
 // DROPDOWNS
 
-
 .js_dropdown {
 
 	&.closed .js_dropd_content {
@@ -48,7 +47,7 @@
 // Accordeons
 
 .accordeon_item {
-	border-bottom: 1px solid $gray_light;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.324);
 	padding: $marge 0 0 0;
 }
 

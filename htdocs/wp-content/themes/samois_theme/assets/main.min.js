@@ -72,7 +72,7 @@ function init() {
                 return;
             
             if( st < 50 ) {
-                console.log('documentIsScrolling BACKTOTHETOP');
+                //console.log('documentIsScrolling BACKTOTHETOP');
 
                 app.page.classList.remove('scrolling')
                 app.masthead.classList.remove('fixed');
@@ -80,7 +80,7 @@ function init() {
 
             }
             else if (st > app.lastScrollTop ){
-                console.log('documentIsScrolling DOWN');
+                //console.log('documentIsScrolling DOWN');
 
                 app.page.classList.add('scrolling')
                 app.masthead.classList.add('fixed');
@@ -88,7 +88,7 @@ function init() {
 
             } 
             else {
-                console.log('documentIsScrolling UP');
+                //console.log('documentIsScrolling UP');
 
                 app.page.classList.add('scrolling')
                 app.masthead.classList.add('in');
@@ -98,7 +98,10 @@ function init() {
             app.lastScrollTop = st;
         },
 
+
+        // ACCORDEONS
         closeDropdownsContent: function( $els ) {
+            console.log('closeDropdownsContent');
 
             let i = 0;
     
@@ -118,9 +121,9 @@ function init() {
     
         },
     
-    
         handleDropdownsOpening: function( $els ) {
-            
+            console.log('handleDropdownsOpening');
+
             for (let el of $els) {
     
                 const js_dropdown = el.closest('.js_dropdown');

@@ -54,6 +54,7 @@ function accordeon_shortcode( $atts , $content = null ) {
 		$atts
 	);
 	$titre = $atts['titre'];
+	$content = wpautop(trim($content));
 
   	$return_string = '<div class="js_dropdown accordeon_item">'; 
 
@@ -68,3 +69,4 @@ function accordeon_shortcode( $atts , $content = null ) {
 	return $return_string;
 }
 add_shortcode( 'accordeon', 'accordeon_shortcode' );
+
