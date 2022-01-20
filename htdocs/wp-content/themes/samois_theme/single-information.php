@@ -22,14 +22,17 @@ while (have_posts()) : the_post();
     
 
     // CALLING THE BREADCRUMB MODULE
-    
+    $level = 0;
+
     $ancestors = get_post_ancestors($post);
-    $level = count($ancestors);
+    if( !empty( $ancestors ) ) {
+        $level = count($ancestors);
+    }
     $ariane = '';
 
     if( $level == 0 ) {
         $root = get_the_ID();
-        $children = get_page_children($root, $pages);
+        $children = get_page_children($root, $page_children);
         $root_title = get_the_title($root);
         $root_title_url = get_permalink($root);	
     } 
