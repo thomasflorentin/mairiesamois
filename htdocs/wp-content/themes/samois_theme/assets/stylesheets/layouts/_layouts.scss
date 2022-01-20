@@ -6,6 +6,7 @@ $space_top: 200px;
 // Breadcrumb
 
 .breadcrumb {
+    z-index: 10000;
     background: #e8e8e8;
     color: #909090;
     position: fixed;
@@ -16,8 +17,12 @@ $space_top: 200px;
 
     @include at-least(medium) {
         padding-left: $space_left;
+<<<<<<< HEAD
+        top: 238px;
+=======
         padding-top: 50px;
         top: 108px;
+>>>>>>> ff0c347158597ba1748440e6eb47168625d6e4c0
     }
     @include up-to(medium) {
         padding-left: 125px;
@@ -39,6 +44,10 @@ $space_top: 200px;
 
         @include up-to(medium) {
             margin-top: $space_top;
+        }
+
+        .shortcuts{
+            padding: $marge;
         }
     }
 
@@ -111,7 +120,7 @@ $space_top: 200px;
 
 .shortcuts {
     position: fixed;
-    padding: $marge;
+    padding: $marge * 4 $marge;
     left: 0;
     transition: transform .4s;
 

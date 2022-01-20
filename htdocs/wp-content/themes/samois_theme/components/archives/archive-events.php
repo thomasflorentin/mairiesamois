@@ -2,7 +2,7 @@
 
 $shortcuts_links = get_field('shortcuts_links');
 $shortcuts_args = array(
-    'title' => 'Pour aller plus vite !',
+    'title' => 'Pour aller <br> plus vite !',
 );
 set_query_var('links', $shortcuts_links);
 get_template_part('components/shortcuts', '', $shortcuts_args); ?>

@@ -15,7 +15,7 @@ get_header();
 
 <?php
 $args = array(
-    'title' => 'Prenez un raccourci !',
+    'title' => 'Prenez un <br>raccourci !',
 );
 $shortcuts_links = get_field('shortcuts_links');
 set_query_var('links', $shortcuts_links);
