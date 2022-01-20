@@ -11,6 +11,9 @@ $space_top: 200px;
     position: fixed;
     left: 0;
     right: 0;
+    transition: top .4s;
+    z-index: 9999;
+
     @include at-least(medium) {
         padding-left: $space_left;
         padding-top: 50px;
@@ -31,7 +34,7 @@ $space_top: 200px;
 
     .home & {
         @include at-least(medium) {
-            margin-top: $space_top * 1.4;
+            margin-top: $space_top * 1.7;
         }
 
         @include up-to(medium) {
@@ -41,6 +44,17 @@ $space_top: 200px;
 
     @include up-to(medium) {
         padding-bottom: $marge * 3;
+    }
+}
+.scrolling {
+    .header-alert {
+        min-height: 0;
+    }
+    .breadcrumb {
+        top: 68px;
+    }
+    .header-banner {
+        height: 0;
     }
 }
 

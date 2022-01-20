@@ -480,13 +480,15 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .nav-container i { margin-right: 10px; }
 
-.nav-container li { margin: 0 0 0 20px; flex: 1; line-height: 1; }
+.nav-container li { margin: 0 0 0 20px; line-height: 1; }
 
 @media (max-width: 800px) { .nav-container { margin-left: 100px; flex-direction: column; align-items: flex-end; } }
 
 @media (max-width: 800px) { .nav-upper { border-bottom: 1px solid black; padding-bottom: 5px; margin-bottom: 5px; width: 100vw; font-size: 3rem; padding: 0 20px; }
   .nav-upper ul { justify-content: flex-end; }
   .nav-upper li, .nav-upper i { margin-right: 0; margin-left: 20px; } }
+
+.navigation-links { width: 60%; }
 
 @media (max-width: 800px) { .navigation-links { width: 100vw; padding: 0 20px; }
   .navigation-links ul { justify-content: flex-end; align-items: center; }
@@ -496,6 +498,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (max-width: 800px) { .header-link { display: none; } }
 
 /* HOMMEPAGE BANNIERE */
+.header-banner { transition: height .4s; }
+
 @media (min-width: 800px) { .header-banner { overflow: hidden; height: 172px; }
   .header-banner figure { margin: 0; }
   .header-banner figure img { width: auto; height: 100%; } }
@@ -503,7 +507,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (max-width: 800px) { .header-banner { display: none; } }
 
 /* BLOC ALERT */
-.header-alert { padding: 30px 0px; min-height: 0px; transition: all .4s; }
+.header-alert { padding: 10px 0px; min-height: 0px; transition: all .4s; }
 
 .header-alert .alert-container { min-width: 50%; }
 
@@ -560,7 +564,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-.breadcrumb { background: #e8e8e8; color: #909090; position: fixed; left: 0; right: 0; }
+.breadcrumb { background: #e8e8e8; color: #909090; position: fixed; left: 0; right: 0; transition: top .4s; z-index: 9999; }
 
 @media (min-width: 800px) { .breadcrumb { padding-left: 250px; padding-top: 50px; top: 108px; } }
 
@@ -568,11 +572,17 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .site-main { margin-top: 200px; }
 
-@media (min-width: 800px) { .home .site-main { margin-top: 280px; } }
+@media (min-width: 800px) { .home .site-main { margin-top: 340px; } }
 
 @media (max-width: 800px) { .home .site-main { margin-top: 200px; } }
 
 @media (max-width: 800px) { .site-main { padding-bottom: 60px; } }
+
+.scrolling .header-alert { min-height: 0; }
+
+.scrolling .breadcrumb { top: 68px; }
+
+.scrolling .header-banner { height: 0; }
 
 @media (min-width: 800px) { .single_post .container-title-post { margin-left: -130px; z-index: 100; background: white; } }
 

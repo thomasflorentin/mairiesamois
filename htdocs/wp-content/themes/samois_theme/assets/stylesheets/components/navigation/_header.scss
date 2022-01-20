@@ -56,7 +56,6 @@
 
     li {
         margin: 0 0 0 20px;
-        flex: 1;
         line-height: 1;
     }
 
@@ -89,6 +88,8 @@
 }
 
 .navigation-links {
+    width: 60%;
+
     @include up-to(medium) {
         width: 100vw;
         padding: 0 $marge;
@@ -126,7 +127,8 @@
  */
 
     .header-banner {
-
+        transition: height .4s;
+        ;
         @include at-least(medium) {
             overflow: hidden;
             height: 172px;
@@ -154,7 +156,7 @@
  */
 
     .header-alert {
-        padding: 30px 0px;
+        padding: 10px 0px;
         min-height: 0px;
         transition: all .4s;
 

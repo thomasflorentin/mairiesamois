@@ -77,7 +77,7 @@ if (is_admin_bar_showing()) : ?>
 
 
 
-                <div class="nav-container">
+                <div class="nav-container fl-justify">
 
                     <div class="nav-upper">
                         <ul class="flex">
