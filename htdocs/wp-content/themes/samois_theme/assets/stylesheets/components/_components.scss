@@ -13,3 +13,48 @@
 --------------------------------------------- */
 @import "media/captions";
 
+
+
+// DROPDOWNS
+
+
+.js_dropdown {
+
+	&.closed .js_dropd_content {
+        max-height: 0 !important;
+    }
+
+	.icon-chevron-down:before {
+		transition: all .2s;
+	}
+	&.closed .icon-chevron-down:before {
+//		transform: rotate(-90deg);
+	}
+} 
+
+.js_dropd_link {
+    &:hover,
+	&:hover * {
+        color: $primary_color;
+    }
+}
+
+.js_dropd_content {
+    overflow: hidden;
+    transition: max-height .4s;
+}
+
+
+// Accordeons
+
+.accordeon_item {
+	border-bottom: 1px solid $gray_light;
+	padding: $marge 0 0 0;
+}
+
+.accordeon_content {
+	p:first-child {
+		//display: none;
+		padding-right: 20px;
+	}
+}
