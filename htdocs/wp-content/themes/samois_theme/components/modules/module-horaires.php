@@ -1,11 +1,5 @@
 <aside id="structure-infos" class="structure-infos">
 
-    <div class="grid">
-        <div class="m_hide">
-            <?php get_search_form(); ?>
-        </div>
-    </div>
-
     <div>
 
         <h3 class="h3">Mairie de Samois</h3>

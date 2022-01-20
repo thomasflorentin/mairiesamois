@@ -484,11 +484,13 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .site_logo { width: 80%; max-width: 150px; }
 
 /* NAVIGATION PRINCIPALE (3-4 entrées) */
-.nav-container { display: flex; align-items: baseline; padding: 10px 20px 10px 250px; justify-content: flex-start; }
+.nav-container { display: flex; align-items: center; padding: 10px 20px 10px 250px; justify-content: flex-start; }
 
 .nav-container i { margin-right: 10px; }
 
-.nav-container li { margin: 0 0 0 20px; line-height: 1; }
+.nav-container li { margin: 0 0 0 20px; line-height: 1; text-transform: uppercase; }
+
+@media (min-width: 1200px) { .nav-container li { font-size: 2rem; } }
 
 @media (max-width: 800px) { .nav-container { margin-left: 100px; flex-direction: column; align-items: flex-end; } }
 
@@ -502,7 +504,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (max-width: 800px) { .navigation-links { width: 100vw; padding: 0 0 0 80px; }
   .navigation-links ul { justify-content: flex-end; align-items: center; }
-  .navigation-links li { margin-right: 0; margin-left: 20px; display: inline-block; text-align: right; text-transform: uppercase; line-height: 1; }
+  .navigation-links li { margin-right: 0; margin-left: 20px; display: inline-block; text-align: right; line-height: 1; }
   .navigation-links a { padding: 10px 0 5px; display: inline-block; } }
 
 @media (max-width: 800px) { .header-link { display: none; } }
@@ -510,9 +512,9 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /* HOMMEPAGE BANNIERE */
 .header-banner { transition: height .4s; }
 
-@media (min-width: 800px) { .header-banner { overflow: hidden; height: 172px; }
+@media (min-width: 800px) { .header-banner { overflow: hidden; height: 50vh; }
   .header-banner figure { margin: 0; }
-  .header-banner figure img { width: auto; height: 100%; } }
+  .header-banner figure img { width: auto; height: 100%; width: 100vw; object-fit: cover; } }
 
 @media (max-width: 800px) { .header-banner { display: none; } }
 
@@ -594,19 +596,23 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (max-width: 800px) { .breadcrumb { padding-left: 125px; top: 84px; padding-top: 30px; } }
 
-.site-main { margin-top: 200px; }
+.site-main { transition: all .4s; padding-top: 250px; }
 
-@media (min-width: 800px) { .home .site-main { margin-top: 340px; } }
+@media (min-width: 800px) { .home .site-main { padding-top: calc(50vh + 200px); } }
 
-@media (max-width: 800px) { .home .site-main { margin-top: 200px; } }
+@media (max-width: 800px) { .home .site-main { padding-top: 200px; } }
 
 @media (max-width: 800px) { .site-main { padding-bottom: 60px; } }
+
+@media (min-width: 800px) { .home .scrolling .site-main { padding-top: 400px; } }
 
 .scrolling .header-alert { min-height: 0; }
 
 .scrolling .breadcrumb { top: 55px; }
 
 .scrolling .header-banner { height: 0; }
+
+.scrolling .shortcuts { top: 250px; }
 
 @media (min-width: 800px) { .single_post .container-title-post { margin-left: -130px; z-index: 100; background: white; } }
 
@@ -621,7 +627,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .item_related .item_related_date { position: absolute; bottom: 0; left: 50%; transform: translate(-50%, -50%); }
 
 /* shortcuts aside */
-.shortcuts { position: fixed; padding: 20px 20px; left: 0; transition: transform .4s; z-index: 99999; }
+.shortcuts { position: fixed; padding: 20px 20px; left: 0; transition: transform .4s; z-index: 99999; transition: all .4s; }
 
 .shortcuts hr { width: 60px; }
 

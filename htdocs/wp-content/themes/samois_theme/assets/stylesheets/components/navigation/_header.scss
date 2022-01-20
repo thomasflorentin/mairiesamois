@@ -47,7 +47,7 @@
 
 .nav-container {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     padding: 10px $marge 10px $space_left;
     justify-content: flex-start;
 
@@ -58,6 +58,10 @@
     li {
         margin: 0 0 0 20px;
         line-height: 1;
+        text-transform: uppercase;
+        @include at-least(large) {
+            font-size: 2rem;
+        }
     }
 
     @include up-to(medium) {
@@ -107,7 +111,6 @@
             margin-left: $marge;
             display: inline-block;
             text-align: right;
-            text-transform: uppercase;
             line-height: 1;
         }
         a {
@@ -135,7 +138,7 @@
         ;
         @include at-least(medium) {
             overflow: hidden;
-            height: 172px;
+            height: 50vh;
 
             figure {
                 margin: 0;
@@ -144,6 +147,8 @@
             figure img {
                 width: auto;
                 height: 100%;
+                width: 100vw;
+                object-fit: cover;
             }
         }
 

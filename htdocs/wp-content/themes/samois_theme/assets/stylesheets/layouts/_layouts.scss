@@ -28,23 +28,29 @@
 // Main
 
 .site-main {
-    margin-top: $space_top;
+    transition: all .4s;
+    padding-top: 250px;
 
     .home & {
         @include at-least(medium) {
-            margin-top: $space_top * 1.7;
+            padding-top: calc(50vh + 200px);
         }
 
         @include up-to(medium) {
-            margin-top: $space_top;
+            padding-top: $space_top;
         }
-
-
     }
 
     @include up-to(medium) {
         padding-bottom: $marge * 3;
     }
+    @include at-least(medium) {
+                
+        .home .scrolling & {
+            padding-top: 400px;
+        }
+    }
+
 }
 .scrolling {
     .header-alert {
@@ -55,6 +61,9 @@
     }
     .header-banner {
         height: 0;
+    }
+    .shortcuts {
+        top: 250px;
     }
 }
 
@@ -115,6 +124,7 @@
     left: 0;
     transition: transform .4s;
     z-index: 99999;
+    transition: all .4s;
 
     hr {
         width: 60px;
