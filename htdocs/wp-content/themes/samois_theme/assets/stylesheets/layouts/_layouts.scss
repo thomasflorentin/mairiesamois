@@ -1,4 +1,4 @@
-$space_top: 250px;
+$space_top: 200px;
 
 
 
@@ -13,7 +13,8 @@ $space_top: 250px;
     right: 0;
     @include at-least(medium) {
         padding-left: $space_left;
-        top: 141px;
+        padding-top: 50px;
+        top: 108px;
     }
     @include up-to(medium) {
         padding-left: 125px;
@@ -30,7 +31,7 @@ $space_top: 250px;
 
     .home & {
         @include at-least(medium) {
-            margin-top: $space_top * 1.7;
+            margin-top: $space_top * 1.4;
         }
 
         @include up-to(medium) {
@@ -104,11 +105,11 @@ $space_top: 250px;
         width: 60px;
     }
 
-    @include at-least(medium) {
+    @include at-least(large) {
         width: $space_left;
     }
 
-    @include up-to(medium) {
+    @include up-to(large) {
         transform: translateY(100vh);
         background-color: gray;
         color: white;

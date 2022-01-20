@@ -10,11 +10,11 @@ $space_left: 250px;
     max-width: $max-width;
     width: calc(100% - #{$marge_wrapper});
 
-    @include at-least(medium) {
+    @include at-least(large) {
         padding-left: $space_left;
     }
 
-    @include up-to(medium) {
+    @include up-to(large) {
         margin-right: auto;
         margin-left: auto;
     }

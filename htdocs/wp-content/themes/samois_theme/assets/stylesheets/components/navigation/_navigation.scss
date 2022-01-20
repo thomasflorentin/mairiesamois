@@ -17,6 +17,9 @@
 	transition: transform .4s;
     z-index: 99999;
 
+	.wrapper {
+		padding-left: $space_left / 2;
+	}
 	a {
 		color: white;
 

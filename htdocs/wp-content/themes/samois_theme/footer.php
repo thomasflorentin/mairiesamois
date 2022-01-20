@@ -138,7 +138,7 @@ $useful_links = get_field('util_link', 'options')
             $alert_post = get_field('alert', 'option');
         ?>
 
-        <nav id="footer_menu" class="footer_menu m_hide">
+        <nav id="footer_menu" class="footer_menu l_hide">
             <ul class="fl-justify">
                 <li>
                     <a href="">Insta</a>

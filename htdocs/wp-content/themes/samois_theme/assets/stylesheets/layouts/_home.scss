@@ -1,16 +1,20 @@
 .hp_left {
 
     @include at-least(medium) {
+        width: calc(100% - 300px);
+    }
+    @include at-least(large) {
         width: calc(100% - 400px);
     }
 }
 
 .hp_right {
-
     @include at-least(medium) {
+        width: 250px;
+    }
+    @include at-least(large) {
         width: 350px;
     }
-
 }
 
 
