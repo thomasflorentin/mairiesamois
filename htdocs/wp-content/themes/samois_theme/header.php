@@ -77,7 +77,7 @@ if (is_admin_bar_showing()) : ?>
 
 
 
-                <div class="nav-container">
+                <div class="nav-container fl-justify">
 
                     <div class="nav-upper">
                         <ul class="flex">
@@ -87,7 +87,7 @@ if (is_admin_bar_showing()) : ?>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" id="js-toggleDropdown" role="button" class="fl-hcentered">
+                                <a href="#" id="js-toggleDropdown" role="button" class="fl-centered">
                                     <i class="fas fa-bars"></i>
                                     <span class="s_hide m_show"><?php print('Thématiques'); ?></span>
                                 </a>

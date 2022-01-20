@@ -35,6 +35,7 @@
 
 .site_logo {
     width: 80%;
+    max-width: 150px;
 }
 
 
@@ -47,20 +48,17 @@
 .nav-container {
     display: flex;
     align-items: baseline;
-    margin-left: $space_left;
-    padding: 10px 0;
+    padding: 10px $marge 10px $space_left;
 
     i {
-        margin-right: 15px;
+        margin-right: 10px;
     }
 
     li {
-        margin: 0 30px 0 0;
+        margin: 0 0 0 20px;
+        line-height: 1;
     }
 
-    @include at-least(medium) {
-        margin-left: 250px;
-    }
     @include up-to(medium) {
         margin-left: 100px;
         flex-direction: column;
@@ -90,6 +88,8 @@
 }
 
 .navigation-links {
+    width: 60%;
+
     @include up-to(medium) {
         width: 100vw;
         padding: 0 $marge;
@@ -127,7 +127,8 @@
  */
 
     .header-banner {
-
+        transition: height .4s;
+        ;
         @include at-least(medium) {
             overflow: hidden;
             height: 172px;
@@ -155,7 +156,7 @@
  */
 
     .header-alert {
-        padding: 30px 0px;
+        padding: 10px 0px;
         min-height: 0px;
         transition: all .4s;
 
@@ -163,6 +164,6 @@
             min-width: 50%;
         }
         @include at-least(medium) {
-            min-height: 160px;
+            min-height: 100px;
         }
     }

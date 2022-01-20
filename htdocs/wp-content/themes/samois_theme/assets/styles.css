@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
 .wrapper { max-width: 1600px; width: calc(100% - 40px); }
 
-@media (min-width: 800px) { .wrapper { padding-left: 250px; } }
+@media (min-width: 1200px) { .wrapper { padding-left: 250px; } }
 
-@media (max-width: 800px) { .wrapper { margin-right: auto; margin-left: auto; } }
+@media (max-width: 1200px) { .wrapper { margin-right: auto; margin-left: auto; } }
 
 .hidden, .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; opacity: 0; }
 
@@ -418,6 +418,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /* DROPDOWN THÉMATIQUES */
 .nav_thematiques { position: absolute; padding: 40px 0; left: 0; right: 0; background-color: blue; transform: translateY(-100%); transition: transform .4s; z-index: 99999; }
 
+.nav_thematiques .wrapper { padding-left: 125px; }
+
 .nav_thematiques a { color: white; }
 
 .nav_thematiques a:hover { text-decoration: underline; }
@@ -473,22 +475,22 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (max-width: 800px) { .header-branding { width: 125px; top: -20px; } }
 
-.site_logo { width: 80%; }
+.site_logo { width: 80%; max-width: 150px; }
 
 /* NAVIGATION PRINCIPALE (3-4 entrées) */
-.nav-container { display: flex; align-items: baseline; margin-left: 250px; padding: 10px 0; }
+.nav-container { display: flex; align-items: baseline; padding: 10px 20px 10px 250px; }
 
-.nav-container i { margin-right: 15px; }
+.nav-container i { margin-right: 10px; }
 
-.nav-container li { margin: 0 30px 0 0; }
-
-@media (min-width: 800px) { .nav-container { margin-left: 250px; } }
+.nav-container li { margin: 0 0 0 20px; line-height: 1; }
 
 @media (max-width: 800px) { .nav-container { margin-left: 100px; flex-direction: column; align-items: flex-end; } }
 
 @media (max-width: 800px) { .nav-upper { border-bottom: 1px solid black; padding-bottom: 5px; margin-bottom: 5px; width: 100vw; font-size: 3rem; padding: 0 20px; }
   .nav-upper ul { justify-content: flex-end; }
   .nav-upper li, .nav-upper i { margin-right: 0; margin-left: 20px; } }
+
+.navigation-links { width: 60%; }
 
 @media (max-width: 800px) { .navigation-links { width: 100vw; padding: 0 20px; }
   .navigation-links ul { justify-content: flex-end; align-items: center; }
@@ -498,6 +500,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (max-width: 800px) { .header-link { display: none; } }
 
 /* HOMMEPAGE BANNIERE */
+.header-banner { transition: height .4s; }
+
 @media (min-width: 800px) { .header-banner { overflow: hidden; height: 172px; }
   .header-banner figure { margin: 0; }
   .header-banner figure img { width: auto; height: 100%; } }
@@ -505,11 +509,11 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (max-width: 800px) { .header-banner { display: none; } }
 
 /* BLOC ALERT */
-.header-alert { padding: 30px 0px; min-height: 0px; transition: all .4s; }
+.header-alert { padding: 10px 0px; min-height: 0px; transition: all .4s; }
 
 .header-alert .alert-container { min-width: 50%; }
 
-@media (min-width: 800px) { .header-alert { min-height: 160px; } }
+@media (min-width: 800px) { .header-alert { min-height: 100px; } }
 
 .site-footer { margin-top: 100px; margin-bottom: 40px; }
 
@@ -562,21 +566,33 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+<<<<<<< HEAD
 .breadcrumb { z-index: 10000; background: #e8e8e8; color: #909090; position: fixed; left: 0; right: 0; }
 
 @media (min-width: 800px) { .breadcrumb { padding-left: 250px; top: 238px; } }
+=======
+.breadcrumb { background: #e8e8e8; color: #909090; position: fixed; left: 0; right: 0; transition: top .4s; z-index: 9999; }
+
+@media (min-width: 800px) { .breadcrumb { padding-left: 250px; padding-top: 50px; top: 108px; } }
+>>>>>>> ff0c347158597ba1748440e6eb47168625d6e4c0
 
 @media (max-width: 800px) { .breadcrumb { padding-left: 125px; top: 80px; padding-top: 30px; z-index: 99999; } }
 
-.site-main { margin-top: 250px; }
+.site-main { margin-top: 200px; }
 
-@media (min-width: 800px) { .home .site-main { margin-top: 425px; } }
+@media (min-width: 800px) { .home .site-main { margin-top: 340px; } }
 
-@media (max-width: 800px) { .home .site-main { margin-top: 250px; } }
+@media (max-width: 800px) { .home .site-main { margin-top: 200px; } }
 
 .home .site-main .shortcuts { padding: 20px; }
 
 @media (max-width: 800px) { .site-main { padding-bottom: 60px; } }
+
+.scrolling .header-alert { min-height: 0; }
+
+.scrolling .breadcrumb { top: 68px; }
+
+.scrolling .header-banner { height: 0; }
 
 @media (min-width: 800px) { .single_post .container-title-post { margin-left: -130px; z-index: 100; background: white; } }
 
@@ -595,24 +611,26 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .shortcuts hr { width: 60px; }
 
-@media (min-width: 800px) { .shortcuts { width: 250px; } }
+@media (min-width: 1200px) { .shortcuts { width: 250px; } }
 
-@media (max-width: 800px) { .shortcuts { transform: translateY(100vh); background-color: gray; color: white; right: 0; top: 0; bottom: 0; padding-top: 375px; } }
+@media (max-width: 1200px) { .shortcuts { transform: translateY(100vh); background-color: gray; color: white; right: 0; top: 0; bottom: 0; padding-top: 300px; } }
 
 .shortcuts.open { transform: none; }
 
 .structure-infos { background-color: gray; color: white; border-radius: 15px; }
 
-@media (min-width: 800px) { .hp_left { width: calc(100% - 400px); } }
+@media (min-width: 800px) { .hp_left { width: calc(100% - 300px); } }
 
-@media (min-width: 800px) { .hp_right { width: 350px; } }
+@media (min-width: 1200px) { .hp_left { width: calc(100% - 400px); } }
 
-/*
-    Structure_name aside
-*/
+@media (min-width: 800px) { .hp_right { width: 250px; } }
+
+@media (min-width: 1200px) { .hp_right { width: 350px; } }
+
+/* Structure_name aside */
 .structure-infos { padding: 20px; transition: transform .4s; position: sticky; top: 400px; }
 
-@media (max-width: 800px) { .structure-infos { transform: translateY(-100vh); background-color: rgba(255, 255, 255, 0.5); position: fixed; left: 0; right: 0; top: 0; bottom: 0; padding-top: 375px; } }
+@media (max-width: 800px) { .structure-infos { transform: translateY(-100vh); background-color: rgba(255, 255, 255, 0.5); position: fixed; left: 0; right: 0; top: 0; bottom: 0; padding-top: 300px; } }
 
 /*--------------------------------------------------------------
 # Utilities

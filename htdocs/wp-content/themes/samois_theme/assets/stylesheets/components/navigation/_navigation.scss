@@ -12,8 +12,11 @@
     transition: transform .4s;
     z-index: 99999;
 
-    a {
-        color: white;
+	.wrapper {
+		padding-left: $space_left / 2;
+	}
+	a {
+		color: white;
 
         &:hover {
             text-decoration: underline;
