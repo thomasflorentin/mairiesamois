@@ -17,8 +17,7 @@ $space_top: 200px;
 
     @include at-least(medium) {
         padding-left: $space_left;
-        padding-top: 50px;
-        top: 108px;
+        top: 238px;
     }
     @include up-to(medium) {
         padding-left: 125px;
