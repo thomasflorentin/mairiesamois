@@ -1,17 +1,5 @@
 
 
-
-    <header class="page_head">
-        <h1 class="FS42_B"><?= the_title() ?></h1>
-        <div class="grid mb-medium">
-            <div class="s_12col m_9col">
-                <p class="FS14"><?= get_the_excerpt() ?></p>
-            </div>
-        </div>
-    </header>
-
-
-
     <?php
 
         $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;

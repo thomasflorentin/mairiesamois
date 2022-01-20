@@ -26,7 +26,7 @@ get_header();
         <div class="grid">
             <?php while (have_posts()) : the_post(); ?>
                 <div class="m_4col mb-medium">
-                    <?php get_template_part('components/blocs/bloc', 'post'); ?>
+                    <?php get_template_part('components/blocs/bloc', 'search'); ?>
                 </div>
             <?php endwhile; 
 
