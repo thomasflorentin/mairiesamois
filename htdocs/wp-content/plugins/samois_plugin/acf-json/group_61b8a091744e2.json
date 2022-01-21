@@ -33,7 +33,7 @@
             "key": "field_61b8a091a1bba",
             "label": "Date",
             "name": "date",
-            "type": "date_picker",
+            "type": "date_time_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -42,8 +42,8 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "l j F Y",
-            "return_format": "l j F Y",
+            "display_format": "l j F Y à H:i",
+            "return_format": "l j F Y à H\\hi",
             "first_day": 1
         },
         {
@@ -84,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1642773038
+    "modified": 1642774464
 }
