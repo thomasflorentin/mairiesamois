@@ -48,7 +48,7 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
 
     <div class="grid">
         <div class="s_12col m_9col copy FS16">
-            <?= get_the_content(); ?>
+            <?= do_shortcode(the_content());  ?>
         </div>
     </div>
 

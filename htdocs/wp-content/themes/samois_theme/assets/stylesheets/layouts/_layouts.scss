@@ -1,4 +1,3 @@
-$space_top: 200px;
 
 
 
@@ -6,14 +5,13 @@ $space_top: 200px;
 // Breadcrumb
 
 .breadcrumb {
-    z-index: 10000;
+    z-index: 99999;
     background: #e8e8e8;
     color: #909090;
     position: fixed;
     left: 0;
     right: 0;
     transition: top .4s;
-    z-index: 9999;
 
     @include at-least(medium) {
         padding-left: $space_left;
@@ -22,44 +20,50 @@ $space_top: 200px;
     }
     @include up-to(medium) {
         padding-left: 125px;
-        top: 80px;
+        top: 84px;
         padding-top: 30px;
-        z-index: 99999;
     }
 }
 
 // Main
 
 .site-main {
-    margin-top: $space_top;
+    transition: all .4s;
+    padding-top: 250px;
 
     .home & {
         @include at-least(medium) {
-            margin-top: $space_top * 1.7;
+            padding-top: calc(50vh + 200px);
         }
 
         @include up-to(medium) {
-            margin-top: $space_top;
-        }
-
-        .shortcuts{
-            padding: $marge;
+            padding-top: $space_top;
         }
     }
 
     @include up-to(medium) {
         padding-bottom: $marge * 3;
     }
+    @include at-least(medium) {
+                
+        .home .scrolling & {
+            padding-top: 400px;
+        }
+    }
+
 }
 .scrolling {
     .header-alert {
         min-height: 0;
     }
     .breadcrumb {
-        top: 68px;
+        top: 55px;
     }
     .header-banner {
         height: 0;
+    }
+    .shortcuts {
+        top: 250px;
     }
 }
 
@@ -116,9 +120,11 @@ $space_top: 200px;
 
 .shortcuts {
     position: fixed;
-    padding: $marge * 4 $marge;
+    padding: $marge $marge;
     left: 0;
     transition: transform .4s;
+    z-index: 99999;
+    transition: all .4s;
 
     hr {
         width: 60px;

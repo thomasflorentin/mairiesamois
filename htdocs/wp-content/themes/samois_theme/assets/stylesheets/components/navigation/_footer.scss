@@ -77,4 +77,11 @@
     background-color: white;
     box-shadow: 0 -4px 6px -2px #8685855e;
     z-index: 99999;
+    font-size: 1.8rem;
+
+    li {
+        padding: 0 20px;
+        line-height: 1;
+        text-align: center;
+    }
 }

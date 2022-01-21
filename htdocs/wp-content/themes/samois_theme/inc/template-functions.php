@@ -35,3 +35,38 @@ function samois_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'samois_pingback_header' );
+
+
+
+
+
+/*
+ * Add ACCORDEON Shortcode
+ */
+
+function accordeon_shortcode( $atts , $content = null ) {
+
+	// Attributes
+	$atts = shortcode_atts(
+		array(
+			'titre' => 'Le titre de l\'accordéon ici',
+		),
+		$atts
+	);
+	$titre = $atts['titre'];
+	$content = wpautop(trim($content));
+
+  	$return_string = '<div class="js_dropdown accordeon_item">'; 
+
+		$return_string .= '<a href="#" class="js_dropd_link "><h3 class="btn-inline accordeon_title fl-justify">' . $titre . '<span class="icon-chevron-down"></span></h3></a>';
+
+		$return_string .= '<div class="js_dropd_content accordeon_content">'; 
+			$return_string .= $content; 
+		$return_string .= '</div>'; 
+		
+  	$return_string .= '</div>'; 
+
+	return $return_string;
+}
+add_shortcode( 'accordeon', 'accordeon_shortcode' );
+

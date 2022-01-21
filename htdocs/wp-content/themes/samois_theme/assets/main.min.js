@@ -72,7 +72,7 @@ function init() {
                 return;
             
             if( st < 50 ) {
-                console.log('documentIsScrolling BACKTOTHETOP');
+                //console.log('documentIsScrolling BACKTOTHETOP');
 
                 app.page.classList.remove('scrolling')
                 app.masthead.classList.remove('fixed');
@@ -80,7 +80,7 @@ function init() {
 
             }
             else if (st > app.lastScrollTop ){
-                console.log('documentIsScrolling DOWN');
+                //console.log('documentIsScrolling DOWN');
 
                 app.page.classList.add('scrolling')
                 app.masthead.classList.add('fixed');
@@ -88,7 +88,7 @@ function init() {
 
             } 
             else {
-                console.log('documentIsScrolling UP');
+                //console.log('documentIsScrolling UP');
 
                 app.page.classList.add('scrolling')
                 app.masthead.classList.add('in');
@@ -96,6 +96,50 @@ function init() {
             }
 
             app.lastScrollTop = st;
+        },
+
+
+        // ACCORDEONS
+        closeDropdownsContent: function( $els ) {
+            console.log('closeDropdownsContent');
+
+            let i = 0;
+    
+            for (let el of $els) {
+    
+                var this_height = el.offsetHeight + 50;            
+                
+                el.style.maxHeight = this_height + 'px';
+        
+                // Don't close for first item
+                if( i > 0 ) {
+                    el.closest('.js_dropdown').classList.add('closed');
+                }
+        
+                i++;
+            }
+    
+        },
+    
+        handleDropdownsOpening: function( $els ) {
+            console.log('handleDropdownsOpening');
+
+            for (let el of $els) {
+    
+                const js_dropdown = el.closest('.js_dropdown');
+    
+                el.addEventListener('click', function(e) {
+                    e.preventDefault();
+        
+                    for( let e of $els) {
+                        e.closest('.js_dropdown').classList.add('closed');
+                    }
+        
+                    js_dropdown.classList.toggle('closed')
+        
+                }); 
+    
+            }
         },
 
     }
@@ -108,12 +152,23 @@ function init() {
      * LISTENERS
      */
 
+    // handle show/hide popins
     app.dropdownBtn.addEventListener('click', (e) => app.toggleElement(e, app.dropdownMenu) );
     app.searchbarBtn.addEventListener('click', (e) => app.toggleElement(e, app.searchbarElement) );
     app.shortcutsBtn.addEventListener('click', (e) => app.toggleElement(e, app.shortcuts) );
 
 
+    // handle scroll
     document.addEventListener("scroll", app.documentIsScrolling, false);
+
+
+    // handle accordéons
+    const $js_dropdown = document.querySelectorAll('.js_dropd_link');
+    const $js_dropd_content = document.querySelectorAll('.js_dropd_content');
+    
+    app.closeDropdownsContent( $js_dropd_content );
+    app.handleDropdownsOpening( $js_dropdown );
+
 
 
     // todo: A faire fonctionner : fermer le menu quand on clique sur la page

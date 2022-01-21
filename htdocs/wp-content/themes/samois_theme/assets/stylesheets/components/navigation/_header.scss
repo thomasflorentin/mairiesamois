@@ -47,8 +47,9 @@
 
 .nav-container {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     padding: 10px $marge 10px $space_left;
+    justify-content: flex-start;
 
     i {
         margin-right: 10px;
@@ -57,6 +58,10 @@
     li {
         margin: 0 0 0 20px;
         line-height: 1;
+        text-transform: uppercase;
+        @include at-least(large) {
+            font-size: 2rem;
+        }
     }
 
     @include up-to(medium) {
@@ -74,7 +79,7 @@
         margin-bottom: 5px;
         width: 100vw;
         font-size: 3rem;
-        padding: 0 $marge;
+        padding: 10px 0 15px;
 
         ul {
             justify-content: flex-end;
@@ -90,9 +95,12 @@
 .navigation-links {
     width: 60%;
 
+    @include up-to(large) {
+        width: 90%;
+    }
     @include up-to(medium) {
         width: 100vw;
-        padding: 0 $marge;
+        padding: 0 0 0 80px;
 
         ul {
             justify-content: flex-end;
@@ -103,7 +111,6 @@
             margin-left: $marge;
             display: inline-block;
             text-align: right;
-            text-transform: uppercase;
             line-height: 1;
         }
         a {
@@ -131,7 +138,7 @@
         ;
         @include at-least(medium) {
             overflow: hidden;
-            height: 172px;
+            height: 50vh;
 
             figure {
                 margin: 0;
@@ -140,6 +147,8 @@
             figure img {
                 width: auto;
                 height: 100%;
+                width: 100vw;
+                object-fit: cover;
             }
         }
 
