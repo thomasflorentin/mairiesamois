@@ -15,7 +15,7 @@ get_header();
 <?php
 while (have_posts()) : the_post(); ?>
 
-    <header class="page_head">
+<header class="page_head">
         <h1 class="FS42_B"><?= the_title() ?></h1>
         <div class="grid mb-medium">
             <div class="s_12col m_9col">
