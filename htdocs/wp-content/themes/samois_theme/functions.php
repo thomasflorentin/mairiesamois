@@ -168,3 +168,6 @@ function my_mime_types( $mimes ) {
     return $mimes;
 }
 add_filter('upload_mimes', 'my_mime_types');
+
+
+remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
