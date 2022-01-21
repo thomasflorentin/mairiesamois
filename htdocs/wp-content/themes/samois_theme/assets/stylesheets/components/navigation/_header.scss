@@ -29,7 +29,7 @@
     }
     @include up-to(medium) {
         width: 125px;
-        top: -20px;
+        top: 8px;
     }
 }
 
@@ -79,7 +79,7 @@
         margin-bottom: 5px;
         width: 100vw;
         font-size: 3rem;
-        padding: 10px 0 15px;
+        padding: 20px 0 20px;
 
         ul {
             justify-content: flex-end;
