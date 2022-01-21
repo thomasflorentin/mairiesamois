@@ -40,7 +40,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-informations.php"
+                "value": "default"
             }
         ],
         [
@@ -56,6 +56,13 @@
                 "operator": "==",
                 "value": "information"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-vivre-samois.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -67,5 +74,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1642429681
+    "modified": 1642776148
 }
