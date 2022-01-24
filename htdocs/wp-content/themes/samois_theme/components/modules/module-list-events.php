@@ -8,7 +8,15 @@ $link = $args['link'];
 <section class="mod_featured mb-big">
 
     <header class="mod_title mb-medium">
-        <a href="<?php echo $link; ?>" class=" arrow FS24_B "><?php echo $title; ?></a>
+        <h2 class="FS24_B">
+            <?php if( $link != '' ) : ?>
+                <a href="<?php echo $link; ?>" class="arrow">
+            <?php endif; ?>
+                    <?php echo $title; ?>
+            <?php if( $link != '' ) : ?>
+                </a>
+            <?php endif; ?>  
+        </h2>
     </header>
 
     <div class="mod_list">
