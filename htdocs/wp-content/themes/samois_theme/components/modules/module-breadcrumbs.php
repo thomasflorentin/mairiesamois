@@ -28,7 +28,14 @@
                         $ancestors = array_reverse($ancestors);
 
                         foreach ($ancestors as $crumb) {
-                            $html .= '<li><a href="' . get_permalink($crumb) . '">' . get_the_title($crumb) . '</a>&nbsp;>&nbsp;</li>';
+
+                            if( has_children($crumb) > 0 && is_top_level ($crumb)  > 0 ) {
+                                $html .= '<li class="' . $crumb . '">' . get_the_title($crumb) . '&nbsp;>&nbsp;</li>';
+                            }
+                            else {
+                                $html .= '<li class="' . $crumb . '"><a href="' . get_permalink($crumb) . '">' . get_the_title($crumb) . '</a>&nbsp;>&nbsp;</li>';
+                            }
+
                         }
                     }
                 }

@@ -39,6 +39,37 @@ add_action( 'wp_head', 'samois_pingback_header' );
 
 
 
+	function has_children( $id = '') {
+		
+		if( $id === '' ) {	
+			global $post;
+			$id = $post->ID;
+		}
+
+		$pages = get_pages(
+			array(
+				'post_type'	=> array('page', 'information', 'post', 'event'),
+				'child_of'	=> $id
+			)
+		);
+
+		return count($pages);
+	}
+  
+	function is_top_level( $id = '' ) {
+		global $wpdb;
+
+		if( $id === '' ) {
+			global $post;
+			$id = $post->ID;
+		}
+		
+		$current_page = $wpdb->get_var("SELECT post_parent FROM $wpdb->posts WHERE ID = " . $id);
+
+		return $current_page;
+	}
+
+
 
 /*
  * Add ACCORDEON Shortcode
