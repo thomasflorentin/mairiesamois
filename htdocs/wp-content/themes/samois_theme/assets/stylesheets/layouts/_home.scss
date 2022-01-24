@@ -25,9 +25,12 @@
 
 .structure-infos {
     padding: $marge;
-    transition: transform .4s;
+    transition: transform .4s, top .2s;
     position: sticky;
     top: 400px;
+    background-color: $gray;
+    color: $white;
+    border-radius: 15px;
 
     @include up-to(medium) {
         transform: translateY(-100vh);

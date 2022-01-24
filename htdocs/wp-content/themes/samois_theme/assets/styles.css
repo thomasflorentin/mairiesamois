@@ -687,6 +687,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .scrolling .shortcuts { top: 250px; }
 
+.scrolling .structure-infos { top: 150px; }
+
 @media (min-width: 800px) { .single_post .container-title-post { margin-left: -130px; z-index: 100; background: white; } }
 
 .item_title { display: block; margin-left: auto; margin-right: auto; background: white; margin-top: -60px; padding: 20px; position: relative; z-index: 9999; width: 75%; }
@@ -710,8 +712,6 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .shortcuts.open { transform: none; }
 
-.structure-infos { background-color: gray; color: white; border-radius: 15px; }
-
 @media (min-width: 800px) { .hp_left { width: calc(100% - 300px); } }
 
 @media (min-width: 1200px) { .hp_left { width: calc(100% - 400px); } }
@@ -721,7 +721,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (min-width: 1200px) { .hp_right { width: 350px; } }
 
 /* Structure_name aside */
-.structure-infos { padding: 20px; transition: transform .4s; position: sticky; top: 400px; }
+.structure-infos { padding: 20px; transition: transform .4s, top .2s; position: sticky; top: 400px; background-color: gray; color: white; border-radius: 15px; }
 
 @media (max-width: 800px) { .structure-infos { transform: translateY(-100vh); background-color: rgba(255, 255, 255, 0.5); position: fixed; left: 0; right: 0; top: 0; bottom: 0; padding-top: 300px; } }
 

@@ -65,6 +65,9 @@
     .shortcuts {
         top: 250px;
     }
+    .structure-infos {
+        top: 150px;
+    }
 }
 
 // Single post
@@ -148,12 +151,6 @@
         transform: none;
     }
 
-}
-
-.structure-infos{
-    background-color: $gray;
-    color: $white;
-    border-radius: 15px;
 }
 
 
