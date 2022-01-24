@@ -52,16 +52,16 @@ if (have_rows('flex-content')) :
 
 
         // 
-        elseif (get_row_layout() == 'mod_list_informations') :
-            $categoriesChild = get_sub_field('XXXXXXXXXXX');
+        elseif (get_row_layout() == 'mod_blocs_informations') :
+            $parentId = get_sub_field('pages_information');
+            echo '<div class="grid">';
 
-            foreach ($categoriesChild as $c) :
-
-                set_query_var( 'c', $c);
-                get_template_part('components/modules/module', 'informations');
-
+            foreach ($parentId as $p) :
+                    set_query_var( 'parent_id', $p->ID);
+                    get_template_part('components/modules/module', 'informations');
             endforeach; 
 
+            echo '</div>';
 
 
         endif;

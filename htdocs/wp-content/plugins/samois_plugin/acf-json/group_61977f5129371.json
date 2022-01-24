@@ -198,6 +198,44 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_61ee69bc55f49": {
+                    "key": "layout_61ee69bc55f49",
+                    "name": "mod_blocs_informations",
+                    "label": "Blocs Informations",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_61ee69c355f4a",
+                            "label": "Page parente des informations à Afficher",
+                            "name": "pages_information",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "information"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "min": "",
+                            "max": "",
+                            "return_format": "object"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Ajouter un élément",
@@ -244,5 +282,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1641910166
+    "modified": 1643015054
 }
