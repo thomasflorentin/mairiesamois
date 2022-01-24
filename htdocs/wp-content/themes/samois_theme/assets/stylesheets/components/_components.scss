@@ -24,11 +24,12 @@
         max-height: 0 !important;
     }
 
-	.icon-chevron-down:before {
+	i:before {
 		transition: all .2s;
+		display: inline-block;
 	}
-	&.closed .icon-chevron-down:before {
-		transform: rotate(-90deg);
+	&:not(.closed) i:before {
+		transform: rotate(90deg);
 	}
 } 
 

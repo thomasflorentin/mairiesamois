@@ -5,11 +5,11 @@ $imgs = get_field('single_img');
 get_template_part('components/modules/module', 'breadcrumbs'); ?>
 
 
-<article>
+<article class="single_post">
 
     <?php if ($imgs) : ?>
 
-        <div class="grid mb-medium single_post">
+        <div class="grid mb-medium single_cover">
             <figure class="s_12col m_7col ratio_1 m_full">
                 <div class="inner">
                     <div class="cover_slide">
@@ -17,6 +17,22 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
                             <img src="<?= $img['url'] ?>" alt="" class="">
                         <?php endforeach; ?>
                     </div>
+                </div>
+            </figure>
+
+            <div class="s_12col m_5col mt-big container-title-post p-small">
+                <h1 class="FS42_B post-title"><?php the_title(); ?></h1>
+                <div class="FS16_B post-excerpt"><?php the_excerpt(); ?></div>
+            </div>
+        </div>
+
+
+    <?php elseif ( has_post_thumbnail() ) : ?>
+
+        <div class="grid mb-medium single_cover thumbnail_single">
+            <figure class="s_12col m_7col m_full">
+                <div class="inner">
+                    <?php the_post_thumbnail(); ?>
                 </div>
             </figure>
 

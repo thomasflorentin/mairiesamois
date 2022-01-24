@@ -654,9 +654,9 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .js_dropdown.closed .js_dropd_content { max-height: 0 !important; }
 
-.js_dropdown .icon-chevron-down:before { transition: all .2s; }
+.js_dropdown i:before { transition: all .2s; display: inline-block; }
 
-.js_dropdown.closed .icon-chevron-down:before { transform: rotate(-90deg); }
+.js_dropdown:not(.closed) i:before { transform: rotate(90deg); }
 
 .js_dropd_link:hover, .js_dropd_link:hover * { color: yellow; }
 
@@ -695,7 +695,9 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .scrolling .structure-infos { top: 150px; }
 
-@media (min-width: 800px) { .single_post .container-title-post { margin-left: -130px; z-index: 100; background: white; } }
+.single_cover { align-items: flex-start; }
+
+@media (min-width: 800px) { .single_cover .container-title-post { margin-left: -75px; z-index: 100; background: white; box-shadow: -12px -9px 10px #00000012; } }
 
 .item_title { display: block; margin-left: auto; margin-right: auto; background: white; margin-top: -60px; padding: 20px; position: relative; z-index: 9999; width: 75%; }
 

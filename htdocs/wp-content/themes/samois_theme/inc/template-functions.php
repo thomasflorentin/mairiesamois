@@ -58,7 +58,7 @@ function accordeon_shortcode( $atts , $content = null ) {
 
   	$return_string = '<div class="js_dropdown accordeon_item">'; 
 
-		$return_string .= '<a href="#" class="js_dropd_link "><h3 class="btn-inline accordeon_title fl-justify">' . $titre . '<span class="icon-chevron-down"></span></h3></a>';
+		$return_string .= '<a href="#" class="js_dropd_link "><h3 class="btn-inline accordeon_title fl-justify">' . $titre . '<i class="fas fa-arrow-right"></i></h3></a>';
 
 		$return_string .= '<div class="js_dropd_content accordeon_content">'; 
 			$return_string .= $content; 

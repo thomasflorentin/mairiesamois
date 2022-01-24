@@ -72,12 +72,15 @@
 
 // Single post
 
-.single_post {
+.single_cover {
+    align-items: flex-start;
+
     @include at-least(medium) {
         .container-title-post {
-            margin-left: -130px;
+            margin-left: -75px;
             z-index: 100;
             background: $white;
+            box-shadow: -12px -9px 10px #00000012;
         }
     }
 }
