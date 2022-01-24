@@ -170,6 +170,13 @@ function init() {
     app.handleDropdownsOpening( $js_dropdown );
 
 
+    // handle sliders
+
+    var slider = tns({
+        container: '.cover_slide',
+        items: 1,
+      });
+
 
     // todo: A faire fonctionner : fermer le menu quand on clique sur la page
     // $main.addEventListener('click', function( e ) {

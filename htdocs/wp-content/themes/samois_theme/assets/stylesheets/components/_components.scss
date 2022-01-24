@@ -8,6 +8,7 @@
 /* Media
 --------------------------------------------- */
 @import "media/media";
+@import "media/tinyslide";
 
 /* Captions
 --------------------------------------------- */
@@ -27,7 +28,7 @@
 		transition: all .2s;
 	}
 	&.closed .icon-chevron-down:before {
-//		transform: rotate(-90deg);
+		transform: rotate(-90deg);
 	}
 } 
 

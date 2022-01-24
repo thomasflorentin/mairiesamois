@@ -120,6 +120,8 @@ function my_load_scripts($hook) {
     $my_css_ver = '220118';
     // 
     wp_enqueue_script( 'my_js', get_template_directory_uri() . '/assets/main.min.js', array(), $my_js_ver );
+    wp_enqueue_script( 'tinyslide','https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js', array(), '' );
+    
     wp_register_style( 'my_css', get_template_directory_uri() . '/assets/styles.css', false,   $my_css_ver );
     wp_enqueue_style ( 'my_css' );
  
