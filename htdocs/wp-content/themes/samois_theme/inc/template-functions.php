@@ -85,14 +85,14 @@ function accordeon_shortcode( $atts , $content = null ) {
 		$atts
 	);
 	$titre = $atts['titre'];
-	$content = wpautop(trim($content));
+	$result = wpautop(trim($content));
 
   	$return_string = '<div class="js_dropdown accordeon_item">'; 
 
 		$return_string .= '<a href="#" class="js_dropd_link "><h3 class="btn-inline accordeon_title fl-justify">' . $titre . '<i class="fas fa-arrow-right"></i></h3></a>';
 
 		$return_string .= '<div class="js_dropd_content accordeon_content">'; 
-			$return_string .= $content; 
+			$return_string .= $result; 
 		$return_string .= '</div>'; 
 		
   	$return_string .= '</div>'; 

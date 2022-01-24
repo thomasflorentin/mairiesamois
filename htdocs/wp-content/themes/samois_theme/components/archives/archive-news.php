@@ -10,7 +10,7 @@
             'order'             => 'DESC',
             'orderby'           => 'date',
             'paged'             => $paged,
-            'posts_per_page'    => 3
+            'posts_per_page'    => 9
         );
 
         // Custom query.
@@ -26,7 +26,9 @@
 
                 <div class="s_12col m_4col mb-medium">
 
-                    <?php get_template_part('components/blocs/bloc', 'post'); ?>
+                    <?php 
+                        $args['loop'] = 1;
+                        get_template_part('components/blocs/bloc', 'post', $args ); ?>
 
                 </div>
 

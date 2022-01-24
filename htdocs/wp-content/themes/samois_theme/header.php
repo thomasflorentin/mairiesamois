@@ -137,7 +137,7 @@ if (is_admin_bar_showing()) : ?>
             <nav id="searchbar_wrapper" class="searchbar_wrapper">
                 <?php get_search_form(); ?>
 
-                <div class="l_hide">
+                <div class="m_hide">
                     <?php get_template_part('components/modules/module', 'horaires'); ?>
                 </div>
             </nav>

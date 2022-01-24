@@ -100,7 +100,7 @@
     }
     @include up-to(medium) {
         width: 100vw;
-        padding: 0 0 0 80px;
+        padding: 0 0 0 125px;
 
         ul {
             justify-content: flex-end;
@@ -112,6 +112,7 @@
             display: inline-block;
             text-align: right;
             line-height: 1;
+            flex: 1;
         }
         a {
             padding: 10px 0 5px;

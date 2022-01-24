@@ -297,9 +297,9 @@ h1, h2, h3, h4, h5, h6 { clear: both; margin-top: 0; }
 
 .h31 { text-transform: uppercase; line-height: 1; }
 
-.FS42_B { font-size: 4.2rem; font-weight: 700; }
+.FS42_B { font-size: 4.2rem; font-weight: 700; line-height: 1; }
 
-.FS24_B { font-size: 2.4rem; font-weight: 700; }
+.FS24_B { font-size: 2.4rem; font-weight: 700; line-height: 1; }
 
 .FS18 { font-size: 1.8rem; }
 
@@ -445,10 +445,11 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 800px) { .nav_thematiques .sub-menu a { padding: 5px 0; } }
 
-.searchbar_wrapper { position: absolute; padding: 10px 0; opacity: 0; transform: scale(0); transition: opacity .4s; z-index: 9999; }
+.searchbar_wrapper { position: absolute; left: 250px; padding: 10px 0; opacity: 0; transform: scale(0); transition: opacity .4s; z-index: 9999; }
 
-@media (max-width: 1200px) { .searchbar_wrapper { background-color: blue; left: 0; right: 0; bottom: 0; top: 0; padding-top: 200px; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; }
-  .searchbar_wrapper .structure-infos { background: none; padding: 60px 0 0 0; } }
+@media (max-width: 800px) { .searchbar_wrapper { background-color: blue; left: 0; right: 0; bottom: 0; top: 0; padding-top: 300px; padding-bottom: 100px; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; overflow: scroll; }
+  .searchbar_wrapper .structure-infos { background: none; padding: 60px 0 0 0; }
+  .searchbar_wrapper > * { width: 90% !important; } }
 
 @media (min-width: 1200px) { .searchbar_wrapper { left: 250px; } }
 
@@ -502,9 +503,9 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (max-width: 1200px) { .navigation-links { width: 90%; } }
 
-@media (max-width: 800px) { .navigation-links { width: 100vw; padding: 0 0 0 80px; }
+@media (max-width: 800px) { .navigation-links { width: 100vw; padding: 0 0 0 125px; }
   .navigation-links ul { justify-content: flex-end; align-items: center; }
-  .navigation-links li { margin-right: 0; margin-left: 20px; display: inline-block; text-align: right; line-height: 1; }
+  .navigation-links li { margin-right: 0; margin-left: 20px; display: inline-block; text-align: right; line-height: 1; flex: 1; }
   .navigation-links a { padding: 10px 0 5px; display: inline-block; } }
 
 @media (max-width: 800px) { .header-link { display: none; } }
@@ -673,7 +674,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 800px) { .breadcrumb { padding-left: 250px; top: 100px; padding-top: 50px; } }
 
-@media (max-width: 800px) { .breadcrumb { padding-left: 125px; top: 84px; padding-top: 30px; } }
+@media (max-width: 800px) { .breadcrumb { padding-left: 125px; top: 100px; padding-top: 30px; } }
 
 .site-main { transition: all .4s; padding-top: 250px; }
 
@@ -724,6 +725,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 1200px) { .hp_left { width: calc(100% - 400px); } }
 
+@media (max-width: 800px) { .hp_right .structure-infos { display: none; } }
+
 @media (min-width: 800px) { .hp_right { width: 250px; } }
 
 @media (min-width: 1200px) { .hp_right { width: 350px; } }
@@ -731,7 +734,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /* Structure_name aside */
 .structure-infos { padding: 20px; transition: transform .4s, top .2s; position: sticky; top: 400px; background-color: gray; color: white; border-radius: 15px; }
 
-@media (max-width: 800px) { .structure-infos { transform: translateY(-100vh); background-color: rgba(255, 255, 255, 0.5); position: fixed; left: 0; right: 0; top: 0; bottom: 0; padding-top: 300px; } }
+@media (max-width: 800px) { .structure-infos { background: none; padding-top: 300px; } }
 
 /*--------------------------------------------------------------
 # Utilities

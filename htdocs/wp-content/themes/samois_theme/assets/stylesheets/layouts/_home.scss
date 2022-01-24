@@ -9,6 +9,11 @@
 }
 
 .hp_right {
+    @include up-to(medium) {
+        .structure-infos {
+            display: none;
+        }
+    }
     @include at-least(medium) {
         width: 250px;
     }
@@ -33,13 +38,7 @@
     border-radius: 15px;
 
     @include up-to(medium) {
-        transform: translateY(-100vh);
-        background-color: rgba($color: #fff, $alpha: .5);
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
+        background: none;
         padding-top: $space_top * 1.5;
     }
 }

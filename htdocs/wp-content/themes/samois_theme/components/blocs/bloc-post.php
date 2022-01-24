@@ -1,3 +1,9 @@
+<?php 
+    if( !isset( $args['loop'] ) ) {
+        $args['loop'] = 1;
+    }
+?>
+
 <div class="bloc">
     <a href="<?= get_the_permalink(); ?>">
         <?php if (has_post_thumbnail()) : ?>
