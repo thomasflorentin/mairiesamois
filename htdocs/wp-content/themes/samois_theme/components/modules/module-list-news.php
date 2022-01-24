@@ -1,15 +1,17 @@
 <?php
 $title = $args['title'];
-$posts = $args['list_news'];
+$posts = $args['list_posts'];
 $loop = count($posts) + 1;
+$link = $args['link'];
 
 ?>
 
 
-<section class="mod_featured">
+<section class="mod_featured mb-big">
 
-    <a href="/actualites" class="mod_title arrow FS24_B"><?php echo $title; ?></a>
-
+    <header class="mod_title mb-medium">
+        <a href="<?php echo $link; ?>" class=" arrow FS24_B "><?php echo $title; ?></a>
+    </header>
 
     <div class="mod_list">
         <?php

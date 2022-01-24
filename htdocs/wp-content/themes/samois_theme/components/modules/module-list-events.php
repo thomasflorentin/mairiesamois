@@ -1,13 +1,15 @@
 <?php
 $title = $args['title'];
-$posts = $args['list_events'];
+$posts = $args['list_posts'];
+$link = $args['link'];
 ?>
 
 
-<section class="mod_featured">
+<section class="mod_featured mb-big">
 
-    <a href="<?php echo esc_url(home_url('/agenda')); ?>" class="mod_title arrow FS24_B"><?php echo $title; ?></a>
-
+    <header class="mod_title mb-medium">
+        <a href="<?php echo $link; ?>" class=" arrow FS24_B "><?php echo $title; ?></a>
+    </header>
 
     <div class="mod_list">
         <?php

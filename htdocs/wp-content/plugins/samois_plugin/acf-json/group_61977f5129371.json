@@ -1,6 +1,6 @@
 {
     "key": "group_61977f5129371",
-    "title": "Options",
+    "title": "CONTENUS FLEXIBLES",
     "fields": [
         {
             "key": "field_61a634127c53b",
@@ -82,7 +82,7 @@
                 "layout_61a636258b55d": {
                     "key": "layout_61a636258b55d",
                     "name": "mod_grid_new",
-                    "label": "Grille actualités",
+                    "label": "Listes de pages (actus, événements, informations)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -94,7 +94,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -105,8 +105,27 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_61ee781589370",
+                            "label": "Lien sur le titre ?",
+                            "name": "mod_link",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": "",
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "allow_archives": 1,
+                            "multiple": 0
+                        },
+                        {
                             "key": "field_61a6366e8b55f",
-                            "label": "Liste des actus à afficher",
+                            "label": "Liste des pages à afficher",
                             "name": "mod_list_news",
                             "type": "relationship",
                             "instructions": "",
@@ -135,6 +154,32 @@
                             "min": "",
                             "max": 5,
                             "return_format": "object"
+                        },
+                        {
+                            "key": "field_61ee6e49fc449",
+                            "label": "Mode d'affichage",
+                            "name": "mod_design",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "focus": "Blocs focus",
+                                "events": "Liste événements",
+                                "news": "Blocs Actualités"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
                         }
                     ],
                     "min": "",
@@ -282,5 +327,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1643015054
+    "modified": 1643018373
 }
