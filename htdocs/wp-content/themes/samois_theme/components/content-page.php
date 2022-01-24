@@ -27,7 +27,8 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
         </div>
 
 
-        <?php else :
+    <?php else : // else imgs 
+
         if (is_page()) : ?>
             <div class="grid mb-medium">
                 <div class="s_12col m_7col col_start_2">
@@ -45,7 +46,8 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
             </div>
 
         <?php endif; ?>
-    <?php endif; ?>
+
+    <?php endif; // if imgs ?>
 
 
     <div class="grid">

@@ -630,11 +630,17 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .tns-controls { position: absolute; bottom: 0; left: 0; background: rgba(255, 255, 255, 0.5); z-index: 999; }
 
+.tns-controls button { padding: 5px; }
+
 .tns-nav { position: absolute; bottom: 0; right: 0; left: 0; bottom: 14px; z-index: 999; display: flex; justify-content: center; }
 
-.tns-nav button { border-radius: 50%; width: 10px; height: 10px; display: inline-block; border: 1px solid black; background-color: white; margin: 0 5px; }
+.tns-nav button { border-radius: 50%; width: 10px; height: 10px; display: inline-block; border: 1px solid black; background-color: white; margin: 0 2px; }
 
-.tns-item img { height: 40vh; object-fit: cover; }
+.tns-nav button.tns-nav-active { background-color: black; border-color: white; }
+
+.tns-item { height: 40vh; object-fit: cover; }
+
+.tns-item img { height: inherit; object-fit: inherit; }
 
 /* Captions
 --------------------------------------------- */

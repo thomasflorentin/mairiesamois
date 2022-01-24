@@ -175,6 +175,7 @@ function init() {
     var slider = tns({
         container: '.cover_slide',
         items: 1,
+        controlsText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
       });
 
 
