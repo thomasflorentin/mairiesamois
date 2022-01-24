@@ -694,9 +694,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .scrolling .header-banner { height: 0; }
 
-.scrolling .shortcuts { top: 250px; }
-
-.scrolling .structure-infos { top: 150px; }
+@media (min-width: 800px) { .scrolling .shortcuts { top: 250px; }
+  .scrolling .structure-infos { top: 150px; } }
 
 .single_cover { align-items: flex-start; }
 
