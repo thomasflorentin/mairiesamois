@@ -53,14 +53,7 @@ get_template_part('components/shortcuts', '', $shortcuts_args); ?>
                     echo "<h3 class='agenda-month FS24_B txt-capitalize mb-vsmall'>" . $current_header . '</h3>';
                 } ?>
 
-                <li class="list-bbot">
-                    <a class="grid p-small" href="<?= the_permalink() ?>">
-                        <p class="m_3col txt-capitalize FS14 mb-none"><?= get_field('date') ?></p>
-                        <p class="m_4col mb-none FS16_B"><?= the_title() ?></p>
-                        <p class="m_4col mb-none FS14"><?= get_field('location') ?></p>
-                        <div class="arrow m_1col mb-none txt-right"></div>
-                    </a>
-                </li>
+                <?php get_template_part('components/blocs/bloc', 'event'); ?>
 
             <?php endwhile; ?>
             

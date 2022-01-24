@@ -643,8 +643,6 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .tns-item img { height: inherit; object-fit: inherit; }
 
-/* Captions
---------------------------------------------- */
 .wp-caption { margin-bottom: 1.5em; max-width: 100%; }
 
 .wp-caption img[class*="wp-image-"] { display: block; margin-left: auto; margin-right: auto; }
@@ -652,6 +650,10 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .wp-caption .wp-caption-text { margin: 0.8075em 0; }
 
 .wp-caption-text { text-align: center; }
+
+/* Blocs
+--------------------------------------------- */
+.bloc_event { padding: 20px 0; }
 
 .js_dropdown.closed .js_dropd_content { max-height: 0 !important; }
 
