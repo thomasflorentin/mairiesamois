@@ -6,7 +6,10 @@ if (have_rows('flex-content')) :
 
     while (have_rows('flex-content')) : the_row();
 
-
+        /*
+         * BLOCS de CONTENUS MIS EN AVANT 
+         * (cf. Accueil)
+         */
         if (get_row_layout() == 'mod_featured') :
             $title = get_sub_field('mod_title');
             $content = get_sub_field('mod_content');
@@ -24,15 +27,51 @@ if (have_rows('flex-content')) :
 
 
         /*
-         * BLOCS d'INFORMATIONS 
-         * (cf. SERVICES ET DEMARCHES)
+         * LISTE DE POSTS 
+         * (actualités, événements, etc.)
          */
         elseif (get_row_layout() == 'mod_grid_new') :
 
             $title = get_sub_field('mod_title');
-            $list_posts = get_sub_field('mod_list_news');
             $design = get_sub_field('mod_design');
             $link = get_sub_field('mod_link');
+            $auto = get_sub_field('mod_auto');
+            $postsperpage = get_sub_field('mod_postsperpage');
+            $posttype = get_sub_field('mod_posttype');
+
+            if( $auto ) {
+                
+                $q_args = array(
+                    'posts_per_page'    => $postsperpage,
+                    'post_type'         => $posttype,
+                    'status'            => 'published',
+
+                );
+
+                if( $posttype === 'event' ) {
+                    setlocale(LC_TIME, 'fr_FR.UTF8', 'fr.UTF8', 'fr_FR.UTF-8', 'fr.UTF-8');
+                    $today = date('Ymd');
+
+                    $q_args['meta_key'] = 'date';
+                    $q_args['orderby'] = 'meta_value_num';
+                    $q_args['order'] = 'ASC';
+                    $q_args['meta_query'] = array(
+                        'key'           => 'date',
+                        'value'         => $today,
+                        'compare'       => '>=',
+                    );
+
+                }
+                else {
+                    $q_args['orderby'] = 'date';
+                    $q_args['order'] = 'DESC';
+                }
+
+                $list_posts = get_posts( $q_args );
+            }
+            else {
+                $list_posts = get_sub_field('mod_list_news');
+            }
 
             $args = array(
                 'title'   => $title,

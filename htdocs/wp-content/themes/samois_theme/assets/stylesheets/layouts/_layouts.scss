@@ -62,17 +62,12 @@
     .header-banner {
         height: 0;
     }
-
-    @include at-least(medium) {
-        .shortcuts {
-            top: 250px;
-        }
-        .structure-infos {
-            top: 150px;
-        }
+    .shortcuts {
+        top: 250px;
     }
-
-
+    .structure-infos {
+        top: 150px;
+    }
 }
 
 // Single post
@@ -89,6 +84,14 @@
         }
     }
 }
+.thumbnail_single {
+    img {
+        width: 100%;
+    }
+}
+
+
+
 
 // Cards
 
