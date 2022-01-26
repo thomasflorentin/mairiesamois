@@ -29,6 +29,8 @@
 
     @include up-to(medium) {
         height: 100vh;
+        overflow: scroll;
+        padding-bottom: 200px;
 
         ul {
             flex-direction: column;

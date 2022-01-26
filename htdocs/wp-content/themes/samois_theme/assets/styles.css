@@ -426,7 +426,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .nav_thematiques.open { transform: none; }
 
-@media (max-width: 800px) { .nav_thematiques { height: 100vh; }
+@media (max-width: 800px) { .nav_thematiques { height: 100vh; overflow: scroll; padding-bottom: 200px; }
   .nav_thematiques ul { flex-direction: column; }
   .nav_thematiques .wrapper { padding-left: 0; } }
 
