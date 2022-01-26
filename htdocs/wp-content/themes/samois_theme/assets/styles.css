@@ -627,7 +627,9 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .tns-t-ct > div { width: 1.4285714%; width: -webkit-calc(100% / 70); width: -moz-calc(100% / 70); width: calc(100% / 70); height: 10px; float: left; }
 
 /*# sourceMappingURL=sourcemaps/tiny-slider.css.map */
-.cover_slide img { object-fit: cover; }
+.cover_slide { display: flex; align-items: center; }
+
+.cover_slide img { object-fit: cover; height: 40vh; }
 
 .tns-controls { position: absolute; bottom: 0; left: 0; background: rgba(255, 255, 255, 0.5); z-index: 999; }
 

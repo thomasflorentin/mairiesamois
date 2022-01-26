@@ -4,8 +4,12 @@
 
 
 .cover_slide {
+    display: flex;
+    align-items: center;
+
     img {
         object-fit: cover;
+        height: 40vh;
     }
 }
 
