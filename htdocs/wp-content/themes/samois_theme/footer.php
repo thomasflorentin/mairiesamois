@@ -40,11 +40,8 @@ $useful_links = get_field('util_link', 'options')
                     
                     <div class="mb-medium">
                         <h3 class="FS16_B">Restez toujours informé.e !</h3>
-                        <p class="mb-small">Recevez notre Newsletter</p>
-                        <form class="form-newsletter field_default" method="get" action="">
-                            <input type="text" class="search-field" name="s" placeholder="Recherher">
-                            <button type="submit"><i class="fas fa-arrow-right"></i></button>
-                        </form>
+                        <?php get_template_part('components/modules/module', 'newsletter'); ?>
+
                     </div>
 
                     <div class="social-qrcode fl-justify pb-medium">
