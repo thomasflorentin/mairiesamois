@@ -7,6 +7,15 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
 
 <article class="single_post">
 
+    <?php if( get_post_type() == 'event' ) : ?>
+
+        <section class="event_meta mb-big">
+            <p class="FS24_B mb-small"><?php the_field('date'); ?></p>
+            <p class="FS24_B"><?php the_field('location'); ?></p>
+        </section>
+
+    <?php endif; ?>
+
     <?php if ($imgs) : ?>
 
         <div class="grid mb-medium single_cover">

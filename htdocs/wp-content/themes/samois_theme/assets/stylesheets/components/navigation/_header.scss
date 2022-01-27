@@ -24,8 +24,11 @@
     left: 0;
 
     @include at-least(medium) {
-        width: $space_left;
+        width: $space_left * .6;
         top: 20px;
+    }
+    @include at-least(large) {
+        width: $space_left;
     }
     @include up-to(medium) {
         width: 125px;
@@ -65,11 +68,16 @@
     }
 
     @include up-to(medium) {
-        margin-left: 100px;
+        padding-left: 100px;
         flex-direction: column;
         align-items: flex-end;
     }
-
+    @include at-least(medium) {
+        padding-left: $space_left * .6;
+    }
+    @include at-least(large) {
+        padding-left: $space_left;
+    }
 }
 
 .nav-upper {
