@@ -6,8 +6,8 @@
 
 .breadcrumb {
     z-index: 99999;
-    background: #e8e8e8;
-    color: #909090;
+    background-color: $gray_light;
+    color: $gray;
     position: fixed;
     left: 0;
     right: 0;
@@ -73,14 +73,13 @@
 // Single post
 
 .single_cover {
-    align-items: flex-start;
 
     @include at-least(medium) {
         .container-title-post {
-            margin-left: -75px;
+            margin-left: -115px;
             z-index: 100;
             background: $white;
-            box-shadow: -12px -9px 10px #00000012;
+            //box-shadow: -12px -9px 10px #00000012;
         }
     }
 }
@@ -134,7 +133,7 @@
 
 .shortcuts {
     position: fixed;
-    padding: $marge $marge;
+    padding: $marge $marge * 2;
     left: 0;
     transition: transform .4s;
     z-index: 99999;

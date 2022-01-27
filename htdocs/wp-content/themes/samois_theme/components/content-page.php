@@ -10,13 +10,11 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
     <?php if ($imgs) : ?>
 
         <div class="grid mb-medium single_cover">
-            <figure class="s_12col m_7col ratio_1 m_full">
-                <div class="inner">
-                    <div class="cover_slide">
-                        <?php foreach ($imgs as $img) : ?>
-                            <img src="<?= $img['url'] ?>" alt="" class="">
-                        <?php endforeach; ?>
-                    </div>
+            <figure class="s_12col m_7col m_full">
+                <div class="cover_slide">
+                    <?php foreach ($imgs as $img) : ?>
+                        <img src="<?= $img['url'] ?>" alt="" class="">
+                    <?php endforeach; ?>
                 </div>
             </figure>
 

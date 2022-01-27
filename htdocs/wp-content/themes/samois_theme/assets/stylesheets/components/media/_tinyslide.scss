@@ -9,26 +9,37 @@
 
     img {
         object-fit: cover;
-        height: 40vh;
+        height: 50vh;
+        min-height: 400px;
     }
 }
 
+.tns-outer {
+    position: relative;
+
+}
 .tns-controls {
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     background: rgba(255,255,255,0.5);
     z-index: 999;
+
     button {
-        padding: 5px;
+        padding: 0 3px;
+        font-size: 20px;
+
+        &:first-child {
+            position: relative;
+                bottom: 6px;
+        }
     }
 }
 .tns-nav {
     position: absolute;
-    bottom: 0;
     right: 0;
     left: 0;
-    bottom: 14px;
+    bottom: -20px;
     z-index: 999;
     display: flex;
     justify-content: center;

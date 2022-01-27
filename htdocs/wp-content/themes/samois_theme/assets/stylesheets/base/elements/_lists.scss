@@ -38,6 +38,9 @@ ul[class] {
     border-bottom: 1px solid $black;
 }
 
+.agenda-month {
+	color: $blue;
+}
 .agenda-list .agenda-month:nth-child(n+2){
     margin-top: $marge_big;
 }
