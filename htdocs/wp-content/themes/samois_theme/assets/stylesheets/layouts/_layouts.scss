@@ -72,11 +72,13 @@
     .header-banner {
         height: 0;
     }
-    .shortcuts {
-        top: 250px;
-    }
     .structure-infos {
         top: 150px;
+    }
+    @include at-least(medium) {
+        .shortcuts {
+            top: 250px;
+        }
     }
 }
 

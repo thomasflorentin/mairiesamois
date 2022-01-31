@@ -93,10 +93,10 @@
         background-color: $secondary_color;
         left: 0;
         right: 0;
-        bottom: 0;
-        top: 0;
-        padding-top: $space_top * 1.5;
-        padding-bottom: $space_top / 2;
+        bottom: auto;
+        top: auto;
+        padding-top: $space_top;
+        padding-bottom: $space_top;
         height: 100vh;
         display: flex;
         justify-content: center;
