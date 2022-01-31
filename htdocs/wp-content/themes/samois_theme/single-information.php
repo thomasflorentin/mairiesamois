@@ -14,8 +14,8 @@ while (have_posts()) : the_post();
         'post_type'   => 'information',
         'post_parent' => $post->ID, 
         'posts_per_page' => -1, 
-        'sort_column' => 'title', 
-        'sort_order' => 'ASC'
+        'orderby' => 'title',
+      'order' => 'ASC'
     );
     $page_children = get_posts( $args );
 

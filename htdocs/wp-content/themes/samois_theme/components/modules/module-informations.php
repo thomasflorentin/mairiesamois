@@ -1,11 +1,11 @@
-<?php 
+<?php
 
 $args = array(
     'post_type'   => 'information',
-    'post_parent' => $parent_id, 
-    'posts_per_page' => -1, 
-    'sort_column' => 'title', 
-    'sort_order' => 'ASC'
+    'post_parent' => $parent_id,
+    'posts_per_page' => -1,
+    'orderby' => 'title',
+    'order' => 'ASC'
 );
 
 $the_query = new WP_Query($args); ?>
@@ -14,12 +14,12 @@ $the_query = new WP_Query($args); ?>
 
     <figure class="ratio_1 m_full item_cover">
         <div class="inner">
-            <?php echo get_the_post_thumbnail( $parent_id, '' ); ?>
+            <?php echo get_the_post_thumbnail($parent_id, ''); ?>
         </div>
     </figure>
 
     <div class="item_title txt-centered">
-        <h2 class="FS18 mb-none"><?php echo get_the_title( $parent_id ); ?></h2>
+        <h2 class="FS18 mb-none"><?php echo get_the_title($parent_id); ?></h2>
     </div>
 
     <ul class="item_pages txt-centered">
