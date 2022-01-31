@@ -697,8 +697,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (max-width: 1200px) { .breadcrumb { top: 90px; } }
 
-@media (max-width: 800px) { .breadcrumb { padding-left: 125px; top: 84px; }
-  .breadcrumb .flex, .breadcrumb .fl-col, .breadcrumb .fl-top, .breadcrumb .fl-hcentered, .breadcrumb .fl-bottom, .breadcrumb .fl-justify, .breadcrumb .fl-vcentered, .breadcrumb .fl-centered, .breadcrumb .fl-end, .breadcrumb .fl-wrap { justify-content: flex-end; padding-right: 20px; } }
+@media (max-width: 800px) { .breadcrumb { display: none; } }
 
 @media (min-width: 800px) { .breadcrumb { padding-left: 180px; } }
 

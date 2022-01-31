@@ -18,13 +18,14 @@
         top: 90px;
     }
     @include up-to(medium) {
-        padding-left: 125px;
-        top: 84px;
+        // padding-left: 125px;
+        // top: 84px;
+        display: none;
 
-        .flex {
-            justify-content: flex-end;
-            padding-right: 20px;
-        }
+        // .flex {
+        //     justify-content: flex-end;
+        //     padding-right: 20px;
+        // }
     }
     @include at-least(medium) {
         padding-left: $space_left * .6;
