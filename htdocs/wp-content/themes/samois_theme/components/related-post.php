@@ -2,10 +2,18 @@
 
 $related = get_posts(array(
     'post_type' => array('post', 'event', 'information', 'page'),
-    'numberposts' => 3, 
-    'post__not_in' => array($post->ID), 
+    'numberposts' => 3,
+    'post__not_in' => array($post->ID),
     'tag__in' => $tags,
     'orderby' => 'rand',
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'post_tag',
+            'field'    => 'slug',
+            'terms'    => 'noindex',
+            'operator' => 'NOT IN',
+        ),
+    ),
 ));
 
 if ($related) : ?>

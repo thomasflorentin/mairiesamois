@@ -1,0 +1,7 @@
+0000.000 (1) Opened log file at time: Mon, 31 Jan 2022 10:01:17 +0000 on http://mairiesamois.local
+0000.034 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.22.1 WP: 5.8.3 PHP: 8.0.10 (apache2handler, Windows NT TOM 10.0 build 22000 (Windows 10) AMD64) MySQL: 10.4.21-MariaDB (max packet size=1048576) WPLANG: fr_FR Server: Apache/2.4.48 (Win64) OpenSSL/1.1.1l PHP/8.0.10 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 31.9M | 34M) multisite: N openssl: OpenSSL 1.1.1l  24 Aug 2021 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.036 (1) Free space on disk containing Updraft's temporary directory: 877590.9 MB
+0000.042 (1) Requesting backup semaphore lock (c2651a8908f5)
+0000.123 (1) [Debug] Lock option (updraft_lock_c2651a8908f5, ms_options) was created in the database
+0000.144 (1) [Info] Lock (updraft_lock_c2651a8908f5, ms_options) acquired after initialising the database
+0000.175 (1) This backup task (c2651a8908f5) is either complete or began over 2 days ago: ending (1643623277.6004, ) (existing jobdata keys: )

@@ -111,20 +111,20 @@ add_action('after_setup_theme', 'samois_setup');
 /**
  * Never worry about cache again!
  */
-function my_load_scripts($hook) {
- 
+function my_load_scripts($hook)
+{
+
     // create my own version codes
     // $my_js_ver  = date("ymd-Gis", filemtime( get_template_directory_uri() . '/assets/main.min.js' ) );
     // $my_css_ver = date("ymd-Gis", filemtime( get_template_directory_uri() . '/assets/styles.css' ) );
     $my_js_ver  = '220118';
     $my_css_ver = '220118';
     // 
-    wp_enqueue_script( 'my_js', get_template_directory_uri() . '/assets/main.min.js', array(), $my_js_ver );
-    wp_enqueue_script( 'tinyslide','https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js', array(), '' );
-    
-    wp_register_style( 'my_css', get_template_directory_uri() . '/assets/styles.css', false,   $my_css_ver );
-    wp_enqueue_style ( 'my_css' );
- 
+    wp_enqueue_script('my_js', get_template_directory_uri() . '/assets/main.min.js', array(), $my_js_ver);
+    wp_enqueue_script('tinyslide', 'https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js', array(), '');
+
+    wp_register_style('my_css', get_template_directory_uri() . '/assets/styles.css', false,   $my_css_ver);
+    wp_enqueue_style('my_css');
 }
 add_action('wp_enqueue_scripts', 'my_load_scripts');
 
@@ -163,16 +163,17 @@ function add_taxonomies_to_pages()
 }
 add_action('init', 'add_taxonomies_to_pages');
 
-add_post_type_support( 'page', 'excerpt' );
+add_post_type_support('page', 'excerpt');
 
-function my_mime_types( $mimes ) {
+function my_mime_types($mimes)
+{
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
 }
 add_filter('upload_mimes', 'my_mime_types');
 
 
-remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 
 
 
@@ -180,11 +181,17 @@ remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
  * Pre get post sur résultats de recherche
  */
 
-function search_filter($query) {
-    if ( ! is_admin() && $query->is_main_query() ) {
-        if ( $query->is_search ) {
-            $query->set( 'tag__not_in',  array( 37, 47 ) );
-        }
+function search_filter($query)
+{
+    if (!is_admin() && $query->is_main_query() && $query->is_search()) {
+        $taxquery = array(
+            'taxonomy' => 'post_tag',
+            'field'    => 'slug',
+            'terms'    => 'noindex',
+            'operator' => 'NOT IN',
+        );
+
+        $query->set('tax_query', array($taxquery));
     }
 }
-add_action( 'pre_get_posts', 'search_filter' );
+add_action('pre_get_posts', 'search_filter');
