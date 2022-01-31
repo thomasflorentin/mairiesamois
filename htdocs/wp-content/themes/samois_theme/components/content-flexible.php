@@ -115,7 +115,7 @@ if (have_rows('flex-content')) :
             $parentId = get_sub_field('pages_information');
             
             echo '<section class="module">';
-                echo '<header class=""><h2 class="FS24_B">Titre</h2></header>';
+                echo '<header class=""><h2 class="FS54_B">Titre</h2></header>';
 
                 echo '<div class="grid mb-big">';
 
