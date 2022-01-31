@@ -1,0 +1,25 @@
+.acf-flexible-content .layout {
+    border: 10px solid #ce117b !important;
+    margin-bottom: 50px !important;
+}
+
+.acf-flexible-content .layout .acf-fc-layout-handle {
+    font-size: 20px !important;
+    color: #ce117b !important;
+    font-weight: bold;
+}
+
+.acf-actions .acf-button {
+    background-color: #ce117b !important;
+    font-size: 21px !important;
+    padding: 0 40px !important;
+}
+
+.edit-post-meta-boxes-area #poststuff h2.hndle {
+    background: #ce117b;
+    color: white;
+    font-size: 30px;
+}
+.edit-post-layout__metaboxes {
+    margin-top: 100px;
+}

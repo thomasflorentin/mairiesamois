@@ -129,6 +129,16 @@ function my_load_scripts($hook)
 add_action('wp_enqueue_scripts', 'my_load_scripts');
 
 
+/* 
+ * CSS ADMIN
+ *************************/
+
+function admin_style() {
+	wp_enqueue_style('admin-styles', get_template_directory_uri().'/admin.css');
+}
+add_action('admin_enqueue_scripts', 'admin_style');
+
+
 /**
  * Implement the Custom Header feature.
  */
