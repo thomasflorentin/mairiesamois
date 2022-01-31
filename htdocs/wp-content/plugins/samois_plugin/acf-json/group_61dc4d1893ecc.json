@@ -26,6 +26,25 @@
             "min": "",
             "max": "",
             "return_format": "object"
+        },
+        {
+            "key": "field_61f7c2f83640b",
+            "label": "Infos pratiques \/ Liens",
+            "name": "infos_pratiques__liens",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -56,13 +75,6 @@
                 "operator": "==",
                 "value": "information"
             }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page-vivre-samois.php"
-            }
         ]
     ],
     "menu_order": 0,
@@ -74,5 +86,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1642776148
+    "modified": 1643627320
 }

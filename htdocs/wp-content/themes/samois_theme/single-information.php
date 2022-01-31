@@ -58,12 +58,16 @@ while (have_posts()) : the_post();
 
 
         $shortcuts_links = get_field('shortcuts_links');
+        $shortcuts_infos = get_field('infos_pratiques__liens');
+
         $shortcuts_args = array(
             'title' => 'Pour aller plus vite !',
         );
         set_query_var('links', $shortcuts_links);
+        set_query_var('infos', $shortcuts_infos);
         get_template_part('components/shortcuts', '', $shortcuts_args);
 
+        
 
         set_query_var('page_children', $page_children);
         get_template_part('components/archives/archive', 'informations');
