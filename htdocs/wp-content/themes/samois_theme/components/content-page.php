@@ -18,7 +18,7 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
 
     <?php if ($imgs) : ?>
 
-        <div class="grid mb-medium single_cover">
+        <div class="grid mb-big single_cover">
             <figure class="s_12col m_7col m_full">
                 <div class="cover_slide">
                     <?php foreach ($imgs as $img) : ?>
@@ -36,7 +36,7 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
 
     <?php elseif ( has_post_thumbnail() ) : ?>
 
-        <div class="grid mb-medium single_cover thumbnail_single">
+        <div class="grid mb-big single_cover thumbnail_single">
             <figure class="s_12col m_7col m_full">
                 <div class="inner">
                     <?php the_post_thumbnail(); ?>

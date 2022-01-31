@@ -453,6 +453,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
   .searchbar_wrapper .structure-infos { background: none; padding: 60px 0 0 0; }
   .searchbar_wrapper > * { width: 90% !important; } }
 
+@media (min-width: 800px) { .searchbar_wrapper { left: 180px; } }
+
 @media (min-width: 1200px) { .searchbar_wrapper { left: 300px; } }
 
 .searchbar_wrapper.open { opacity: 1; transform: none; }

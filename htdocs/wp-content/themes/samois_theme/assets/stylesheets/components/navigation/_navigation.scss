@@ -114,6 +114,9 @@
         }
     }
 
+    @include at-least(medium) {
+        left: $space_left * 0.6;
+    }
     @include at-least(large) {
         left: $space_left;
     }
