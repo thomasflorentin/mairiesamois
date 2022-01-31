@@ -1,5 +1,9 @@
 
 
+.single_post {
+    margin-bottom: 160px;
+}
+
 
 
 // Breadcrumb
@@ -40,7 +44,6 @@
 
 .site-main {
     transition: all .4s;
-    padding-top: 250px;
 
     .home & {
         @include at-least(medium) {
@@ -54,9 +57,12 @@
 
     @include up-to(medium) {
         padding-bottom: $marge * 3;
+        padding-top: 175px;
+
     }
     @include at-least(medium) {
-                
+        padding-top: 250px;
+
         .home .scrolling & {
             padding-top: 400px;
         }
@@ -122,7 +128,7 @@
     position: relative;
 
     .item_inner {
-        padding: $marge;
+        padding: $marge $marge 0 $marge;
     }
 
     @include up-to(medium) {
@@ -132,7 +138,7 @@
     .item_related_type {
         width: 50%;
         background: $gray_light;
-        margin: -23px auto $marge auto;
+        margin: 0 auto;
     }
 
     .item_related_date {

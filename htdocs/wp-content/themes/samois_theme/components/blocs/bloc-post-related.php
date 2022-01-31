@@ -18,13 +18,15 @@ $excerpt = substr($excerpt, 0, strrpos($excerpt, ' ')) . ' [...]';
         
         <div class="item_inner">
 
-            <?php if ( get_field('type') !== '' ) :  ?>
-                <p class="FS14_U item_related_type"><?= get_field('type'); ?></p>
-            <?php endif; ?>
+            <p class="FS14_U item_related_type">
+                <?= get_field('type'); ?> 
+                <?php if(get_field('date') !== '' ) { ?>
+                    <span class="item_related_date"> - <?= get_field('date'); ?></span>
+                <?php } ?>
+            </p>
 
             <p class="FS16_B mb-small item_related_title"><?= get_the_title(); ?></p>
             <p class="FS14 item_related_excerpt"><?= $excerpt; ?></p>
-            <p class="FS10_B mb-none item_related_date"><?= get_field('date'); ?></p>
         </div>
 
     </a>

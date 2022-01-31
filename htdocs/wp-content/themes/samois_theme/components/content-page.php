@@ -56,7 +56,7 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
     <?php else : // else imgs 
 
         if (is_page()) : ?>
-            <div class="grid mb-medium">
+            <div class="grid mb-big">
                 <div class="s_12col m_7col col_start_2">
                     <h1 class="FS42_B"><?php the_title(); ?></h1>
                     <div class="FS18"><?php the_excerpt(); ?></div>
@@ -64,7 +64,7 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
             </div>
 
         <?php else : ?>
-            <div class="grid mb-medium">
+            <div class="grid mb-big">
                 <div class="s_12col m_7col col_start_2">
                     <h1 class="FS42_B"><?php the_title(); ?></h1>
                     <div class="FS18_B"><?php the_excerpt(); ?></div>

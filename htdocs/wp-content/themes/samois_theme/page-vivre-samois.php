@@ -19,8 +19,8 @@ get_header();
 <?php while (have_posts()) : the_post(); ?>
 
     <header class="page_head">
-        <h1 class="FS54_B "><?= the_title() ?></h1>
-        <div class="grid mb-medium">
+        <h1 class="FS42_BB "><?= the_title() ?></h1>
+        <div class="grid mb-big">
             <div class="s_12col m_9col">
                 <p class="FS14"><?= get_the_excerpt() ?></p>
             </div>
