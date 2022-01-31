@@ -173,3 +173,18 @@ add_filter('upload_mimes', 'my_mime_types');
 
 
 remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
+
+
+
+/*
+ * Pre get post sur résultats de recherche
+ */
+
+function search_filter($query) {
+    if ( ! is_admin() && $query->is_main_query() ) {
+        if ( $query->is_search ) {
+            $query->set( 'tag__not_in',  array( 37, 47 ) );
+        }
+    }
+}
+add_action( 'pre_get_posts', 'search_filter' );
