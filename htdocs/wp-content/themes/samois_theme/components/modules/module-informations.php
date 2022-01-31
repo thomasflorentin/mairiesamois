@@ -14,7 +14,7 @@ $the_query = new WP_Query($args); ?>
 
     <figure class="ratio_1 m_full item_cover">
         <div class="inner">
-            <?php echo get_the_post_thumbnail($parent_id, ''); ?>
+            <?php echo get_the_post_thumbnail($parent_id, 'infos-thumb'); ?>
         </div>
     </figure>
 

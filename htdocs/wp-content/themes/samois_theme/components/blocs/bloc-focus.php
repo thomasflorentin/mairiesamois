@@ -4,7 +4,7 @@
         <?php if (has_post_thumbnail()) : ?>
             <figure class="ratio_1 m_full">
                 <div class="inner">
-                    <?php the_post_thumbnail(); ?>
+                    <?php the_post_thumbnail('focus-thumb'); ?>
                 </div>
             </figure>
         <?php endif; ?>

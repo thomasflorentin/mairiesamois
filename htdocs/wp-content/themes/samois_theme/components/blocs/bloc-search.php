@@ -12,7 +12,7 @@ $excerpt = substr($excerpt, 0, strrpos($excerpt, ' ')) . ' [...]';
         <?php if (has_post_thumbnail()) : ?>
             <figure class="ratio_1 m_full">
                 <div class="inner">
-                    <?php the_post_thumbnail(); ?>
+                    <?php the_post_thumbnail('post-thumb'); ?>
                 </div>
             </figure>
         <?php endif; ?>

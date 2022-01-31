@@ -119,7 +119,10 @@
 .item_related {
     background: $gray_light;
     position: relative;
-    padding: 0 $marge / 1.5 $marge / 1.5 $marge / 1.5;
+
+    .item_inner {
+        padding: $marge;
+    }
 
     @include up-to(medium) {
         margin-bottom: $marge_medium;
@@ -127,8 +130,8 @@
 
     .item_related_type {
         width: 50%;
-        background: $white;
-        margin: auto;
+        background: $gray_light;
+        margin: -23px auto $marge auto;
     }
 
     .item_related_date {
