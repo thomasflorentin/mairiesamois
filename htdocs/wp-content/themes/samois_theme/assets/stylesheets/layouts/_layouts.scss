@@ -175,6 +175,23 @@
 
 }
 
+.shortcuts_title {
+    position: relative;
+    margin-bottom: $marge * 2;
+
+    &:after {
+        position: absolute;
+        left: 20%;
+        right: 20%;
+        bottom: - $marge;
+        height: 2px;
+        background-color: $gray;
+        content: '';
+
+    }
+
+}
+
 
 
 

@@ -1,6 +1,6 @@
 {
     "key": "group_61dc4d1893ecc",
-    "title": "Shortcut Links",
+    "title": "CONTENUS Colonne de gauche",
     "fields": [
         {
             "key": "field_61dc4e5f9fe5a",
@@ -50,30 +50,30 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "page-home.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "default"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page-agenda.php"
+                "value": "information"
             }
         ],
         [
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "information"
+                "value": "event"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
             }
         ]
     ],
@@ -86,5 +86,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1643627320
+    "modified": 1643639087
 }

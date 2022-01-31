@@ -56,16 +56,7 @@ while (have_posts()) : the_post();
 
         get_template_part('components/modules/module', 'breadcrumbs');
 
-
-        $shortcuts_links = get_field('shortcuts_links');
-        $shortcuts_infos = get_field('infos_pratiques__liens');
-
-        $shortcuts_args = array(
-            'title' => 'Pour aller plus vite !',
-        );
-        set_query_var('links', $shortcuts_links);
-        set_query_var('infos', $shortcuts_infos);
-        get_template_part('components/shortcuts', '', $shortcuts_args);
+        get_template_part('components/shortcuts');
 
         
 

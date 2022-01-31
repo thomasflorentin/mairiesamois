@@ -1,30 +1,43 @@
-<?php if ($links || $infos) : ?>
+<?php 
+
+$shortcuts_links = get_field('shortcuts_links');
+$shortcuts_infos = get_field('infos_pratiques__liens');
+
+if(  $shortcuts_infos === null || $shortcuts_infos === '' ) {
+    $title = 'Prenez un <br>raccourci !';
+}
+else {
+    $title = 'A savoir';
+}
+
+?>
 
     <aside id="shortcuts" class="shortcuts txt-centered">
 
-        <h2 class="FS16_B"><?= $args['title']; ?></h2>
+        <header class="shortcuts_title">
+            <h2 class="FS16_B"><?= $title; ?></h2>
+        </header>
 
-        <nav class="">
-            <ul class="">
-                <hr>
-                <?php if ($infos) : ?>
+        <?php if (  $shortcuts_infos !== null && $shortcuts_infos !== '' ) : ?>
+            <div>
+                <?= $shortcuts_infos; ?>
+            </div>
 
-                    <li><?= $infos; ?></li>
 
-                    <?php else :
+        <?php else : ?>
 
-                    foreach ($links as $value) : ?>
+            <nav class="">
+                <ul class="">
+
+                    <?php foreach ($shortcuts_links as $value) : ?>
                         <li>
-                            <a class="FS14_B" href="<?= $value->guid; ?>"><?= $value->post_title; ?></a>
+                            <a class="FS14" href="<?= $value->guid; ?>"><?= $value->post_title; ?></a>
                             <hr>
                         </li>
                     <?php endforeach; ?>
 
-                <?php endif; ?>
-                <hr>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        <?php endif; ?>
 
     </aside>
-
-<?php endif; ?>

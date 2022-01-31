@@ -94,18 +94,6 @@ if (have_rows('flex-content')) :
 
 
 
-        // 
-        elseif (get_row_layout() == 'mod_list_event') :
-            $title = get_sub_field('mod_title');
-            $list_posts = get_sub_field('mod_list_events');
-
-            $args = array(
-                'title'   => $title,
-                'list_posts'   => $list_posts,
-            );
-
-            get_template_part('components/modules/module', 'list-events', $args);
-
 
         /*
          * BLOCS d'INFORMATIONS 
@@ -113,11 +101,15 @@ if (have_rows('flex-content')) :
          */
         elseif (get_row_layout() == 'mod_blocs_informations') :
             $parentId = get_sub_field('pages_information');
-            
-            echo '<section class="module">';
-                echo '<header class=""><h2 class="FS54_B">Titre</h2></header>';
+            $title = get_sub_field('mod_title');
 
-                echo '<div class="grid mb-big">';
+            echo '<section class="module mb-big">';
+
+                if( $title !== '' ) {
+                    echo '<header class="mb-small"><h2 class="FS54_B">'. $title . '</h2></header>';
+                }
+
+                echo '<div class="grid">';
 
                 foreach ($parentId as $p) :
                         set_query_var( 'parent_id', $p->ID);
