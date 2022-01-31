@@ -10,7 +10,7 @@ $args = array(
 
 $the_query = new WP_Query($args); ?>
 
-<div class="s_12col m_6col l_5col page_item mb-big">
+<div class="s_12col m_6col l_4col page_item mb-big">
 
     <figure class="ratio_1 m_full item_cover">
         <div class="inner">

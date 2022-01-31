@@ -113,14 +113,19 @@ if (have_rows('flex-content')) :
          */
         elseif (get_row_layout() == 'mod_blocs_informations') :
             $parentId = get_sub_field('pages_information');
-            echo '<div class="grid">';
+            
+            echo '<section class="module">';
+                echo '<header class=""><h2 class="FS24_B">Titre</h2></header>';
 
-            foreach ($parentId as $p) :
-                    set_query_var( 'parent_id', $p->ID);
-                    get_template_part('components/modules/module', 'informations');
-            endforeach; 
+                echo '<div class="grid mb-big">';
 
-            echo '</div>';
+                foreach ($parentId as $p) :
+                        set_query_var( 'parent_id', $p->ID);
+                        get_template_part('components/modules/module', 'informations');
+                endforeach; 
+
+                echo '</div>';
+            echo '</section>';
 
 
         endif;
