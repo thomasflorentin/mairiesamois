@@ -190,10 +190,12 @@
 
     &:after {
         position: absolute;
-        left: 20%;
-        right: 20%;
+        left: 0;
+        right: 0;
         bottom: - $marge;
         height: 2px;
+        width: 60px;
+        margin: auto;
         background-color: $gray;
         content: '';
 
