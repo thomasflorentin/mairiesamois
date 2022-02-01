@@ -718,13 +718,14 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .scrolling .header-alert { min-height: 0; }
 
-.scrolling .breadcrumb { top: 45px; }
-
 .scrolling .header-banner { height: 0; }
 
 .scrolling .structure-infos { top: 150px; }
 
-@media (min-width: 800px) { .scrolling .shortcuts { top: 250px; } }
+@media (min-width: 800px) { .scrolling .shortcuts { top: 250px; }
+  .scrolling .breadcrumb { top: 45px; } }
+
+@media (min-width: 1200px) { .scrolling .breadcrumb { top: 55px; } }
 
 @media (min-width: 800px) { .single_cover .container-title-post { margin-left: -115px; z-index: 100; background: white; } }
 

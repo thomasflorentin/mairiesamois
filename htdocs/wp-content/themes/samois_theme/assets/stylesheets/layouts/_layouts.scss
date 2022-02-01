@@ -73,9 +73,6 @@
     .header-alert {
         min-height: 0;
     }
-    .breadcrumb {
-        top: 45px;
-    }
     .header-banner {
         height: 0;
     }
@@ -85,6 +82,14 @@
     @include at-least(medium) {
         .shortcuts {
             top: 250px;
+        }
+        .breadcrumb {
+            top: 45px;
+        }
+    }
+    @include at-least(large) {
+        .breadcrumb {
+            top: 55px;
         }
     }
 }
