@@ -163,6 +163,7 @@
 
     hr {
         width: 60px;
+        color: $gray_light;
     }
 
     @include at-least(large) {

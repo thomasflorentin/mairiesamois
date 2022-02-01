@@ -43,6 +43,7 @@
 
     .menu-item-has-children {
         padding: $marge 0;
+        position: relative;
 
         @include up-to(medium) {
             border-bottom: 1px solid white;
@@ -52,8 +53,15 @@
             flex: 1;
             text-align: center;
 
-            &:not(:last-child) {
-                border-right: 1px solid #ffffff63;
+            &:not(:last-child):after {
+                content: '';
+                width: 1px;
+                height: 60px;
+                background-color: #ffffff63;
+                display: block;
+                right: 0;
+                position: absolute;
+                top: 33%;
             }
         }
 

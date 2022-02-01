@@ -44,7 +44,7 @@
 
                 if ($temp_header != $current_header) {
                     $current_header = $temp_header;
-                    echo "<h3 class='agenda-month FS42_BB txt-capitalize mb-vsmall'>" . $current_header . '</h3>';
+                    echo "<h3 class='agenda-month FS52_B txt-capitalize mb-vsmall'>" . $current_header . '</h3>';
                 } ?>
 
                 <?php get_template_part('components/blocs/bloc', 'event'); ?>

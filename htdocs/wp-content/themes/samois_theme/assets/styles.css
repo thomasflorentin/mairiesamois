@@ -297,7 +297,7 @@ h1, h2, h3, h4, h5, h6 { clear: both; margin-top: 0; }
 
 .h31 { text-transform: uppercase; line-height: 1; }
 
-.FS42_BB { font-size: 4.2rem; font-weight: 400; line-height: 1; color: #3366FF; }
+.FS52_B { font-size: 5.2rem; font-weight: 700; line-height: 1; color: #3366FF; }
 
 .FS42_B { font-size: 4.2rem; font-weight: 700; line-height: 1; }
 
@@ -319,9 +319,9 @@ h1, h2, h3, h4, h5, h6 { clear: both; margin-top: 0; }
 
 .FS14 { font-size: 1.4rem; }
 
-.FS10_U { font-size: 1rem; text-transform: uppercase; margin-bottom: 0; }
+.FS10_U { font-size: 1.4rem; text-transform: uppercase; margin-bottom: 0; }
 
-.FS10_B { font-size: 1rem; font-weight: 700; }
+.FS10_B { font-size: 1.4rem; font-weight: 700; }
 
 p { margin-top: 0; margin-bottom: 1.5em; }
 
@@ -434,12 +434,12 @@ button { border: none; padding: 0; margin: 0; background: none; }
   .nav_thematiques ul { flex-direction: column; }
   .nav_thematiques .wrapper { padding-left: 0; } }
 
-.nav_thematiques .menu-item-has-children { padding: 20px 0; }
+.nav_thematiques .menu-item-has-children { padding: 20px 0; position: relative; }
 
 @media (max-width: 800px) { .nav_thematiques .menu-item-has-children { border-bottom: 1px solid white; } }
 
 @media (min-width: 800px) { .nav_thematiques .menu-item-has-children { flex: 1; text-align: center; }
-  .nav_thematiques .menu-item-has-children:not(:last-child) { border-right: 1px solid #ffffff63; } }
+  .nav_thematiques .menu-item-has-children:not(:last-child):after { content: ''; width: 1px; height: 60px; background-color: #ffffff63; display: block; right: 0; position: absolute; top: 33%; } }
 
 .nav_thematiques .menu-item-has-children > a { font-size: 2rem; }
 
@@ -745,7 +745,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /* shortcuts aside */
 .shortcuts { position: fixed; padding: 20px 40px; left: 0; transition: transform .4s; z-index: 99999; transition: all .4s; }
 
-.shortcuts hr { width: 60px; }
+.shortcuts hr { width: 60px; color: #E4E5E8; }
 
 @media (min-width: 1200px) { .shortcuts { width: 300px; } }
 
