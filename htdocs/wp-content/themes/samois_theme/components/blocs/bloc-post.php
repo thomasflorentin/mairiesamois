@@ -23,7 +23,7 @@
 
                     <h3 clasvs="FS_16B"><?= get_the_title(); ?></h3>
                     <div class="FS14 mb-small"><?= get_the_excerpt(); ?></div>
-                    <p class="FS_10B"><?= get_field('date') ?></p>
+                    <p class="FS10_B"><?= get_field('date') ?></p>
                 </div>
     </a>
 </div>

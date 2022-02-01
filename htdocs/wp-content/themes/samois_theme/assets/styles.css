@@ -309,7 +309,7 @@ h1, h2, h3, h4, h5, h6 { clear: both; margin-top: 0; }
 
 .FS16_B { font-size: 1.6rem; font-weight: 700; }
 
-.FS16 { font-size: 1.6rem; }
+.FS16 { font-size: 1.6rem; line-height: 1.8; }
 
 .FS14_B { font-size: 1.4rem; font-weight: 700; }
 
@@ -739,8 +739,6 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (max-width: 800px) { .item_related { margin-bottom: 40px; } }
 
 .item_related .item_related_type { width: 50%; background: #E4E5E8; margin: 0 auto; }
-
-.item_related .item_related_date { position: absolute; bottom: 0; left: 50%; transform: translate(-50%, -50%); }
 
 /* shortcuts aside */
 .shortcuts { position: fixed; padding: 20px 40px; left: 0; transition: transform .4s; z-index: 99999; transition: all .4s; }
