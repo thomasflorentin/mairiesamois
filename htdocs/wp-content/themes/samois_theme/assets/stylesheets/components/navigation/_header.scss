@@ -126,6 +126,25 @@
             display: inline-block;
         }
     }
+
+    .current-menu-item,
+    .current-information-ancestor {
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            top: -10px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            width: 50%;
+            height: 1px;
+            background-color: black;
+            position: absolute;
+            margin: auto;
+        }
+    }
 }
 
 

@@ -420,7 +420,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /* Navigation
 --------------------------------------------- */
 /* DROPDOWN THÉMATIQUES */
-.nav_thematiques { position: absolute; padding: 40px 0; left: 0; right: 0; background-color: #3366FF; transform: translateY(-100%); transition: transform .4s; z-index: 99999; }
+.nav_thematiques { position: absolute; padding: 60px 0; left: 0; right: 0; background-color: #3366FF; transform: translateY(-100%); transition: transform .4s; z-index: 99999; }
 
 .nav_thematiques .wrapper { padding-left: 150px; }
 
@@ -441,17 +441,13 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (min-width: 800px) { .nav_thematiques .menu-item-has-children { flex: 1; text-align: center; }
   .nav_thematiques .menu-item-has-children:not(:last-child):after { content: ''; width: 1px; height: 60px; background-color: #ffffff63; display: block; right: 0; position: absolute; top: 33%; } }
 
-.nav_thematiques .menu-item-has-children > a { font-size: 2rem; }
+.nav_thematiques .menu-item-has-children > a { font-size: 2rem; margin-bottom: 20px; display: inline-block; }
 
 .nav_thematiques .sub-menu a { font-size: 1.6rem; display: inline-block; }
 
 @media (max-width: 800px) { .nav_thematiques .sub-menu a { padding: 5px 20px; } }
 
 @media (min-width: 800px) { .nav_thematiques .sub-menu a { padding: 5px 0; } }
-
-.current-menu-item, .current-information-ancestor { position: relative; }
-
-.current-menu-item::before, .current-information-ancestor::before { content: ''; display: block; top: -10px; left: 0; right: 0; height: 1px; width: 50%; height: 1px; background-color: black; position: absolute; margin: auto; }
 
 .searchbar_wrapper { position: absolute; left: 300px; padding: 10px 0; opacity: 0; transform: scale(0); transition: opacity .4s; z-index: 9999; }
 
@@ -523,6 +519,10 @@ button { border: none; padding: 0; margin: 0; background: none; }
   .navigation-links ul { justify-content: flex-end; align-items: center; }
   .navigation-links li { margin-right: 0; margin-left: 20px; display: inline-block; text-align: right; line-height: 1; }
   .navigation-links a { padding: 10px 0 5px; display: inline-block; } }
+
+.navigation-links .current-menu-item, .navigation-links .current-information-ancestor { position: relative; }
+
+.navigation-links .current-menu-item::before, .navigation-links .current-information-ancestor::before { content: ''; display: block; top: -10px; left: 0; right: 0; height: 1px; width: 50%; height: 1px; background-color: black; position: absolute; margin: auto; }
 
 @media (max-width: 800px) { .header-link { display: none; } }
 

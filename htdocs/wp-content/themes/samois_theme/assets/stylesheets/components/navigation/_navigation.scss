@@ -4,7 +4,7 @@
 
 .nav_thematiques {
     position: absolute;
-    padding: 40px 0;
+    padding: $marge * 3 0;
     left: 0;
     right: 0;
     background-color: $secondary_color;
@@ -65,8 +65,10 @@
             }
         }
 
-        &>a {
+        & > a {
             font-size: 2rem;
+            margin-bottom: $marge;
+            display: inline-block;
         }
     }
 
@@ -87,24 +89,6 @@
     }
 }
 
-.current-menu-item,
-.current-information-ancestor {
-    position: relative;
-
-    &::before {
-        content: '';
-        display: block;
-        top: -10px;
-        left: 0;
-        right: 0;
-        height: 1px;
-        width: 50%;
-        height: 1px;
-        background-color: black;
-        position: absolute;
-        margin: auto;
-    }
-}
 
 
 .searchbar_wrapper {
@@ -204,3 +188,4 @@
         flex: 1 0 50%;
     }
 }
+
