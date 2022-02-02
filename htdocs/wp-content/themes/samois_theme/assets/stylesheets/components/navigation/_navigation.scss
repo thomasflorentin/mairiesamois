@@ -67,7 +67,8 @@
 
         & > a {
             font-size: 2rem;
-            margin-bottom: $marge;
+            line-height: 1.2;
+            margin-bottom: $marge * 1.5;
             display: inline-block;
         }
     }
