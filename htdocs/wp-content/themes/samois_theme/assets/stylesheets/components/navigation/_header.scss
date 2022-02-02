@@ -7,9 +7,10 @@
     position: fixed; /* Set the navbar to fixed position */
     top: 0px; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
-    box-shadow: 0 4px 6px -2px #8685855e;
+    box-shadow: -7px 4px 6px -2px #8685855e;
     background-color: white;
     z-index: 999999;
+    max-width: $max_width;
 }
 
 .header_inner {
@@ -38,7 +39,7 @@
 
 .site_logo {
     width: 80%;
-    max-width: 150px;
+    max-width: 230px;
 }
 
 
@@ -59,7 +60,7 @@
     }
 
     li {
-        margin: 0 0 0 20px;
+        margin: 0 20px 0 0;
         line-height: 1;
         text-transform: uppercase;
         @include at-least(large) {
@@ -165,7 +166,7 @@
         ;
         @include at-least(medium) {
             overflow: hidden;
-            height: 50vh;
+            height: 45vh;
 
             figure {
                 margin: 0;
@@ -176,6 +177,7 @@
                 height: 100%;
                 width: 100vw;
                 object-fit: cover;
+                max-width: $max_width;
             }
         }
 
@@ -200,6 +202,6 @@
             min-width: 50%;
         }
         @include at-least(medium) {
-            min-height: 100px;
+            min-height: 150px;
         }
     }

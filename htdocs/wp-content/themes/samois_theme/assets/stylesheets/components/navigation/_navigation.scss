@@ -7,16 +7,17 @@
     padding: $marge * 3 0;
     left: 0;
     right: 0;
-    background-color: $secondary_color;
+    background-color: white;
+    border: 1px solid $gray;
     transform: translateY(-100%);
     transition: transform .4s;
     z-index: 99999;
+    box-shadow: 0 4px 6px -2px #8685855e;
 
 	.wrapper {
 		padding-left: $space_left / 2;
 	}
 	a {
-		color: white;
 
         &:hover {
             text-decoration: underline;

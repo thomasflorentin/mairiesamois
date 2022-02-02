@@ -8,9 +8,9 @@
     <a href="<?= get_the_permalink(); ?>">
         <?php if (has_post_thumbnail()) : ?>
             <?php if (is_front_page() || is_page()) : ?>
-                <figure class="<?= ($args['loop'] == 2) ? 'ratio_2' : '' ?> m_full">
+                <figure class="<?= ($args['loop'] == 2) ? 'ratio_2' : '' ?> m_full  mb-small">
                 <?php else : ?>
-                    <figure class="m_full">
+                    <figure class="m_full  mb-small">
                     <?php endif; ?>
                     <div class="inner">
                         <?php the_post_thumbnail('post-thumb'); ?>
@@ -18,7 +18,7 @@
                     </figure>
                 <?php endif; ?>
 
-                <div class="bloc-footer p-small">
+                <div class="bloc-footer">
                     <p class="FS10_U"><?= get_field('type'); ?></p>
 
                     <h3 clasvs="FS_16B"><?= get_the_title(); ?></h3>

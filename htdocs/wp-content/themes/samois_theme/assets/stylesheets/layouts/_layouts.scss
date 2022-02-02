@@ -10,8 +10,8 @@
 
 .breadcrumb {
     z-index: 99999;
-    background-color: $gray_light;
-    color: $gray;
+    background-color: #e4e5e8;
+    color: #b5b5b5;
     position: fixed;
     left: 0;
     right: 0;
@@ -81,7 +81,7 @@
     }
     @include at-least(medium) {
         .shortcuts {
-            top: 250px;
+            top: 350px;
         }
         .breadcrumb {
             top: 45px;
@@ -151,15 +151,24 @@
 
 .shortcuts {
     position: fixed;
-    padding: $marge $marge * 2;
+    padding: 0 $marge * 3 $marge $marge * 3;
     left: 0;
     transition: transform .4s;
     z-index: 99999;
     transition: all .4s;
 
+    li {
+        line-height: 1.2;
+    }
+
     hr {
         width: 60px;
         color: $gray_light;
+        margin: 20px auto;
+
+        &.last {
+            margin-top: 0;
+        }
     }
 
     @include at-least(large) {

@@ -35,6 +35,7 @@ if ( $shortcuts_infos !== null || $shortcuts_links !== null ) :
                             <hr>
                         </li>
                     <?php endforeach; ?>
+                    <hr class="last">
 
                 </ul>
             </nav>

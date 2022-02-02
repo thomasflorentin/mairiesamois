@@ -59,7 +59,7 @@ if (is_admin_bar_showing()) : ?>
                 </div><!-- #site-logo -->
 
 
-                <div class="wrapper s_hide m_show">
+                <div class="s_hide m_show">
                     <div class="header-alert fl-end fl-hcentered">
                         <?= ($alert_post) ? "<div class='alert-container field_alert'><a href='$alert_post->guid'>[ALERTE] $alert_post->post_title</a><i class='fas fa-arrow-right'></i></div>" : "" ?>
                     </div><!-- #site-alert -->

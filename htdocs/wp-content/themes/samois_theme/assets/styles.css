@@ -321,7 +321,7 @@ h1, h2, h3, h4, h5, h6 { clear: both; margin-top: 0; }
 
 .FS10_U { font-size: 1.4rem; text-transform: uppercase; margin-bottom: 0; }
 
-.FS10_B { font-size: 1.4rem; font-weight: 700; }
+.FS10_B { font-size: 1.4rem; font-weight: 400; color: #707070; }
 
 p { margin-top: 0; margin-bottom: 1.5em; }
 
@@ -410,7 +410,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .field, .field_default, .wpcf7-form-control, .field_alert { display: flex; justify-content: space-between; align-items: center; padding: 5px 10px; border-radius: 15px; }
 
-.field_default, .wpcf7-form-control { border: 1px solid black !important; background: white; }
+.field_default, .wpcf7-form-control { border: 1px solid black; background: white; }
 
 .field_alert { background-color: #FEEB00; }
 
@@ -420,11 +420,9 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /* Navigation
 --------------------------------------------- */
 /* DROPDOWN THÉMATIQUES */
-.nav_thematiques { position: absolute; padding: 60px 0; left: 0; right: 0; background-color: #3366FF; transform: translateY(-100%); transition: transform .4s; z-index: 99999; }
+.nav_thematiques { position: absolute; padding: 60px 0; left: 0; right: 0; background-color: white; border: 1px solid #707070; transform: translateY(-100%); transition: transform .4s; z-index: 99999; box-shadow: 0 4px 6px -2px #8685855e; }
 
 .nav_thematiques .wrapper { padding-left: 150px; }
-
-.nav_thematiques a { color: white; }
 
 .nav_thematiques a:hover { text-decoration: underline; }
 
@@ -478,7 +476,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next { text-align: end; flex: 1 0 50%; }
 
 /* Généralité HEADER */
-.header-container { position: fixed; /* Set the navbar to fixed position */ top: 0px; /* Position the navbar at the top of the page */ width: 100%; /* Full width */ box-shadow: 0 4px 6px -2px #8685855e; background-color: white; z-index: 999999; }
+.header-container { position: fixed; /* Set the navbar to fixed position */ top: 0px; /* Position the navbar at the top of the page */ width: 100%; /* Full width */ box-shadow: -7px 4px 6px -2px #8685855e; background-color: white; z-index: 999999; max-width: 1600px; }
 
 .header_inner { background-color: white; position: relative; z-index: 999999; }
 
@@ -490,14 +488,14 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (max-width: 800px) { .header-branding { width: 125px; top: 8px; } }
 
-.site_logo { width: 80%; max-width: 150px; }
+.site_logo { width: 80%; max-width: 230px; }
 
 /* NAVIGATION PRINCIPALE (3-4 entrées) */
 .nav-container { display: flex; align-items: center; padding: 10px 20px 10px 300px; justify-content: flex-start; }
 
 .nav-container i { margin-right: 10px; }
 
-.nav-container li { margin: 0 0 0 20px; line-height: 1; text-transform: uppercase; }
+.nav-container li { margin: 0 20px 0 0; line-height: 1; text-transform: uppercase; }
 
 @media (min-width: 1200px) { .nav-container li { font-size: 2rem; } }
 
@@ -529,9 +527,9 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /* HOMMEPAGE BANNIERE */
 .header-banner { transition: height .4s; }
 
-@media (min-width: 800px) { .header-banner { overflow: hidden; height: 50vh; }
+@media (min-width: 800px) { .header-banner { overflow: hidden; height: 45vh; }
   .header-banner figure { margin: 0; }
-  .header-banner figure img { width: auto; height: 100%; width: 100vw; object-fit: cover; } }
+  .header-banner figure img { width: auto; height: 100%; width: 100vw; object-fit: cover; max-width: 1600px; } }
 
 @media (max-width: 800px) { .header-banner { display: none; } }
 
@@ -540,7 +538,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .header-alert .alert-container { min-width: 50%; }
 
-@media (min-width: 800px) { .header-alert { min-height: 100px; } }
+@media (min-width: 800px) { .header-alert { min-height: 150px; } }
 
 .site-footer { margin-top: 160px; margin-bottom: 40px; }
 
@@ -699,7 +697,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 --------------------------------------------------------------*/
 .single_post { margin-bottom: 160px; }
 
-.breadcrumb { z-index: 99999; background-color: #E4E5E8; color: #707070; position: fixed; left: 0; right: 0; transition: top .4s; padding-top: 50px; }
+.breadcrumb { z-index: 99999; background-color: #e4e5e8; color: #b5b5b5; position: fixed; left: 0; right: 0; transition: top .4s; padding-top: 50px; }
 
 @media (max-width: 1200px) { .breadcrumb { top: 90px; } }
 
@@ -726,7 +724,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .scrolling .structure-infos { top: 150px; }
 
-@media (min-width: 800px) { .scrolling .shortcuts { top: 250px; }
+@media (min-width: 800px) { .scrolling .shortcuts { top: 350px; }
   .scrolling .breadcrumb { top: 45px; } }
 
 @media (min-width: 1200px) { .scrolling .breadcrumb { top: 55px; } }
@@ -746,9 +744,13 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .item_related .item_related_type { margin: 0 auto; }
 
 /* shortcuts aside */
-.shortcuts { position: fixed; padding: 20px 40px; left: 0; transition: transform .4s; z-index: 99999; transition: all .4s; }
+.shortcuts { position: fixed; padding: 0 60px 20px 60px; left: 0; transition: transform .4s; z-index: 99999; transition: all .4s; }
 
-.shortcuts hr { width: 60px; color: #E4E5E8; }
+.shortcuts li { line-height: 1.2; }
+
+.shortcuts hr { width: 60px; color: #E4E5E8; margin: 20px auto; }
+
+.shortcuts hr.last { margin-top: 0; }
 
 @media (min-width: 1200px) { .shortcuts { width: 300px; } }
 
@@ -762,18 +764,20 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 800px) { .hp_left { width: calc(100% - 300px); } }
 
-@media (min-width: 1200px) { .hp_left { width: calc(100% - 400px); } }
+@media (min-width: 1200px) { .hp_left { width: calc(100% - 350px); } }
 
 @media (max-width: 800px) { .hp_right .structure-infos { display: none; } }
 
 @media (min-width: 800px) { .hp_right { width: 250px; } }
 
-@media (min-width: 1200px) { .hp_right { width: 350px; } }
+@media (min-width: 1200px) { .hp_right { width: 300px; } }
 
 /* Structure_name aside */
 .structure-infos { padding: 20px; transition: transform .4s, top .2s; position: sticky; top: 400px; background-color: #707070; color: white; border-radius: 15px; }
 
 @media (max-width: 800px) { .structure-infos { background: none; padding-top: 300px; } }
+
+.structure-infos .field_default { border: none; }
 
 /*--------------------------------------------------------------
 # Utilities

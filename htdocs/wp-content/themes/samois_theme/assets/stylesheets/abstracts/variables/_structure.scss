@@ -1,4 +1,4 @@
-$max-width: 1600px;
+$max_width: 1600px;
 $marge_wrapper: 40px;
 
 $space_left: 300px;
@@ -8,7 +8,7 @@ $space_top: 200px;
 // CLASSES
 
 .wrapper {
-    max-width: $max-width;
+    max-width: $max_width;
     width: calc(100% - #{$marge_wrapper});
 
     @include at-least(large) {

@@ -10,14 +10,14 @@ $excerpt = substr($excerpt, 0, strrpos($excerpt, ' ')) . ' [...]';
     <a href="<?= get_the_permalink(); ?>">
 
         <?php if (has_post_thumbnail()) : ?>
-            <figure class="ratio_1 m_full">
+            <figure class="ratio_1 m_full mb-small">
                 <div class="inner">
                     <?php the_post_thumbnail('post-thumb'); ?>
                 </div>
             </figure>
         <?php endif; ?>
 
-        <div class="bloc-footer p-small">
+        <div class="bloc-footer">
             <?php 
                 if ( get_post_type() == 'event' || get_post_type() == 'post' ) {
                     $type = get_field('type');

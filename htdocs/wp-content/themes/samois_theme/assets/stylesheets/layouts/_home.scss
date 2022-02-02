@@ -4,7 +4,7 @@
         width: calc(100% - 300px);
     }
     @include at-least(large) {
-        width: calc(100% - 400px);
+        width: calc(100% - 350px);
     }
 }
 
@@ -18,7 +18,7 @@
         width: 250px;
     }
     @include at-least(large) {
-        width: 350px;
+        width: 300px;
     }
 }
 
@@ -40,5 +40,9 @@
     @include up-to(medium) {
         background: none;
         padding-top: $space_top * 1.5;
+    }
+
+    .field_default {
+        border: none;
     }
 }
