@@ -743,7 +743,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (max-width: 800px) { .item_related { margin-bottom: 40px; } }
 
-.item_related .item_related_type { width: 50%; background: #E4E5E8; margin: 0 auto; }
+.item_related .item_related_type { margin: 0 auto; }
 
 /* shortcuts aside */
 .shortcuts { position: fixed; padding: 20px 40px; left: 0; transition: transform .4s; z-index: 99999; transition: all .4s; }
