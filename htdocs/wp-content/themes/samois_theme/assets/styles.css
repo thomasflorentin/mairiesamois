@@ -750,7 +750,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .shortcuts hr { width: 60px; color: #E4E5E8; margin: 20px auto; }
 
-.shortcuts hr.last { margin-top: 0; }
+.shortcuts hr.last { margin-top: -15px; }
 
 @media (min-width: 1200px) { .shortcuts { width: 300px; } }
 
