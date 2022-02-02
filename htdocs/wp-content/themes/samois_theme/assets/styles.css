@@ -449,6 +449,10 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 800px) { .nav_thematiques .sub-menu a { padding: 5px 0; } }
 
+.current-menu-item, .current-information-ancestor { position: relative; }
+
+.current-menu-item::before, .current-information-ancestor::before { content: ''; display: block; top: -10px; left: 0; right: 0; height: 1px; width: 50%; height: 1px; background-color: black; position: absolute; margin: auto; }
+
 .searchbar_wrapper { position: absolute; left: 300px; padding: 10px 0; opacity: 0; transform: scale(0); transition: opacity .4s; z-index: 9999; }
 
 @media (max-width: 800px) { .searchbar_wrapper { background-color: #3366FF; left: 0; right: 0; bottom: auto; top: auto; padding-top: 200px; padding-bottom: 200px; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; overflow: scroll; }

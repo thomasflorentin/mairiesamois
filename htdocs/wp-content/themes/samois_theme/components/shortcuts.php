@@ -10,8 +10,8 @@ else {
     $title = 'A savoir';
 }
 
+if ( $shortcuts_infos !== null || $shortcuts_links !== null ) : 
 ?>
-
     <aside id="shortcuts" class="shortcuts txt-centered">
 
         <header class="shortcuts_title">
@@ -41,3 +41,5 @@ else {
         <?php endif; ?>
 
     </aside>
+
+    <?php endif; ?>
