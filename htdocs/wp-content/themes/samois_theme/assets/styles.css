@@ -522,13 +522,15 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .navigation-links .current-menu-item::before, .navigation-links .current-information-ancestor::before { content: ''; display: block; top: -10px; left: 0; right: 0; height: 1px; width: 50%; height: 1px; background-color: black; position: absolute; margin: auto; }
 
+@media (max-width: 800px) { .navigation-links .current-menu-item::before, .navigation-links .current-information-ancestor::before { top: 0; } }
+
 @media (max-width: 800px) { .header-link { display: none; } }
 
 /* HOMMEPAGE BANNIERE */
 .header-banner { transition: height .4s; }
 
 @media (min-width: 800px) { .header-banner { overflow: hidden; height: 45vh; }
-  .header-banner figure { margin: 0; }
+  .header-banner figure { margin: 0; height: 100%; }
   .header-banner figure img { width: auto; height: 100%; width: 100vw; object-fit: cover; max-width: 1600px; } }
 
 @media (max-width: 800px) { .header-banner { display: none; } }
@@ -697,7 +699,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 --------------------------------------------------------------*/
 .single_post { margin-bottom: 160px; }
 
-.breadcrumb { z-index: 99999; background-color: #e4e5e8; color: #b5b5b5; position: fixed; left: 0; right: 0; transition: top .4s; padding-top: 50px; }
+.breadcrumb { z-index: 99999; background-color: #e4e5e8; color: #b5b5b5; position: fixed; left: 0; right: 0; transition: top .4s; padding-top: 50px; max-width: 1600px; }
 
 @media (max-width: 1200px) { .breadcrumb { top: 90px; } }
 
@@ -705,7 +707,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 800px) { .breadcrumb { padding-left: 180px; } }
 
-@media (min-width: 1200px) { .breadcrumb { top: 100px; padding-left: 300px; } }
+@media (min-width: 1200px) { .breadcrumb { top: 150px; padding-left: 300px; } }
 
 .site-main { transition: all .4s; }
 
@@ -715,7 +717,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (max-width: 800px) { .site-main { padding-bottom: 60px; padding-top: 175px; } }
 
-@media (min-width: 800px) { .site-main { padding-top: 250px; }
+@media (min-width: 800px) { .site-main { padding-top: 300px; }
   .home .scrolling .site-main { padding-top: 400px; } }
 
 .scrolling .header-alert { min-height: 0; }

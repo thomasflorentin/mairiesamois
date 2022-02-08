@@ -17,6 +17,7 @@
     right: 0;
     transition: top .4s;
     padding-top: 50px;
+    max-width: 1600px;
 
     @include up-to(large) {
         top: 90px;
@@ -35,7 +36,7 @@
         padding-left: $space_left * .6;
     }
     @include at-least(large) {
-        top: 100px;
+        top: 150px;
         padding-left: $space_left;
     }
 }
@@ -61,7 +62,7 @@
 
     }
     @include at-least(medium) {
-        padding-top: 250px;
+        padding-top: $space_top * 1.5;
 
         .home .scrolling & {
             padding-top: 400px;
