@@ -3,6 +3,7 @@
     @include at-least(medium) {
         width: calc(100% - 300px);
     }
+
     @include at-least(large) {
         width: calc(100% - 350px);
     }
@@ -14,9 +15,11 @@
             display: none;
         }
     }
+
     @include at-least(medium) {
         width: 250px;
     }
+
     @include at-least(large) {
         width: 300px;
     }
@@ -45,4 +48,10 @@
     .field_default {
         border: none;
     }
+}
+
+.flat_black {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0px 20px;
+    border-radius: 15px;
 }

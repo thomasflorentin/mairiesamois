@@ -1,4 +1,4 @@
-<li class="list-btop bloc_event">
+<li class="list-bbot bloc_event">
     <a class="grid" href="<?= the_permalink() ?>">
         <p class="s_3col txt-capitalize FS14 mb-none"><?= get_field('date') ?></p>
         <p class="s_4col mb-none FS16_B" ><?= the_title() ?></p>

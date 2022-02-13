@@ -122,7 +122,7 @@ if (is_admin_bar_showing()) : ?>
 
 
             <nav id="nav_thematiques" class="nav_thematiques">
-                <div class="wrapper">
+                <div class="">
                     <?php 
                         wp_nav_menu(
                             array(

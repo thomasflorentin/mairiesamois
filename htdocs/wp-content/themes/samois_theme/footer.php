@@ -47,7 +47,7 @@ $useful_links = get_field('util_link', 'options')
                     <div class="social-qrcode fl-justify pb-medium">
                         <div class="social p2">
                             <a href="<?= the_field('facebook_link', 'options') ?>"><i class="fab fa-facebook-square"></i></a>
-                            <a href="<?= the_field('instagram_url', 'options') ?>"><i class="fab fa-instagram"></i></a>
+                            <a href="<?= get_field('mail', 'option');?>"><i class="fas fa-envelope"></i></a>
                         </div>
                         <img src="<?= the_field('qrcode_notif', 'options') ?>" alt="">
                     </div>
@@ -94,7 +94,7 @@ $useful_links = get_field('util_link', 'options')
                     <p class="FS14 mb-none"><?php the_field('structure_adress', 'options') ?></p>
                     <p class="FS14 mb-small"><?php the_field('mail', 'options') ?></p>
 
-                    <p class="FS14 mb-none">Std : <?php the_field('Phone', 'options') ?></p>
+                    <p class="FS14 mb-none">Téléphone : <?php the_field('Phone', 'options') ?></p>
                     <p class="FS14">Télécopie : <?php the_field('telecopie', 'options') ?></p>
                 </div>
 
@@ -112,7 +112,7 @@ $useful_links = get_field('util_link', 'options')
 
                         <nav class="end-link flex">
                             <a href="" class="btn_inline mr-small">Mentions légales</a>
-                            <a href="" class="btn_inline mr-small">Cookie</a>
+                            <a href="" class="btn_inline mr-small">Cookies</a>
                             <a href="" class="btn_inline">Plan du site</a>
                         </nav>
 

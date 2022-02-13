@@ -64,7 +64,10 @@
         line-height: 1;
         text-transform: uppercase;
         @include at-least(large) {
-            font-size: 2rem;
+            font-size: 1.7rem;
+        }
+        & a:hover, & a:focus{
+            color: #08FCF2 !important;
         }
     }
 
@@ -80,6 +83,7 @@
         padding-left: $space_left;
     }
 }
+
 
 .nav-upper {
     @include up-to(medium) {
@@ -156,6 +160,9 @@
 .header-link {
     @include up-to(medium) {
         display: none;
+    }
+    a{
+        vertical-align: sub;
     }
 }
 
