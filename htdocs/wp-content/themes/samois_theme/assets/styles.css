@@ -371,9 +371,7 @@ dd { margin: 0 1.5em 1.5em; }
 
 ul[class] { list-style-type: none; padding: 0; margin: 0; }
 
-.list-btop:nth-child(n + 2) { border-top: 1px solid #020202; }
-
-.list-bbot:nth-last-child(n+2) { border-bottom: 1px solid #020202; }
+.list-bbot { border-bottom: 1px solid #1F5DA5; }
 
 .agenda-list .agenda-month:nth-child(n+2) { margin-top: 80px; }
 

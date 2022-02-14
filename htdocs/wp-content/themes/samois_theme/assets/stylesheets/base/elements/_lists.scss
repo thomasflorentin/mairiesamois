@@ -31,11 +31,9 @@ ul[class] {
     margin: 0;
 }
 
-.list-btop:nth-child(n + 2){
-    border-top: 1px solid $black;
-}
-.list-bbot:nth-last-child(n+2){
-    border-bottom: 1px solid $black;
+
+.list-bbot{
+    border-bottom: 1px solid $secondary_color;
 }
 
 

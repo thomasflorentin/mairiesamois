@@ -34,8 +34,11 @@
             )
         );
         $allevents = new WP_Query($args);
+        $i = 0;
 
         if ( $allevents->have_posts() ) : 
+
+            echo '<div class="agenda-groupe mb-big">';
 
             while ( $allevents->have_posts() ) : $allevents->the_post(); 
 
@@ -44,13 +47,22 @@
 
                 if ($temp_header != $current_header) {
                     $current_header = $temp_header;
+                    if( $i !== 0 ) {
+                        echo '</div>';
+                        echo '<div class="agenda-groupe mb-big">';
+                    }
                     echo "<h3 class='agenda-month FS24_B txt-capitalize mb-vsmall'>" . $current_header . '</h3>';
                 } ?>
 
                 <?php get_template_part('components/blocs/bloc', 'event'); ?>
 
-            <?php endwhile; ?>
+            <?php
+                $i++; 
+                endwhile; 
+                echo '</div>'; 
+                ?>
             
+
 
             <?php 
                 set_query_var('posts', $allevents);
