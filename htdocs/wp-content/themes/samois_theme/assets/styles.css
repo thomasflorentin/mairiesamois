@@ -737,7 +737,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 800px) { .breadcrumb { padding-left: 180px; } }
 
-@media (min-width: 1200px) { .breadcrumb { top: 150px; padding-left: 300px; } }
+@media (min-width: 1200px) { .breadcrumb { top: 155px; padding-left: 300px; } }
 
 .site-main { transition: all .4s; }
 

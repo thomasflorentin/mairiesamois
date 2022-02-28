@@ -2,7 +2,7 @@
 
 
 function init() {
-    console.log('dom ready');
+    console.log('init');
 
 
 
@@ -38,11 +38,26 @@ function init() {
          * METHODES
          */
 
+
+        closeAll: function( el ) {
+
+            const $all = document.querySelectorAll('*');
+
+            for( let e of $all) {
+                if( el !== e ) {
+                    e.classList.remove('open');
+                }
+            }
+            
+        },
+
         toggleElement: function(e, el) {
 
             e.preventDefault();
             console.log('toggleElement');
-    
+
+            app.closeAll( el );
+
             el.classList.toggle('open');
             app.body.classList.toggle('el_toggled');
     
@@ -171,25 +186,38 @@ function init() {
 
 
     // handle sliders
+    const cover_slides = document.querySelectorAll('.cover_slide');
+    for (const slide of cover_slides) {
+        var slider = tns({
+            container: slide,
+            items: 1,
+            controlsText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
+        });
+    }
 
-    var slider = tns({
-        container: '.cover_slide',
-        items: 1,
-        controlsText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
-      });
 
 
     // todo: A faire fonctionner : fermer le menu quand on clique sur la page
-    // $main.addEventListener('click', function( e ) {
-    //     if( $body.classList.contains('menu_panel_is_open')) {
-    //         if( !e.target.matches('#nav_thematiques')) {
-    //             toggleDropdown(e);
-    //         }
-    //     }
-    // })
-
-
     
+    console.log(app.main);
+
+    app.main.addEventListener('click', function( e ) {
+
+        if( !e.target.matches('.js-toggleDropdown') ) {
+            
+            if( !e.target.matches('#nav_thematiques')  ) {
+
+                if( app.dropdownMenu.classList.contains('open') ) {
+                    app.dropdownMenu.classList.remove('open');
+                }
+
+            }
+
+        }
+
+
+
+    })
 
 }
 
