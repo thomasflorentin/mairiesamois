@@ -146,6 +146,10 @@
     background: $gray_light;
     position: relative;
 
+    a:hover {
+        color: $green_flash;
+    }
+
     .item_inner {
         padding: $marge $marge 0 $marge;
     }
@@ -211,12 +215,12 @@
 
     @include up-to(large) {
         transform: translateY(100vh);
-        background-color: gray;
+        background-color: $primary_color;
         color: white;
         right: 0;
         top: 0;
         bottom: 0;
-        padding-top: $space_top * 1.5;
+        padding-top: $space_top;
     }
 
     &.open {

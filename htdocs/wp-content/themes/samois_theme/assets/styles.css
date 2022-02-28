@@ -291,6 +291,8 @@ html { font-size: 62.5%; }
 
 body { font-size: 16px; line-height: 1.6; font-family: "Grover", sans-serif; color: #020202; }
 
+@media (max-width: 800px) { body { hyphens: auto; } }
+
 h1, h2, h3, h4, h5, h6 { clear: both; margin-top: 0; }
 
 .h1 { font-size: 4rem; margin-bottom: 20px; }
@@ -430,13 +432,17 @@ button { border: none; padding: 0; margin: 0; background: none; }
 /* Navigation
 --------------------------------------------- */
 /* DROPDOWN THÉMATIQUES */
-.nav_thematiques { position: absolute; padding: 60px 0; left: 300px; right: 0; background-color: white; border: 1px solid #707070; transform: translateY(-100%); transition: transform .4s; z-index: 99999; box-shadow: 0 4px 6px -2px #8685855e; }
+.nav_thematiques { position: absolute; padding: 60px 0; right: 0; background-color: white; border: 1px solid #707070; transform: translateY(-100%); transition: transform .4s; z-index: 99999; box-shadow: 0 4px 6px -2px #8685855e; }
 
-.nav_thematiques a:hover { text-decoration: underline; }
+.nav_thematiques a:hover { color: #08FCF2; }
 
 .nav_thematiques.open { transform: none; }
 
-@media (max-width: 800px) { .nav_thematiques { left: 0; height: 100vh; overflow: scroll; padding-bottom: 200px; }
+@media (min-width: 800px) { .nav_thematiques { left: 180px; } }
+
+@media (min-width: 1200px) { .nav_thematiques { left: 300px; } }
+
+@media (max-width: 800px) { .nav_thematiques { left: 0; height: 100vh; overflow: scroll; padding-bottom: 200px; padding-left: 5%; padding-right: 5%; }
   .nav_thematiques ul { flex-direction: column; }
   .nav_thematiques .wrapper { padding-left: 0; } }
 
@@ -447,7 +453,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (min-width: 800px) { .nav_thematiques .menu-item-has-children { flex: 1; text-align: center; }
   .nav_thematiques .menu-item-has-children:not(:last-child):after { content: ''; width: 1px; height: 60px; background-color: #ffffff63; display: block; right: 0; position: absolute; top: 33%; } }
 
-.nav_thematiques .menu-item-has-children > a { font-size: 1.7rem; line-height: 1.2; margin-bottom: 30px; display: inline-block; }
+.nav_thematiques .menu-item-has-children > a { font-size: 1.7rem; line-height: 1.2; margin-bottom: 20px; display: inline-block; }
 
 .nav_thematiques .sub-menu a { font-size: 1.4rem; display: inline-block; }
 
@@ -494,9 +500,12 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 1200px) { .header-branding { width: 300px; } }
 
-@media (max-width: 800px) { .header-branding { width: 125px; top: 8px; } }
+@media (max-width: 800px) { .header-branding { width: 125px; top: 8px; }
+  .header-branding figure { justify-content: flex-start; } }
 
-.site_logo { width: 80%; max-width: 230px; }
+.site_logo { width: 80%; max-width: 230px; height: auto; transition: all .4s; }
+
+@media (max-width: 800px) { .site_logo { max-width: 80px; } }
 
 /* NAVIGATION PRINCIPALE (3-4 entrées) */
 .nav-container { display: flex; align-items: center; padding: 10px 20px 10px 300px; justify-content: flex-start; }
@@ -521,7 +530,10 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .navigation-links { width: 60%; }
 
-@media (max-width: 1200px) { .navigation-links { width: 90%; } }
+.navigation-links li, .navigation-links a { text-align: center; }
+
+@media (max-width: 1200px) { .navigation-links { width: 90%; }
+  .navigation-links a { font-size: 1.2rem; } }
 
 @media (max-width: 800px) { .navigation-links { width: 100vw; padding: 0 0 0 125px; }
   .navigation-links ul { justify-content: flex-end; align-items: center; }
@@ -533,6 +545,10 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .navigation-links .current-menu-item::before, .navigation-links .current-information-ancestor::before { content: ''; display: block; top: -10px; left: 0; right: 0; height: 1px; width: 50%; height: 1px; background-color: black; position: absolute; margin: auto; }
 
 @media (max-width: 800px) { .navigation-links .current-menu-item::before, .navigation-links .current-information-ancestor::before { top: 0; } }
+
+@media (max-width: 1200px) { #js-toggleDropdown { font-size: 1.2rem; } }
+
+@media (max-width: 800px) { #js-toggleDropdown { font-size: inherit; } }
 
 @media (max-width: 800px) { .header-link { display: none; } }
 
@@ -703,7 +719,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .accordeon_content p:first-child { padding-right: 20px; }
 
-.mod_featured a:hover { color: #3DFA05; }
+.mod_featured a:hover { color: #1F5DA5; }
 
 /* FoRMS */
 .wpcf7-form { max-width: 600px; }
@@ -755,6 +771,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .item_related { background: #E4E5E8; position: relative; }
 
+.item_related a:hover { color: #3DFA05; }
+
 .item_related .item_inner { padding: 20px 20px 0 20px; }
 
 @media (max-width: 800px) { .item_related { margin-bottom: 40px; } }
@@ -778,7 +796,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 1200px) { .shortcuts { width: 300px; } }
 
-@media (max-width: 1200px) { .shortcuts { transform: translateY(100vh); background-color: gray; color: white; right: 0; top: 0; bottom: 0; padding-top: 300px; } }
+@media (max-width: 1200px) { .shortcuts { transform: translateY(100vh); background-color: #FEEB00; color: white; right: 0; top: 0; bottom: 0; padding-top: 200px; } }
 
 .shortcuts.open { transform: none; }
 
@@ -786,9 +804,13 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .shortcuts_title:after { position: absolute; left: 0; right: 0; bottom: -20px; height: 2px; width: 60px; margin: auto; background-color: #707070; content: ''; }
 
+.hp_left { max-width: 100%; }
+
 @media (min-width: 800px) { .hp_left { width: calc(100% - 300px); } }
 
 @media (min-width: 1200px) { .hp_left { width: calc(100% - 350px); } }
+
+.hp_right { max-width: 100%; }
 
 @media (max-width: 800px) { .hp_right .structure-infos { display: none; } }
 
@@ -802,6 +824,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (max-width: 800px) { .structure-infos { background: none; padding-top: 300px; } }
 
 .structure-infos .field_default { border: none; }
+
+.structure-infos a:hover { color: #08FCF2; }
 
 .flat_black { background: rgba(0, 0, 0, 0.1); padding: 0px 20px; border-radius: 15px; }
 

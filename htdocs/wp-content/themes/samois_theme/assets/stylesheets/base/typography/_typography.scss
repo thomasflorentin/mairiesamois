@@ -43,6 +43,9 @@ body {
 	font-family: $font__main;
 	color: $black;
 
+	@include up-to(medium) {
+		hyphens: auto;
+	}
 }
 
 

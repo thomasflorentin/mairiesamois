@@ -34,12 +34,21 @@
     @include up-to(medium) {
         width: 125px;
         top: 8px;
+
+        figure {
+            justify-content: flex-start;
+        }
     }
 }
 
 .site_logo {
     width: 80%;
     max-width: 230px;
+    height: auto;
+    transition: all .4s;
+    @include up-to(medium) {
+        max-width: 80px;
+    }
 }
 
 
@@ -108,8 +117,15 @@
 .navigation-links {
     width: 60%;
 
+    li,a {
+        text-align: center;
+    }
+
     @include up-to(large) {
         width: 90%;
+        a {
+            font-size: 1.2rem;
+        }
     }
     @include up-to(medium) {
         width: 100vw;
@@ -153,6 +169,15 @@
                 top: 0;
             }
         }
+    }
+}
+
+#js-toggleDropdown {
+    @include up-to(large) {
+        font-size: 1.2rem;
+    }
+    @include up-to(medium) {
+        font-size: inherit;
     }
 }
 

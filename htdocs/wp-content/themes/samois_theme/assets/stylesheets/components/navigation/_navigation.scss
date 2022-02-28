@@ -5,7 +5,6 @@
 .nav_thematiques {
     position: absolute;
     padding: $marge * 3 0;
-    left: $space_left;
     right: 0;
     background-color: white;
     border: 1px solid $gray;
@@ -13,12 +12,10 @@
     transition: transform .4s;
     z-index: 99999;
     box-shadow: 0 4px 6px -2px #8685855e;
-
 	
 	a {
-
         &:hover {
-            text-decoration: underline;
+            color: $blue_flash;
         }
     }
 
@@ -26,11 +23,20 @@
         transform: none;
     }
 
+    @include at-least(medium) {
+        left: $space_left * .6;
+    }
+    @include at-least(large) {
+        left: $space_left;
+    }
+
     @include up-to(medium) {
         left: 0;
         height: 100vh;
         overflow: scroll;
         padding-bottom: 200px;
+        padding-left: 5%;
+        padding-right: 5%;
 
         ul {
             flex-direction: column;
@@ -68,7 +74,7 @@
         & > a {
             font-size: 1.7rem;
             line-height: 1.2;
-            margin-bottom: $marge * 1.5;
+            margin-bottom: $marge;
             display: inline-block;
         }
     }
