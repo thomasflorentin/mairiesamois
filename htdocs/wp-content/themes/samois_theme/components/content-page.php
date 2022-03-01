@@ -3,6 +3,11 @@ $imgs = get_field('single_img');
 ;
 get_template_part('components/shortcuts');
 
+$hide_featured_img = get_field('hide_featured_img');
+if( $hide_featured_img === null) {
+    $hide_featured_img = false;
+}
+var_dump($hide_featured_img);
 
 // CALLING THE BREADCRUMB MODULE 
 get_template_part('components/modules/module', 'breadcrumbs'); ?>
@@ -37,7 +42,7 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
         </div>
 
 
-    <?php elseif ( has_post_thumbnail() ) : ?>
+    <?php elseif ( !$hide_featured_img && has_post_thumbnail() ) : ?>
 
         <div class="grid mb-big single_cover thumbnail_single">
             <figure class="s_12col m_7col m_full">
