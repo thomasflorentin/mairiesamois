@@ -3,7 +3,7 @@ Contributors: Backup with UpdraftPlus, DavidAnderson, DNutbourne, aporter, snigh
 Tags: backup, restore, database backup, wordpress backup, cloud backup, s3, dropbox, google drive, onedrive, ftp, backups
 Requires at least: 3.2
 Tested up to: 5.9
-Stable tag: 1.22.1
+Stable tag: 1.22.7
 Author URI: https://updraftplus.com
 Donate link: https://david.dw-perspective.org.uk/donate
 License: GPLv3 or later
@@ -168,11 +168,55 @@ The <a href="https://updraftplus.com/news/">UpdraftPlus backup blog</a> is the b
 
 N.B. Paid versions of UpdraftPlus Backup / Restore have a version number which is 1 higher in the first digit, and has an extra component on the end, but the changelog below still applies. i.e. changes listed for 1.16.32.x of the free version correspond to changes made in 2.16.32.x of the paid version.
 
+
+= 1.22.7 - 01/Mar/2022 =
+
+* FIX: Internal S3 library was missing a method for using session tokens together with Vault
+* FIX: Various UI issues with the S3 IAM Wizard
+* TWEAK: Use AWS SDK/Guzzle for S3 operations if Curl is not available
+* TWEAK: Prevent coding deprecation notice during S3 upload on PHP 8.1
+
+= 1.22.6 - 26/Feb/2022 =
+
+* FIX: Internal S3 library had regressed in its ability to detect bucket location on AWS when using v4 signatures
+* TWEAK: When using S3 APIs, log the class used for easier debugging
+* TWEAK: Change S3 SDK selection algorithm
+
+= 1.22.5 - 24/Feb/2022 =
+
+* FIX: An issue that prevented being able to browse the contents of an already downloaded backup zip file
+* FIX: Add previously unbundled AWS SDK file for IAM service description which prevented S3 wizard in the Premium version working correctly
+* FIX: Prevent a fatal error when handling some S3 errors, caused by a format change
+* TWEAK: When loading AWS SDK at upload time, apply some work-arounds for plugins with buggy or old versions of related libraries
+* TWEAK: Update to latest AWS SDK toolkit, fixing an error with error-reporting in some situations in the previous version
+* TWEAK: Remove vendor/aws/aws-crt-php/run_tests.bat from build (apparently one user's hosting does not allow .bat files), plus other unnecessary files from that package
+* TWEAK: Enable PHP 8.1 in UpdraftClone (N.B. not yet officially supported by WordPress, so, made available for testing/development purposes)
+* TWEAK: Prevent error emitted on the browser console when 'Images' filter is selected on UpdraftCentral's media module
+
+= 1.22.4 - 17/Feb/2022 =
+
+* TWEAK: Prevent a couple of possible fatal errors when printing autobackup options on PHP 8
+* TWEAK: Work around a bug in the JetPack autoloader that was triggered when projects using that also used Guzzle in a different namespace
+
+= 1.22.3 - 15/Feb/2022 =
+
+* SECURITY: Thanks to Marc-Alexandre Montpas of Automattic for this report (CVE: CVE-2022-23303). All versions of UpdraftPlus from March 2019 onwards have contained a vulnerability caused by a missing permissions-level check, allowing untrusted users access to backups. If your site does not have non-admin users, or if your non-admin users are all trusted (and your site does not allow users to sign up themselves), then you are not vulnerable (but we always recommend updating to the latest version in any case). Please see https://updraftplus.com/updraftplus-security-release-1-22-3-2-22-3/ for more details.
+* FIX: Unexpected 'Backup History' array structure during the rescanning of the new backup sets that changed the type of the database associative keys from string to array format
+* FIX: Failure in excluding and wiping out jobdata during backup and restore causing the same backup to repeat under certain circumstances
+* REFACTOR: Upgrade AWS SDK from version 2.8 to 3
+* TWEAK: Improve how log file and backup file attachments are handled through mail-related functions, so they don't get omitted by some 3rd party SMTP plugins
+* TWEAK: Overcome PHP 8 'Only the first byte will be assigned to the string offset' warning when rescanning local folder and/or remote storage for new backup sets
+* TWEAK: On Windows, when mysqldump.exe binary is in use for backing up database, it failed to exclude updraft_jobdata_* entries due to 'escapeshellarg' function that replaces % char to white space
+* TWEAK: Switch to official jstree release now that our patch is included
+* TWEAK: Update updater library in paid version to current release
+* TWEAK: In the multisite add-on, store the last log message separately to perform better with binary logging together with large backups
+* TWEAK: Add Google branding to the Google Drive authentication link
+* TWEAK: Change complex formatting string to avoid translator errors resulting in PHP errors
+
 = 1.22.1 - 14/Jan/2022 =
 
 * TWEAK: New versionning scheme; the second part of the version number was previously not used very meaningfully/systematically; together with the third, it now indicates the year of release and number within that year
 * TWEAK: Adjust run-time performance check, removing one test that was no longer appropriate
-* TWEAK: In the multisite add-on, store the last log message separately to perform better with binary logging together with large backups
 * TWEAK: Adjust next resumption display message if there isn't one
 * TWEAK: Cache the UpdraftVault quota to reduce the amount of network calls made during long backups
 
@@ -1435,4 +1479,4 @@ Reliance upon any non-English translation is at your own risk; UpdraftPlus can g
 We recognise and thank those mentioned at https://updraftplus.com/acknowledgements/ for code and/or libraries used and/or modified under the terms of their open source licences.
 
 == Upgrade Notice ==
-* 1.22.1: Adjust run-time performance check, removing one test that was no longer appropriate. In the multisite add-on, store the last log message separately to perform better with binary logging together with large backups. Adjust next resumption display message if there isn't one. Cache the UpdraftVault quota to reduce the amount of network calls made during long backups. A recommended update for all.
+* 1.22.7: Various tweaks/fixes to handling of S3 using bundled internal library. N.B. 1.22.3 fixed a security issue (see the changelog for more info). A recommended update for all.
