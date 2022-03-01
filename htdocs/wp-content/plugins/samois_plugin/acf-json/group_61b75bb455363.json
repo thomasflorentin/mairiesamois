@@ -1,10 +1,10 @@
 {
     "key": "group_61b75bb455363",
-    "title": "Single Post",
+    "title": "Options pour l'article \/ événement",
     "fields": [
         {
             "key": "field_61b7321539a5e",
-            "label": "Image pour l'affichage des images pour les informations, événements et les articles",
+            "label": "Galerie d'image",
             "name": "single_img",
             "type": "gallery",
             "instructions": "Image pour l'affichage des images pour les informations, événements et les articles ne rien mettre si l'on est sur la page d'accueil",
@@ -30,34 +30,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_61b89688ee574",
-            "label": "Type",
-            "name": "type",
-            "type": "select",
-            "instructions": "Se champs est destinée à être utilisé uniquement sur les actualités",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Exposition": "Exposition",
-                "Commémoration": "Commémoration",
-                "Vide-Grenier": "Vide-Grenier",
-                "Vaccination": "Vaccination",
-                "Conférence": "Conférence"
-            },
-            "default_value": false,
-            "allow_null": 1,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "label",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
             "key": "field_61b87534aff64",
             "label": "Date",
             "name": "date",
@@ -66,7 +38,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -82,6 +54,13 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "event"
+            }
         ]
     ],
     "menu_order": 0,
@@ -93,5 +72,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1642773008
+    "modified": 1646147781
 }

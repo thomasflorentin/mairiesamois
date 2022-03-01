@@ -20,7 +20,12 @@ $excerpt = substr($excerpt, 0, strrpos($excerpt, ' ')) . ' [...]';
         <div class="bloc-footer">
             <?php 
                 if ( get_post_type() == 'event' || get_post_type() == 'post' ) {
-                    $type = get_field('type');
+                    $categories = get_the_category();
+                    $type = '';
+                 
+                    if ( ! empty( $categories ) ) {
+                        $type .= esc_html( $categories[0]->name );   
+                    }
                 }
                 elseif ( get_post_type() == 'page' ) {
                     $type = 'Page';
