@@ -7,7 +7,6 @@ $hide_featured_img = get_field('hide_featured_img');
 if( $hide_featured_img === null) {
     $hide_featured_img = false;
 }
-var_dump($hide_featured_img);
 
 // CALLING THE BREADCRUMB MODULE 
 get_template_part('components/modules/module', 'breadcrumbs'); ?>
