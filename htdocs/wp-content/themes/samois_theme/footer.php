@@ -145,7 +145,7 @@ $useful_links = get_field('util_link', 'options')
                 </li>
 
                 <li>
-                    <a href="<?php echo $alert_post->guid; ?>"><?php printf('[ALERTE]'); ?></a>
+                    <a href="<?php echo $alert_post->guid; ?>" class="footer_alert"><?php printf('[ALERTE]'); ?></a>
                 </li>
 
                 <li>

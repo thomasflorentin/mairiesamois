@@ -72,12 +72,23 @@
         margin: 0 20px 0 0;
         line-height: 1;
         text-transform: uppercase;
-        @include at-least(large) {
-            font-size: 1.7rem;
-        }
+
         & a:hover, & a:focus{
             color: #08FCF2 !important;
         }
+    }
+
+    a {
+        @include up-to(medium) {
+            font-size: 1.2rem;
+        }
+        @include at-least(medium) {
+            font-size: 1.4rem;
+        }  
+        @include at-least(large) {
+            font-size: 1.6rem;
+        }        
+
     }
 
     @include up-to(medium) {
@@ -123,9 +134,7 @@
 
     @include up-to(large) {
         width: 90%;
-        a {
-            font-size: 1.2rem;
-        }
+
     }
     @include up-to(medium) {
         width: 100vw;
@@ -172,14 +181,7 @@
     }
 }
 
-#js-toggleDropdown {
-    @include up-to(large) {
-        font-size: 1.2rem;
-    }
-    @include up-to(medium) {
-        font-size: inherit;
-    }
-}
+
 
 
 .header-link {

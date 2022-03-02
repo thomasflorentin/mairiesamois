@@ -88,9 +88,9 @@ if (is_admin_bar_showing()) : ?>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" id="js-toggleDropdown" role="button" class="s_hide m_show fl-centered js-toggleDropdown">
+                                <a href="#" id="js-toggleDropdown" role="button" class="fl-centered js-toggleDropdown">
                                     <i class="fas fa-bars js-toggleDropdown"></i>
-                                    <?php print('Thématiques'); ?>
+                                    <span class="s_hide m_show js-toggleDropdown"><?php print('Thématiques'); ?></span>
                                 </a>
                             </li>
                         </ul>

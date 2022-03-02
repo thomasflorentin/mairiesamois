@@ -514,9 +514,13 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .nav-container li { margin: 0 20px 0 0; line-height: 1; text-transform: uppercase; }
 
-@media (min-width: 1200px) { .nav-container li { font-size: 1.7rem; } }
-
 .nav-container li a:hover, .nav-container li a:focus { color: #08FCF2 !important; }
+
+@media (max-width: 800px) { .nav-container a { font-size: 1.2rem; } }
+
+@media (min-width: 800px) { .nav-container a { font-size: 1.4rem; } }
+
+@media (min-width: 1200px) { .nav-container a { font-size: 1.6rem; } }
 
 @media (max-width: 800px) { .nav-container { padding-left: 100px; flex-direction: column; align-items: flex-end; } }
 
@@ -532,8 +536,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .navigation-links li, .navigation-links a { text-align: center; }
 
-@media (max-width: 1200px) { .navigation-links { width: 90%; }
-  .navigation-links a { font-size: 1.2rem; } }
+@media (max-width: 1200px) { .navigation-links { width: 90%; } }
 
 @media (max-width: 800px) { .navigation-links { width: 100vw; padding: 0 0 0 125px; }
   .navigation-links ul { justify-content: flex-end; align-items: center; }
@@ -545,10 +548,6 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .navigation-links .current-menu-item::before, .navigation-links .current-information-ancestor::before { content: ''; display: block; top: -10px; left: 0; right: 0; height: 1px; width: 50%; height: 1px; background-color: black; position: absolute; margin: auto; }
 
 @media (max-width: 800px) { .navigation-links .current-menu-item::before, .navigation-links .current-information-ancestor::before { top: 0; } }
-
-@media (max-width: 1200px) { #js-toggleDropdown { font-size: 1.2rem; } }
-
-@media (max-width: 800px) { #js-toggleDropdown { font-size: inherit; } }
 
 @media (max-width: 800px) { .header-link { display: none; } }
 
@@ -577,6 +576,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .site-footer .section-search, .site-footer .news-infos { border-bottom: 1px solid black; margin-bottom: 40px; }
 
 .site-footer .news-infos form label { display: block; }
+
+.footer_alert { background-color: #FEEB00; padding: 3px 5px; }
 
 .social-qrcode img { height: 100px; }
 
@@ -796,7 +797,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 1200px) { .shortcuts { width: 300px; } }
 
-@media (max-width: 1200px) { .shortcuts { transform: translateY(100vh); background-color: #FEEB00; color: white; right: 0; top: 0; bottom: 0; padding-top: 200px; } }
+@media (max-width: 1200px) { .shortcuts { transform: translateY(100vh); background-color: #707070; color: white; right: 0; top: 0; bottom: 0; padding-top: 200px; } }
 
 .shortcuts.open { transform: none; }
 

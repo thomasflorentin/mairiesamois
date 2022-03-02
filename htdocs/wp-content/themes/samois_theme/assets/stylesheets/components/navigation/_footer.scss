@@ -18,7 +18,10 @@
     display: block;
 }
 
-
+.footer_alert {
+    background-color: $primary_color;
+    padding: 3px 5px;
+}
 
 .social-qrcode img {
     height: 100px;
