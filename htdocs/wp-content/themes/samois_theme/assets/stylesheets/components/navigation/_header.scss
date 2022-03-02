@@ -80,13 +80,13 @@
 
     a {
         @include up-to(medium) {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         @include at-least(medium) {
             font-size: 1.4rem;
         }  
         @include at-least(large) {
-            font-size: 1.6rem;
+            font-size: 1.7rem;
         }        
 
     }
@@ -121,6 +121,10 @@
         li, i {
             margin-right: 0;
             margin-left: $marge;
+        }
+
+        a {
+            font-size: 2.6rem;
         }
     }
 }

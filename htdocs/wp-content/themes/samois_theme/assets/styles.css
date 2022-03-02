@@ -516,11 +516,11 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .nav-container li a:hover, .nav-container li a:focus { color: #08FCF2 !important; }
 
-@media (max-width: 800px) { .nav-container a { font-size: 1.2rem; } }
+@media (max-width: 800px) { .nav-container a { font-size: 1.3rem; } }
 
 @media (min-width: 800px) { .nav-container a { font-size: 1.4rem; } }
 
-@media (min-width: 1200px) { .nav-container a { font-size: 1.6rem; } }
+@media (min-width: 1200px) { .nav-container a { font-size: 1.7rem; } }
 
 @media (max-width: 800px) { .nav-container { padding-left: 100px; flex-direction: column; align-items: flex-end; } }
 
@@ -530,7 +530,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (max-width: 800px) { .nav-upper { border-bottom: 1px solid black; padding-bottom: 5px; margin-bottom: 5px; width: 100vw; font-size: 3rem; padding: 20px 0 20px; }
   .nav-upper ul { justify-content: flex-end; }
-  .nav-upper li, .nav-upper i { margin-right: 0; margin-left: 20px; } }
+  .nav-upper li, .nav-upper i { margin-right: 0; margin-left: 20px; }
+  .nav-upper a { font-size: 2.6rem; } }
 
 .navigation-links { width: 60%; }
 
