@@ -83,6 +83,17 @@
         top: 150px;
     }
 
+    @include up-to(medium) {
+        .nav-upper {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .nav-container {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+
     @include at-least(medium) {
         .shortcuts {
             top: 260px;
