@@ -18,10 +18,7 @@
     display: block;
 }
 
-.footer_alert {
-    background-color: $primary_color;
-    padding: 3px 5px;
-}
+
 
 .social-qrcode img {
     height: 100px;
@@ -87,5 +84,21 @@
         padding: 0 10px;
         line-height: 1;
         text-align: center;
+    }
+    .fab {
+        font-size: 3rem;
+    }
+
+    a:hover {
+        color: $green_flash;
+    }
+}
+.footer_alert {
+    background-color: $primary_color;
+    padding: 3px 5px;
+    border-radius: 5px;
+
+    &:hover {
+        color: white !important;
     }
 }
