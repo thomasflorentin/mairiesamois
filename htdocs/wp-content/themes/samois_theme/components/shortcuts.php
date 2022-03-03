@@ -4,6 +4,9 @@ $shortcuts_links = get_field('shortcuts_links');
 $shortcuts_infos = get_field('infos_pratiques__liens');
 
 if(  $shortcuts_infos === null || $shortcuts_infos === '' ) {
+    if( $shortcuts_links === null ) {    
+        $shortcuts_links = get_field('shortcuts_links', get_option('page_on_front') );
+    }
     $title = 'Prenez un <br>raccourci !';
 }
 else {

@@ -793,7 +793,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .item_pages li:hover, .item_pages a:hover { color: #3DFA05; }
 
 /* shortcuts aside */
-.shortcuts { position: fixed; padding: 0 60px 20px 60px; left: 0; transition: transform .4s; z-index: 99999; transition: all .4s; }
+.shortcuts { position: fixed; padding: 0 60px 20px 60px; left: 0; transition: transform .4s; z-index: 99997; transition: all .4s; }
 
 .shortcuts .shortcuts_title { line-height: 17px; }
 
