@@ -225,6 +225,8 @@
         top: 0;
         bottom: 0;
         padding-top: $space_top;
+        padding-bottom: 100px;
+        overflow-y: scroll;
     }
 
     &.open {

@@ -65,9 +65,15 @@
 // Flex module
 
 .mod_featured {
+
     a:hover{
         color: $blue;
     }
+
+	.mod_title a:hover {
+		color: $green_flash;
+	}
+
 }
 
 /*
