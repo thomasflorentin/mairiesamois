@@ -71,14 +71,14 @@
 
 .footer_menu {
     position: fixed;
-    padding: $marge / 2 $marge;
+    padding: 5px $marge;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: white;
     box-shadow: 0 -4px 6px -2px #8685855e;
     z-index: 99999;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 
     li {
         padding: 0 10px;

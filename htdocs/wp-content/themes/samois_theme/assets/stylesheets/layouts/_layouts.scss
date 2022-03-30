@@ -7,7 +7,7 @@
 // Breadcrumb
 
 .breadcrumb {
-    z-index: 99999;
+    z-index: 9999;
     background-color: #e4e5e8;
     color: #b5b5b5;
     position: fixed;
@@ -106,7 +106,7 @@
 
     @include at-least(large) {
         .breadcrumb {
-            top: 55px;
+            top: 62px;
         }
     }
 }

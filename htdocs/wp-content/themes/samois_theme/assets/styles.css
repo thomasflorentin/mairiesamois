@@ -597,7 +597,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (max-width: 800px) { .end-link { margin-bottom: 40px; } }
 
 /* FOOTER MOBILE MENU */
-.footer_menu { position: fixed; padding: 10px 20px; bottom: 0; left: 0; right: 0; background-color: white; box-shadow: 0 -4px 6px -2px #8685855e; z-index: 99999; font-size: 1.8rem; }
+.footer_menu { position: fixed; padding: 5px 20px; bottom: 0; left: 0; right: 0; background-color: white; box-shadow: 0 -4px 6px -2px #8685855e; z-index: 99999; font-size: 1.5rem; }
 
 .footer_menu li { padding: 0 10px; line-height: 1; text-align: center; }
 
@@ -739,7 +739,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 --------------------------------------------------------------*/
 .single_post { margin-bottom: 160px; }
 
-.breadcrumb { z-index: 99999; background-color: #e4e5e8; color: #b5b5b5; position: fixed; left: 0; right: 0; transition: top .4s; padding-top: 50px; max-width: 1600px; }
+.breadcrumb { z-index: 9999; background-color: #e4e5e8; color: #b5b5b5; position: fixed; left: 0; right: 0; transition: top .4s; padding-top: 50px; max-width: 1600px; }
 
 @media (max-width: 1200px) { .breadcrumb { top: 90px; } }
 
@@ -774,7 +774,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (min-width: 800px) { .scrolling .shortcuts { top: 260px; }
   .scrolling .breadcrumb { top: 45px; } }
 
-@media (min-width: 1200px) { .scrolling .breadcrumb { top: 55px; } }
+@media (min-width: 1200px) { .scrolling .breadcrumb { top: 62px; } }
 
 @media (min-width: 800px) { .single_cover .container-title-post { margin-left: -115px; z-index: 100; background: white; } }
 
