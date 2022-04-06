@@ -1,6 +1,6 @@
 {
     "key": "group_61b9ce5fa8fe0",
-    "title": "Géneral Settings",
+    "title": "Options générales (horaires, contact, ...)",
     "fields": [
         {
             "key": "field_61b9ce92e6966",
@@ -166,5 +166,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1642604966
+    "modified": 1649253256
 }

@@ -778,6 +778,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 800px) { .single_cover .container-title-post { margin-left: -115px; z-index: 100; background: white; } }
 
+@media (min-width: 800px) { .single_cover.vertical_image .container-title-post { margin-left: 0; } }
+
 .thumbnail_single img { width: 100%; }
 
 .item_title { display: block; margin-left: auto; margin-right: auto; background: white; margin-top: -60px; padding: 20px; position: relative; z-index: 9999; width: 75%; }

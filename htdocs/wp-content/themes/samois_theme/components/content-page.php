@@ -3,9 +3,9 @@ $imgs = get_field('single_img');
 ;
 get_template_part('components/shortcuts');
 
-$hide_featured_img = get_field('hide_featured_img');
-if( $hide_featured_img === null) {
-    $hide_featured_img = false;
+$vertical_thumbnail = get_field('vertical_thumbnail');
+if( $vertical_thumbnail === null) {
+    $vertical_thumbnail = false;
 }
 
 // CALLING THE BREADCRUMB MODULE 
@@ -41,7 +41,22 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
         </div>
 
 
-    <?php elseif ( !$hide_featured_img && has_post_thumbnail() ) : ?>
+    <?php elseif ( $vertical_thumbnail && has_post_thumbnail() ) : ?>
+
+        <div class="grid mb-big single_cover thumbnail_single vertical_image">
+            <figure class="s_12col m_5col m_full">
+                <div class="inner">
+                    <?php the_post_thumbnail(); ?>
+                </div>
+            </figure>
+
+            <div class="s_12col m_7col mt-big container-title-post  p-small">
+                <h1 class="FS42_B post-title"><?php the_title(); ?></h1>
+                <div class="FS16_B post-excerpt"><?php the_excerpt(); ?></div>
+            </div>
+        </div>
+
+    <?php elseif ( !$vertical_thumbnail && has_post_thumbnail() ) : ?>
 
         <div class="grid mb-big single_cover thumbnail_single">
             <figure class="s_12col m_7col m_full">
@@ -55,7 +70,6 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
                 <div class="FS16_B post-excerpt"><?php the_excerpt(); ?></div>
             </div>
         </div>
-
 
     <?php else : // else imgs 
 

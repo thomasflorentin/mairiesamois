@@ -1,6 +1,6 @@
 {
     "key": "group_61977f5129371",
-    "title": "CONTENUS FLEXIBLES",
+    "title": "Contenus flexibles (blocs, listes de publications, etc.)",
     "fields": [
         {
             "key": "field_61a634127c53b",
@@ -378,5 +378,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1643638522
+    "modified": 1649253284
 }

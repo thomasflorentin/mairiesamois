@@ -1,11 +1,11 @@
 {
     "key": "group_621e3a0dcad1c",
-    "title": "Cacher ou Afficher l'image à la Une",
+    "title": "Options sur l'image à la Une",
     "fields": [
         {
             "key": "field_621e3a1d31a69",
-            "label": "Cacher l'image à la Une en tête de l'article ?",
-            "name": "hide_featured_img",
+            "label": "L'image en tête d'article est verticale \/ portrait ?",
+            "name": "vertical_thumbnail",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -29,6 +29,27 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "event"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "information"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
         ]
     ],
     "menu_order": 0,
@@ -40,5 +61,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1646148524
+    "modified": 1649253906
 }
