@@ -14,15 +14,6 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
 
 <article class="single_post">
 
-    <?php if( get_post_type() == 'event' ) : ?>
-
-        <section class="event_meta mb-big">
-            <p class="FS24_B mb-small txt-capitalize"><?php the_field('date'); ?> - <?php the_field('horaires'); ?></p>
-            <p class="FS24_B txt-capitalize"><?php the_field('location'); ?></p>
-        </section>
-
-    <?php endif; ?>
-
     <?php if ($imgs) : ?>
 
         <div class="grid mb-big single_cover">
@@ -36,6 +27,16 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
 
             <div class="s_12col m_5col mt-big container-title-post p-small">
                 <h1 class="FS42_B post-title"><?php the_title(); ?></h1>
+                
+                <?php if( get_post_type() == 'event' ) : ?>
+
+                    <div class="event_meta mb-big">
+                        <p class="FS24_B mb-small txt-capitalize"><?php the_field('date'); ?> - <?php the_field('horaires'); ?></p>
+                        <p class="FS24_B txt-capitalize"><?php the_field('location'); ?></p>
+                    </div>
+
+                <?php endif; ?>
+
                 <div class="FS16_B post-excerpt"><?php the_excerpt(); ?></div>
             </div>
         </div>
@@ -52,6 +53,16 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
 
             <div class="s_12col m_7col mt-big container-title-post  p-small">
                 <h1 class="FS42_B post-title"><?php the_title(); ?></h1>
+
+                <?php if( get_post_type() == 'event' ) : ?>
+
+                    <div class="event_meta mb-big">
+                        <p class="FS24_B mb-small txt-capitalize"><?php the_field('date'); ?> - <?php the_field('horaires'); ?></p>
+                        <p class="FS24_B txt-capitalize"><?php the_field('location'); ?></p>
+                    </div>
+
+                <?php endif; ?>
+
                 <div class="FS16_B post-excerpt"><?php the_excerpt(); ?></div>
             </div>
         </div>
@@ -67,6 +78,14 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
 
             <div class="s_12col m_5col mt-big container-title-post p-small">
                 <h1 class="FS42_B post-title"><?php the_title(); ?></h1>
+                <?php if( get_post_type() == 'event' ) : ?>
+
+                    <div class="event_meta mb-big">
+                        <p class="FS24_B mb-small txt-capitalize"><?php the_field('date'); ?> - <?php the_field('horaires'); ?></p>
+                        <p class="FS24_B txt-capitalize"><?php the_field('location'); ?></p>
+                    </div>
+
+                <?php endif; ?>
                 <div class="FS16_B post-excerpt"><?php the_excerpt(); ?></div>
             </div>
         </div>
@@ -85,6 +104,14 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
             <div class="grid mb-big">
                 <div class="s_12col m_7col col_start_2">
                     <h1 class="FS42_B"><?php the_title(); ?></h1>
+                    <?php if( get_post_type() == 'event' ) : ?>
+
+                        <div class="event_meta mb-big">
+                            <p class="FS24_B mb-small txt-capitalize"><?php the_field('date'); ?> - <?php the_field('horaires'); ?></p>
+                            <p class="FS24_B txt-capitalize"><?php the_field('location'); ?></p>
+                        </div>
+
+                    <?php endif; ?>
                     <div class="FS18_B"><?php the_excerpt(); ?></div>
                 </div>
             </div>
