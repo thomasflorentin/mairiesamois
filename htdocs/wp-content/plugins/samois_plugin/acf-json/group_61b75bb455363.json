@@ -1,13 +1,13 @@
 {
     "key": "group_61b75bb455363",
-    "title": "Options pour l'article \/ événement",
+    "title": "Galerie d'image près du titre",
     "fields": [
         {
             "key": "field_61b7321539a5e",
             "label": "Galerie d'image",
             "name": "single_img",
             "type": "gallery",
-            "instructions": "Image pour l'affichage des images pour les informations, événements et les articles ne rien mettre si l'on est sur la page d'accueil",
+            "instructions": "La galerie d'image prendra la forme d'un slider défilant avec les flèches. \r\nInsérable sur TOUTES pages. \r\nInutile sur la page d'accueil.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -28,23 +28,6 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_61b87534aff64",
-            "label": "Date",
-            "name": "date",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "j M Y",
-            "return_format": "j M Y",
-            "first_day": 1
         }
     ],
     "location": [
@@ -61,6 +44,20 @@
                 "operator": "==",
                 "value": "event"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "information"
+            }
         ]
     ],
     "menu_order": 0,
@@ -72,5 +69,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1646147781
+    "modified": 1649252583
 }

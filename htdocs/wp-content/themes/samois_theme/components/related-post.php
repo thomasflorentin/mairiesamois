@@ -18,7 +18,7 @@ $related = get_posts(array(
 
 if ($related) : ?>
     <div class="related-posts mt-big">
-        <h2 class="FS24_B"><?php print('Actualités et évènements'); ?></h2>
+        <h2 class="FS24_B"><?php print('Poursuivre la lecture'); ?></h2>
         <ul class="grid txt-centered">
             <?php foreach ($related as $post) :
                 setup_postdata($post); ?>

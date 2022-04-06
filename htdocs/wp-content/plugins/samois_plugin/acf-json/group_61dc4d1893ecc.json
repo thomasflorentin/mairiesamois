@@ -1,6 +1,6 @@
 {
     "key": "group_61dc4d1893ecc",
-    "title": "CONTENUS Colonne de gauche",
+    "title": "Informations dans la Colonne des raccourcis",
     "fields": [
         {
             "key": "field_61dc4e5f9fe5a",
@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -36,13 +36,13 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "tabs": "all",
-            "toolbar": "full",
+            "toolbar": "basic",
             "media_upload": 0,
             "delay": 0
         }
@@ -86,5 +86,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1643639087
+    "modified": 1649252796
 }
