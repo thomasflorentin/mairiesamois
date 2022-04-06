@@ -20,3 +20,16 @@
 		margin-left: - $marge
 	}
 }
+
+
+.gallery-item {
+	float: left;
+	width: 45%;
+	height: auto;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+  

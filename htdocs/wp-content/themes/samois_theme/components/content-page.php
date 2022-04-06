@@ -97,8 +97,13 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
     <div class="grid">
         <div class="s_12col m_8col copy FS16">
             <?= do_shortcode(the_content());  ?>
+
+            <?php get_template_part('components/content', 'flexible'); ?>
+
         </div>
     </div>
+
+
 
 </article>
 

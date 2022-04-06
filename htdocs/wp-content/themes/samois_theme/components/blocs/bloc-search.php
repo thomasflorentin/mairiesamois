@@ -38,7 +38,6 @@ $excerpt = substr($excerpt, 0, strrpos($excerpt, ' ')) . ' [...]';
 
             <h3 clasvs="FS_16B"><?= get_the_title(); ?></h3>
             <div class="FS14 mb-small"><?= $excerpt; ?></div>
-            <p class="FS10_B"><?= get_field('date') ?></p>
         </div>
 
     </a>
