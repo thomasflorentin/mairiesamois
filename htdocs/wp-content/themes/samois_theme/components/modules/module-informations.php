@@ -4,7 +4,7 @@ $args = array(
     'post_type'   => 'information',
     'post_parent' => $parent_id,
     'posts_per_page' => -1,
-    'orderby' => 'title',
+    'orderby' => 'date',
     'order' => 'ASC'
 );
 

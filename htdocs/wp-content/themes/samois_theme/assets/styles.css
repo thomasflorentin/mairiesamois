@@ -719,7 +719,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .js_dropdown:not(.closed) i:before { transform: rotate(90deg); }
 
-.js_dropd_link:hover, .js_dropd_link:hover * { color: #FEEB00; }
+.js_dropd_link:hover, .js_dropd_link:hover * { color: #3DFA05; }
 
 .js_dropd_content { overflow: hidden; transition: max-height .4s; }
 
