@@ -70,6 +70,8 @@
 
 .ratio::after, .square::after, .ratio_1::after, .ratio_2::after { content: ""; display: block; }
 
+.ratio .attachment-infos-thumb, .square .attachment-infos-thumb, .ratio_1 .attachment-infos-thumb, .ratio_2 .attachment-infos-thumb { height: 100%; width: 100%; }
+
 .ratio img, .square img, .ratio_1 img, .ratio_2 img { object-fit: cover; height: 100%; width: 100%; }
 
 .square::after { padding-bottom: 100%; }

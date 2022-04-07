@@ -203,6 +203,11 @@ $marge_vbig: $marge * 8;
         display: block;
     }
 
+    .attachment-infos-thumb {
+        height: 100%;
+        width: 100%;
+    }
+
     img {
         object-fit: cover;
         height: 100%;
