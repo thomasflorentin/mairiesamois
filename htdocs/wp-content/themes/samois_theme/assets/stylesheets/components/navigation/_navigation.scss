@@ -76,6 +76,9 @@
             line-height: 1.2;
             margin-bottom: $marge;
             display: inline-block;
+            pointer-events: none;
+            cursor: default;
+            color: black;
         }
     }
 

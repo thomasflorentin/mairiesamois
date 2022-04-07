@@ -453,7 +453,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (min-width: 800px) { .nav_thematiques .menu-item-has-children { flex: 1; text-align: center; }
   .nav_thematiques .menu-item-has-children:not(:last-child):after { content: ''; width: 1px; height: 60px; background-color: #ffffff63; display: block; right: 0; position: absolute; top: 33%; } }
 
-.nav_thematiques .menu-item-has-children > a { font-size: 1.7rem; line-height: 1.2; margin-bottom: 20px; display: inline-block; }
+.nav_thematiques .menu-item-has-children > a { font-size: 1.7rem; line-height: 1.2; margin-bottom: 20px; display: inline-block; pointer-events: none; cursor: default; color: black; }
 
 .nav_thematiques .sub-menu a { font-size: 1.4rem; display: inline-block; }
 
