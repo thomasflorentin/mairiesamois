@@ -228,7 +228,7 @@
 
     body:not(.home) & {
         @include at-least(large) {
-            top: 360px;
+            top: 400px;
         }
     }
 
