@@ -783,8 +783,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 @media (max-width: 800px) { .scrolling .nav-upper { padding-top: 5px; padding-bottom: 5px; }
   .scrolling .nav-container { padding-top: 5px; padding-bottom: 5px; } }
 
-@media (min-width: 800px) { .scrolling .shortcuts { top: 260px !important; }
-  .scrolling .breadcrumb { top: 45px; } }
+@media (min-width: 800px) { .scrolling .breadcrumb { top: 45px; } }
 
 @media (min-width: 1200px) { .scrolling .breadcrumb { top: 72px; } }
 

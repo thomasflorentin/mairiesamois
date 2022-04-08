@@ -95,10 +95,6 @@
     }
 
     @include at-least(medium) {
-        .shortcuts {
-            top: 260px !important;
-        }
-
         .breadcrumb {
             top: 45px;
         }

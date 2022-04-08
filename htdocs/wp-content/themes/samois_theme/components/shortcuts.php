@@ -3,10 +3,10 @@
 $shortcuts_links = get_field('shortcuts_links');
 $shortcuts_infos = get_field('infos_pratiques__liens');
 
-if(  $shortcuts_infos !== '' ) {
+if(  $shortcuts_infos !== '' && $shortcuts_infos !== null ) {
     $title = 'A savoir';
 }
-elseif( $shortcuts_infos !== "" && $shortcuts_infos !== null ) {
+elseif( $shortcuts_links !== "" && $shortcuts_links !== null ) {
     $title = 'Prenez un <br>raccourci !';
 }
 else {
