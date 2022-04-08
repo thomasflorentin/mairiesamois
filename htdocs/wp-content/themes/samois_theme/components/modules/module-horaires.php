@@ -6,7 +6,6 @@
         
         <p class="FS14"><?php the_field('structure_adress', 'options') ?></p>
 
-        <p class="FS14">Horaires d'ouverture au public <br>
         <?php the_field('hour_opening', 'options') ?></p>
 
         <p class="mb-none FS14"> Courriel : <br> <?php the_field('mail', 'options') ?></p>

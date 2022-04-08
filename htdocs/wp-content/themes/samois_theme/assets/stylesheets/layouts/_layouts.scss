@@ -96,7 +96,7 @@
 
     @include at-least(medium) {
         .shortcuts {
-            top: 260px;
+            top: 260px !important;
         }
 
         .breadcrumb {
@@ -106,7 +106,7 @@
 
     @include at-least(large) {
         .breadcrumb {
-            top: 62px;
+            top: 72px;
         }
     }
 }
@@ -223,6 +223,13 @@
 
     @include at-least(large) {
         width: $space_left;
+    }
+
+
+    body:not(.home) & {
+        @include at-least(large) {
+            top: 360px;
+        }
     }
 
     @include up-to(large) {
