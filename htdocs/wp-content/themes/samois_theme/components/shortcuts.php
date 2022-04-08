@@ -35,7 +35,7 @@ if ( $shortcuts_infos !== "" || $shortcuts_infos !== null ) : ?>
 
                     <?php foreach ($shortcuts_links as $value) : ?>
                         <li>
-                            <a class="FS14" href="<?= $value->guid; ?>"><?= $value->post_title; ?></a>
+                            <a class="FS14" href="<?= get_permalink( $value->ID ); ?>"><?= $value->post_title; ?></a>
                             <hr>
                         </li>
                     <?php endforeach; ?>
