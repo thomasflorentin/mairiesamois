@@ -349,6 +349,10 @@ p { margin-top: 0; margin-bottom: 1.5em; }
 
 .copy figure { margin: 40px 0; }
 
+.copy table { border: 1px solid #ddd; width: 100%; margin-bottom: 30px; }
+
+.copy table td { border-bottom: 1px solid #eee; padding: 10px; text-align: center; }
+
 dfn, cite, em, i { font-style: italic; }
 
 blockquote { margin: 0 1.5em; }
