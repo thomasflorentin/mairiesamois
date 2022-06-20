@@ -4,9 +4,9 @@
     "fields": [
         {
             "key": "field_61dc4e5f9fe5a",
-            "label": "Liens de raccourcis",
+            "label": "Liste de raccourcis",
             "name": "shortcuts_links",
-            "type": "relationship",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,17 +15,28 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
-            "taxonomy": "",
-            "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
-            ],
-            "elements": "",
-            "min": "",
-            "max": "",
-            "return_format": "object"
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Ajouter une page \/ lien aux raccourcis",
+            "sub_fields": [
+                {
+                    "key": "field_62b0226380e26",
+                    "label": "Page du site ou URL externe",
+                    "name": "shortcut_item",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
         },
         {
             "key": "field_61f7c2f83640b",
@@ -86,5 +97,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649252796
+    "modified": 1655710400
 }

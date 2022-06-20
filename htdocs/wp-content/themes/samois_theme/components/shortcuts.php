@@ -28,18 +28,28 @@ if ( $shortcuts_infos !== "" || $shortcuts_infos !== null ) : ?>
             </div>
 
 
+
         <?php else : ?>
 
             <nav class="">
                 <ul class="">
 
-                    <?php foreach ($shortcuts_links as $value) : ?>
-                        <li>
-                            <a class="FS14" href="<?= get_permalink( $value->ID ); ?>"><?= $value->post_title; ?></a>
-                            <hr>
-                        </li>
-                    <?php endforeach; ?>
-                    <hr class="last">
+                <?php
+
+                    if( have_rows('shortcuts_links', get_option('page_on_front') ) ):
+
+                        while( have_rows('shortcuts_links', get_option('page_on_front') ) ) : the_row(); 
+                        $item = get_sub_field('shortcut_item'); ?>
+
+                            <li>
+                                <a class="FS14" href="<?= $item['url']; ?>" target="<?= $item['target']; ?>"><?= $item['title']; ?></a>
+                                <hr>
+                            </li>
+
+                        <?php endwhile; ?>
+                        <hr class="last">
+
+                    <?php endif; ?>
 
                 </ul>
             </nav>
