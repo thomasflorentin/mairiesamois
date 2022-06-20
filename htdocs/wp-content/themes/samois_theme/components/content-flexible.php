@@ -116,7 +116,7 @@ if (have_rows( $flex_content )) :
             echo '<section class="module mb-big">';
 
                 if( $title !== '' ) {
-                    echo '<header class="mb-small"><h2 class="FS52_B">'. $title . '</h2></header>';
+                    echo '<header class="mb-small"><h2 class="FS42_BC ">'. $title . '</h2></header>';
                 }
 
                 echo '<div class="grid">';
