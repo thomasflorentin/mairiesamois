@@ -9,7 +9,7 @@ $link = $args['link'];
 <section class="mod_featured mb-big">
 
     <header class="mod_title mb-medium">
-        <h2 class="FS42_B ">
+        <h2 class="FS52_B ">
             <?php if( $link != '' ) : ?>
                 <a href="<?php echo $link; ?>" class="arrow">
             <?php endif; ?>

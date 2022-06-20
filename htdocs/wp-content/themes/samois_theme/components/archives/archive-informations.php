@@ -16,14 +16,36 @@
 
 
 
+<section>
+    <?php 
+        set_query_var('before', true);
+        get_template_part('components/content', 'flexible'); ?>
+</section>
 
-<div class="grid">
 
-    <?php
-    foreach ($page_children as $child) {
-        set_query_var('parent_id', $child->ID);
-        get_template_part('components/modules/module', 'informations');
-    }
-    ?>
 
-</div>
+<section class="module mb-big">
+
+    <?php if( get_field("module_title") !== "" ) { 
+        echo '<header class="mb-small"><h2 class="FS52_B">'. get_field("module_title") . '</h2></header>';
+    } ?>
+
+    <div class="grid">
+
+        <?php
+        foreach ($page_children as $child) {
+            set_query_var('parent_id', $child->ID);
+            get_template_part('components/modules/module', 'informations');
+        }
+        ?>
+
+    </div>
+</section>
+
+
+
+<section>
+    <?php 
+            set_query_var('before', false);
+            get_template_part('components/content', 'flexible'); ?>
+</section>

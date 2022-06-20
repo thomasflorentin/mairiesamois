@@ -1,10 +1,20 @@
 <?php
 
 
-if (have_rows('flex-content')) :
+
+if( isset($before) && $before ) {
+    $flex_content = 'flex-content-before';
+}
+else {
+    $flex_content = 'flex-content';
+}
 
 
-    while (have_rows('flex-content')) : the_row();
+
+if (have_rows( $flex_content )) :
+
+
+    while (have_rows( $flex_content )) : the_row();
 
         /*
          * BLOCS de CONTENUS MIS EN AVANT 

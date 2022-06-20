@@ -1,11 +1,11 @@
 {
-    "key": "group_61977f5129371",
-    "title": "Contenus flexibles (blocs, listes de publications, etc.)",
+    "key": "group_62b067962fb7e",
+    "title": "Contenus flexibles (blocs, listes de publications, etc.) [AVANT CONTENUS]",
     "fields": [
         {
-            "key": "field_61a634127c53b",
-            "label": "Contenu Flexible (APRES CONTENUS)",
-            "name": "flex-content",
+            "key": "field_62b064fe3f587",
+            "label": "Contenu Flexible (AVANT CONTENUS)",
+            "name": "flex-content-before",
             "type": "flexible_content",
             "instructions": "",
             "required": 0,
@@ -23,7 +23,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_61a6341e7c53c",
+                            "key": "field_62b064fe3f588",
                             "label": "Titre du module",
                             "name": "mod_title",
                             "type": "text",
@@ -42,7 +42,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_61a635dc8b55b",
+                            "key": "field_62b064fe3f589",
                             "label": "Contenue",
                             "name": "mod_content",
                             "type": "wysiwyg",
@@ -61,7 +61,7 @@
                             "delay": 0
                         },
                         {
-                            "key": "field_61a635f98b55c",
+                            "key": "field_62b064fe3f58a",
                             "label": "Lien",
                             "name": "mod_link",
                             "type": "link",
@@ -86,7 +86,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_61a6364b8b55e",
+                            "key": "field_62b064fe3f58b",
                             "label": "Titre",
                             "name": "mod_title",
                             "type": "text",
@@ -105,7 +105,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_61ee781589370",
+                            "key": "field_62b064fe3f58c",
                             "label": "Lien sur le titre ?",
                             "name": "mod_link",
                             "type": "page_link",
@@ -124,7 +124,7 @@
                             "multiple": 0
                         },
                         {
-                            "key": "field_61ee6e49fc449",
+                            "key": "field_62b064fe3f58d",
                             "label": "Mode d'affichage",
                             "name": "mod_design",
                             "type": "select",
@@ -145,12 +145,12 @@
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 0,
-                            "return_format": "value",
                             "ajax": 0,
+                            "return_format": "value",
                             "placeholder": ""
                         },
                         {
-                            "key": "field_61efd6c9dd79b",
+                            "key": "field_62b064fe3f58e",
                             "label": "Affichage automatique ?",
                             "name": "mod_auto",
                             "type": "true_false",
@@ -169,7 +169,7 @@
                             "ui_off_text": ""
                         },
                         {
-                            "key": "field_61efd70edd79c",
+                            "key": "field_62b064fe3f58f",
                             "label": "Nombre d'éléments ?",
                             "name": "mod_postsperpage",
                             "type": "number",
@@ -178,7 +178,7 @@
                             "conditional_logic": [
                                 [
                                     {
-                                        "field": "field_61efd6c9dd79b",
+                                        "field": "field_62b064fe3f58e",
                                         "operator": "==",
                                         "value": "1"
                                     }
@@ -198,7 +198,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_61efd761dd79d",
+                            "key": "field_62b064fe3f590",
                             "label": "Type de post",
                             "name": "mod_posttype",
                             "type": "select",
@@ -207,7 +207,7 @@
                             "conditional_logic": [
                                 [
                                     {
-                                        "field": "field_61efd6c9dd79b",
+                                        "field": "field_62b064fe3f58e",
                                         "operator": "==",
                                         "value": "1"
                                     }
@@ -228,12 +228,12 @@
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 0,
-                            "return_format": "value",
                             "ajax": 0,
+                            "return_format": "value",
                             "placeholder": ""
                         },
                         {
-                            "key": "field_61a6366e8b55f",
+                            "key": "field_62b064fe3f591",
                             "label": "Liste des pages à afficher",
                             "name": "mod_list_news",
                             "type": "relationship",
@@ -242,7 +242,7 @@
                             "conditional_logic": [
                                 [
                                     {
-                                        "field": "field_61efd6c9dd79b",
+                                        "field": "field_62b064fe3f58e",
                                         "operator": "!=",
                                         "value": "1"
                                     }
@@ -255,9 +255,9 @@
                             },
                             "post_type": [
                                 "post",
-                                "information",
+                                "page",
                                 "event",
-                                "page"
+                                "information"
                             ],
                             "taxonomy": "",
                             "filters": [
@@ -283,7 +283,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_61ee69c355f4a",
+                            "key": "field_62b064fe3f592",
                             "label": "Page parente des informations à Afficher",
                             "name": "pages_information",
                             "type": "relationship",
@@ -311,7 +311,7 @@
                             "return_format": "object"
                         },
                         {
-                            "key": "field_61f7eee34b9b7",
+                            "key": "field_62b064fe3f593",
                             "label": "Titre de la section",
                             "name": "mod_title",
                             "type": "text",
@@ -337,6 +337,25 @@
             "button_label": "Ajouter un élément",
             "min": "",
             "max": ""
+        },
+        {
+            "key": "field_62b067cccdbcd",
+            "label": "Ajouter un titre au modules des informations ?",
+            "name": "module_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -344,28 +363,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "page"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
                 "value": "information"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "event"
             }
         ]
     ],
@@ -378,5 +376,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1655728291
+    "modified": 1655728294
 }
