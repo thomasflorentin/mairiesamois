@@ -72,7 +72,7 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
         <div class="grid mb-big single_cover thumbnail_single">
             <figure class="s_12col m_7col m_full">
                 <div class="inner">
-                    <?php the_post_thumbnail(); ?>
+                    <?php the_post_thumbnail('single-main'); ?>
                 </div>
             </figure>
 

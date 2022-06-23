@@ -122,5 +122,6 @@ function wpdocs_theme_setup() {
     add_image_size( 'infos-thumb', 550 );
     add_image_size( 'post-thumb', 550 );
     add_image_size( 'focus-thumb', 700 );
+    add_image_size( 'single-main', 800 );
     // add_image_size( 'homepage-thumb', 220, 180, true ); // (cropped)
 }
