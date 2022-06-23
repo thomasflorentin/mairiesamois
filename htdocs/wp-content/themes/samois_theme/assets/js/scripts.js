@@ -133,7 +133,7 @@ function init() {
     
             for (let el of $els) {
     
-                var this_height = el.offsetHeight + 50;            
+                var this_height = el.offsetHeight + 500;            
                 
                 el.style.maxHeight = this_height + 'px';
         
@@ -157,8 +157,12 @@ function init() {
                 el.addEventListener('click', function(e) {
                     e.preventDefault();
         
-                    for( let e of $els) {
-                        e.closest('.js_dropdown').classList.add('closed');
+                    if ( ! el.closest('.js_dropdown').classList.contains("closed") ) {
+                        el.closest('.js_dropdown').classList.add('closed');
+                        return;
+                    }
+                    for( let j of $els) {
+                        j.closest('.js_dropdown').classList.add('closed');
                     }
         
                     js_dropdown.classList.toggle('closed')
