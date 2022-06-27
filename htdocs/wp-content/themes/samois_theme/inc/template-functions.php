@@ -42,20 +42,14 @@ add_action('wp_head', 'samois_pingback_header');
 
 
 
-function has_children($id = '')
-{
+function get_children_pages_count($id = '') {
 
-    if ($id === '') {
+    if ($id == '') {
         global $post;
         $id = $post->ID;
     }
 
-    $pages = get_pages(
-        array(
-            'post_type'    => array('page', 'information', 'post', 'event'),
-            'child_of'    => $id
-        )
-    );
+    $pages = get_pages( array( 'child_of' => $id ) );
 
     if (is_array($pages)) {
         return count($pages);
@@ -64,8 +58,7 @@ function has_children($id = '')
     }
 }
 
-function is_top_level($id = '')
-{
+function get_top_level_page($id = '') {
     global $wpdb;
 
     if ($id === '') {

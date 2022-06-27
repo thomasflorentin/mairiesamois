@@ -29,7 +29,7 @@
 
                         foreach ($ancestors as $crumb) {
 
-                            if( has_children($crumb) > 0 && is_top_level ($crumb)  > 0 ) {
+                            if( get_top_level_page($crumb) > 0 ) {
                                 $html .= '<li class="' . $crumb . '">' . get_the_title($crumb) . '&nbsp;>&nbsp;</li>';
                             }
                             else {
