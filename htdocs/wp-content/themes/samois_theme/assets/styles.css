@@ -345,7 +345,9 @@ p { margin-top: 0; margin-bottom: 1.5em; }
 
 .p2 { font-size: 2rem; }
 
-.copy a { border-bottom: 1px solid #1F5DA5; }
+.copy a { box-shadow: inset 0 -3px 0 rgba(31, 93, 165, 0.8); transition: box-shadow .3s ease-in-out 0s; color: inherit; text-decoration: none; }
+
+.copy a:hover { box-shadow: inset 0 -22px 0 rgba(31, 93, 165, 0.8); color: white; }
 
 .copy figure { margin: 40px 0; }
 
