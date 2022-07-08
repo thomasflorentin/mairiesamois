@@ -25,14 +25,20 @@
 .gallery {
 	margin-bottom: 100px
 }
-.gallery-item {
+figure.gallery-item {
 	float: left;
-	width: 45%;
+	width: 49%;
 	height: auto;
+	margin-top: 0;
+	margin-bottom: 5px;
 
 	img {
 		width: 100%;
 		height: auto;
+	}
+
+	&:nth-child(odd) {
+		margin-right: 1%;
 	}
 }
   

@@ -237,7 +237,8 @@ function init() {
 
     // vanilla JS
     let msnry = new Masonry( '.gallery', {
-        columnWidth: 200
+        itemSelector: '.gallery-item',
+        percentPosition: true
     });
 
 }

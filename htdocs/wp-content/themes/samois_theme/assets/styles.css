@@ -640,9 +640,11 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .gallery { margin-bottom: 100px; }
 
-.gallery-item { float: left; width: 45%; height: auto; }
+figure.gallery-item { float: left; width: 49%; height: auto; margin-top: 0; margin-bottom: 5px; }
 
-.gallery-item img { width: 100%; height: auto; }
+figure.gallery-item img { width: 100%; height: auto; }
+
+figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 
 .tns-outer { padding: 0 !important; }
 
