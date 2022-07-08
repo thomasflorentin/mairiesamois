@@ -640,7 +640,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .gallery { margin-bottom: 100px; }
 
-figure.gallery-item { float: left; width: 49%; height: auto; margin-top: 0; margin-bottom: 5px; }
+figure.gallery-item { float: left; width: 49%; height: auto; margin-top: 0; margin-bottom: 6px; }
 
 figure.gallery-item img { width: 100%; height: auto; }
 
