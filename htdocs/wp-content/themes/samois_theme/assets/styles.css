@@ -395,8 +395,6 @@ ul[class] { list-style-type: none; padding: 0; margin: 0; }
 
 .agenda-list .agenda-month:nth-child(n+2) { margin-top: 80px; }
 
-.agenda-list a:hover, .agenda-list li:hover { color: #3DFA05; }
-
 /* Make sure embeds and iframes fit their containers. */
 embed, iframe, object { max-width: 100%; }
 

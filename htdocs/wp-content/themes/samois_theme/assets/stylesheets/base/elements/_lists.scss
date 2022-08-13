@@ -35,14 +35,7 @@ ul[class] {
 .list-bbot{
     border-bottom: 1px solid $secondary_color;
 }
-
-
-
 	
 .agenda-list .agenda-month:nth-child(n+2){
     margin-top: $marge_big;
-}
-
-.agenda-list a:hover, .agenda-list li:hover{
-    color: #3DFA05;
 }
