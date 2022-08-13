@@ -46,6 +46,9 @@
     max-width: 230px;
     height: auto;
     transition: all .4s;
+    object-fit: contain;
+    object-position: top;
+    
     @include up-to(medium) {
         max-width: 80px;
     }
