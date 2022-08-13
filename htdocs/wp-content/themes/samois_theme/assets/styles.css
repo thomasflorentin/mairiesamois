@@ -638,7 +638,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (max-width: 800px) { .m_full { width: 100vw; max-width: none; margin-left: -20px; } }
 
-.gallery { margin-bottom: 100px; }
+.gallery { margin-bottom: 100px; float: left; width: 100%; }
 
 figure.gallery-item { float: left; width: 49%; height: auto; margin-top: 0; margin-bottom: 6px; }
 

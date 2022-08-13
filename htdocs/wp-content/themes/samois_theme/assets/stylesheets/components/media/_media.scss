@@ -23,7 +23,9 @@
 
 
 .gallery {
-	margin-bottom: 100px
+	margin-bottom: 100px;
+	float: left;
+	width: 100%;
 }
 figure.gallery-item { 
 	float: left;
