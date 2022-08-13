@@ -743,6 +743,12 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 --------------------------------------------- */
 .bloc_event { padding: 20px 0; }
 
+.bloc_event .block_title, .bloc_event .arrow { color: #1F5DA5; }
+
+.bloc_event a:hover { color: inherit; }
+
+.bloc_event a:hover .block_title, .bloc_event a:hover .arrow { color: #3DFA05; }
+
 .js_dropdown.closed .js_dropd_content { max-height: 0 !important; }
 
 .js_dropdown i:before { transition: all .2s; display: inline-block; }

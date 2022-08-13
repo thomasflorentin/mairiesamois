@@ -1,4 +1,18 @@
 
 .bloc_event {
     padding: 20px 0;
+
+    .block_title, .arrow {
+        color: $secondary_color;
+    }
+
+    a:hover {
+        color: inherit;
+
+        .block_title, .arrow {
+            color: $tertiary_color;
+        }
+    }
+
+
 }
