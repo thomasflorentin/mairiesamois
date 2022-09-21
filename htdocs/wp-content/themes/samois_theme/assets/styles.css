@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
-.wrapper { max-width: 1500px; width: calc(100% - 40px); }
+.wrapper { max-width: 1650px; width: calc(100% - 40px); }
 
 @media (min-width: 1200px) { .wrapper { padding-left: 300px; } }
 
@@ -510,7 +510,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next { text-align: end; flex: 1 0 50%; }
 
 /* Généralité HEADER */
-.header-container { position: fixed; /* Set the navbar to fixed position */ top: 0px; /* Position the navbar at the top of the page */ width: 100%; /* Full width */ box-shadow: -7px 4px 6px -2px #8685855e; background-color: white; z-index: 99999; max-width: 1500px; }
+.header-container { position: fixed; /* Set the navbar to fixed position */ top: 0px; /* Position the navbar at the top of the page */ width: 100%; /* Full width */ box-shadow: -7px 4px 6px -2px #8685855e; background-color: white; z-index: 99999; max-width: 1650px; }
 
 .header_inner { background-color: white; position: relative; z-index: 999999; }
 
@@ -579,7 +579,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (min-width: 800px) { .header-banner { overflow: hidden; height: 45vh; }
   .header-banner figure { margin: 0; height: 100%; }
-  .header-banner figure img { width: auto; height: 100%; width: 100vw; object-fit: cover; max-width: 1500px; } }
+  .header-banner figure img { width: auto; height: 100%; width: 100vw; object-fit: cover; max-width: 1650px; } }
 
 @media (max-width: 800px) { .header-banner { display: none; } }
 
