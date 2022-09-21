@@ -2,8 +2,8 @@
 Contributors: Backup with UpdraftPlus, DavidAnderson, DNutbourne, aporter, snightingale, bcrodua
 Tags: backup, restore, database backup, wordpress backup, cloud backup, s3, dropbox, google drive, onedrive, ftp, backups
 Requires at least: 3.2
-Tested up to: 5.9
-Stable tag: 1.22.7
+Tested up to: 6.0
+Stable tag: 1.22.22
 Author URI: https://updraftplus.com
 Donate link: https://david.dw-perspective.org.uk/donate
 License: GPLv3 or later
@@ -164,10 +164,143 @@ Unfortunately not; since this is free software, there’s no warranty and no gua
 
 == Changelog ==
 
-The <a href="https://updraftplus.com/news/">UpdraftPlus backup blog</a> is the best place to learn in more detail about any important changes.
+= 1.22.22 - 16/Sep/2022 =
 
-N.B. Paid versions of UpdraftPlus Backup / Restore have a version number which is 1 higher in the first digit, and has an extra component on the end, but the changelog below still applies. i.e. changes listed for 1.16.32.x of the free version correspond to changes made in 2.16.32.x of the paid version.
+* FIX: Restrict the CSS scope for our jQuery to prevent conflicts
+* FIX: UI bug when unable to download a database for restoration and then retrying before refreshing the page
+* TWEAK: Add basic design to confirmation window when adding a site to UpdraftCentral
+* TWEAK: Prevent a PHP coding deprecation warning on PHP 8.1
+* TWEAK: Feedburner URLs now are case-sensitive
+* TWEAK: Improve the Handlebars template of the Rackspace Cloud Files remote storage by taking PHP code out of it
+* TWEAK: WP Rocket - disable CDN upon migration completion since key will be invalid.
+* TWEAK: Improve the UpdraftClone user-visible feedback and logging on delay or failure conditions
+* TWEAK: WebDAV refactor part 2: Eliminate the stream-wrapper layer
 
+= 1.22.21 - 09/Sep/2022 =
+
+* FIX: Infinite recursions/loops appeared to happen in restoration during the search-replace operation especially when some tables had a circular reference in their serialised data
+* FIX: Prevent PclZip from restoring empty/corrupt archives
+* FIX: Zip file sizes had ceased to be recorded in the backup history
+* FIX: Fix fatal error when loading the "Advanced Tools" section for UpdraftCentral
+* TWEAK: Log intermediate unzip errors before proceeding with different method
+
+= 1.22.20 - 05/Sep/2022 =
+
+* FEATURE: Restore the "upload immediately after creation" feature that was turned off whilst misbehaviour was investigated; fixes have been applied.
+* FIX: Prevent premature removal of zip manifest files
+* TWEAK: Improve the Handlebars template of the OpenStack (Swift) remote storage by taking PHP code out of it
+* TWEAK: Do not run out-of-place "SET @@GLOBAL.GTID_PURGED" statements upon restore
+
+= 1.22.19 - 29/Aug/2022 =
+
+* TWEAK: The "upload immediately after creation" feature has been disabled whilst reports of incorrect behaviour are investigated
+* TWEAK: Replace require_once to include_once and use the UpdraftCentral path constant when loading the UpdraftCentral host class.
+* TWEAK: Modify the "overdue crons" message for greater clarity
+
+= 1.22.18 - 26/Aug/2022 =
+
+* TWEAK: Suppress pre-loading of phpseclib libraries, which has exposed fatal-error inducing bugs in a handful of unmaintained third-party plugins and themes
+* TWEAK: Increase the number of conditions for which attempts to access an S3 bucket will result in more logging
+
+= 1.22.17 - 23/Aug/2022 =
+
+* FIX: Ensure jobdata is saved before attempting a partial cloud upload, preventing potential omission of an archive
+* FEATURE: Restore the "upload immediately after creation" feature that was turned off in 1.22.16 whilst misbehaviour was investigated
+* TWEAK: Add log information as to why DB stored routines couldn't be included in the backup if that should be so
+* TWEAK: Declare some implicity-declared class variables to avoid warnings in PHP 8.2
+
+= 1.22.15 - 22/Aug/2022 =
+
+* FEATURE: Each archive created will now be uploaded immediately directly after creation, to save disk space (prior behaviour was to first create all archives)
+* FIX: Improve parsing of HTTP response code header with generic S3 providers to avoid incorrectly interpreting status code
+* FIX: When an S3 service returns a RequestTimeTooSkewed error, make sure this is passed up to the user and not lost
+* FIX: Do not prematurely trigger upload_complete message when performing immediate file upload during clone operation
+* FIX: Database views don't get restored or are not restored correctly when in atomic mode
+* FIX: After sending email reports, other emails that follow used the same From address/name taken from the previous email
+* FIX: Database views don't get included in the backup
+* TWEAK: Improve the Handlebars template of the Microsoft Azure remote storage by taking PHP code out of it (Premium)
+* TWEAK: Update WebDAV library used for WebDAV remote storage (Premium) - N.B. This now requires PHP 5.5+.
+* TWEAK: Improve the Handlebars template of the Google Cloud remote storage by taking PHP code out of it (Premium)
+* TWEAK: Improve the Handlebars template of the Microsoft OneDrive remote storage by taking PHP code out of it (Premium)
+* TWEAK: Detect and break absurdly-future locks
+* TWEAK: Restrict the CSS scope for our jQuery to prevent conflicts
+* TWEAK: Work around consequences of a backup history save failure
+* TWEAK: Add a twice-daily cron to clear temporary files so that they are cleared even in the absence of new backups beginning and prior backup completion failure
+* TWEAK: Tweak UpdraftCentral abstraction classes
+* TWEAK: Separate custom font rules when retrieving styles from remote sites
+* TWEAK: Prevent PHP deprecation notice when using Google libraries on PHP 8.1+
+* TWEAK: Simplify Dropbox SDK by removing unused "response format" code
+
+= 1.22.14 - 07/Jul/2022 =
+
+* FIX: Selective table restore
+* FIX: Fix restore button JS issue when importing single site to multisite
+* TWEAK: Allow charset to be set during a WP_CLI restore
+* TWEAK: Use similar charset if one is not set and not supported during a WL_CLI restore
+* TWEAK: Add bulk process handler for UpdraftCentral's plugin and theme modules
+* TWEAK: Return previous plugin and theme states before installation or activation
+* TWEAK: Improve the Handlebars template of the Backblaze remote storage by taking PHP code out of it (Premium)
+* TWEAK: Improve the Handlebars template of the WebDAV remote storage by taking PHP code out of it (Premium)
+* TWEAK: Improve the Handlebars template of the SFTP/SCP remote storage by taking PHP code out of it (Premium)
+* TWEAK: Avoid using 'phpmailer_init' action when setting up sender name and sender email address, as some SMTP plugins override the 'wp_mail()' function and they don't bother to call the 'phpmailer_init' action
+* TWEAK: Prevent increments being added to backups from other sites
+
+= 1.22.13 - 25/May/2022 =
+
+* FEATURE: Added the ability to create a clone from WP-CLI (Premium)
+* TWEAK: Free version – Improve the Handlebars template of Azzure, OneDrive, WebDAV, SFTP/SCP, Blackblaze, and Google Cloud remote storage by taking PHP code out of them
+* TWEAK: Update notice class
+* TWEAK: Escape URL used in remote storage connection modal
+* TWEAK: A Label being incorrectly displayed when creating a clone
+* TWEAK: Update class-udrpc
+* TWEAK: Don't show database selective restore UI if no tables are found in the database scan
+* TWEAK: Allow drag-dropping of backup anywhere, not just on target area
+* TWEAK: Add "echo" to display the premium link properly in some templates
+* TWEAK: Update the posts class to support theme.json config file for theme styles and block settings
+* TWEAK: Extract from plugin's data rather than relying on its key when retrieving the plugin slug
+* TWEAK: Increase likelihood of using experimental upload-sooner feature from 1% to 5%
+
+= 1.22.12 - 29/Apr/2022 =
+
+* FEATURE: Added the ability to select which themes and plugins to Restore
+* FEATURE: Allow existing local backups to be sent to a remote site when migrating
+* TWEAK: Tweak to allow the Amazon S3 setup wizard to run if the internal S3 library is active
+* TWEAK: The WordPress sidebar menu overlaps the popover tour box
+* TWEAK: Attempt to upload a zip file after it's been created to save on storage space
+* TWEAK: Add MySQL maximum packet size to Advanced Tools -> Site Information
+* TWEAK: Only output the expected table rows when starting to process the table
+* TWEAK: Fix get_users parameter that has been deprecated on WP 5.9 in UpdraftCentral posts controller.
+* TWEAK: Do not call escapeshellarg() for SCP if we know it is unnecessary (prevents problems on hosts lacking the function for trivial use cases)
+* TWEAK: Detect change of run-time environment on first resumption and re-set previously detected resumption interval if likely to be helpful
+* TWEAK: Improve the FTP Handlebars template by taking PHP code out of it
+* TWEAK: Convert HTTP error codes to their meanings
+* TWEAK: Some plugins are loading their own incomplete mcrypt_* functions try and detect this and recover
+* TWEAK: Ensure the local backup file is cleaned up if an earlier failed remote storage upload later succeeds
+* TWEAK: Include plugin version when getting details from UpdraftPlus Vault to allow features that depend upon a sufficiently up-to-date version
+
+= 1.22.11 - 15/Mar/2022 =
+
+* FIX: Internal S3 library did not correctly construct canonical query string with v4 signatures if there were multiple parameters, leading to wrong signatures and failed authorisation
+* FIX: Fix a recent regression that caused DNS hostnames to not be preferred when using Amazon S3
+* TWEAK: Prevent deprecation notice on PHP 8.1 if opening a zero-size zip file
+* TWEAK: Introduce filter updraftplus_dropbox_fetch_curl_options for easier debugging/experimentation
+
+= 1.22.10 - 11/Mar/2022 =
+
+* FIX: Fix a regression in the 1.22.9 adjustment to the internal S3 library's evaluation of when to use a Host: header
+* FIX: Fix a long-standing issue whereby if S3-related credentials were being tested via the front-end UI, and multiple back-end instances were present, then the wrong settings could be used in making decisions on Host: headers
+
+= 1.22.9 - 10/Mar/2022 =
+
+* SECURITY: Fixed a failure to sanitise printed URLs properly, leading to a targetted XSS opportunity (if an attacker persuades a logged-in admin to follow a link personally crafted for their site, he may be able to run JavaScript inside the browser - but on our testing, this ability is limited due to the sanitisation that was there - we have not been able to confirm that a payload causing damage is possible). Reported by Taurus Omar - https://taurusomar.com.
+* TWEAK: Adjust internal S3 library's evaluation of when to use a Host: header (improves compatibility with buckets with minimal access rules)
+* TWEAK: Adjust algorithm concerning likelihood of switching S3 libraries to accelerate deployment
+* TWEAK: Prevent PHP notice when using S3 with particular bucket naming and SSL
+
+= 1.22.8 - 03/Mar/2022 =
+
+* FIX: Do not attempt to use S3 DNS-style bucket naming in alternative library if SSL validation will fail due to AWS certificate wildcard policies or other bucket naming-related reasons
+* TWEAK: Add version number to alternative S3 library requests
 
 = 1.22.7 - 01/Mar/2022 =
 
@@ -1479,4 +1612,4 @@ Reliance upon any non-English translation is at your own risk; UpdraftPlus can g
 We recognise and thank those mentioned at https://updraftplus.com/acknowledgements/ for code and/or libraries used and/or modified under the terms of their open source licences.
 
 == Upgrade Notice ==
-* 1.22.7: Various tweaks/fixes to handling of S3 using bundled internal library. N.B. 1.22.3 fixed a security issue (see the changelog for more info). A recommended update for all.
+* 1.22.22: Various tweaks and fixes. See changelog for full details. A recommended update for all.

@@ -3,7 +3,7 @@
  * $Id$
  *
  * Copyright (c) 2011, Donovan Schönknecht.  All rights reserved.
- * Portions copyright (c) 2012-2021, David Anderson (https://david.dw-perspective.org.uk).  All rights reserved.
+ * Portions copyright (c) 2012-2022, David Anderson (https://david.dw-perspective.org.uk).  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -34,7 +34,6 @@
  *
  * Forked originally from:
  * @link http://undesigned.org.za/2007/10/22/amazon-s3-php-class
- * @version 0.5.0-dev
  */
 class UpdraftPlus_S3 {
 	// ACL flags
@@ -85,7 +84,7 @@ class UpdraftPlus_S3 {
 	 * @param string|null $endpoint Endpoint
 	 * @param string|null $session_token The session token returned by AWS for temporary credentials access
 	 * @param string $region Region
-
+	 *
 	 * @throws Exception If cURL extension is not present
 	 *
 	 * @return self
@@ -219,6 +218,15 @@ class UpdraftPlus_S3 {
 	}
 
 	/**
+	 * Get SSL validation value.
+	 *
+	 * @return bool
+	 */
+	public function getUseSSLValidation() {
+		return $this->useSSLValidation;
+	}
+	
+	/**
 	 * Set SSL client certificates (experimental)
 	 *
 	 * @param string $sslCert SSL client certificate
@@ -313,7 +321,7 @@ class UpdraftPlus_S3 {
 	 *
 	 * @return void
 	 */
-	private function __triggerError($message, $file, $line, $code = 0) {// phpcs:ignore PHPCompatibility.FunctionNameRestrictions.ReservedFunctionNames.MethodDoubleUnderscore -- Method name "UpdraftPlus_S3Request::_responseHeaderCallback" is discouraged; PHP has reserved all method names with a double underscore prefix for future use.
+	private function __triggerError($message, $file, $line, $code = 0) {// phpcs:ignore PHPCompatibility.FunctionNameRestrictions.ReservedFunctionNames.MethodDoubleUnderscore -- Method name "UpdraftPlus_S3Request::__triggerError" is discouraged; PHP has reserved all method names with a double underscore prefix for future use.
 		if ($this->useExceptions) {
 			throw new UpdraftPlus_S3Exception($message, $file, $line, $code);
 		} else {
@@ -1056,7 +1064,6 @@ class UpdraftPlus_S3 {
 		);
 	}
 
-
 	/**
 	 * Disable bucket logging
 	 *
@@ -1073,7 +1080,8 @@ class UpdraftPlus_S3 {
 	 *
 	 * @param string $bucket Bucket name
 	 *
-	 * @return string | false
+	 * @return String | Boolean - A boolean result will be false, indicating failure.
+	 * 
 	 */
 	public function getBucketLocation($bucket) {
 		$rest = new UpdraftPlus_S3Request('GET', $bucket, '', $this->endpoint, $this->use_dns_bucket_name, $this);
@@ -1081,8 +1089,8 @@ class UpdraftPlus_S3 {
 		$rest = $rest->getResponse();
 		
 		global $updraftplus;
-		
-		if (false !== $rest->error && 200 !== $rest->code && 'AuthorizationHeaderMalformed' == $rest->error['code'] && !empty($rest->error['region'])) {
+
+		if (false !== $rest->error && 'AuthorizationHeaderMalformed' == $rest->error['code'] && !empty($rest->error['region'])) {
 			// The location request was sent to the wrong region... but the response tells us the correct region, which is all we wanted.
 			return $rest->error['region'];
 		}
@@ -1454,9 +1462,13 @@ class UpdraftPlus_S3 {
 		if (strpos($uri, '?')) {
 			list($uri, $query_str) = @explode('?', $uri);
 			parse_str($query_str, $parameters);
+			// "Sort the parameter names by character code point in ascending order. Parameters with duplicate names should be sorted by value. For example, a parameter name that begins with the uppercase letter F precedes a parameter name that begins with a lowercase letter b."
+			// N.B. Here we've not looked at the values as we don't expect duplicates
+			uksort($parameters, 'strcmp');
 		}
 
 		// Canonical Requests
+		// "Start with the HTTP request method (GET, PUT, POST, etc.)"
 		$amzRequests[] = $method;
 		$uriQmPos = strpos($uri, '?');
 		$amzRequests[] = (false === $uriQmPos ? $uri : substr($uri, 0, $uriQmPos));
@@ -1541,7 +1553,7 @@ final class UpdraftPlus_S3Request {
 	 * @param string  $bucket Bucket name
 	 * @param string  $uri Object URI
 	 * @param string  $endpoint Endpoint of storage
-	 * @param boolean $use_dns_bucket_name
+	 * @param boolean $use_dns_bucket_name - if set, then constructs an endpoint based upon the bucket name as well as $endpoint (otherwise, uses $endpoint only)
 	 * @param object  $s3 S3 Object that calls these requests
 	 *
 	 * @return mixed
@@ -1559,7 +1571,8 @@ final class UpdraftPlus_S3Request {
 		//	$this->resource = $this->uri;
 
 		if ('' !== $this->bucket) {
-			if ($this->_dnsBucketName($this->bucket) || $use_dns_bucket_name) {
+			// Use host-style access if the consumer requested it and we don't see a problem.
+			if ($use_dns_bucket_name && $this->_dnsBucketName($this->bucket)) {
 				$this->headers['Host'] = $this->bucket.'.'.$this->endpoint;
 				$this->resource = '/'.$this->bucket.$this->uri;
 			} else {
@@ -1647,7 +1660,9 @@ final class UpdraftPlus_S3Request {
 		//var_dump('bucket: ' . $this->bucket, 'uri: ' . $this->uri, 'resource: ' . $this->resource, 'url: ' . $url);
 
 		$curl = curl_init();
-		curl_setopt($curl, CURLOPT_USERAGENT, 'S3/php');
+		
+		global $updraftplus;
+		curl_setopt($curl, CURLOPT_USERAGENT, 'S3/UpdraftPlus-'.$updraftplus->version);
 
 		if ($this->s3->useSSL) {
 			// SSL Validation can now be optional for those with broken OpenSSL installations
@@ -1694,7 +1709,7 @@ final class UpdraftPlus_S3Request {
 		// AMZ headers must be sorted
 		if (sizeof($amz) > 0) {
 			//sort($amz);
-			usort($amz, array(&$this, '__sortMetaHeadersCmp'));
+			usort($amz, array($this, '__sortMetaHeadersCmp'));
 			$amz = "\n".implode("\n", $amz);
 		} else {
 			$amz = '';
@@ -1733,8 +1748,8 @@ final class UpdraftPlus_S3Request {
 		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 		curl_setopt($curl, CURLOPT_HEADER, false);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, false);
-		curl_setopt($curl, CURLOPT_WRITEFUNCTION, array(&$this, '_responseWriteCallback'));
-		curl_setopt($curl, CURLOPT_HEADERFUNCTION, array(&$this, '_responseHeaderCallback'));
+		curl_setopt($curl, CURLOPT_WRITEFUNCTION, array($this, '_responseWriteCallback'));
+		curl_setopt($curl, CURLOPT_HEADERFUNCTION, array($this, '_responseHeaderCallback'));
 		@curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
 
 		// Request types
@@ -1766,14 +1781,15 @@ final class UpdraftPlus_S3Request {
 		}
 
 		// Execute, grab errors
-		if (curl_exec($curl))
+		if (curl_exec($curl)) {
 			$this->response->code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-		else
+		} else {
 			$this->response->error = array(
 				'code' => curl_errno($curl),
 				'message' => curl_error($curl),
 				'resource' => $this->resource
 			);
+		}
 
 		@curl_close($curl);
 
@@ -1844,7 +1860,12 @@ final class UpdraftPlus_S3Request {
 
 
 	/**
-	 * Check DNS conformity
+	 * Check DNS conformity (suitability for Host: header addressing).
+	 * Many of the rules below apply to all new buckets; but some don't apply to legacy buckets created before certain dates.
+	 * 
+	 * This is used to rule out invalid names
+	 *
+	 * @see https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html
 	 *
 	 * @param  string $bucket Bucket name
 	 *
@@ -1852,17 +1873,17 @@ final class UpdraftPlus_S3Request {
 	 */
 	private function _dnsBucketName($bucket) {
 		// A DNS bucket name cannot have len>63
-		// A DNS bucket name must have a character in other than a-z, 0-9, . -
-		// The purpose of this second check is not clear - is it that there's some limitation somewhere on bucket names that match that pattern that means that the bucket must be accessed by hostname?
-		if (strlen($bucket) > 63 || !preg_match("/[^a-z0-9\.-]/", $bucket)) return false;
-		# A DNS bucket name cannot contain -.
+		if (strlen($bucket) > 63) return false;
+		// A DNS bucket name must not have a character in other than a-z, 0-9, . -
+		if (preg_match("/[^a-z0-9\.-]/", $bucket)) return false;
+		// A DNS bucket name cannot contain -.
 		if (false !== strstr($bucket, '-.')) return false;
-		# A DNS bucket name cannot contain ..
+		// A DNS bucket name cannot contain ..
 		if (false !== strstr($bucket, '..')) return false;
-		# A DNS bucket name must begin with 0-9a-z
+		// A DNS bucket name must begin with 0-9a-z
 		if (!preg_match("/^[0-9a-z]/", $bucket)) return false;
 		# A DNS bucket name must end with 0-9 a-z
-		if (!preg_match("/[0-9a-z]$/", $bucket)) return false;
+		// (!preg_match("/[0-9a-z]$/", $bucket)) return false;
 		return true;
 	}
 
@@ -1876,8 +1897,8 @@ final class UpdraftPlus_S3Request {
 	 */
 	private function _responseHeaderCallback($curl, $data) {
 		if (($strlen = strlen($data)) <= 2) return $strlen;
-		if ('HTTP' == substr($data, 0, 4)) {
-			$this->response->code = (int)substr($data, 9, 3);
+		if (preg_match('#^HTTP/\S+ (\d\d\d)#', $data, $matches)) {
+			$this->response->code = (int)$matches[1];
 		} else {
 			$data = trim($data);
 			if (false === strpos($data, ': ')) return $strlen;

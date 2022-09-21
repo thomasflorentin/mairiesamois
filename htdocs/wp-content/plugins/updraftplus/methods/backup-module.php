@@ -69,6 +69,59 @@ abstract class UpdraftPlus_BackupModule {
 	}
 
 	/**
+	 * Retrieve persistent class variables and/or methods (the ones that don't get changed during runtime) and transform them into a list of template properties
+	 *
+	 * @return Array an associative array keyed by names of the corresponding variables/methods, the keys might not exactly be the same with the name of the variables/methods
+	 */
+	protected function get_persistent_variables_and_methods() {
+		global $updraftplus;
+		return array(
+			'css_class' => 'updraftplusmethod',
+			'is_multi_options_feature_supported' => $this->supports_feature('multi_options'),
+			'is_config_templates_feature_supported' => $this->supports_feature('config_templates'),
+			'is_conditional_logic_feature_supported' => $this->supports_feature('conditional_logic'),
+			'is_multi_servers_feature_supported' => $this->supports_feature('multi_servers'),
+			'method_id' => $this->get_id(),
+			'_instance_id' => $this->_instance_id,
+			'method_display_name' => $updraftplus->backup_methods[$this->get_id()],
+			'admin_page_url' => UpdraftPlus_Options::admin_page_url(),
+		);
+	}
+
+	/**
+	 * Get all persistent variables and methods across the modules (this could mean the child including its parent), also the necessary required HTML element attributes and texts which are unique to each child
+	 * NOTE: Since this method would normally be over-ridden by the child, please sanitise all strings that are required to be shown as HTML content on the frontend side (i.e. wp_kses())
+	 *
+	 * @return Array an associative array keyed by names that describe themselves as they are
+	 */
+	public function get_template_properties() {
+		return array();
+	}
+
+	/**
+	 * List all allowed HTML tags for content sanitisation
+	 *
+	 * @return Array an associatve array keyed by name of the allowed HTML tags 
+	 */
+	protected function allowed_html_for_content_sanitisation() {
+		return array(
+			'a' => array(
+				'href' => array(),
+				'title' => array(),
+				'target' => array(),
+			),
+			'br' => array(),
+			'em' => array(),
+			'strong' => array(),
+			'p' => array(),
+			'div' => array(
+				'class' => array(),
+			),
+			'kbd' => array(),
+		);
+	}
+
+	/**
 	 * Check whether options have been set up by the user, or not
 	 * This method would normally be over-ridden by the child.
 	 *
@@ -564,7 +617,7 @@ abstract class UpdraftPlus_BackupModule {
 
 		if ($template_instead_of_notice) {
 			$instance_id = "{{instance_id}}";
-			$text = sprintf(__("<strong>After</strong> you have saved your settings (by clicking 'Save Changes' below), then come back here once and follow this link to complete authentication with %s.", 'updraftplus'), $description);
+			$text = sprintf(__("<strong>After</strong> you have saved your settings (by clicking 'Save Changes' below), then come back here and follow this link to complete authentication with %s.", 'updraftplus'), $description);
 		} else {
 			$instance_id = $this->get_instance_id();
 			$text = sprintf(__('Follow this link to authorize access to your %s account (you will not be able to backup to %s without it).', 'updraftplus'), $description, $description);
@@ -725,6 +778,37 @@ abstract class UpdraftPlus_BackupModule {
 		$updraftplus->log("$prefix: $line", $level, $uniq_id, $skip_dblog);
 	}
 
+	/**
+	 * Log appropriate messages for a multi-delete response.
+	 *
+	 * @param Array $files
+	 * @param Array $responses - using the same keys as $files
+	 *
+	 * @return Boolean - true if no errors were found, otherwise false
+	 */
+	protected function process_multi_delete_responses($files, $responses) {
+		global $updraftplus;
+		$ret = true;
+		if (is_array($responses)) {
+			foreach ($responses as $key => $response) {
+				if ('success' == $response) {
+					$updraftplus->log("$files[$key]: Delete succeeded");
+				} elseif (is_array($response)) {
+					$ret = false;
+					if (isset($response['error']) && isset($response['error']['code']) && isset($response['error']['message'])) {
+						$updraftplus->log("Delete failed for file: $files[$key] with error code: ".$response['error']['code']." message: ".$response['error']['message']);
+					} else {
+						$updraftplus->log("Delete failed for file: $files[$key]");
+					}
+				}
+			}
+		} elseif (!$responses) {
+			$ret = false;
+			$updraftplus->log("Delete failed for files: ".implode($files));
+		}
+		return $ret;
+	}
+	
 	/**
 	 * This function will build and return the remote storage instance label
 	 *

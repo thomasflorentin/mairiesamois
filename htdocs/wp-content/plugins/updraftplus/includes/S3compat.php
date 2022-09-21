@@ -267,7 +267,16 @@ class UpdraftPlus_S3_Compat {
 	public function getuseSSL() {
 		return $this->use_ssl;
 	}
-
+	
+	/**
+	 * Get SSL validation value.
+	 *
+	 * @return bool
+	 */
+	public function getUseSSLValidation() {
+		return $this->use_ssl_validation;
+	}
+	
 	/**
 	 * Set SSL client certificates (experimental)
 	 *
@@ -792,7 +801,8 @@ class UpdraftPlus_S3_Compat {
 	 * Get a bucket's location
 	 *
 	 * @param string $bucket Bucket name
-	 * @return string | false
+	 *
+	 * @return String | Boolean - A boolean result will be false, indicating failure.
 	 */
 	public function getBucketLocation($bucket) {
 		try {
