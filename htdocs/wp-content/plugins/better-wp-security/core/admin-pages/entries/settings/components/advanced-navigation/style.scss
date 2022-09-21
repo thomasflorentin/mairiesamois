@@ -13,6 +13,7 @@
     a {
         color: $medium-text;
         display: flex;
+        flex-direction: column;
         align-items: center;
         text-decoration: none;
 
@@ -20,17 +21,8 @@
             color: $main-blue;
         }
 
-        &::before {
-            @include dashicon();
-            margin-right: .15rem;
-        }
-
-        &.itsec-settings-advanced-nav--tools::before {
-            content: '\f107';
-        }
-
-        &.itsec-settings-advanced-nav--advanced::before {
-            content: '\f194';
+        .dashicon {
+            margin-bottom: .15rem;
         }
     }
 }
