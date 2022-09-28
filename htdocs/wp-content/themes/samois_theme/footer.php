@@ -71,7 +71,7 @@ $useful_links = get_field('util_link', 'options')
                         </div>
                     </div>
 
-                    <div class="notification-footer pb-medium">
+                    <!-- <div class="notification-footer pb-medium">
                         <h3 class="FS16_B">Activer les notifications sur votre mobile </h3>
                         <ul class="FS14">
                             <li>1. Scanner ce QR code avec votre mobile</li>
@@ -79,7 +79,7 @@ $useful_links = get_field('util_link', 'options')
                             <li>3. Cliquez sur "J'accepte".</li>
                             <li>4. Recevez automatiquement actualités et événements !</li>
                         </ul>
-                    </div>
+                    </div>-->
 
                 </div>
             </div>
@@ -155,6 +155,18 @@ $useful_links = get_field('util_link', 'options')
         </nav>
 
     </div><!-- #page -->
+
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X26J6JXBWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X26J6JXBWC');
+</script>
+
 
 </body>
 </html>

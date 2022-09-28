@@ -77,6 +77,18 @@ tarteaucitron.user.googletagmanagerId = 'GTM-XXXX';
 
 
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X26J6JXBWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X26J6JXBWC');
+</script>
+
+
 <?php
 if (is_admin_bar_showing()) : ?>
 
