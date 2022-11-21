@@ -13,7 +13,7 @@
 // MY SCRIPT
 
 function init() {
-    console.log('init');
+    //console.log('init');
 
 
 
@@ -65,7 +65,7 @@ function init() {
         toggleElement: function(e, el) {
 
             e.preventDefault();
-            console.log('toggleElement');
+            //console.log('toggleElement');
 
             app.closeAll( el );
 
@@ -89,7 +89,7 @@ function init() {
 
 
         handleScrollForMenu: function () {
-            console.log('handleScrollForMenu');
+            // console.log('handleScrollForMenu');
 
             let st = window.scrollY;
 
@@ -127,7 +127,7 @@ function init() {
 
         // ACCORDEONS
         closeDropdownsContent: function( $els ) {
-            console.log('closeDropdownsContent');
+            // console.log('closeDropdownsContent');
 
             let i = 0;
     
@@ -148,7 +148,7 @@ function init() {
         },
     
         handleDropdownsOpening: function( $els ) {
-            console.log('handleDropdownsOpening');
+            // console.log('handleDropdownsOpening');
 
             for (let el of $els) {
     
@@ -214,7 +214,7 @@ function init() {
 
     // todo: A faire fonctionner : fermer le menu quand on clique sur la page
     
-    console.log(app.main);
+    // console.log(app.main);
 
     app.main.addEventListener('click', function( e ) {
 
@@ -241,7 +241,24 @@ function init() {
         percentPosition: true
     });
 
+
+
+
+    // REPLACE LINKS
+
+    let staginLinks = document.querySelectorAll('a[href^="http://samoistaging.com"]');
+
+    for( let link of staginLinks ) {
+        console.log(link);
+        let url = link.getAttribute('href');
+        let updatedUrl = url.replace("http://samoistaging.com", "http://samois.stagingserver.fr");
+        // let updatedUrl = url.replace("http://samoistaging.com", "http://samois-sur-seine.fr/");
+        // updatedUrl = url.replace("http://samois.stagingserver.fr", "http://samois-sur-seine.fr/");
+        link.setAttribute('href', updatedUrl);
+    }
 }
+
+
 
 
 

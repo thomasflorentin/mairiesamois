@@ -4,7 +4,6 @@
 const { src, dest , series , watch } = require("gulp");
 const sass = require("gulp-sass")(require('sass'));
 const rename = require("gulp-rename");
-const del = require('del');
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
