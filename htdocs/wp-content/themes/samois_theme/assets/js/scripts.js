@@ -246,7 +246,7 @@ function init() {
 
     // REPLACE LINKS
 
-    let staginLinks = document.querySelectorAll('a[href^="http://samoistaging.com"]');
+    let staginLinks = document.querySelectorAll('a[href*="http://samoistaging.com"]');
 
     for( let link of staginLinks ) {
         console.log(link);
