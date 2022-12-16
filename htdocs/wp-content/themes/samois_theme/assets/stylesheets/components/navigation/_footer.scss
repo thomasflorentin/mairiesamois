@@ -22,6 +22,7 @@
 
 .social-qrcode img {
     height: 100px;
+    width: auto;
 }
 
 
@@ -63,6 +64,9 @@
 .end-link{
     @include up-to(medium){
         margin-bottom: $marge-medium;
+    }
+    a {
+        @extend .btn_inline !optional;
     }
 }
 /*

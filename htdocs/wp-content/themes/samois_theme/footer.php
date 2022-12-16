@@ -62,7 +62,7 @@ $useful_links = get_field('util_link', 'options')
                         <div class="number-phone flex FS14">
                             <div class="number-rescue">
                                 <p>Police > 17</p>
-                                <p>Pompier > 18</p>
+                                <p>Pompiers > 18</p>
                                 <p>Samu > 15</p>
                             </div>
                             <div class="number-doc">
@@ -110,10 +110,15 @@ $useful_links = get_field('util_link', 'options')
                             <?php endforeach; ?>
                         </nav>
 
-                        <nav class="end-link flex">
-                            <a href="" class="btn_inline mr-small">Mentions légales</a>
-                            <a href="" class="btn_inline mr-small">Cookies</a>
-                            <a href="" class="btn_inline">Plan du site</a>
+                        <nav class="">
+                            <?php
+                            wp_nav_menu(
+                                array(
+                                    'theme_location'    => 'footer',
+                                    'items_wrap'     => '<ul class="end-link flex">%3$s</ul>'
+                                )
+                            );
+                            ?>
                         </nav>
 
                     </div>

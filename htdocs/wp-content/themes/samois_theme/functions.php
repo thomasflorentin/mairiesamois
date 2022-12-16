@@ -53,7 +53,8 @@ if (!function_exists('samois_setup')) :
         register_nav_menus(
             array(
                 'primary-menu' => esc_html__('Menu primaire', 'samois'),
-                'primany-dropdown-men' => esc_html__('Menu Thématiques', 'samois')
+                'primany-dropdown-men' => esc_html__('Menu Thématiques', 'samois'),
+                'footer' => esc_html__('Menu Footer', 'samois')
             )
         );
         /*
