@@ -12,7 +12,7 @@
 
 ?>
 
-<div class="bloc-post">
+<div class="bloc_post">
     <a href="<?= get_the_permalink(); ?>">
         <?php if (has_post_thumbnail()) : ?>
             <?php if (is_front_page() || is_page()) : ?>
