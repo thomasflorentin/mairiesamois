@@ -1,6 +1,6 @@
 <?php
 $imgs = get_field('single_img');
-;
+
 get_template_part('components/shortcuts');
 
 $vertical_thumbnail = get_field('vertical_thumbnail');
