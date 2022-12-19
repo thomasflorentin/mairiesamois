@@ -27,8 +27,7 @@ $useful_links = get_field('util_link', 'options')
                     
                     <nav class="s_5col m_6col search-link FS14">
                         <ul class=" fl-col">
-                            <li><a href="/contact" class="p1 btn_inline">Posez vos questions en ligne</a></li>
-                            <li><a href="/faq" class="p1 btn_inline">Questions fréquement posées</a></li>
+                            <li><a href="/contact-en-ligne" class="p1 btn_inline">Posez vos questions en ligne</a></li>
                         </ul>
                     </nav>
                 </div>
