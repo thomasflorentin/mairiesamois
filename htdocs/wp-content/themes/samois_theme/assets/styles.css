@@ -819,7 +819,7 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 
 .thumbnail_single img { width: 100%; }
 
-.item_title { display: block; margin-left: auto; margin-right: auto; background: white; margin-top: -60px; padding: 20px; position: relative; z-index: 9999; width: 75%; }
+.item_title { display: block; margin-left: auto; margin-right: auto; background: white; margin-top: -60px; padding: 20px; position: relative; z-index: 999; width: 75%; }
 
 .item_related { background: #E4E5E8; position: relative; }
 
