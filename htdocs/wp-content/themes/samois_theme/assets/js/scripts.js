@@ -185,7 +185,10 @@ function init() {
     // handle show/hide popins
     app.dropdownBtn.addEventListener('click', (e) => app.toggleElement(e, app.dropdownMenu) );
     app.searchbarBtn.addEventListener('click', (e) => app.toggleElement(e, app.searchbarElement) );
-    app.shortcutsBtn.addEventListener('click', (e) => app.toggleElement(e, app.shortcuts) );
+
+    if(app.shortcutsBtn !== null ) {
+        app.shortcutsBtn.addEventListener('click', (e) => app.toggleElement(e, app.shortcuts) );
+    }
 
 
     // handle scroll
