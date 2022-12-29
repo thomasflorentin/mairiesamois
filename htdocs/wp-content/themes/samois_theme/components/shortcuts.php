@@ -40,13 +40,15 @@ if ( $shortcuts_infos !== "" || $shortcuts_infos !== null ) : ?>
                         
                         foreach( $shortcuts_links as $link ) : 
                         $item = $link["shortcut_item"];
-                        ?>
+                        if( is_array( $item ) ) : ?>
+                        
                             <li>
                                 <a class="FS14" href="<?= $item['url']; ?>" target="<?= $item['target']; ?>"><?= $item['title']; ?></a>
                                 <hr>
                             </li>
 
-                        <?php endforeach;
+                        <?php endif; 
+                        endforeach;
 
                         
                     else : 
