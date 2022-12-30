@@ -271,7 +271,7 @@ function init() {
         link.setAttribute('href', updatedUrl);
     }
 
-}
+} 
 
 
 
