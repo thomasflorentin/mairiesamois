@@ -254,7 +254,7 @@ function init() {
     for( let link of staginLinks ) {
         console.log(link);
         let url = link.getAttribute('href');
-        let updatedUrl = url.replace("http://samoistaging.com", "https://samois-sur-seine.fr/");
+        let updatedUrl = url.replace("http://samoistaging.com", "https://samois-sur-seine.fr");
         // let updatedUrl = url.replace("http://samoistaging.com", "http://samois-sur-seine.fr/");
         // updatedUrl = url.replace("http://samois.stagingserver.fr", "http://samois-sur-seine.fr/");
         link.setAttribute('href', updatedUrl);
@@ -265,9 +265,19 @@ function init() {
     for( let link of staginLinks2 ) {
         console.log(link);
         let url = link.getAttribute('href');
-        let updatedUrl = url.replace("http://samois.stagingserver.fr", "https://samois-sur-seine.fr/");
+        let updatedUrl = url.replace("http://samois.stagingserver.fr", "https://samois-sur-seine.fr");
         // let updatedUrl = url.replace("http://samoistaging.com", "http://samois-sur-seine.fr/");
         // updatedUrl = url.replace("http://samois.stagingserver.fr", "http://samois-sur-seine.fr/");
+        link.setAttribute('href', updatedUrl);
+    }
+
+
+    let localLinks = document.querySelectorAll('a[href*="http://mairiesamois.local"]');
+
+    for( let link of localLinks ) {
+        console.log(link);
+        let url = link.getAttribute('href');
+        let updatedUrl = url.replace("http://mairiesamois.local", "https://samois-sur-seine.fr");
         link.setAttribute('href', updatedUrl);
     }
 
