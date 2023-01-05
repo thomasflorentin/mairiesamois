@@ -133,6 +133,10 @@
         & > * {
             width: 90% !important;
         }
+
+        .searchform {
+            margin-top: 250px;
+        }
     }
 
     @include at-least(medium) {

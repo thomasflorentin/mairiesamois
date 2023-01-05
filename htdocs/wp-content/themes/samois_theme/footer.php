@@ -140,17 +140,13 @@ $useful_links = get_field('util_link', 'options')
         ?>
 
         <nav id="footer_menu" class="footer_menu l_hide">
-            <ul class="fl-justify fl-hcentered">
-                <li>
-                    <?= (INSTAGRAM_LINK) ? "<a target=\"_blank\" href=\"". INSTAGRAM_LINK . "\"><i class=\"fab fa-instagram-square\"></i></a>" : "" ?>
-                </li>
-                <li>
-                    <?= (FACEBOOK_LINK) ? "<a target=\"_blank\" href=\"". FACEBOOK_LINK . "\"><i class=\"fab fa-facebook-square\"></i></a>" : "" ?>
-                </li>
+            <ul class="fl-centered fl-hcentered">
+                
+                <?= (INSTAGRAM_LINK) ? "<li><a target=\"_blank\" href=\"". INSTAGRAM_LINK . "\"><i class=\"fab fa-instagram-square\"></i></a></li>" : "" ?>
+                
+                <?= (FACEBOOK_LINK) ? "<li><a target=\"_blank\" href=\"". FACEBOOK_LINK . "\"><i class=\"fab fa-facebook-square\"></i></a></li>" : "" ?>
 
-                <li>
-                    <a href="<?php echo $alert_post->guid; ?>" class="footer_alert"><?php printf('[ALERTE]'); ?></a>
-                </li>
+                <?= ($alert_post) ? '<li><a href="' . $alert_post->guid . '" class="footer_alert">[ALERTE]</a></li>' : '' ?>
 
                 <li>
                     <a href="#" id="js-shortcutsBtn">Prenez un raccourci</a>
