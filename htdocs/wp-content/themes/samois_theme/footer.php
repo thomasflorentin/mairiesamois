@@ -46,7 +46,7 @@ $useful_links = get_field('util_link', 'options')
                     <div class="social-qrcode fl-justify pb-medium">
                         <div class="social p2">
                             <a href="<?= the_field('facebook_link', 'options') ?>"><i class="fab fa-facebook-square"></i></a>
-                            <a href="<?= get_field('mail', 'option');?>"><i class="fas fa-envelope"></i></a>
+                            <a href="mailto:<?= get_field('mail', 'option');?>"><i class="fas fa-envelope"></i></a>
                         </div>
                         <img src="<?= the_field('qrcode_notif', 'options') ?>" alt="">
                     </div>
