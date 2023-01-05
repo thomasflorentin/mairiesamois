@@ -1,4 +1,4 @@
-<p class="mb-small">Recevez notre Newsletter</p>
+<p class="mb-small">Recevez notre Infolettre</p>
 
     <!-- Begin Mailchimp Signup Form -->
 
