@@ -345,7 +345,7 @@ p { margin-top: 0; margin-bottom: 1.5em; }
 
 .p2 { font-size: 2rem; }
 
-.copy a { color: #1F5DA5; text-decoration: none; }
+.copy a { color: #1F5DA5; text-decoration: underline; }
 
 .copy a:hover { color: #3DFA05; }
 

@@ -13,15 +13,10 @@ p {
 
 .copy {
 	a {
-		// box-shadow: inset 0 -3px 0 rgba($secondary_color, .8);
-		// transition: box-shadow .3s ease-in-out 0s;
-		// color: inherit;
 		color: $secondary_color;
-		text-decoration: none;
+		text-decoration: underline;
 	}
 	a:hover {
-		// box-shadow: inset 0 -22px 0 rgba($secondary_color, .8);
-		// color: white;
 		color: $tertiary_color;
 	}
 
