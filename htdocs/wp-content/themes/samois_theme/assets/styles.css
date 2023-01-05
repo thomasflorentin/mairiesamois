@@ -349,9 +349,11 @@ p { margin-top: 0; margin-bottom: 1.5em; }
 
 .copy a:hover { color: #3DFA05; }
 
-.copy figure { margin: 40px 0; }
-
 .copy figure a { border: none; box-shadow: none; }
+
+.copy img { margin: 40px 0; }
+
+.copy .gallery { margin-bottom: 0; }
 
 .copy table { border: 1px solid #ddd; width: 100%; margin-bottom: 30px; border-spacing: 0; }
 
@@ -640,7 +642,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 @media (max-width: 800px) { .m_full { width: 100vw; max-width: none; margin-left: -20px; } }
 
-.gallery { margin-bottom: 100px; float: left; width: 100%; }
+.gallery { margin-bottom: 60px; float: left; width: 100%; }
 
 figure.gallery-item { float: left; width: 49%; height: auto; margin-top: 0; margin-bottom: 6px; }
 

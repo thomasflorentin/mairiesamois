@@ -26,12 +26,18 @@ p {
 	}
 
 	figure {
-		margin: 40px 0;
-
 		a {
 			border: none;
 			box-shadow: none;
 		}
+	}
+
+	img {
+		margin: 40px 0;
+	}
+
+	.gallery {
+		margin-bottom: 0;
 	}
 
 	table {
