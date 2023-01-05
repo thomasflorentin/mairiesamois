@@ -15,7 +15,7 @@
     right: 0;
     transition: top .4s;
     padding-top: 50px;
-    max-width: 1600px;
+    max-width: $max_width;
 
     @include up-to(large) {
         top: 90px;

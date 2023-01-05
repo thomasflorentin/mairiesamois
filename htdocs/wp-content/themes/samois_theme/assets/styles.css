@@ -780,7 +780,7 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 --------------------------------------------------------------*/
 .single_post { margin-bottom: 160px; }
 
-.breadcrumb { z-index: 9999; background-color: #e4e5e8; color: #b5b5b5; position: fixed; left: 0; right: 0; transition: top .4s; padding-top: 50px; max-width: 1600px; }
+.breadcrumb { z-index: 9999; background-color: #e4e5e8; color: #b5b5b5; position: fixed; left: 0; right: 0; transition: top .4s; padding-top: 50px; max-width: 1650px; }
 
 @media (max-width: 1200px) { .breadcrumb { top: 90px; } }
 
