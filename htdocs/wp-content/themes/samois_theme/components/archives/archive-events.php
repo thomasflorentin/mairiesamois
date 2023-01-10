@@ -21,7 +21,7 @@
 
         $args = array(
             'post_type'         => 'event',
-            'posts_per_page' 	=> '30',
+            'posts_per_page' 	=> '-1',
             'meta_key'          => 'date',
             'orderby'           => 'meta_value_num',
             'order'             => 'ASC',
