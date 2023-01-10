@@ -38,7 +38,7 @@ $useful_links = get_field('util_link', 'options')
                 <div class="s_12col m_5col">
                     
                     <div class="mb-medium">
-                        <h3 class="FS16_B">Restez toujours informé.e !</h3>
+                        <h3 class="FS16_B">Restez toujours informé !</h3>
                         <?php get_template_part('components/modules/module', 'newsletter'); ?>
 
                     </div>
