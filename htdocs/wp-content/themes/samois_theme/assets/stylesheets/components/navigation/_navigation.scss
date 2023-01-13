@@ -116,11 +116,11 @@
         right: 0;
         bottom: auto;
         top: auto;
-        padding-top: $space_top;
-        padding-bottom: $space_top;
+        padding-top: 50px;
+        padding-bottom: 250px;
         height: 100vh;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         flex-direction: column;
         overflow: scroll;
@@ -135,7 +135,7 @@
         }
 
         .searchform {
-            margin-top: 250px;
+            margin-top: 0;
         }
     }
 
