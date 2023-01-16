@@ -647,7 +647,7 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .gallery { margin-bottom: 60px; float: left; width: 100%; }
 
-figure.gallery-item { float: left; width: 49%; height: auto; margin-top: 0; margin-bottom: 6px; }
+figure.gallery-item { float: left; width: 49%; height: auto; margin-top: 0; }
 
 figure.gallery-item img { width: 100%; height: auto; }
 
