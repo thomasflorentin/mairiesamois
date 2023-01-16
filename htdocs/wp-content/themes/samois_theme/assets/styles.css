@@ -349,9 +349,11 @@ p { margin-top: 0; margin-bottom: 1.5em; }
 
 .copy a:hover { color: #3DFA05; }
 
+.copy figure { margin-bottom: 40px; }
+
 .copy figure a { border: none; box-shadow: none; }
 
-.copy img { margin: 40px 0; }
+.copy img { margin: 5px 0; }
 
 .copy .gallery { margin-bottom: 0; }
 
@@ -740,7 +742,7 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 
 .wp-caption .wp-caption-text { margin: 0.8075em 0; }
 
-.wp-caption-text { text-align: center; }
+.wp-caption-text { text-align: center; font-size: 0.7em; }
 
 /* Blocs
 --------------------------------------------- */
