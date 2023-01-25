@@ -754,7 +754,7 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 
 .bloc_event a:hover .block_title, .bloc_event a:hover .arrow { color: #3DFA05; }
 
-.bloc_post img { width: 100%; object-fit: cover; max-height: 450px; }
+.bloc_post img { width: 100%; object-fit: cover; }
 
 .js_dropdown.closed .js_dropd_content { max-height: 0 !important; }
 
