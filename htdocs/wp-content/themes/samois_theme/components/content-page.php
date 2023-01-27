@@ -31,7 +31,9 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
                 <?php if( get_post_type() == 'event' ) : ?>
 
                     <div class="event_meta mb-big">
-                        <p class="FS24_B mb-small txt-capitalize"><?php the_field('date'); ?> - <?php the_field('horaires'); ?></p>
+                        <p class="FS24_B mb-small">
+                            <?php get_event_dates(get_the_ID()); ?>
+                        </p>
                         <p class="FS24_B txt-capitalize"><?php the_field('location'); ?></p>
                     </div>
 
@@ -57,7 +59,9 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
                 <?php if( get_post_type() == 'event' ) : ?>
 
                     <div class="event_meta mb-big">
-                        <p class="FS24_B mb-small txt-capitalize"><?php the_field('date'); ?> - <?php the_field('horaires'); ?></p>
+                        <p class="FS24_B mb-small">
+                            <?php get_event_dates(get_the_ID()); ?>
+                        </p>
                         <p class="FS24_B txt-capitalize"><?php the_field('location'); ?></p>
                     </div>
 
@@ -81,7 +85,9 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
                 <?php if( get_post_type() == 'event' ) : ?>
 
                     <div class="event_meta mb-big">
-                        <p class="FS24_B mb-small txt-capitalize"><?php the_field('date'); ?> - <?php the_field('horaires'); ?></p>
+                        <p class="FS24_B mb-small">
+                            <?php get_event_dates(get_the_ID()); ?>
+                        </p>
                         <p class="FS24_B txt-capitalize"><?php the_field('location'); ?></p>
                     </div>
 
@@ -107,7 +113,9 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
                     <?php if( get_post_type() == 'event' ) : ?>
 
                         <div class="event_meta mb-big">
-                            <p class="FS24_B mb-small txt-capitalize"><?php the_field('date'); ?> - <?php the_field('horaires'); ?></p>
+                            <p class="FS24_B mb-small">            
+                                <?php get_event_dates(get_the_ID()); ?>
+                            </p>
                             <p class="FS24_B txt-capitalize"><?php the_field('location'); ?></p>
                         </div>
 

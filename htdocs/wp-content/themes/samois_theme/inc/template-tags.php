@@ -163,3 +163,33 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+
+if ( ! function_exists( 'get_event_dates' ) ) :
+	/**
+	 * Shim for sites older than 5.2.
+	 *
+	 * @link https://core.trac.wordpress.org/ticket/12563
+	 */
+	function get_event_dates( $id ) {
+		
+		if( get_field('date_fin', $id)) {
+			echo get_field('date', $id) . ' - ' . get_field('date_fin', $id);
+			if( get_field('horaires', $id) !== '' && get_field('horaires', $id) !== NULL ) { 
+				echo '<br>' . get_field('horaires', $id);
+			} 
+			 
+		}
+		else {
+			echo get_field('date', $id);
+
+			if( get_field('horaires', $id) !== '' && get_field('horaires', $id) !== NULL ) { 
+				echo ' - ' . get_field('horaires', $id);
+			} 
+		}
+		
+
+		
+	}
+endif;
+

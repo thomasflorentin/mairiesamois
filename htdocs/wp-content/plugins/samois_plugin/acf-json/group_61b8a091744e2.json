@@ -1,11 +1,12 @@
 {
     "key": "group_61b8a091744e2",
-    "title": "Informations sur l’évènement (date \/ lieux)",
+    "title": "Single Event",
     "fields": [
         {
             "key": "field_61b8a091a1bba",
             "label": "Date",
             "name": "date",
+            "aria-label": "",
             "type": "date_picker",
             "instructions": "",
             "required": 0,
@@ -20,9 +21,28 @@
             "first_day": 1
         },
         {
-            "key": "field_624d9a39145d1",
+            "key": "field_63d390fc2c886",
+            "label": "Date de fin",
+            "name": "date_fin",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "l j F Y",
+            "return_format": "l j F Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_63d38e7c507cf",
             "label": "Horaires",
             "name": "horaires",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -33,15 +53,16 @@
                 "id": ""
             },
             "default_value": "",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_61b879c808abc",
             "label": "Lieux",
             "name": "location",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -52,10 +73,10 @@
                 "id": ""
             },
             "default_value": "",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         }
     ],
     "location": [
@@ -76,5 +97,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649252941
+    "modified": 1674809670
 }
