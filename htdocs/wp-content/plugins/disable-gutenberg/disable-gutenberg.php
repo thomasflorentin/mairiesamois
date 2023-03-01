@@ -9,9 +9,9 @@
 	Donate link: https://monzillamedia.com/donate.html
 	Contributors: specialk
 	Requires at least: 4.9
-	Tested up to: 6.1
-	Stable tag: 2.8.1
-	Version: 2.8.1
+	Tested up to: 6.2
+	Stable tag: 2.9
+	Version: 2.9
 	Requires PHP: 5.6.20
 	Text Domain: disable-gutenberg
 	Domain Path: /languages
@@ -32,7 +32,7 @@
 	You should have received a copy of the GNU General Public License
 	with this program. If not, visit: https://www.gnu.org/licenses/
 	
-	Copyright 2022 Monzilla Media. All rights reserved.
+	Copyright 2023 Monzilla Media. All rights reserved.
 */
 
 if (!defined('ABSPATH')) die();
@@ -70,7 +70,7 @@ if (!class_exists('DisableGutenberg')) {
 		
 		function constants() {
 			
-			if (!defined('DISABLE_GUTENBERG_VERSION')) define('DISABLE_GUTENBERG_VERSION', '2.8.1');
+			if (!defined('DISABLE_GUTENBERG_VERSION')) define('DISABLE_GUTENBERG_VERSION', '2.9');
 			if (!defined('DISABLE_GUTENBERG_REQUIRE')) define('DISABLE_GUTENBERG_REQUIRE', '4.9');
 			if (!defined('DISABLE_GUTENBERG_AUTHOR'))  define('DISABLE_GUTENBERG_AUTHOR',  'Jeff Starr');
 			if (!defined('DISABLE_GUTENBERG_NAME'))    define('DISABLE_GUTENBERG_NAME',    __('Disable Gutenberg', 'disable-gutenberg'));
@@ -188,11 +188,11 @@ if (!class_exists('DisableGutenberg')) {
 		
 		function footer_text($text) {
 			
-			$screen = get_current_screen();
+			$screen_id = disable_gutenberg_get_current_screen_id();
 			
 			$ids = array('settings_page_disable-gutenberg');
 			
-			if (isset($screen->id) && apply_filters('disable_gutenberg_admin_footer_text', in_array($screen->id, $ids))) {
+			if ($screen_id && apply_filters('disable_gutenberg_admin_footer_text', in_array($screen_id, $ids))) {
 				
 				$text = __('Like this plugin? Give it a', 'disable-gutenberg');
 				

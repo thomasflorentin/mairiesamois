@@ -9,9 +9,9 @@ Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 4.9
-Tested up to: 6.1
-Stable tag: 2.8.1
-Version: 2.8.1
+Tested up to: 6.2
+Stable tag: 2.9
+Version: 2.9
 Requires PHP: 5.6.20
 Text Domain: disable-gutenberg
 Domain Path: /languages
@@ -299,6 +299,13 @@ Thank you to everyone for using Disable Gutenberg and for all the [awesome 5-sta
 
 If you have any feedback or suggestions to make this plugin the absolute best it can be, and/or would like to help with development, please reach me via the [contact form](https://plugin-planet.com/support/#contact) at Plugin Planet.
 
+
+**2.9 (2023/02/26)**
+
+* Removes non-UI CPTs from CPT options
+* Improves logic when calling `get_current_screen()`
+* Tests on WordPress 6.1 + 6.2 (beta)
+* Tests on PHP 8.1 and 8.2
 
 **2.8.1 (2022/11/02)**
 
