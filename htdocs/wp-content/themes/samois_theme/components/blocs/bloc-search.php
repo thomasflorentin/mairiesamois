@@ -9,7 +9,7 @@ if( strlen($excerpt) > 200 ) {
 
 ?>
 
-<div class="bloc">
+<div class="bloc-search">
     <a href="<?= get_the_permalink(); ?>">
 
         <?php if (has_post_thumbnail()) : ?>

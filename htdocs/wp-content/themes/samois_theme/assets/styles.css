@@ -776,6 +776,15 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 
 .mod_featured .mod_title a:hover { color: #3DFA05; }
 
+
+
+
+.bloc-search {
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 20px;
+}
+
+
 /* FoRMS */
 .wpcf7-form { max-width: 600px; }
 
