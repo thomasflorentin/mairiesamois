@@ -59,11 +59,6 @@ $useful_links = get_field('util_link', 'options')
                     <div class="mb-medium">
                         <h3 class="FS16_B">Numéros indispensables</h3>
                         <div class="number-phone flex FS14">
-                            <div class="number-rescue">
-                                <p>Police > 17</p>
-                                <p>Pompiers > 18</p>
-                                <p>Samu > 15</p>
-                            </div>
                             <div class="number-doc">
                                 <?php the_field('number_indispensable', 'options') ?>
                             </div>
