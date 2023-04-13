@@ -193,17 +193,31 @@ remove_filter('get_the_excerpt', 'wp_trim_excerpt');
  * Pre get post sur résultats de recherche
  */
 
-function search_filter($query)
-{
-    if (!is_admin() && $query->is_main_query() && $query->is_search()) {
-        $taxquery = array(
-            'taxonomy' => 'post_tag',
-            'field'    => 'slug',
-            'terms'    => 'noindex',
-            'operator' => 'NOT IN',
-        );
+function loops_filters($query) {
+    if (!is_admin() && $query->is_main_query()) {
 
-        $query->set('tax_query', array($taxquery));
+        
+        if ( $query->is_search()) {
+            $taxquery = array(
+                'taxonomy' => 'post_tag',
+                'field'    => 'slug',
+                'terms'    => 'noindex',
+                'operator' => 'NOT IN',
+            );
+    
+            $query->set('tax_query', array($taxquery));
+        }
+
+        
+        if ( is_category() ) {
+			$query->set( 'posts_per_page', 24 );
+            $query->set( 'post_type', array('post', 'page', 'event', 'information') );
+            $query->set( 'orderby', 'date' );
+            $query->set( 'order', 'DESC');
+		}
+
     }
 }
-add_action('pre_get_posts', 'search_filter');
+add_action('pre_get_posts', 'loops_filters');
+
+
