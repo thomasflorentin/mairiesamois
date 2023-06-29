@@ -100,7 +100,7 @@ function ProUpgrade() {
 					) }
 				</ControlledTabPanel>
 				<Button
-					isPrimary
+					variant="primary"
 					className="itsec-promo-pro-upgrade__button"
 					href={ tabs.find( ( tab ) => tab.name === currentTab )?.link || 'https://ithem.es/go-security-pro-now' }
 				>
@@ -143,7 +143,7 @@ function VulnerabilityReport() {
 					) }
 				</p>
 				<Button
-					isPrimary
+					variant="primary"
 					className="itsec-promo itsec-promo-vulnerability-report__button"
 					isBusy={ status === 'pending' }
 					onClick={ () => execute( email ) }

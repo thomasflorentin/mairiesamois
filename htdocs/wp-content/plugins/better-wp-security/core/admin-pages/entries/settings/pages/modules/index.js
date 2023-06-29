@@ -194,7 +194,7 @@ function Navigation() {
 			<FlexItem>
 				<Link
 					component={ withNavigate( Button ) }
-					isPrimary
+					variant="primary"
 					to={ next }
 				>
 					{ __( 'Next', 'better-wp-security' ) }

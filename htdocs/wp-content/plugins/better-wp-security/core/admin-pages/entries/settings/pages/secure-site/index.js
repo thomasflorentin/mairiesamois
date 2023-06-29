@@ -83,10 +83,10 @@ function OverviewScreen( { goToEnd } ) {
 
 			<Flex justify="right">
 				<FlexItem>
-					{ currentStep === true ? ( <Button isPrimary onClick={ goToEnd }>
+					{ currentStep === true ? ( <Button variant="primary" onClick={ goToEnd }>
 						{ __( 'Finish', 'better-wp-security' ) }
 					</Button> ) : ( <Button
-						isPrimary
+						variant="primary"
 						onClick={ () => completeOnboarding( { root } ) }
 						disabled={ currentStep !== false }
 					>
