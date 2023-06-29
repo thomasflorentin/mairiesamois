@@ -45,10 +45,10 @@ $useful_links = get_field('util_link', 'options')
 
                     <div class="social-qrcode fl-justify pb-medium">
                         <div class="social p2">
-                            <a href="<?= the_field('facebook_link', 'options') ?>"><i class="fab fa-facebook-square"></i></a>
-                            <a href="mailto:<?= get_field('mail', 'option');?>"><i class="fas fa-envelope"></i></a>
+                            <a href="<?= the_field('facebook_link', 'options') ?>" title="Aller sur la page Facebook de la Mairie de Samois sur Seine"><i class="fab fa-facebook-square"></i></a>
+                            <a href="mailto:<?= get_field('mail', 'option');?>" title="Envoyer un mail à la Mairie de Samois sur Seine"><i class="fas fa-envelope"></i></a>
                         </div>
-                        <img src="<?= the_field('qrcode_notif', 'options') ?>" alt="">
+                        <img src="<?= the_field('qrcode_notif', 'options') ?>" alt="Qr Code du site de la Mairie de Samois sur Seine">
                     </div>
 
                 </div>
@@ -121,7 +121,7 @@ $useful_links = get_field('util_link', 'options')
 
                 <div class="logo-footer s_2col m_2col">
                     <figure>
-                        <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php the_field('logo_footer', 'options') ?>" alt=""></a>
+                        <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php the_field('logo_footer', 'options') ?>" alt="Blason de la Mairie de Samois sur Seine"></a>
                     </figure>
                 </div>
 

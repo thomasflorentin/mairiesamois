@@ -20,7 +20,7 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
             <figure class="s_12col m_7col m_full">
                 <div class="cover_slide">
                     <?php foreach ($imgs as $img) : ?>
-                        <img src="<?= $img['url'] ?>" alt="" class="">
+                        <img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>" class="">
                     <?php endforeach; ?>
                 </div>
             </figure>

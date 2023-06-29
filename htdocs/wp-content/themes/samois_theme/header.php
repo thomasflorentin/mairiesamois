@@ -154,7 +154,7 @@ if (is_admin_bar_showing()) : ?>
                 <div class="header-branding">
                     <figure class="fl-vcentered">
                         <a href="<?php echo esc_url(home_url('/')); ?>" class="fl-vcentered">
-                            <img src="<?= $website_logo ?>" alt="" class="site_logo">
+                            <img src="<?= $website_logo ?>" alt="Blason de la Mairie de Samois sur Seine" class="site_logo">
                         </a>
                     </figure>
                 </div><!-- #site-logo -->
@@ -171,7 +171,7 @@ if (is_admin_bar_showing()) : ?>
 
                     <div class="header-banner">
                         <figure>
-                            <img src="<?= $header_banner ?>" alt="">
+                            <img src="<?= $header_banner ?>" alt="Bannière image">
                         </figure>
                     </div>
 
@@ -184,9 +184,9 @@ if (is_admin_bar_showing()) : ?>
                     <div class="nav-upper">
                         <ul class="flex">
                             <li>
-                                <a href="#" id="js-toggleSearchbar" role="button">
+                                <button id="js-toggleSearchbar" role="button">
                                     <i class="fas fa-search"></i>
-                                </a>
+                                </button>
                             </li>
                             <li>
                                 <a href="#" id="js-toggleDropdown" role="button" class="fl-centered js-toggleDropdown">
