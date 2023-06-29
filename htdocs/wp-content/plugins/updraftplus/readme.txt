@@ -1,9 +1,9 @@
 === UpdraftPlus WordPress Backup Plugin ===
-Contributors: Backup with UpdraftPlus, DavidAnderson, DNutbourne, aporter, snightingale, bcrodua
+Contributors: Backup with UpdraftPlus, DavidAnderson, pmbaldha, DNutbourne, aporter, bcrodua
 Tags: backup, restore, database backup, wordpress backup, cloud backup, s3, dropbox, google drive, onedrive, ftp, backups
 Requires at least: 3.2
-Tested up to: 6.1
-Stable tag: 1.22.24
+Tested up to: 6.2
+Stable tag: 1.23.6
 Author URI: https://updraftplus.com
 Donate link: https://david.dw-perspective.org.uk/donate
 License: GPLv3 or later
@@ -168,6 +168,106 @@ The <a href="https://updraftplus.com/news/">UpdraftPlus backup blog</a> is the b
 
 N.B. Paid versions of UpdraftPlus Backup / Restore have a version number which is 1 higher in the first digit, and has an extra component on the end, but the changelog below still applies. i.e. changes listed for 1.16.32.x of the free version correspond to changes made in 2.16.32.x of the paid version.
 
+* TWEAK: Remove the incremental dropdown on incremental backup restore when the user selects only the database to restore
+* TWEAK: Validate SFTP key field on credential test and before save
+* TWEAK: Remove the unused UpdraftPlus_S3::getHttpUploadPostParams() method.
+* TWEAK: Fix pCloud deprecated warning in PHP 8.2
+* TWEAK: Fix Google Cloud deprecated warning in PHP 8.2
+* TWEAK: Fix Google Drive deprecated warning in PHP 8.2
+* TWEAK: Fix pCloud deprecation warning in PHP 8.2
+* TWEAK: Fixed issue with cron jobs not clearing after wiping settings
+* TWEAK: Added link to WP-Optimize in the database size tab in the advanced tools
+* FIX: Search / replace database not working on Admin dashboard > Settings > UpdraftPlus Backups > Advanced Tools > Search / replace database on PHP 8.2 due to stricter type checking
+* TWEAK: Fixed Missing/ broken links for the pcloud image in addons tab
+
+
+= 1.23.6 - 19/Jun/2023 =
+
+* FIX: Search / replace database not working on Admin dashboard > Settings > UpdraftPlus Backups > Advanced Tools > Search / replace database on PHP 8.2 due to stricter type checking
+* TWEAK: Remove the incremental dropdown on incremental backup restore when the user selects only the database to restore
+* TWEAK: Validate SFTP key field on credential test and before save
+* TWEAK: Remove the unused UpdraftPlus_S3::getHttpUploadPostParams() method
+* TWEAK: Attempt to workaround some web hosts' opcode cache producing incorrect error upon upgrade
+* COMPATIBILITY: Fix pCloud deprecated warning in PHP 8.2
+* COMPATIBILITY: Fix Google Cloud deprecated warning in PHP 8.2
+* COMPATIBILITY: Fix Google Drive deprecated warning in PHP 8.2
+* TWEAK: Fixed issue with cron jobs not clearing after wiping settings
+* TWEAK: Added link to WP-Optimize in the database size tab in the advanced tools
+
+= 1.23.4 - 16/May/2023 =
+
+* SECURITY: Fixed a missing nonce combined with a URL sanitisation failure, which could lead to a targetted XSS opportunity (if an attacker persuades a logged-in administrator to both re-authorise their connection to a remote storage (e.g. Dropbox) and then to follow a link personally crafted for their site before re-authorising whilst logged in, he can then store a fixed JavaScript payload in the WP admin area (they would need a further route to use that ability to cause any damage). Because of the need for the administrator to co-operate in multiple steps, this attack is very unlikely (but you should of course still update).
+* FIX: DigitalOcean S3-compatible storage does not work with disabled SSL entirely where possible settings.
+* FIX: If there was an error or network connectivity issue on first attempt of uploading a plugin/theme file, then the second attempt of uploading the same file would make the file become corrupted thus resulting in installation failure.
+* COMPATIBILITY: Suppress htmlspecialchars deprecation warnings on PHP 8.1
+* COMPATIBILITY: Suppress some PHP 8.2 deprecation notices from use of ${} style variables, and others from use of dynamic properties
+* TWEAK: Handle web hosting company setup that disabled pclose() but not popen()
+* TWEAK: All HTTP requests to the Google Drive API now, by default, forces to use HTTP/1.1 version. Also, a constant named UPDRAFTPLUS_GDRIVE_CURL_HTTP_VERSION can be set in the wp-config.php file to change the default HTTP version to another preferred version
+* TWEAK: Improve 'move' and 'copy' filesystem functions in restoring directories containing files to a different mount point/partition than where they reside
+* TWEAK: Improve files pruning mechanism, by not repeating already-done ones when resuming deletions
+* TWEAK: Improve the Handlebars templates of the Google Drive, Dropbox and UpdraftVault remote storage modules by taking PHP code out of them
+* TWEAK: Improve widget layout when decrypting a backup
+* TWEAK: Remove Boostrap CSS in Restore Wizard and replace with Flexbox CSS
+* TWEAK: Add multisite subsites header information to the database backup file that will be used for converting a network subsite to a standalone normal WordPress site
+* TWEAK: Add the UpdraftPlus plugin slug header to the database backup file
+* TWEAK: Include next-level-up directory path along with deleted folder's name when deleting a folder
+* TWEAK: Update seasonal notices
+* TWEAK: Make common logic for getting backup history from the database
+* TWEAK: Remove usage of the file_get_contents() function from WebDAV remote storage without chunking upload
+* TWEAK: Pass through some previously unhandled Dropbox error codes
+* TWEAK: Added the "non-core" word to the WordPress database tables excluded warning.
+* TWEAK: Remove WordPress core tables from the non-core WordPress database tables excluded list in restoration step 2
+* TWEAK: When migrating the www site, the search replace will be performed in database tables on the non-www domain too, and vice versa
+
+= 1.23.3 - 16/Mar/2023 =
+
+* SECURITY: This release fixes an important security defect - please update. Full details: https://updraftplus.com/updraftplus-1-23-3-2-23-3-important-security-release/. Sites are affected if there are WordPress users (i.e. people who can login) who can reach the back-end (i.e. wp-admin) dashboard (but we recommend everyone updates in any case).
+
+= 1.23.2 - 15/Mar/2023 =
+
+* FIX: Automatic backups before updating a plugin, theme, or WP core were not working (regression in 1.23.1)
+* FIX: A database backup couldn't be taken from WP-Optimize and All-In-One Security (AIOS) (regression)
+* TWEAK: Add a user capabilities check when downloading a backup (this is not believed to have any security implications, as the download operation already requires knowledge of a further nonce that there is no mechanism for a non-administrator to obtain).
+* TWEAK: Improve the Handlebars template of the UpdraftVault remote storage by taking PHP code out of it
+* TWEAK: Prevent making a nonce available to logged-in users who could not manage UpdraftPlus (this did not give access to any unauthorised actions)
+* TWEAK: Improve the Handlebars template of the UpdraftVault remote storage by taking PHP code out of it
+* TWEAK: Improve the Handlebars template of the pCloud remote storage by taking PHP code out of it
+
+= 1.23.1 - 08/Mar/2023 =
+
+* FEATURE: Support Cloudflare R2 as a generic S3 storage provider (always use v4 signature)
+* FEATURE: Added the ability to get an accurate row count for all tables in the advanced tools
+* FEATURE: Expose an option in the UI to disable chunked uploading when using WebDAV remote storage (previously required a constant)
+* FEATURE: Add the ability to anonymize WooCommerce order data when cloning a site
+* FIX: An over-ride enforcing use of V4 signatures on Aliyuncs S3 storage was no longer working
+* FIX: pCloud error handling in chunked uploading did not pass the error message up to the logging layer
+* FIX: Backups started under WP-CLI could not backup the database only without any files
+* FIX: Couldn't add any file/directory inclusion for "Other" entity due to access to one directory up from the current (ABSPATH) isn't permitted
+* FIX: Atomic restore is not renaming a few tables when not restoring specific tables by using the filter `updraftplus_restore_this_table`.
+* FIX: Sometimes the "delete old directories" notice displayed even though the actual `-old` directory didn't exist
+* FIX: The restore point date time was incorrect in the restore screen when restoring the incremental backup, and the WordPress site has a non-GMT timezone set.
+* TWEAK: Improve manual rescanning and deletion of backup sets by setting up a time limit to a value defined in UPDRAFTPLUS_SET_TIME_LIMIT constant to minimise chances of getting fatal error (maximum execution time exceeded)
+* TWEAK: Add a filter updraftplus_mysqldump_arguments to allow changing of arguments passed to the mysqldump binary when that is being used
+* TWEAK: Include PHP version in default S3 user agent to aid debugging
+* TWEAK: Disable Gravatar on UpdraftClone
+* TWEAK: Cleanup .list.tmp files when a cloud backup completes
+* TWEAK: Use the function that lists our own cron schedules to simplify the way backup intervals are prepared and to avoid schedules mismatch
+* TWEAK: Improve manual deletion of backup sets by setting up a time limit to a value defined in UPDRAFTPLUS_SET_TIME_LIMIT constant to minimise chances of getting fatal error (maximum execution time exceeded)
+* TWEAK: Improve the Handlebars template of the S3-Compatible (Generic) remote storage by taking PHP code out of it
+* TWEAK: Increase max_recursion value to 20 in class-search-replace.php
+* TWEAK: Add a new function that lists our own cron schedules so that it can later be used as schedules sorting purpose also as a main source from which our schedules list is originated
+* TWEAK: Display Google drive email address along with account holder name
+* TWEAK: Fixed WebDAV PHP 8.1+ deprecated warnings
+* TWEAK: Updated text message displayed on Web Server - Localhost UC Dashboard Key Creation.
+* TWEAK: Use nonce in every part of a restoration process to prevent direct access that has allows an unwanted log file to be begun. On sites running on end-of-lifed PHP versions (<8.0) it was possible to read the beginning of the log file, causing an unintended information disclosure about the server environment, e.g. Apache version, PHP version and available memory (but current PHP versions are not vulnerable).
+* TWEAK: Use nonce when starting a new restoration and strengthen the continuation process to prevent direct access that has the potential of being file and/or log abuse
+* TWEAK: Improve the WebDAV storage module API in regard to the way it handles uploading and writing files
+* TWEAK: Replace the word "Directory" with "Folder" in UI notices
+* TWEAK: UpdraftVault: select storage class intelligently
+
+= 1.22.25 - 16/Dec/2022 =
+
+* FIX: Resolves a fatal error that occurred if a user had one specific add-on and not another (i.e. paid versions only)
 
 = 1.22.24 - 14/Dec/2022 =
 
@@ -1647,7 +1747,7 @@ Older changes are found <a href="https://plugins.svn.wordpress.org/updraftplus/t
 
 == License ==
 
-    Copyright 2011-20 David Anderson
+    Copyright 2011-23 David Anderson
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -1668,4 +1768,4 @@ Reliance upon any non-English translation is at your own risk; UpdraftPlus can g
 We recognise and thank those mentioned at https://updraftplus.com/acknowledgements/ for code and/or libraries used and/or modified under the terms of their open source licences.
 
 == Upgrade Notice ==
-* 1.22.24: Various tweaks and fixes. See changelog for full details. A recommended update for all.
+* 1.23.6: Various tweaks and fixes a fatal error when searching / replacing database manually. A recommended update for all.
