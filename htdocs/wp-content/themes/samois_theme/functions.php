@@ -221,3 +221,19 @@ function loops_filters($query) {
 add_action('pre_get_posts', 'loops_filters');
 
 
+
+function my_pre_get_posts( $query ) {
+    
+    // do not modify queries in the admin
+    if( isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'event'  ) {
+        
+        $query->set('orderby', 'meta_value');    
+        $query->set('meta_key', 'date');    
+        $query->set('order', 'DESC'); 
+        
+    }
+
+    // return
+    return $query;
+}
+add_action('pre_get_posts', 'my_pre_get_posts');
