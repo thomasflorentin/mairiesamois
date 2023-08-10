@@ -4,8 +4,8 @@
 
     <header>
         <h1 class="FS42_B"><?= the_title() ?></h1>
-        <div class="grid mb-big copy">
-            <div class="s_12col m_9col">
+        <div class="grid mb-big">
+            <div class="s_12col m_9col copy">
                 <p class="FS14"><?= get_the_excerpt() ?></p>
             </div>
         </div>
@@ -18,18 +18,20 @@
         $current_header = '';
         setlocale(LC_TIME, 'fr_FR.UTF8', 'fr.UTF8', 'fr_FR.UTF-8', 'fr.UTF-8');
         $today = date('Ymd');
-
+        $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+        
         $args = array(
             'post_type'         => 'event',
-            'posts_per_page' 	=> '-1',
+            'posts_per_page' 	=> '36',
             'meta_key'          => 'date',
             'orderby'           => 'meta_value_num',
-            'order'             => 'ASC',
+            'order'             => 'DESC',
+            'paged' => $paged,
             'meta_query'        => array(
                 array(
                     'key'           => 'date',
                     'value'         => $today,
-                    'compare'       => '>=',
+                    'compare'       => '<=',
                 )
             )
         );
@@ -64,10 +66,12 @@
             
 
 
+            <?php the_posts_pagination( array( 'mid_size' => 2 ) ); ?>
+
+
             <?php 
                 set_query_var('query', $allevents);
-                get_template_part('components/modules/module', 'pagination'); ?>
-                
+                get_template_part('components/modules/module', 'pagination'); ?>         
 
         <?php endif;  wp_reset_postdata();  ?>
         

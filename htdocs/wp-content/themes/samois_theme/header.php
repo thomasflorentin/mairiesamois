@@ -90,8 +90,6 @@ tarteaucitron.init({
   "mandatory": true, /* Show a message about mandatory cookies */
   "mandatoryCta": true /* Show the disabled accept button when mandatory on */
 });
-tarteaucitron.user.googletagmanagerId = 'GTM-XXXX';
-(tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
 (tarteaucitron.job = tarteaucitron.job || []).push('youtube');
 </script>
 
@@ -113,18 +111,7 @@ tarteaucitron.user.googletagmanagerId = 'GTM-XXXX';
 <!-- End Matomo Code -->
 
 
-
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X26J6JXBWC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-X26J6JXBWC');
-</script>
 
 
 <?php

@@ -35,8 +35,9 @@
             <?php endwhile; ?>
         </div>
 
+
         <?php 
-            set_query_var('posts', $allnews);
+            set_query_var('query', $allnews);
             get_template_part('components/modules/module', 'pagination'); ?>
 
 
