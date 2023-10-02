@@ -756,6 +756,8 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 
 .bloc_event a:hover .block_title, .bloc_event a:hover .arrow { color: #3DFA05; }
 
+.bloc_event:last-child { border-bottom: none; }
+
 .bloc_post img { width: 100%; object-fit: cover; }
 
 .bloc-search { border-bottom: 1px solid #e7e7e7; padding-bottom: 20px; }

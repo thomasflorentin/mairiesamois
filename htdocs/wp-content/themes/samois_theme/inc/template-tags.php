@@ -172,8 +172,11 @@ if ( ! function_exists( 'get_event_dates' ) ) :
 	 * @link https://core.trac.wordpress.org/ticket/12563
 	 */
 	function get_event_dates( $id ) {
+
+		$start = get_field('date', $id);
+		$end = get_field('date_fin', $id);
 		
-		if( get_field('date_fin', $id)) {
+		if( get_field('date_fin', $id) && $start !== $end ) {
 			echo get_field('date', $id) . ' - ' . get_field('date_fin', $id);
 			if( get_field('horaires', $id) !== '' && get_field('horaires', $id) !== NULL ) { 
 				echo '<br>' . get_field('horaires', $id);

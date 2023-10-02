@@ -66,7 +66,7 @@ if (have_rows( $flex_content )) :
                     $q_args['orderby'] = 'meta_value_num';
                     $q_args['order'] = 'ASC';
                     $q_args['meta_query'] = array(
-                        'key'           => 'date',
+                        'key'           => 'date_fin',
                         'value'         => $today,
                         'compare'       => '>=',
                     );

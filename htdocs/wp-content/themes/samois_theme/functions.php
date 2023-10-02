@@ -236,3 +236,17 @@ function my_pre_get_posts( $query ) {
     return $query;
 }
 add_action('pre_get_posts', 'my_pre_get_posts');
+
+
+
+function samois_wp_insert_post_endate_empty( $post_id, $post ) {
+	if ($post->post_type == 'event'):
+		$startdate = get_field('date', $post_id, false);
+
+		$enddate = get_field('date_fin', $post_id);
+		if ($startdate && empty($enddate)):
+			 update_post_meta($post_id,'date_fin',$startdate);
+		endif;
+	endif;
+}
+add_action('save_post', 'samois_wp_insert_post_endate_empty', 99, 2);
