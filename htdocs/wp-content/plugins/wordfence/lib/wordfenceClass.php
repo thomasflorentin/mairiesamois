@@ -178,6 +178,8 @@ class wordfence {
 		
 		wfRateLimit::trimData();
 		
+		wfCentral::checkForUnsentSecurityEvents();
+		
 		wfVersionCheckController::shared()->checkVersionsAndWarn();
 	}
 	private static function keyAlert($msg){
@@ -312,6 +314,8 @@ class wordfence {
 		} else if($count2 > $maxRows){
 			$wfdb->queryWrite("delete from {$table_wfLogins} order by ctime asc limit %d", ($count2 - $maxRows));
 		}
+		
+		wfCentral::trimSecurityEvents();
 		
 		$table_wfReverseCache = wfDB::networkTable('wfReverseCache');
 		$wfdb->queryWrite("delete from {$table_wfReverseCache} where unix_timestamp() - lastUpdate > 86400");
@@ -1368,6 +1372,8 @@ SQL
 		
 		add_action('wordfence_batchReportBlockedAttempts', 'wordfence::wfsnBatchReportBlockedAttempts');
 		add_action('wordfence_batchReportFailedAttempts', 'wordfence::wfsnBatchReportFailedAttempts');
+		
+		add_action('wordfence_batchSendSecurityEvents', 'wfCentral::sendPendingSecurityEvents');
 
 		if (wfConfig::get('other_hideWPVersion')) {
 			add_filter('update_feedback', 'wordfence::restoreReadmeForUpgrade');
@@ -6092,7 +6098,7 @@ HTML;
 			'loadTwoFactor', 'sendTestEmail',
 			'email_summary_email_address_debug', 'unblockNetwork',
 			'sendDiagnostic', 'saveDisclosureState', 'saveWAFConfig', 'updateWAFRules', 'loadLiveTraffic', 'whitelistWAFParamKey',
-			'disableDirectoryListing', 'fixFPD', 'deleteAdminUser', 'revokeAdminUser',
+			'disableDirectoryListing', 'fixFPD', 'deleteAdminUser', 'revokeAdminUser', 'acknowledgeAdminUser',
 			'hideFileHtaccess', 'saveDebuggingConfig',
 			'whitelistBulkDelete', 'whitelistBulkEnable', 'whitelistBulkDisable',
 			'dismissNotification', 'utilityScanForBlacklisted', 'dashboardShowMore',
@@ -7594,6 +7600,35 @@ SQL
 			revoke_super_admin($data['userID']);
 		}
 
+		$wfIssues->deleteIssue($issueID);
+		wfScanEngine::refreshScanNotification($wfIssues);
+
+		return array(
+			'ok'         => 1,
+			'user_login' => $userLogin,
+		);
+	}
+	
+	public static function ajax_acknowledgeAdminUser_callback() {
+		$issueID = absint(!empty($_POST['issueID']) ? $_POST['issueID'] : 0);
+		$wfIssues = new wfIssues();
+		$issue = $wfIssues->getIssueByID($issueID);
+		if (!$issue) {
+			return array('errorMsg' => __("We could not find that issue in the database.", 'wordfence'));
+		}
+		$data = $issue['data'];
+		if (empty($data['userID'])) {
+			return array('errorMsg' => __("We could not find that user in the database.", 'wordfence'));
+		}
+		$user = new WP_User($data['userID']);
+		if (!$user->exists()) {
+			return array('errorMsg' => __("We could not find that user in the database.", 'wordfence'));
+		}
+		$userLogin = $user->user_login;
+		
+		$adminUsers = new wfAdminUserMonitor();
+		$adminUsers->addAdmin($data['userID']);
+		
 		$wfIssues->deleteIssue($issueID);
 		wfScanEngine::refreshScanNotification($wfIssues);
 
@@ -9510,7 +9545,7 @@ if (file_exists(__DIR__.%1$s)) {
 		// Step 2: Makes POST request to `/central/api/wf/site/<guid>` endpoint passing in the new public key.
 		// Uses JWT from auth grant endpoint as auth.
 
-		require_once(WORDFENCE_PATH . '/crypto/vendor/paragonie/sodium_compat/autoload-fast.php');
+		require_once(WORDFENCE_PATH . '/lib/sodium_compat_fast.php');
 
 		$accessToken = wfConfig::get('wordfenceCentralAccessToken');
 		if (!$accessToken) {
