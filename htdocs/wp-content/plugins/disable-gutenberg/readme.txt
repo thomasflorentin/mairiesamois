@@ -9,9 +9,9 @@ Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 4.9
-Tested up to: 6.2
-Stable tag: 2.9
-Version: 2.9
+Tested up to: 6.3
+Stable tag: 3.0
+Version: 3.0
 Requires PHP: 5.6.20
 Text Domain: disable-gutenberg
 Domain Path: /languages
@@ -287,6 +287,11 @@ Either route will get you there.
 The default Gutenberg/Block styles are disabled by default when DG plugin is active. To enable/disable the styles, visit the plugin setting, "Enable Frontend".
 
 
+**Does this work with full site editing and block themes?**
+
+No, because block themes rely on blocks. [See Block themes article](https://wordpress.org/support/article/block-themes/) for more information.
+
+
 **Got a question?**
 
 Send any questions or feedback via my [contact form](https://plugin-planet.com/support/#contact)
@@ -299,6 +304,14 @@ Thank you to everyone for using Disable Gutenberg and for all the [awesome 5-sta
 
 If you have any feedback or suggestions to make this plugin the absolute best it can be, and/or would like to help with development, please reach me via the [contact form](https://plugin-planet.com/support/#contact) at Plugin Planet.
 
+
+**3.0 (2023/07/10)**
+
+* Improves font-icon CSS styles
+* Improves localization function
+* Adds custom notice on settings page
+* Updates default translation template
+* Tests on WordPress 6.3 (beta)
 
 **2.9 (2023/02/26)**
 
