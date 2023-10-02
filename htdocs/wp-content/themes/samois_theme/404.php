@@ -20,7 +20,7 @@ get_template_part('components/shortcuts');
         <header class="page-header">
             <div class="grid">
                 <div class="s-12col m_7col col_start_2">
-                    <h1 class="page-title"><?php esc_html_e('Désolé, nous ne trouvons pas le contenu recherché...', 'samois'); ?></h1>
+                    <h1 class="h1"><?php esc_html_e('Désolé, nous ne trouvons pas le contenu recherché...', 'samois'); ?></h1>
                 </div>
             </div>
         </header><!-- .page-header -->

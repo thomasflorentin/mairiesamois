@@ -10,6 +10,7 @@ h6 {
 
 .h1 {
     font-size: 4rem;
+    line-height: 1.2;
     margin-bottom: $marge;
 
     @include at-least(wide) {
@@ -48,7 +49,11 @@ h6 {
 .FS42_B {
     font-size: 4.2rem;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.2;
+    
+    @include up-to(medium) {
+        font-size: 3rem;
+    }
 }
 
 .FS42_BC {

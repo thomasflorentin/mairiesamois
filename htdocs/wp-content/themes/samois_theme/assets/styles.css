@@ -297,7 +297,7 @@ body { font-size: 16px; line-height: 1.6; font-family: "Grover", sans-serif; col
 
 h1, h2, h3, h4, h5, h6 { clear: both; margin-top: 0; }
 
-.h1 { font-size: 4rem; margin-bottom: 20px; }
+.h1 { font-size: 4rem; line-height: 1.2; margin-bottom: 20px; }
 
 @media (min-width: 1550px) { .h1 { font-size: 6rem; } }
 
@@ -311,7 +311,9 @@ h1, h2, h3, h4, h5, h6 { clear: both; margin-top: 0; }
 
 .FS52_B { font-size: 5.2rem; font-weight: 700; line-height: 1; color: #1F5DA5; }
 
-.FS42_B { font-size: 4.2rem; font-weight: 700; line-height: 1; }
+.FS42_B { font-size: 4.2rem; font-weight: 700; line-height: 1.2; }
+
+@media (max-width: 800px) { .FS42_B { font-size: 3rem; } }
 
 .FS42_BC { font-size: 4.2rem; font-weight: 700; line-height: 1; color: #1F5DA5; }
 

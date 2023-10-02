@@ -15,7 +15,7 @@ get_header();
     <?php if (have_posts()) : ?>
 
         <header class="page-header mb-big">
-            <h1 class="page-title">
+            <h1 class="h1">
                 <?php
                 /* translators: %s: search query. */
                 printf(esc_html__('Résultats pour votre recherche : %s', 'samois'), '<span><em>' . get_search_query() . '</em></span>');
