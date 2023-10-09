@@ -813,7 +813,7 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 
 .scrolling .header-alert { min-height: 0; }
 
-.scrolling .site_logo { width: 60%; }
+.scrolling .site_logo { width: 50%; }
 
 .scrolling .header-banner { height: 0; }
 
@@ -859,9 +859,12 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 
 .shortcuts hr.last { margin-top: -15px; }
 
-@media (min-width: 1200px) { .shortcuts { width: 300px; } }
+@media (min-width: 1200px) { .shortcuts { width: 300px; top: auto; }
+  .scrolling .shortcuts { top: 300px; } }
 
 @media (min-width: 1200px) { body:not(.home) .shortcuts { top: 400px; } }
+
+@media (min-width: 1200px) { body:not(.home) .scrolling .shortcuts { top: 250px; } }
 
 @media (max-width: 1200px) { .shortcuts { transform: translateY(100vh); background-color: #707070; color: white; right: 0; top: 0; bottom: 0; padding-top: 200px; padding-bottom: 100px; overflow-y: scroll; } }
 

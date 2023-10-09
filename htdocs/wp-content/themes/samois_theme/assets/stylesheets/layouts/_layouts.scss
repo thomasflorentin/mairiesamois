@@ -72,7 +72,7 @@
     }
 
     .site_logo {
-        width: 60%;
+        width: 50%;
     }
 
     .header-banner {
@@ -219,12 +219,23 @@
 
     @include at-least(large) {
         width: $space_left;
+        top: auto;
+
+        .scrolling & {
+            top: 300px;
+        }
     }
 
 
     body:not(.home) & {
         @include at-least(large) {
             top: 400px;
+        }
+    }
+
+    body:not(.home) .scrolling & {
+        @include at-least(large) {
+            top: 250px;
         }
     }
 
