@@ -222,20 +222,20 @@
         top: auto;
 
         .scrolling & {
-            top: 300px;
+            top: 230px;
         }
     }
 
 
     body:not(.home) & {
         @include at-least(large) {
-            top: 400px;
+            top: 325px;
         }
     }
 
     body:not(.home) .scrolling & {
         @include at-least(large) {
-            top: 250px;
+            top: 230px;
         }
     }
 
