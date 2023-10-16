@@ -1,6 +1,6 @@
 
 
-    <nav class="page_navigation" style="font-size: 3rem;>
+    <nav class="page_navigation" style="font-size: 3rem;">
         <div class="">
              <?php 
                 
