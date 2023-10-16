@@ -4,8 +4,8 @@
         <div class="">
              <?php 
                 
-                next_posts_link( '<<- ', $query->max_num_pages );
-                previous_posts_link( '->>' ); 
+                next_posts_link( '<- Pages précédentes', $query->max_num_pages );
+                previous_posts_link( 'Pages suivantes ->' ); 
                 
                 ?>
         </div>
