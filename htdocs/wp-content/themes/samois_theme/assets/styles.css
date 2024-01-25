@@ -851,6 +851,8 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 /* shortcuts aside */
 .shortcuts { position: sticky; padding: 0 60px 20px 60px; left: 0; transition: transform .4s; z-index: 99997; transition: all .4s; }
 
+.shortcuts + .shortcuts { display: none; }
+
 .shortcuts .shortcuts_title { line-height: 17px; }
 
 .shortcuts li { line-height: 1.2; }
