@@ -2,8 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
 .wrapper { max-width: 1650px; width: calc(100% - 40px); }
 
-@media (min-width: 1200px) { .wrapper { padding-left: 300px; } }
-
 @media (max-width: 1200px) { .wrapper { margin-right: auto; margin-left: auto; } }
 
 .hidden, .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; opacity: 0; }
@@ -601,6 +599,8 @@ button { border: none; padding: 0; margin: 0; background: none; }
 
 .site-footer { margin-top: 160px; margin-bottom: 40px; }
 
+@media (min-width: 1200px) { .site-footer.wrapper { padding-left: 250px; } }
+
 .number-rescue p { margin: 0px !important; }
 
 .site-footer .section-search, .site-footer .news-infos { border-bottom: 1px solid black; margin-bottom: 40px; }
@@ -802,6 +802,8 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 
 .site-main { transition: all .4s; }
 
+.site-main.wrapper { display: flex; align-items: flex-start; }
+
 @media (min-width: 800px) { .home .site-main { padding-top: calc(50vh + 200px); } }
 
 @media (max-width: 800px) { .home .site-main { padding-top: 200px; } }
@@ -847,7 +849,7 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 .item_pages li:hover, .item_pages a:hover { color: #3DFA05; }
 
 /* shortcuts aside */
-.shortcuts { position: fixed; padding: 0 60px 20px 60px; left: 0; transition: transform .4s; z-index: 99997; transition: all .4s; }
+.shortcuts { position: sticky; padding: 0 60px 20px 60px; left: 0; transition: transform .4s; z-index: 99997; transition: all .4s; }
 
 .shortcuts .shortcuts_title { line-height: 17px; }
 
@@ -866,7 +868,7 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 
 @media (min-width: 1200px) { body:not(.home) .scrolling .shortcuts { top: 230px; } }
 
-@media (max-width: 1200px) { .shortcuts { transform: translateY(100vh); background-color: #707070; color: white; right: 0; top: 0; bottom: 0; padding-top: 200px; padding-bottom: 100px; overflow-y: scroll; } }
+@media (max-width: 1200px) { .shortcuts { position: fixed; transform: translateY(100vh); background-color: #707070; color: white; right: 0; top: 0; bottom: 0; padding-top: 200px; padding-bottom: 100px; overflow-y: scroll; } }
 
 .shortcuts.open { transform: none; }
 

@@ -11,7 +11,7 @@ $space_top: 200px;
     width: calc(100% - #{$marge_wrapper});
 
     @include at-least(large) {
-        padding-left: $space_left;
+        //padding-left: $space_left;
     }
 
     @include up-to(large) {

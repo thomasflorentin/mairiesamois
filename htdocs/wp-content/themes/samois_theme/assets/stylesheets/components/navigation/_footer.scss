@@ -1,6 +1,12 @@
 .site-footer {
     margin-top: 160px;
     margin-bottom: $marge_medium;
+
+    &.wrapper {
+        @include at-least(large) {
+            padding-left: 250px;
+        }
+    }
 }
 
 .number-rescue p {

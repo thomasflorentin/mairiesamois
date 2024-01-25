@@ -40,6 +40,11 @@
 .site-main {
     transition: all .4s;
 
+    &.wrapper {
+        display: flex;
+        align-items: flex-start;
+    }
+
     .home & {
         @include at-least(medium) {
             padding-top: calc(50vh + 200px);
@@ -187,7 +192,7 @@
  */
 
 .shortcuts {
-    position: fixed;
+    position: sticky;
     padding: 0 $marge * 3 $marge $marge * 3;
     left: 0;
     transition: transform .4s;
@@ -240,6 +245,7 @@
     }
 
     @include up-to(large) {
+        position: fixed;
         transform: translateY(100vh);
         background-color: $gray;
         color: white;
