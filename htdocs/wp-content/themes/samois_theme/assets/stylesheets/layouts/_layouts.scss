@@ -286,5 +286,10 @@
 
 }
 
+.searchResults_container {
+    @include at-least(large) {
+        padding-left: $space_left;
+    }
+}
 
 @import "home";

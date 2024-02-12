@@ -878,6 +878,8 @@ figure.gallery-item:nth-child(odd) { margin-right: 1%; }
 
 .shortcuts_title:after { position: absolute; left: 0; right: 0; bottom: -20px; height: 2px; width: 60px; margin: auto; background-color: #707070; content: ''; }
 
+@media (min-width: 1200px) { .searchResults_container { padding-left: 300px; } }
+
 .hp_left { max-width: 100%; }
 
 @media (min-width: 800px) { .hp_left { width: calc(100% - 300px); } }

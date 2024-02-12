@@ -11,6 +11,7 @@
 get_header();
 ?>
 
+<div class="searchResults_container">
 
     <?php if (have_posts()) : ?>
 
@@ -24,15 +25,16 @@ get_header();
         </header><!-- .page-header -->
 
         <div class="grid">
+
             <?php while (have_posts()) : the_post(); ?>
                 <div class="s_12col m_4col mb-medium">
                     <?php get_template_part('components/blocs/bloc', 'search'); ?>
                 </div>
-            <?php endwhile; 
+            <?php endwhile; ?>
 
-                the_posts_navigation();
+            <?php the_posts_navigation(); ?>
 
-            else : ?>
+    <?php else : ?>
                 
                 <div class="mb-big">
                     <h1>Nous n'avons trouvé aucun résultat...</h1>
@@ -51,7 +53,7 @@ get_header();
 
         </div><!-- .grid -->
 
-
+    </div>
 
 <?php
 get_footer();
