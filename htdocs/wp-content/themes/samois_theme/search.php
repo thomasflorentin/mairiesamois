@@ -16,7 +16,7 @@ get_header();
     <?php if (have_posts()) : ?>
 
         <header class="page-header mb-big">
-            <h1 class="h1">
+            <h1 class="h2">
                 <?php
                 /* translators: %s: search query. */
                 printf(esc_html__('Résultats pour votre recherche : %s', 'samois'), '<span><em>' . get_search_query() . '</em></span>');
@@ -37,7 +37,7 @@ get_header();
     <?php else : ?>
                 
                 <div class="mb-big">
-                    <h1>Nous n'avons trouvé aucun résultat...</h1>
+                    <h1 class="h2">Nous n'avons trouvé aucun résultat...</h1>
                     <p>Ne perdons pas espoir :) ! Réessayez avec un autre terme.</p>
 
                     <?php get_search_form(); ?>
