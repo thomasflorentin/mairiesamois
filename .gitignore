@@ -23,3 +23,5 @@
 /htdocs/wp-content/cache/critical-css/index.html
 /htdocs/.maintenance
 /htdocs/wp-content/cache/wp-rocket/.htaccess
+/htdocs/wp-content/wflogs
+/htdocs/wp-content/updraft
