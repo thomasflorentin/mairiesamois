@@ -6,7 +6,7 @@
         
         <p class="FS14"><?php the_field('structure_adress', 'options') ?></p>
 
-        <p class="FS14"><?php the_field('hour_opening', 'options') ?></p>
+        <p class="FS14"><?php echo wp_kses_post( get_field('hour_opening', 'options') ) ?></p>
 
         <p class="mb-none FS14"> Courriel : <br> <?php the_field('mail', 'options') ?></p>
         <p class="mb-none FS14">Téléphone : <?php the_field('Phone', 'options') ?></p>

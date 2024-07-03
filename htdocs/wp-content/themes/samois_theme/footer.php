@@ -60,7 +60,7 @@ $useful_links = get_field('util_link', 'options')
                         <h3 class="FS16_B">Numéros indispensables</h3>
                         <div class="number-phone flex FS14">
                             <div class="number-doc">
-                                <?php the_field('number_indispensable', 'options') ?>
+                                <?php echo wp_kses_post( get_field('number_indispensable', 'options') ) ?>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@ $useful_links = get_field('util_link', 'options')
 
                 <div class="hourly-adress s_12col m_5col">
                     <h3 class="FS16_B"><?php the_field('structur_name', 'options') ?></h3>
-                    <p class="FS14 mb-small"><?php the_field('hour_opening', 'options') ?></p>
+                    <p class="FS14 mb-small"><?php echo wp_kses_post( get_field('hour_opening', 'options') ) ?></p>
                     <p class="FS14 mb-none"><?php the_field('structure_adress', 'options') ?></p>
                     <p class="FS14 mb-small"><?php the_field('mail', 'options') ?></p>
 
