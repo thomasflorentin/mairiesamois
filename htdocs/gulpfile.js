@@ -4,16 +4,15 @@
 const { src, dest , series , watch } = require("gulp");
 const sass = require("gulp-sass")(require('sass'));
 const rename = require("gulp-rename");
-const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 
-sass.compiler = require("node-sass");
+sass.compiler = require("sass");
 
 
 
 // VARIABLES
-var theme_folder = './';
+var theme_folder = './wp-content/themes/samois_theme/';
 var assets_folder = theme_folder + 'assets/';
 
 var jsfolder = assets_folder + 'js/';
@@ -29,7 +28,7 @@ var sassMain = sassfolder + 'main.scss';
 
 // task2 : compiler les fichiers dans le dossier scss => style.css
 function sassMainTask(){
-    const flags = {outputStyle: 'compact'};
+    const flags = {outputStyle: 'compressed'};
     return src( sassfiles )
     .pipe(sourcemaps.init())
     .pipe(sass(flags).on('error', sass.logError))
