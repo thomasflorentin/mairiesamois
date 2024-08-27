@@ -137,11 +137,14 @@ function init() {
                 
                 el.style.maxHeight = this_height + 'px';
         
-                // Don't close for first item
+                // IF you Don't close for first item
                 if( i > 0 ) {
                     el.closest('.js_dropdown').classList.add('closed');
-                }
-        
+                } 
+
+                // else :
+                el.closest('.js_dropdown').classList.add('closed');
+
                 i++;
             }
     
