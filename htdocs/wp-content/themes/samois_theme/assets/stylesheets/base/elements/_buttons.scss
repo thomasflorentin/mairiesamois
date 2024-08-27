@@ -12,6 +12,7 @@ input[type="submit"] {
     
 	&:hover {
 		border-color: $primary_color;
+		cursor: pointer;
 	}
 
 	&:active,
