@@ -4,7 +4,7 @@
 
     &.wrapper {
         @include at-least(large) {
-            padding-left: 250px;
+            padding-left: $space_left;
         }
     }
 }

@@ -229,6 +229,7 @@
     @include at-least(large) {
         width: $space_left;
         top: auto;
+        flex: 0 0 auto;
 
         .scrolling & {
             top: 230px;
