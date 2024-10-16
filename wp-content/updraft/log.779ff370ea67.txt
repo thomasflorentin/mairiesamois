@@ -1,0 +1,62 @@
+0000.002 (0) Opened log file at time: Mon, 14 Oct 2024 09:20:09 +0000 on http://mairiesamois.localhost
+0000.005 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.4 WP: 6.6.1 PHP: 8.1.27 (apache2handler, Darwin mbp-de-thomas.home 23.4.0 Darwin Kernel Version 23.4.0: Fri Mar 15 00:10:42 PDT 2024; root:xnu-10063.101.17~1/RELEASE_ARM64_T6000 arm64) MySQL: 11.3.2-MariaDB (max packet size=16777216) WPLANG: fr_FR Server: Apache/2.4.58 (Unix) PHP/8.1.27 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 11M | 38M) multisite: N openssl: OpenSSL 3.2.1 30 Jan 2024 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.007 (0) Free space on disk containing Updraft's temporary directory: 269462.7 MB
+0000.009 (0) Tasks: Backup files: 1 (schedule: weekly) Backup DB:  (schedule: daily)
+0000.010 (0) Processed schedules. Tasks now: Backup files: 1 Backup DB: 
+0000.011 (0) Requesting semaphore lock (f) (apparently via scheduler: last_scheduled_action_called_at=1727680591, seconds_ago=1217018)
+0000.012 (0) Set semaphore last lock (f) time to 2024-10-14 09:20:09
+0000.013 (0) Semaphore lock (f) complete
+0000.015 (0) Backup run: resumption=0, nonce=779ff370ea67, file_nonce=779ff370ea67 begun at=1728897609 (0s ago), job type=backup
+0000.017 (0) Scheduling a resumption (1) after 300 seconds (1728897909) in case this run gets aborted
+0000.019 (0) Checking if we have a zip executable available
+0000.020 (0) Testing: /usr/bin/zip
+0000.053 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.057 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.059 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.059 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.060 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.077 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.080 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.094 (0) Working binary zip found: /usr/bin/zip
+0000.096 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.097 (0) Creation of backups of directories: beginning
+0000.099 (0) No backup of plugins: excluded by user's options
+0000.099 (0) No backup of themes: excluded by user's options
+0000.100 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0000.101 (0) Looking for candidates to backup in: /Users/thomas/Sites/_projets/mairiesamois/htdocs/wp-content/uploads
+0000.101 (0) finding files: 2024: adding to list (1)
+0000.102 (0) finding files: wpcf7_uploads: adding to list (2)
+0000.102 (0) finding files: 2021: adding to list (3)
+0000.102 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0000.106 (0) Total entities for the zip file: 13 directories, 15 files (0 skipped as non-modified), 1.5 MB
+0000.143 (0) backup_2024-10-14-1120_Mairie_de_Samois_sur_Seine_779ff370ea67-uploads.zip.tmp: size is now: 1.50 MB
+0000.153 (0) Creating zip file manifest (backup_2024-10-14-1120_Mairie_de_Samois_sur_Seine_779ff370ea67-uploads.zip.list-temp.tmp)
+0000.158 (0) Successfully created zip file manifest (size: 799)
+0000.191 (0) Created uploads zip (0) - 1580.8 KB in 0.1 s (18254 KB/s) (sha1: 85f66c3466ae3d28b9debc66143908d4898e0081, sha256: 16c8aa7eda4df74ba3a449660a537b45c61dcf05eab96d0887c528c230bc9768)
+0000.193 (0) Cloud backup selection (1/1): dropbox with instance (1/1) (last)
+0000.193 (0) Beginning dispatch of backup to remote (dropbox) (instance identifier s-1acfaf7944a5cb174b09e9de019962ce)
+0000.194 (0) Dropbox: begin cloud upload (using API version 2 with OAuth v2 token)
+0000.194 (0) Dropbox: access gained; setting chunk size to: 5120 KB
+0000.480 (0) Dropbox: quota usage: used=125442.6 MB, total=2101888 MB, available=1976445.4 MB
+0000.484 (0) Dropbox: Attempt to upload: backup_2024-10-14-1120_Mairie_de_Samois_sur_Seine_779ff370ea67-uploads.zip to: backup_2024-10-14-1120_Mairie_de_Samois_sur_Seine_779ff370ea67-uploads.zip
+0002.478 (0) Dropbox chunked upload: 100 % uploaded (pid_upload_session:ABIIXE77OL0H6c7MAH6Zv0WivZweVsax4WrVrrLe7GDYSQYWww, 1618715, 5120 KB)
+0004.105 (0) Recording as successfully uploaded: backup_2024-10-14-1120_Mairie_de_Samois_sur_Seine_779ff370ea67-uploads.zip
+0004.106 (0) Deleting local file: backup_2024-10-14-1120_Mairie_de_Samois_sur_Seine_779ff370ea67-uploads.zip: OK
+0004.107 (0) Dropbox: File upload success (backup_2024-10-14-1120_Mairie_de_Samois_sur_Seine_779ff370ea67-uploads.zip): 1580 KB in 3s (436 KB/s)
+0004.111 (0) Beginning creation of dump of mu-plugins (split every: 400 MB)
+0004.111 (0) Does not exist: /Users/thomas/Sites/_projets/mairiesamois/htdocs/wp-content/mu-plugins
+0004.112 (0) There are no mu-plugins to backup. Will not raise an error.
+0004.112 (0) mu-plugins: create_zip returned an error
+0004.112 (0) No backup of others: excluded by user's options
+0004.115 (0) Saving backup status to database (elements: 2)
+0004.116 (0) No database backup (wp) - not part of this run
+0004.119 (0) backup_2024-10-14-1120_Mairie_de_Samois_sur_Seine_779ff370ea67-uploads.zip: uploads: This file has already been successfully uploaded
+0004.120 (0) Saving backup history. Total backup size: 1.5 MB
+0004.121 (0) Resume backup (779ff370ea67, 0): finish run
+0004.122 (0) There were no more files that needed uploading
+0004.123 (0) Decremented the semaphore (f) by 1
+0004.124 (0) Semaphore (f) unlocked
+0004.124 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0004.127 (0) Deleting zip manifest (backup_2024-10-14-1120_Mairie_de_Samois_sur_Seine_779ff370ea67-uploads.zip.list.tmp)
+0004.128 (0) No email will be sent - this backup set was empty.
+0004.128 (0) The backup succeeded and is now complete

@@ -1,0 +1,343 @@
+0000.001 (0) Opened log file at time: Mon, 14 Oct 2024 09:19:59 +0000 on http://mairiesamois.localhost
+0000.002 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.4 WP: 6.6.1 PHP: 8.1.27 (apache2handler, Darwin mbp-de-thomas.home 23.4.0 Darwin Kernel Version 23.4.0: Fri Mar 15 00:10:42 PDT 2024; root:xnu-10063.101.17~1/RELEASE_ARM64_T6000 arm64) MySQL: 11.3.2-MariaDB (max packet size=16777216) WPLANG: fr_FR Server: Apache/2.4.58 (Unix) PHP/8.1.27 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 10.7M | 14M) multisite: N openssl: OpenSSL 3.2.1 30 Jan 2024 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.003 (0) Free space on disk containing Updraft's temporary directory: 269462.9 MB
+0000.005 (0) Tasks: Backup files:  (schedule: weekly) Backup DB: 1 (schedule: daily)
+0000.007 (0) Processed schedules. Tasks now: Backup files:  Backup DB: 1
+0000.025 (0) Requesting semaphore lock (d) (apparently via scheduler: last_scheduled_action_called_at=1727680573, seconds_ago=1217026)
+0000.027 (0) Set semaphore last lock (d) time to 2024-10-14 09:19:59
+0000.027 (0) Semaphore lock (d) complete
+0000.032 (0) Backup run: resumption=0, nonce=8e1834e89156, file_nonce=8e1834e89156 begun at=1728897599 (0s ago), job type=backup
+0000.033 (0) Scheduling a resumption (1) after 300 seconds (1728897899) in case this run gets aborted
+0000.070 (0) This backup run is not intended for files - skipping
+0000.072 (0) Beginning creation of database dump (WordPress DB)
+0000.073 (0) SQL compatibility mode is: ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+0000.100 (0) Table ms_options: Total expected rows (via COUNT): 327
+0000.101 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.140 (0) Table ms_options: Rows added in this batch (next record: 405210): 323 (uncompressed bytes in this segment=1049165) in 0.05 seconds
+0000.146 (0) Table ms_options: finishing file(s) (2, 168.8 KB)
+0000.154 (0) Table ms_users: Total expected rows (via COUNT): 16
+0000.154 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.156 (0) Table ms_users: Rows added in this batch (next record: 19): 16 (uncompressed bytes in this segment=3927) in 0.01 seconds
+0000.158 (0) Table ms_users: finishing file(s) (2, 1.8 KB)
+0000.166 (0) Table ms_usermeta: Total expected rows (via COUNT): 470
+0000.166 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.171 (0) Table ms_usermeta: Rows added in this batch (next record: 626): 470 (uncompressed bytes in this segment=37479) in 0.01 seconds
+0000.174 (0) Table ms_usermeta: finishing file(s) (2, 8.5 KB)
+0000.180 (0) Table ms_commentmeta: Total expected rows (via COUNT): 0
+0000.182 (0) Table ms_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=647) in 0.01 seconds
+0000.184 (0) Table ms_commentmeta: finishing file(s) (2, 0.4 KB)
+0000.191 (0) Table ms_comments: Total expected rows (via COUNT): 9
+0000.192 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.193 (0) Table ms_comments: Rows added in this batch (next record: 10): 9 (uncompressed bytes in this segment=7243) in 0.01 seconds
+0000.197 (0) Table ms_comments: finishing file(s) (2, 2.3 KB)
+0000.203 (0) Table ms_links: Total expected rows (via COUNT): 0
+0000.205 (0) Table ms_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1464) in 0.00 seconds
+0000.207 (0) Table ms_links: finishing file(s) (2, 0.5 KB)
+0000.264 (0) Table ms_postmeta: Total expected rows (approximate): 40854
+0000.481 (0) Table ms_postmeta: Rows added in this batch (next record: 50584): 38521 (uncompressed bytes in this segment=4774529) in 0.27 seconds
+0000.484 (0) Table ms_postmeta: finishing file(s) (2, 498.1 KB)
+0000.506 (0) Table ms_posts: Total expected rows (approximate): 2390
+0000.626 (0) Table ms_posts: Rows added in this batch (next record: 3998): 2810 (uncompressed bytes in this segment=3654447) in 0.14 seconds
+0000.629 (0) Table ms_posts: finishing file(s) (2, 666.5 KB)
+0000.634 (0) Table ms_term_relationships: Total expected rows (approximate): 823
+0000.638 (0) Table ms_term_relationships: Rows added in this batch (next record: 100000): 823 (uncompressed bytes in this segment=13351) in 0.01 seconds
+0000.639 (0) Table ms_term_relationships: finishing file(s) (2, 2.7 KB)
+0000.645 (0) Table ms_term_taxonomy: Total expected rows (via COUNT): 32
+0000.645 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.646 (0) Table ms_term_taxonomy: Rows added in this batch (next record: 57): 32 (uncompressed bytes in this segment=1930) in 0.00 seconds
+0000.649 (0) Table ms_term_taxonomy: finishing file(s) (2, 0.7 KB)
+0000.655 (0) Table ms_termmeta: Total expected rows (via COUNT): 46
+0000.656 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.656 (0) Table ms_termmeta: Rows added in this batch (next record: 48): 46 (uncompressed bytes in this segment=2217) in 0.00 seconds
+0000.658 (0) Table ms_termmeta: finishing file(s) (2, 0.7 KB)
+0000.662 (0) Table ms_terms: Total expected rows (via COUNT): 32
+0000.662 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.663 (0) Table ms_terms: Rows added in this batch (next record: 57): 32 (uncompressed bytes in this segment=2023) in 0.00 seconds
+0000.664 (0) Table ms_terms: finishing file(s) (2, 0.9 KB)
+0000.668 (0) Table ms_FinalTiles_gallery: Total expected rows (via COUNT): 2
+0000.669 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.670 (0) Table ms_FinalTiles_gallery: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=5471) in 0.00 seconds
+0000.672 (0) Table ms_FinalTiles_gallery: finishing file(s) (2, 1.6 KB)
+0000.677 (0) Table ms_FinalTiles_gallery_images: Total expected rows (via COUNT): 3
+0000.677 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.678 (0) Table ms_FinalTiles_gallery_images: Rows added in this batch (next record: 5): 3 (uncompressed bytes in this segment=1717) in 0.00 seconds
+0000.679 (0) Table ms_FinalTiles_gallery_images: finishing file(s) (2, 0.7 KB)
+0000.684 (0) Table ms_actionscheduler_actions: Total expected rows (via COUNT): 520
+0000.689 (0) Table ms_actionscheduler_actions: Rows added in this batch (next record: 169222): 520 (uncompressed bytes in this segment=158633) in 0.01 seconds
+0000.691 (0) Table ms_actionscheduler_actions: finishing file(s) (2, 12.7 KB)
+0000.696 (0) Table ms_actionscheduler_claims: Total expected rows (via COUNT): 0
+0000.696 (0) Table ms_actionscheduler_claims: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=627) in 0.00 seconds
+0000.698 (0) Table ms_actionscheduler_claims: finishing file(s) (2, 0.4 KB)
+0000.702 (0) Table ms_actionscheduler_groups: Total expected rows (via COUNT): 2
+0000.702 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.704 (0) Table ms_actionscheduler_groups: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=682) in 0.00 seconds
+0000.705 (0) Table ms_actionscheduler_groups: finishing file(s) (2, 0.4 KB)
+0000.709 (0) Table ms_actionscheduler_logs: Total expected rows (approximate): 1560
+0000.719 (0) Table ms_actionscheduler_logs: Rows added in this batch (next record: 502601): 1560 (uncompressed bytes in this segment=144920) in 0.01 seconds
+0000.721 (0) Table ms_actionscheduler_logs: finishing file(s) (2, 12.2 KB)
+0000.726 (0) Table ms_imagify_files: Total expected rows (via COUNT): 0
+0000.727 (0) Table ms_imagify_files: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1333) in 0.00 seconds
+0000.729 (0) Table ms_imagify_files: finishing file(s) (2, 0.5 KB)
+0000.733 (0) Table ms_imagify_folders: Total expected rows (via COUNT): 0
+0000.734 (0) Table ms_imagify_folders: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=609) in 0.00 seconds
+0000.735 (0) Table ms_imagify_folders: finishing file(s) (2, 0.4 KB)
+0000.739 (0) Table ms_wfblockediplog: Total expected rows (approximate): 0
+0000.739 (0) Table ms_wfblockediplog: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=657) in 0.00 seconds
+0000.741 (0) Table ms_wfblockediplog: finishing file(s) (2, 0.4 KB)
+0000.744 (0) Table ms_wfblocks7: Total expected rows (via COUNT): 0
+0000.745 (0) Table ms_wfblocks7: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=867) in 0.00 seconds
+0000.746 (0) Table ms_wfblocks7: finishing file(s) (2, 0.4 KB)
+0000.748 (0) Table ms_wfconfig: Total expected rows (approximate): 279
+0000.780 (0) Table ms_wfconfig: Rows added in this batch (next record: 1000): 281 (uncompressed bytes in this segment=878088) in 0.03 seconds
+0000.782 (0) Table ms_wfconfig: finishing file(s) (2, 443.1 KB)
+0000.786 (0) Table ms_wfcrawlers: Total expected rows (approximate): 0
+0000.786 (0) Table ms_wfcrawlers: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=582) in 0.00 seconds
+0000.788 (0) Table ms_wfcrawlers: finishing file(s) (2, 0.4 KB)
+0000.793 (0) Table ms_wffilechanges: Total expected rows (approximate): 0
+0000.794 (0) Table ms_wffilechanges: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=482) in 0.00 seconds
+0000.795 (0) Table ms_wffilechanges: finishing file(s) (2, 0.3 KB)
+0000.801 (0) Table ms_wffilemods: Total expected rows (approximate): 15140
+0001.076 (0) Table ms_wffilemods: Rows added in this batch (next record: 20000): 14757 (uncompressed bytes in this segment=5331957) in 0.28 seconds
+0001.078 (0) Table ms_wffilemods: finishing file(s) (2, 1547.7 KB)
+0001.079 (0) Table ms_wfhits: Total expected rows (via COUNT): 0
+0001.079 (0) Table ms_wfhits: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1013) in 0.00 seconds
+0001.080 (0) Table ms_wfhits: finishing file(s) (2, 0.5 KB)
+0001.082 (0) Table ms_wfhoover: Total expected rows (via COUNT): 0
+0001.083 (0) Table ms_wfhoover: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=545) in 0.00 seconds
+0001.084 (0) Table ms_wfhoover: finishing file(s) (2, 0.4 KB)
+0001.086 (0) Table ms_wfissues: Total expected rows (via COUNT): 5
+0001.086 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.086 (0) Table ms_wfissues: Rows added in this batch (next record: 3315): 5 (uncompressed bytes in this segment=6444) in 0.00 seconds
+0001.087 (0) Table ms_wfissues: finishing file(s) (2, 2.2 KB)
+0001.089 (0) Table ms_wfknownfilelist: Total expected rows (approximate): 14040
+0001.231 (0) Table ms_wfknownfilelist: Rows added in this batch (next record: 14759): 14759 (uncompressed bytes in this segment=2605374) in 0.14 seconds
+0001.233 (0) Table ms_wfknownfilelist: finishing file(s) (2, 196.6 KB)
+0001.237 (0) Table ms_wflivetraffichuman: Total expected rows (approximate): 0
+0001.237 (0) Table ms_wflivetraffichuman: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=678) in 0.00 seconds
+0001.239 (0) Table ms_wflivetraffichuman: finishing file(s) (2, 0.4 KB)
+0001.243 (0) Table ms_wflocs: Total expected rows (approximate): 0
+0001.244 (0) Table ms_wflocs: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=708) in 0.00 seconds
+0001.245 (0) Table ms_wflocs: finishing file(s) (2, 0.4 KB)
+0001.248 (0) Table ms_wflogins: Total expected rows (approximate): 2017
+0001.276 (0) Table ms_wflogins: Rows added in this batch (next record: 28895): 2000 (uncompressed bytes in this segment=425753) in 0.03 seconds
+0001.278 (0) Table ms_wflogins: finishing file(s) (2, 48.8 KB)
+0001.282 (0) Table ms_wfls_2fa_secrets: Total expected rows (via COUNT): 6
+0001.283 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.284 (0) Table ms_wfls_2fa_secrets: Rows added in this batch (next record: 10): 6 (uncompressed bytes in this segment=1826) in 0.00 seconds
+0001.286 (0) Table ms_wfls_2fa_secrets: finishing file(s) (2, 1 KB)
+0001.291 (0) Table ms_wfls_role_counts: Total expected rows (approximate): 0
+0001.292 (0) Table ms_wfls_role_counts: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=576) in 0.00 seconds
+0001.294 (0) Table ms_wfls_role_counts: finishing file(s) (2, 0.4 KB)
+0001.298 (0) Table ms_wfls_settings: Total expected rows (approximate): 35
+0001.299 (0) Table ms_wfls_settings: Rows added in this batch (next record: 1000): 35 (uncompressed bytes in this segment=2418) in 0.00 seconds
+0001.301 (0) Table ms_wfls_settings: finishing file(s) (2, 1 KB)
+0001.305 (0) Table ms_wfnotifications: Total expected rows (approximate): 11
+0001.306 (0) Table ms_wfnotifications: Rows added in this batch (next record: 1000): 12 (uncompressed bytes in this segment=3861) in 0.00 seconds
+0001.308 (0) Table ms_wfnotifications: finishing file(s) (2, 1.1 KB)
+0001.312 (0) Table ms_wfpendingissues: Total expected rows (via COUNT): 0
+0001.313 (0) Table ms_wfpendingissues: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=902) in 0.00 seconds
+0001.315 (0) Table ms_wfpendingissues: finishing file(s) (2, 0.4 KB)
+0001.318 (0) Table ms_wfreversecache: Total expected rows (approximate): 0
+0001.319 (0) Table ms_wfreversecache: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=527) in 0.00 seconds
+0001.320 (0) Table ms_wfreversecache: finishing file(s) (2, 0.3 KB)
+0001.322 (0) Table ms_wfsecurityevents: Total expected rows (via COUNT): 0
+0001.322 (0) Table ms_wfsecurityevents: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=712) in 0.00 seconds
+0001.323 (0) Table ms_wfsecurityevents: finishing file(s) (2, 0.4 KB)
+0001.326 (0) Table ms_wfsnipcache: Total expected rows (via COUNT): 2
+0001.326 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.327 (0) Table ms_wfsnipcache: Rows added in this batch (next record: 58016): 2 (uncompressed bytes in this segment=946) in 0.00 seconds
+0001.328 (0) Table ms_wfsnipcache: finishing file(s) (2, 0.5 KB)
+0001.329 (0) Table ms_wfstatus: Total expected rows (approximate): 1014
+0001.335 (0) Table ms_wfstatus: Rows added in this batch (next record: 106366): 949 (uncompressed bytes in this segment=95961) in 0.01 seconds
+0001.337 (0) Table ms_wfstatus: finishing file(s) (2, 17.1 KB)
+0001.340 (0) Table ms_wftrafficrates: Total expected rows (approximate): 0
+0001.341 (0) Table ms_wftrafficrates: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=596) in 0.00 seconds
+0001.342 (0) Table ms_wftrafficrates: finishing file(s) (2, 0.4 KB)
+0001.345 (0) Table ms_wfwaffailures: Total expected rows (via COUNT): 0
+0001.346 (0) Table ms_wfwaffailures: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=559) in 0.00 seconds
+0001.349 (0) Table ms_wfwaffailures: finishing file(s) (2, 0.4 KB)
+0001.380 (0) Table ms_wpr_rocket_cache: Total expected rows (via COUNT): 364
+0001.380 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.386 (0) Table ms_wpr_rocket_cache: Rows added in this batch (next record: 1086): 364 (uncompressed bytes in this segment=55961) in 0.03 seconds
+0001.388 (0) Table ms_wpr_rocket_cache: finishing file(s) (2, 8.3 KB)
+0001.393 (0) Table ms_wpr_rucss_resources: Total expected rows (via COUNT): 0
+0001.394 (0) Table ms_wpr_rucss_resources: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=995) in 0.00 seconds
+0001.397 (0) Table ms_wpr_rucss_resources: finishing file(s) (2, 0.5 KB)
+0001.403 (0) Table ms_wpr_rucss_used_css: Total expected rows (via COUNT): 0
+0001.404 (0) Table ms_wpr_rucss_used_css: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1232) in 0.00 seconds
+0001.406 (0) Table ms_wpr_rucss_used_css: finishing file(s) (2, 0.5 KB)
+0001.411 (0) Table ms_yoast_indexable: Total expected rows (via COUNT): 498
+0001.411 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.435 (0) Table ms_yoast_indexable: Rows added in this batch (next record: 534): 498 (uncompressed bytes in this segment=412652) in 0.03 seconds
+0001.438 (0) Table ms_yoast_indexable: finishing file(s) (2, 61.6 KB)
+0001.443 (0) Table ms_yoast_indexable_hierarchy: Total expected rows (approximate): 633
+0001.446 (0) Table ms_yoast_indexable_hierarchy: Rows added in this batch (next record: 1000): 633 (uncompressed bytes in this segment=12064) in 0.01 seconds
+0001.448 (0) Table ms_yoast_indexable_hierarchy: finishing file(s) (2, 2.2 KB)
+0001.454 (0) Table ms_yoast_migrations: Total expected rows (via COUNT): 24
+0001.454 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.456 (0) Table ms_yoast_migrations: Rows added in this batch (next record: 24): 24 (uncompressed bytes in this segment=1234) in 0.01 seconds
+0001.458 (0) Table ms_yoast_migrations: finishing file(s) (2, 0.6 KB)
+0001.465 (0) Table ms_yoast_primary_term: Total expected rows (via COUNT): 50
+0001.466 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.467 (0) Table ms_yoast_primary_term: Rows added in this batch (next record: 60): 50 (uncompressed bytes in this segment=4773) in 0.01 seconds
+0001.469 (0) Table ms_yoast_primary_term: finishing file(s) (2, 1.3 KB)
+0001.474 (0) Table ms_yoast_seo_links: Total expected rows (approximate): 1419
+0001.490 (0) Table ms_yoast_seo_links: Rows added in this batch (next record: 1588): 1411 (uncompressed bytes in this segment=191643) in 0.02 seconds
+0001.492 (0) Table ms_yoast_seo_links: finishing file(s) (2, 29.4 KB)
+0001.493 (0) PHP event: code E_WARNING: filemtime(): stat failed for /Users/thomas/Sites/_projets/mairiesamois/htdocs/wp-content/updraft/backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db.gz (line 1925, wp-content/plugins/updraftplus/backup.php)
+0001.494 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_options.table.tmpr405211.gz (1/52/fopen): adding to final database dump
+0001.496 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_options.table.gz (2/52/fopen): adding to final database dump
+0001.497 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_users.table.tmpr20.gz (3/52/fopen): adding to final database dump
+0001.497 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_users.table.gz (4/52/fopen): adding to final database dump
+0001.498 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_usermeta.table.tmpr627.gz (5/52/fopen): adding to final database dump
+0001.498 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_usermeta.table.gz (6/52/fopen): adding to final database dump
+0001.499 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_commentmeta.table.tmpr0.gz (7/52/fopen): adding to final database dump
+0001.499 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_commentmeta.table.gz (8/52/fopen): adding to final database dump
+0001.499 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_comments.table.tmpr11.gz (9/52/fopen): adding to final database dump
+0001.500 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_comments.table.gz (10/52/fopen): adding to final database dump
+0001.500 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_links.table.tmpr0.gz (11/52/fopen): adding to final database dump
+0001.501 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_links.table.gz (12/52/fopen): adding to final database dump
+0001.501 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_postmeta.table.tmpr50585.gz (13/52/fopen): adding to final database dump
+0001.508 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_postmeta.table.gz (14/52/fopen): adding to final database dump
+0001.510 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_posts.table.tmpr3999.gz (15/52/fopen): adding to final database dump
+0001.519 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_posts.table.gz (16/52/fopen): adding to final database dump
+0001.520 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_term_relationships.table.tmpr100001.gz (17/52/fopen): adding to final database dump
+0001.520 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_term_relationships.table.gz (18/52/fopen): adding to final database dump
+0001.521 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_term_taxonomy.table.tmpr58.gz (19/52/fopen): adding to final database dump
+0001.521 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_term_taxonomy.table.gz (20/52/fopen): adding to final database dump
+0001.521 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_termmeta.table.tmpr49.gz (21/52/fopen): adding to final database dump
+0001.522 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_termmeta.table.gz (22/52/fopen): adding to final database dump
+0001.522 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_terms.table.tmpr58.gz (23/52/fopen): adding to final database dump
+0001.522 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_terms.table.gz (24/52/fopen): adding to final database dump
+0001.523 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_FinalTiles_gallery.table.tmpr3.gz (25/52/fopen): adding to final database dump
+0001.523 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_FinalTiles_gallery.table.gz (26/52/fopen): adding to final database dump
+0001.523 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_FinalTiles_gallery_images.table.tmpr6.gz (27/52/fopen): adding to final database dump
+0001.524 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_FinalTiles_gallery_images.table.gz (28/52/fopen): adding to final database dump
+0001.524 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_actionscheduler_actions.table.tmpr169223.gz (29/52/fopen): adding to final database dump
+0001.525 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_actionscheduler_actions.table.gz (30/52/fopen): adding to final database dump
+0001.525 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_actionscheduler_claims.table.tmpr0.gz (31/52/fopen): adding to final database dump
+0001.525 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_actionscheduler_claims.table.gz (32/52/fopen): adding to final database dump
+0001.526 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_actionscheduler_groups.table.tmpr3.gz (33/52/fopen): adding to final database dump
+0001.526 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_actionscheduler_groups.table.gz (34/52/fopen): adding to final database dump
+0001.526 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_actionscheduler_logs.table.tmpr502602.gz (35/52/fopen): adding to final database dump
+0001.527 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_actionscheduler_logs.table.gz (36/52/fopen): adding to final database dump
+0001.527 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_imagify_files.table.tmpr0.gz (37/52/fopen): adding to final database dump
+0001.528 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_imagify_files.table.gz (38/52/fopen): adding to final database dump
+0001.528 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_imagify_folders.table.tmpr0.gz (39/52/fopen): adding to final database dump
+0001.528 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_imagify_folders.table.gz (40/52/fopen): adding to final database dump
+0001.529 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfblockediplog.table.tmpr1.gz (41/52/fopen): adding to final database dump
+0001.529 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfblockediplog.table.gz (42/52/fopen): adding to final database dump
+0001.530 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfblocks7.table.tmpr0.gz (43/52/fopen): adding to final database dump
+0001.530 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfblocks7.table.gz (44/52/fopen): adding to final database dump
+0001.531 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfconfig.table.tmpr1001.gz (45/52/fopen): adding to final database dump
+0001.536 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfconfig.table.gz (46/52/fopen): adding to final database dump
+0001.536 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfcrawlers.table.tmpr1.gz (47/52/fopen): adding to final database dump
+0001.537 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfcrawlers.table.gz (48/52/fopen): adding to final database dump
+0001.537 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wffilechanges.table.tmpr1.gz (49/52/fopen): adding to final database dump
+0001.537 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wffilechanges.table.gz (50/52/fopen): adding to final database dump
+0001.538 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wffilemods.table.tmpr20001.gz (51/52/fopen): adding to final database dump
+0001.557 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wffilemods.table.gz (52/52/fopen): adding to final database dump
+0001.557 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfhits.table.tmpr0.gz (53/52/fopen): adding to final database dump
+0001.558 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfhits.table.gz (54/52/fopen): adding to final database dump
+0001.558 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfhoover.table.tmpr0.gz (55/52/fopen): adding to final database dump
+0001.559 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfhoover.table.gz (56/52/fopen): adding to final database dump
+0001.559 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfissues.table.tmpr3316.gz (57/52/fopen): adding to final database dump
+0001.560 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfissues.table.gz (58/52/fopen): adding to final database dump
+0001.560 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfknownfilelist.table.tmpr14760.gz (59/52/fopen): adding to final database dump
+0001.563 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfknownfilelist.table.gz (60/52/fopen): adding to final database dump
+0001.563 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wflivetraffichuman.table.tmpr1.gz (61/52/fopen): adding to final database dump
+0001.563 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wflivetraffichuman.table.gz (62/52/fopen): adding to final database dump
+0001.564 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wflocs.table.tmpr1.gz (63/52/fopen): adding to final database dump
+0001.564 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wflocs.table.gz (64/52/fopen): adding to final database dump
+0001.565 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wflogins.table.tmpr28896.gz (65/52/fopen): adding to final database dump
+0001.566 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wflogins.table.gz (66/52/fopen): adding to final database dump
+0001.566 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfls_2fa_secrets.table.tmpr11.gz (67/52/fopen): adding to final database dump
+0001.567 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfls_2fa_secrets.table.gz (68/52/fopen): adding to final database dump
+0001.567 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfls_role_counts.table.tmpr1.gz (69/52/fopen): adding to final database dump
+0001.567 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfls_role_counts.table.gz (70/52/fopen): adding to final database dump
+0001.568 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfls_settings.table.tmpr1001.gz (71/52/fopen): adding to final database dump
+0001.568 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfls_settings.table.gz (72/52/fopen): adding to final database dump
+0001.569 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfnotifications.table.tmpr1001.gz (73/52/fopen): adding to final database dump
+0001.569 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfnotifications.table.gz (74/52/fopen): adding to final database dump
+0001.570 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfpendingissues.table.tmpr0.gz (75/52/fopen): adding to final database dump
+0001.570 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfpendingissues.table.gz (76/52/fopen): adding to final database dump
+0001.571 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfreversecache.table.tmpr1.gz (77/52/fopen): adding to final database dump
+0001.571 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfreversecache.table.gz (78/52/fopen): adding to final database dump
+0001.572 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfsecurityevents.table.tmpr0.gz (79/52/fopen): adding to final database dump
+0001.572 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfsecurityevents.table.gz (80/52/fopen): adding to final database dump
+0001.572 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfsnipcache.table.tmpr58017.gz (81/52/fopen): adding to final database dump
+0001.573 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfsnipcache.table.gz (82/52/fopen): adding to final database dump
+0001.573 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfstatus.table.tmpr106367.gz (83/52/fopen): adding to final database dump
+0001.574 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfstatus.table.gz (84/52/fopen): adding to final database dump
+0001.574 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wftrafficrates.table.tmpr1.gz (85/52/fopen): adding to final database dump
+0001.575 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wftrafficrates.table.gz (86/52/fopen): adding to final database dump
+0001.575 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfwaffailures.table.tmpr0.gz (87/52/fopen): adding to final database dump
+0001.576 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wfwaffailures.table.gz (88/52/fopen): adding to final database dump
+0001.576 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wpr_rocket_cache.table.tmpr1087.gz (89/52/fopen): adding to final database dump
+0001.577 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wpr_rocket_cache.table.gz (90/52/fopen): adding to final database dump
+0001.577 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wpr_rucss_resources.table.tmpr0.gz (91/52/fopen): adding to final database dump
+0001.577 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wpr_rucss_resources.table.gz (92/52/fopen): adding to final database dump
+0001.578 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wpr_rucss_used_css.table.tmpr0.gz (93/52/fopen): adding to final database dump
+0001.578 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_wpr_rucss_used_css.table.gz (94/52/fopen): adding to final database dump
+0001.579 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_yoast_indexable.table.tmpr535.gz (95/52/fopen): adding to final database dump
+0001.580 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_yoast_indexable.table.gz (96/52/fopen): adding to final database dump
+0001.580 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_yoast_indexable_hierarchy.table.tmpr1001.gz (97/52/fopen): adding to final database dump
+0001.581 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_yoast_indexable_hierarchy.table.gz (98/52/fopen): adding to final database dump
+0001.582 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_yoast_migrations.table.tmpr25.gz (99/52/fopen): adding to final database dump
+0001.583 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_yoast_migrations.table.gz (100/52/fopen): adding to final database dump
+0001.583 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_yoast_primary_term.table.tmpr61.gz (101/52/fopen): adding to final database dump
+0001.584 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_yoast_primary_term.table.gz (102/52/fopen): adding to final database dump
+0001.584 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_yoast_seo_links.table.tmpr1589.gz (103/52/fopen): adding to final database dump
+0001.585 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db-table-ms_yoast_seo_links.table.gz (104/52/fopen): adding to final database dump
+0001.597 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db.gz: finished writing out complete database file (3749.2 KB)
+0001.658 (0) Total database tables backed up: 52 (backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db.gz, size: 3839289, sha1: b3ed49e4d270c1cce390eb1bbf083d8a6ad00608, sha256: 43f21f3f581061b9d8d5b16dfbb684ec709955be4786c351e2b4a5751e2c97ac)
+0001.661 (0) backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db.gz: db: This file has not yet been successfully uploaded: will queue
+0001.662 (0) Saving backup history. Total backup size: 3.7 MB
+0001.663 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0001.664 (0) Cloud backup selection (1/1): dropbox with instance (1/1) (last)
+0001.665 (0) Beginning dispatch of backup to remote (dropbox) (instance identifier s-1acfaf7944a5cb174b09e9de019962ce)
+0001.665 (0) Dropbox: begin cloud upload (using API version 2 with OAuth v2 token)
+0001.953 (0) Successfully updated and refreshed the access token
+0001.954 (0) Dropbox: access gained; setting chunk size to: 1024 KB
+0002.380 (0) Dropbox: quota usage: used=125443.3 MB, total=2101888 MB, available=1976444.7 MB
+0002.384 (0) Dropbox: Attempt to upload: backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db.gz to: backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db.gz
+0002.996 (0) Dropbox chunked upload: 27.3 % uploaded (pid_upload_session:ABIIXFtn0ezhJnGCrZpzR6ANnc1kvtizLFoqLS1OiEMyD4tl_A, 1048576, 5120 KB)
+0005.220 (0) Dropbox chunked upload: 100 % uploaded (pid_upload_session:ABIIXFtn0ezhJnGCrZpzR6ANnc1kvtizLFoqLS1OiEMyD4tl_A, 3839289, 5120 KB)
+0006.918 (0) Recording as successfully uploaded: backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db.gz
+0006.924 (0) Deleting local file: backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db.gz: OK
+0006.926 (0) Dropbox: File upload success (backup_2024-10-14-1119_Mairie_de_Samois_sur_Seine_8e1834e89156-db.gz): 3749 KB in 4s (825 KB/s)
+0006.931 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=1, retain_db=2
+0006.933 (0) Number of backup sets in history: 5; groups (db): 1
+0006.934 (0) Examining (for databases) backup set with group_id=0, nonce=8e1834e89156, datestamp=1728897599 (Oct 14 2024 09:19:59)
+0006.934 (0) This backup set is the backup set just made, so will not be deleted.
+0006.935 (0) Examining (for databases) backup set with group_id=0, nonce=4aca84206299, datestamp=1727680591 (Sep 30 2024 07:16:31)
+0006.935 (0) Examining (for databases) backup set with group_id=0, nonce=ac7329d46a93, datestamp=1727680573 (Sep 30 2024 07:16:13)
+0006.935 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0006.936 (0) Examining (for databases) backup set with group_id=0, nonce=d7a3a67f5db4, datestamp=1724742337 (Aug 27 2024 07:05:37)
+0006.936 (0) Examining (for databases) backup set with group_id=0, nonce=6c1af4d9ca23, datestamp=1724742328 (Aug 27 2024 07:05:28)
+0006.936 (0) 1724742328: db: this set includes a database (backup_2024-08-27-0905_Mairie_de_Samois_sur_Seine_6c1af4d9ca23-db.gz); db count is now 2
+0006.936 (0) 1724742328: db: over retain limit (2); will delete this database
+0006.938 (0) Dropbox: request deletion: backup_2024-08-27-0905_Mairie_de_Samois_sur_Seine_6c1af4d9ca23-db.gz
+0007.885 (0) Dropbox: deletion succeeded
+0007.892 (0) This backup set is now empty; will remove from history
+0007.893 (0) Corresponding log file (log.6c1af4d9ca23.txt) not found - must have already been deleted
+0007.893 (0) Number of backup sets in history: 4; groups (files): 1
+0007.894 (0) Examining (for files) backup set with nonce=8e1834e89156, datestamp=1728897599 (Oct 14 2024 09:19:59)
+0007.894 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0007.894 (0) Examining (for files) backup set with nonce=4aca84206299, datestamp=1727680591 (Sep 30 2024 07:16:31)
+0007.895 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0007.895 (0) Examining (for files) backup set with nonce=ac7329d46a93, datestamp=1727680573 (Sep 30 2024 07:16:13)
+0007.895 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0007.896 (0) Examining (for files) backup set with nonce=d7a3a67f5db4, datestamp=1724742337 (Aug 27 2024 07:05:37)
+0007.896 (0) uploads: over retain limit (1); will delete this file entity
+0007.897 (0) Dropbox: request deletion: backup_2024-08-27-0905_Mairie_de_Samois_sur_Seine_d7a3a67f5db4-uploads.zip
+0009.709 (0) Dropbox: deletion succeeded
+0009.721 (0) This backup set is now empty; will remove from history
+0009.723 (0) Corresponding log file (log.d7a3a67f5db4.txt) not found - must have already been deleted
+0009.723 (0) Retain: saving new backup history (sets now: 3) and finishing retain operation
+0009.726 (0) Resume backup (8e1834e89156, 0): finish run
+0009.728 (0) Decremented the semaphore (d) by 1
+0009.729 (0) Semaphore (d) unlocked
+0009.729 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0009.733 (0) No email will/can be sent - the user has not configured an email address.
+0009.733 (0) The backup succeeded and is now complete
