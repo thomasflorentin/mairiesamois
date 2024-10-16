@@ -25,6 +25,8 @@
 /wp-content/cache/wp-rocket/.htaccess
 /wp-content/wflogs
 /wp-content/updraft
+
+wp-content/wp-rocket-config
 wp-content/wp-rocket-config/index.html
 
 wp-content/advanced-cache.php
