@@ -32,3 +32,5 @@ wp-content/wp-rocket-config/index.html
 wp-content/advanced-cache.php
 wp-content/wflogs/config-livewaf.php
 wp-content/wflogs/config-synced.php
+/wp-content/updraft
+/wp-content/wflogs
