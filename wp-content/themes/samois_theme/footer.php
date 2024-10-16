@@ -17,6 +17,7 @@ $useful_links = get_field('util_link', 'options')
 
 
         <footer id="colophon" class="site-footer wrapper ">
+        footer
 
             <div class="section-search pb-medium">
                 <h3 class="FS16_B">Vous n'avez pas trouvé l'information recherchée ?</h3>
