@@ -1,11 +1,12 @@
 {
     "key": "group_61b9ce5fa8fe0",
-    "title": "Options générales (horaires, contact, ...)",
+    "title": "Géneral Settings",
     "fields": [
         {
             "key": "field_61b9ce92e6966",
             "label": "Nom de la structure",
             "name": "structur_name",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -25,25 +26,7 @@
             "key": "field_61b9d3f52b295",
             "label": "Adresse de la structure",
             "name": "structure_adress",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "br"
-        },
-        {
-            "key": "field_61b9cec2e6967",
-            "label": "Horaire d'ouverture de la structure",
-            "name": "hour_opening",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -63,6 +46,7 @@
             "key": "field_61b9cf30e6968",
             "label": "Mail de la structure",
             "name": "mail",
+            "aria-label": "",
             "type": "email",
             "instructions": "",
             "required": 0,
@@ -81,6 +65,7 @@
             "key": "field_61b9cf5ee6969",
             "label": "Téléphone de la structure",
             "name": "Phone",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -100,6 +85,7 @@
             "key": "field_61b9cfa1e696a",
             "label": "Télécopie de la structure",
             "name": "telecopie",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -116,9 +102,30 @@
             "maxlength": ""
         },
         {
+            "key": "field_61b9cec2e6967",
+            "label": "Horaire d'ouverture de la structure",
+            "name": "hour_opening",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
             "key": "field_61b9d57fb0c7a",
             "label": "Facebook URL",
             "name": "facebook_link",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -135,6 +142,7 @@
             "key": "field_61b9d594b0c7b",
             "label": "Instagram URL",
             "name": "instagram_url",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -145,6 +153,24 @@
                 "id": ""
             },
             "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_6821996d07f17",
+            "label": "WhatsApp URL",
+            "name": "whatsapp_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
             "placeholder": ""
         }
     ],
@@ -166,5 +192,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649253256
+    "modified": 1747032446
 }
