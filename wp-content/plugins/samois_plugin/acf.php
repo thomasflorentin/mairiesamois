@@ -37,31 +37,36 @@ add_filter('acf/save_post', function ($post_id) {
 
 
 
-if (function_exists('acf_add_options_page')) {
+add_action('acf/init', function() { 
+    if (function_exists('acf_add_options_page')) {
 
-    acf_add_options_page(array(
-        'page_title' => 'Options',
-        'menu_title' => 'Options',
-        'menu_slug'     => 'theme-general-settings',
-        'icon_url' => 'dashicons-layout',
-        'position' => 2
-    ));
+        acf_add_options_page(array(
+            'page_title' => 'Options',
+            'menu_title' => 'Options',
+            'menu_slug'     => 'theme-general-settings',
+            'icon_url' => 'dashicons-layout',
+            'position' => 2
+        ));
 
-    acf_add_options_sub_page(array(
-        'page_title'     => 'Géneral Settings',
-        'menu_title'    => 'Géneral',
-        'parent_slug'    => 'theme-general-settings',
-    ));
+        acf_add_options_sub_page(array(
+            'page_title'     => 'Géneral Settings',
+            'menu_title'    => 'Géneral',
+            'parent_slug'    => 'theme-general-settings',
+        ));
 
-    acf_add_options_sub_page(array(
-        'page_title'     => 'Header Settings',
-        'menu_title'    => 'Header',
-        'parent_slug'    => 'theme-general-settings',
-    ));
+        acf_add_options_sub_page(array(
+            'page_title'     => 'Header Settings',
+            'menu_title'    => 'Header',
+            'parent_slug'    => 'theme-general-settings',
+        ));
 
-    acf_add_options_sub_page(array(
-        'page_title'     => 'Footer Settings',
-        'menu_title'    => 'Footer',
-        'parent_slug'    => 'theme-general-settings',
-    ));
-}
+        acf_add_options_sub_page(array(
+            'page_title'     => 'Footer Settings',
+            'menu_title'    => 'Footer',
+            'parent_slug'    => 'theme-general-settings',
+        ));
+    }
+});
+
+
+

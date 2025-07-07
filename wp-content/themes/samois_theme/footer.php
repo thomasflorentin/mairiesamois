@@ -45,10 +45,13 @@ $useful_links = get_field('util_link', 'options')
 
                     <div class="social-qrcode fl-justify pb-medium">
                         <div class="social p2">
+
                             <a href="<?= the_field('facebook_link', 'options') ?>" target="_blank" title="Aller sur la page Facebook de la Mairie de Samois sur Seine"><i class="fab fa-facebook-square"></i></a>
+                            
                             <a href="<?= get_field('whatsapp_url', 'option');?>" target="_blank"  title="Rejoindre la chaîne WhatsApp de la commune de Samois sur Seine">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/whatsapp.png" alt="">
+                                <?php get_template_part('components/svg', 'whatsapp'); ?>
                             </a>
+                            
                             <a href="mailto:<?= get_field('mail', 'option');?>" title="Envoyer un mail à la Mairie de Samois sur Seine"><i class="fas fa-envelope"></i></a>
 
                         </div>
