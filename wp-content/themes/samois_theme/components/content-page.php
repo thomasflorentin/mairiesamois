@@ -76,14 +76,22 @@ get_template_part('components/modules/module', 'breadcrumbs'); ?>
         <?php elseif ( !$vertical_thumbnail && has_post_thumbnail() ) : ?>
 
             <div class="grid mb-big single_cover thumbnail_single">
-                <figure class="s_12col m_7col m_full">
+                <figure class="s_12col m_6col m_full">
                     <div class="inner">
                         <?php the_post_thumbnail('single-main'); ?>
                     </div>
                 </figure>
 
-                <div class="s_12col m_5col mt-big container-title-post p-small">
+                <div class="s_12col m_6col mt-big container-title-post p-small">
+
+                    <?php if( get_post_type() == 'post' ) : ?>
+                        <div class="event_meta mb-small">
+                            <?php echo get_the_date(); ?>
+                        </div>
+                    <?php endif; ?>
+
                     <h1 class="FS42_B post-title"><?php the_title(); ?></h1>
+
                     <?php if( get_post_type() == 'event' ) : ?>
 
                         <div class="event_meta mb-big">
