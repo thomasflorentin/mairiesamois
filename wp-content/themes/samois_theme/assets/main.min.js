@@ -242,11 +242,12 @@ function init() {
     // MASONRY LAYOUT FOR GALLERIES
 
     // vanilla JS
-    let msnry = new Masonry( '.gallery', {
-        itemSelector: '.gallery-item',
-        percentPosition: true
-    });
-
+    if( document.querySelector('.gallery') ) {
+        let msnry = new Masonry( '.gallery', {
+            itemSelector: '.gallery-item',
+            percentPosition: true
+        });
+    }
 
 
 
