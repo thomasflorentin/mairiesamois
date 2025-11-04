@@ -617,7 +617,50 @@ class BeforeAfterImageSlider extends Widget_Base {
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => true,
 				'default'     => esc_html__( 'After', 'wp-before-after-image-slider' ),
-				'placeholder' => esc_html__( 'Type after image label here', 'wp-before-after-image-slider' ),
+				'placeholder' => esc_html__( 'Type after image label', 'wp-before-after-image-slider' ),
+			)
+		);
+
+		$this->add_control(
+			'before_image_caption',
+			array(
+				'label'       => esc_html__( 'Before Image Caption', 'wp-before-after-image-slider' ),
+				'type'        => Controls_Manager::TEXT,
+				'label_block' => true,
+				'default'     => '',
+				'placeholder' => esc_html__( 'Type before image caption', 'wp-before-after-image-slider' ),
+				'condition'   => array(
+					'slider_type!' => 'video',
+				),
+			)
+		);
+
+		$this->add_control(
+			'middle_image_caption',
+			array(
+				'label'       => esc_html__( 'Middle Image Caption', 'wp-before-after-image-slider-pro' ),
+				'type'        => Controls_Manager::TEXT,
+				'label_block' => true,
+				'default'     => '',
+				'placeholder' => esc_html__( 'Type middle image caption', 'wp-before-after-image-slider-pro' ),
+				'condition'   => array(
+					'slider_type'  => 'triple',
+					'slider_type!' => 'video',
+				),
+			)
+		);
+
+		$this->add_control(
+			'after_image_caption',
+			array(
+				'label'       => esc_html__( 'After Image caption', 'wp-before-after-image-slider' ),
+				'type'        => Controls_Manager::TEXT,
+				'label_block' => true,
+				'default'     => '',
+				'placeholder' => esc_html__( 'Type after image caption here', 'wp-before-after-image-slider' ),
+				'condition'   => array(
+					'slider_type!' => 'video',
+				),
 			)
 		);
 
@@ -666,8 +709,8 @@ class BeforeAfterImageSlider extends Widget_Base {
 				'label'   => esc_html__( 'Orientation', 'wp-before-after-image-slider' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'horizontal' => esc_html__( 'Horizontal', 'wp-before-after-image-slider' ),
-					'vertical'   => esc_html__( 'Vertical', 'wp-before-after-image-slider' ),
+					'horizontal' => esc_html__( 'Vertical', 'wp-before-after-image-slider' ),
+					'vertical'   => esc_html__( 'Horizontal', 'wp-before-after-image-slider' ),
 				),
 				'default' => 'horizontal',
 			)
@@ -1071,6 +1114,8 @@ class BeforeAfterImageSlider extends Widget_Base {
 					'show_labels'           => ( isset( $settings['show_labels'] ) && 'yes' === $settings['show_labels'] ),
 					'before_label'          => esc_attr( wp_strip_all_tags( $settings['before_image_text'] ) ),
 					'after_label'           => esc_attr( wp_strip_all_tags( $settings['after_image_text'] ) ),
+					'before_caption'        => esc_attr( wp_strip_all_tags( $settings['before_image_caption'] ) ),
+					'after_caption'         => esc_attr( wp_strip_all_tags( $settings['after_image_caption'] ) ),
 				);
 
 				// Load the unlocked features by Pro Plugin.
@@ -1092,14 +1137,53 @@ class BeforeAfterImageSlider extends Widget_Base {
 					$after_image_html = preg_replace( '/height:[^;]+;/', '', $after_image_html );
 				}
 
-				$content = sprintf(
-					'<div class="coca-bais-container" id="%1$s" data-settings="%2$s" style="opacity: 0;max-width: 100%%;">%3$s%4$s%5$s</div>',
-					esc_attr( $id_class ),
-					esc_attr( wp_json_encode( $compare_settings ) ),
-					wp_kses_post( $before_image_html ),
-					wp_kses_post( $after_image_html ),
-					$popup_output
-				);
+				// Prepare captions.
+				$before_caption = ! empty( $settings['before_image_caption'] ) ? esc_html( $settings['before_image_caption'] ) : '';
+				$after_caption  = ! empty( $settings['after_image_caption'] ) ? esc_html( $settings['after_image_caption'] ) : '';
+
+				// Check orientation and adjust caption placement.
+				if ( 'vertical' === $settings['orientation'] ) {
+					$before_caption_html = $before_caption ? sprintf( '<div class="coca-bais-caption-wrapper"><h3 class="before-image-caption">%s</h3></div>', $before_caption ) : '';
+					$after_caption_html  = $after_caption ? sprintf( '<div class="coca-bais-caption-wrapper"><h3 class="after-image-caption">%s</h3></div>', $after_caption ) : '';
+
+					$content = sprintf(
+						'%1$s
+						<div class="coca-bais-container" id="%2$s" data-settings="%3$s" style="opacity: 0; max-width: 100%%;">
+							%4$s%5$s%6$s
+						</div>
+						%7$s',
+						$before_caption_html,
+						esc_attr( $id_class ),
+						esc_attr( wp_json_encode( $compare_settings ) ),
+						wp_kses_post( $before_image_html ),
+						wp_kses_post( $after_image_html ),
+						$popup_output,
+						$after_caption_html
+					);
+				} else {
+					// Horizontal orientation or default behavior.
+					$caption_wrapper = '';
+					if ( $before_caption || $after_caption ) {
+						$caption_wrapper = sprintf(
+							'<div class="coca-bais-caption-wrapper"><h3 class="before-image-caption">%1$s</h3><h3 class="after-image-caption">%2$s</h3></div>',
+							$before_caption,
+							$after_caption
+						);
+					}
+
+					$content = sprintf(
+						'<div class="coca-bais-container" id="%1$s" data-settings="%2$s" style="opacity: 0; max-width: 100%%;">
+							%3$s%4$s%6$s
+						</div>
+						%5$s',
+						esc_attr( $id_class ),
+						esc_attr( wp_json_encode( $compare_settings ) ),
+						wp_kses_post( $before_image_html ),
+						wp_kses_post( $after_image_html ),
+						$caption_wrapper,
+						$popup_output
+					);
+				}
 			} else {
 				$content = sprintf(
 					'<div class="components-notice is-warning"><div class="components-notice__content"><div class="coca-notice">%s</div></div></div>',

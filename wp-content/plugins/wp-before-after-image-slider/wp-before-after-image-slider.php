@@ -14,7 +14,7 @@
  * Plugin Name:         WP Before After Image Slider
  * Plugin URI:          https://codecanel.com/wp-before-after-image-slider/
  * Description:         Craft dynamic before and after image sliders effortlessly. Engage viewers with seamless visual transitions. Compatible with top page builders like Elementor, Divi, and Gutenberg.
- * Version:             2.0.7
+ * Version:             2.0.8
  * Requires at least:   6.0
  * Tested up to:        6.8
  * Requires PHP:        7.4
@@ -46,7 +46,7 @@ final class Plugin {
 	 *
 	 * @var string
 	 */
-	private string $version = '2.0.7';
+	private string $version = '2.0.8';
 
 	/**
 	 * The version number.

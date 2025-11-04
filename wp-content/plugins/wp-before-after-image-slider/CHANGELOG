@@ -1,4 +1,13 @@
 == Changelog ==
+= 2.0.8 =
+* Added captions for before and after images in both horizontal and vertical comparison modes.
+* Introduced triple image comparison (Before, Middle, After) with individual image captions.
+
+= 2.0.7
+* Issue fixed
+
+= 2.0.6 =
+* Readme updated
 
 = 2.0.5 =
 * Readme updated

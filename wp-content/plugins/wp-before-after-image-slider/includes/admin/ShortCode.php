@@ -124,6 +124,9 @@ class ShortCode {
 	 * @return string The rendered content.
 	 */
 	public function coca_bais_shortcode_rendered_html( string $content, array $attributes ): string {
+		$before_caption = esc_html( $attributes['before_image_caption'] ?? '' );
+		$after_caption  = esc_html( $attributes['after_image_caption'] ?? '' );
+
 		// Verify slider type.
 		if ( 'default' === get_slider_type( $attributes ) ) {
 			if ( ( ! empty( $attributes['image_before_id'] ) && ! empty( $attributes['image_after_id'] ) ) ||
@@ -157,15 +160,59 @@ class ShortCode {
 				$after_image_html  = wp_get_attachment_image( $image_after_id, $image_size, false, $image_attributes );
 
 				$content = sprintf(
-					'<div class="%4$s"><div class="shortcode-container"><div class="coca-bais-container" id="%7$s" data-settings="%1$s" style="opacity: 0; max-width: 100%%;">%2$s%3$s%5$s</div>%6$s</div></div>',
-					esc_attr( wp_json_encode( $compare_settings ) ),
-					wp_kses_post( $before_image_html ),
-					wp_kses_post( $after_image_html ),
-					esc_attr( implode( ' ', $wrapper_classes ) ),
-					$popup_output,
-					$css_output,
-					esc_attr( $shortcode_id )
+					'<div class="%s"><div class="shortcode-container">',
+					esc_attr( implode( ' ', $wrapper_classes ) )
 				);
+
+				// When orientation is vertical, add before caption at the top and after caption at the bottom.
+				if ( 'vertical' === $attributes['orientation'] ) {
+					if ( ! empty( $before_caption ) ) {
+						$content .= sprintf(
+							'<div class="coca-bais-caption-wrapper top-caption"><h3 class="before-image-caption">%s</h3></div>',
+							! empty( $before_caption ) ? $before_caption : __( 'Before Image Caption', 'wp-before-after-image-slider' )
+						);
+					}
+
+					$content .= sprintf(
+						'<div class="coca-bais-container" id="%7$s" data-settings="%1$s" style="opacity: 0; max-width: 100%%;">%2$s%3$s%5$s</div>%6$s',
+						esc_attr( wp_json_encode( $compare_settings ) ),
+						wp_kses_post( $before_image_html ),
+						wp_kses_post( $after_image_html ),
+						esc_attr( implode( ' ', $wrapper_classes ) ),
+						$popup_output,
+						$css_output,
+						esc_attr( $shortcode_id )
+					);
+
+					if ( ! empty( $after_caption ) ) {
+						$content .= sprintf(
+							'<div class="coca-bais-caption-wrapper bottom-caption"><h3 class="after-image-caption">%s</h3></div>',
+							! empty( $after_caption ) ? $after_caption : __( 'After Image Caption', 'wp-before-after-image-slider' )
+						);
+					}
+				} else {
+					// For non-vertical orientation, add both captions inside the container.
+					$content .= sprintf(
+						'<div class="coca-bais-container" id="%7$s" data-settings="%1$s" style="opacity: 0; max-width: 100%%;">%2$s%3$s%5$s</div>%6$s',
+						esc_attr( wp_json_encode( $compare_settings ) ),
+						wp_kses_post( $before_image_html ),
+						wp_kses_post( $after_image_html ),
+						esc_attr( implode( ' ', $wrapper_classes ) ),
+						$popup_output,
+						$css_output,
+						esc_attr( $shortcode_id )
+					);
+
+					if ( ! empty( $before_caption ) || ! empty( $after_caption ) ) {
+						$content .= sprintf(
+							'<div class="coca-bais-caption-wrapper"><h3 class="before-image-caption">%1$s</h3><h3 class="after-image-caption">%2$s</h3></div>',
+							! empty( $before_caption ) ? $before_caption : '',
+							! empty( $after_caption ) ? $after_caption : ''
+						);
+					}
+				}
+
+				$content .= '</div></div>';
 			} else {
 				$err_message  = sprintf(
 					'<div class="coca-bais-shortcode shortcode-%1s"><div class="components-notice is-warning"><div class="components-notice__content">',

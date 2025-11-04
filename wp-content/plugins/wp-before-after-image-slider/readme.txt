@@ -1,11 +1,11 @@
-=== WP Before After Image Slider – Advanced Image comparison Plugin for WordPress ===
+=== WP Before After Image Slider – Advanced Image and Video Comparison Plugin for WordPress ===
 Contributors: codecanel
 Donate link: https://codecanel.com/wp-before-after-image-slider/
-Tags: before after, image comparison, image slider, video comparison, photo comparison
+Tags: before after, image comparison, before after image, video comparison, photo comparison
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 2.0.7
+Stable tag: 2.0.8
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,7 +121,11 @@ Absolutely! The **WP Before After Image Slider** plugin is fully responsive and 
 13. Shortcode generator for easy slider embedding.  
 
 == Upgrade Notice ==
-= 2.0.7
+= 2.0.8 =
+* Added captions for before and after images in both horizontal and vertical comparison modes.
+* Introduced triple image comparison (Before, Middle, After) with individual image captions.
+
+= 2.0.7 =
 * Issue fixed
 
 = 2.0.6 =
@@ -140,7 +144,11 @@ Fixed WordPress compatibility issues.
 Major update – New UI, plugin dashboard, and video control options.
 
 == Changelog ==
-= 2.0.7
+= 2.0.8 =
+* Added captions for before and after images in both horizontal and vertical comparison modes.
+* Introduced triple image comparison (Before, Middle, After) with individual image captions.
+
+= 2.0.7 =
 * Issue fixed
 
 = 2.0.6 =
