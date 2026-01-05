@@ -1,7 +1,7 @@
 <?php
 $title = $args['title'];
 $posts = $args['list_posts'];
-if($post) $loop = count($posts) + 1;
+if( is_array($post) ) $loop = count($posts) + 1;
 $link = $args['link'];
 
 ?>
