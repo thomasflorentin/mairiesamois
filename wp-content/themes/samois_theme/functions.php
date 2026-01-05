@@ -122,12 +122,12 @@ function my_load_scripts($hook)
     // 
 
     $version = filemtime( get_stylesheet_directory() . '/assets/main.min.js' );
-    wp_enqueue_script('my_js', get_template_directory_uri() . '/assets/main.min.js', array('masonry'), $version);
+    wp_enqueue_script('my_js', get_template_directory_uri() . '/assets/main.min.js', array(), $version);
 
     wp_enqueue_script('tinyslide', 'https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js', array(), '');
 
-    $version = filemtime( get_stylesheet_directory() . '/assets/lib/masonry.js' );
-    wp_enqueue_script('masonry', get_template_directory_uri() . '/assets/lib/masonry.js', array('jquery'), $version, true);
+    // $version = filemtime( get_stylesheet_directory() . '/assets/lib/masonry.js' );
+    // wp_enqueue_script('masonry', get_template_directory_uri() . '/assets/lib/masonry.js', array('jquery'), $version, true);
 
     $version = filemtime( get_stylesheet_directory() . '/assets/styles.css' );
     wp_enqueue_style('my_css', get_template_directory_uri() . '/assets/styles.css', false,   $version);
