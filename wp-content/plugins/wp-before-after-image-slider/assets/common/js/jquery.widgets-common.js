@@ -1,1 +1,0 @@
-window.jQuery.fn.coca_isInViewPort=function(){const o=window.jQuery,i=o(this).offset().top,t=i+o(this).outerHeight(),n=o(window).scrollTop(),w=n+o(window).height();return t>n&&i<w};
