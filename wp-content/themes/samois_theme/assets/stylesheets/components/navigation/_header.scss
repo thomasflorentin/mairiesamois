@@ -100,7 +100,7 @@
         align-items: flex-end;
     }
     @include at-least(medium) {
-        padding-left: $space_left * .6;
+        padding-left: 100px;
     }
     @include at-least(large) {
         padding-left: 100px;

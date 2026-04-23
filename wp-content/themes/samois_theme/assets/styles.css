@@ -1602,7 +1602,7 @@ button {
 }
 @media (min-width: 800px) {
   .nav-container {
-    padding-left: 240px;
+    padding-left: 100px;
   }
 }
 @media (min-width: 1200px) {
