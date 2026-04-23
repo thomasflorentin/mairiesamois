@@ -39,6 +39,20 @@
     }
 }
 
+.bloc {
+    figure {
+        @include up-to(medium) {
+            width: 45%;
+            margin-right: 10px;
+        }
+    }
+    .bloc-footer {
+        @include up-to(medium) {
+            width: 45%;
+        }
+    }
+}
+
 
 
 .bloc-search {
