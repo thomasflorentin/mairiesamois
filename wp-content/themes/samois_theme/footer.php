@@ -145,13 +145,13 @@ $useful_links = get_field('util_link', 'options')
             <ul class="fl-centered fl-hcentered">
                 
                 <li>
-                    <a href="/contacts-urgences" id="">Urgences</a>
+                    <a href="/contacts-urgences" id="">N° URGENCES</a>
                 </li>
 
                 <?= ($alert_post) ? '<li><a href="' . $alert_post->guid . '" class="footer_alert">[ALERTE]</a></li>' : '' ?>
 
                 <li>
-                    <a href="#" id="js-shortcutsBtn">Raccourcis</a>
+                    <a href="#" id="js-shortcutsBtn">RACCOURCIS</a>
                 </li>
             </ul>
         </nav>
