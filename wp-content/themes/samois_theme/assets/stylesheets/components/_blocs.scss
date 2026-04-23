@@ -26,6 +26,17 @@
         width: 100%;
         object-fit: cover;
     }
+    figure {
+        @include up-to(medium) {
+            width: 45%;
+            margin-right: 10px;
+        }
+    }
+    .bloc-footer {
+        @include up-to(medium) {
+            width: 45%;
+        }
+    }
 }
 
 
