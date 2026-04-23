@@ -1120,6 +1120,13 @@ ul,
 ol {
   margin: 0 0 1.5em 3em;
 }
+@media (max-width: 800px) {
+  ul,
+  ol {
+    margin-left: 1em;
+    padding-left: 0.5em;
+  }
+}
 
 ul {
   list-style: disc;
