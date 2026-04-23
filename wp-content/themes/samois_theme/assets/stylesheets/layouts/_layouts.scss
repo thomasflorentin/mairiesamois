@@ -1,5 +1,8 @@
 .single_post {
     margin-bottom: 160px;
+    @include up-to(large) {
+        margin-bottom: 80px;
+    }
 }
 
 
