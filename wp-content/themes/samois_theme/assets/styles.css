@@ -51,6 +51,11 @@
 .mb-big {
   margin-bottom: 80px;
 }
+@media (max-width: 800px) {
+  .mb-big {
+    margin-bottom: 40px;
+  }
+}
 
 .mt-vsmall {
   margin-top: 10px !important;
@@ -64,8 +69,15 @@
   margin-top: 40px !important;
 }
 
-.mt-big {
-  margin-top: 80px !important;
+@media (max-width: 800px) {
+  .mt-big {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 800px) {
+  .mt-big {
+    margin-top: 80px !important;
+  }
 }
 
 .mt-vbig {
@@ -78,6 +90,11 @@
 
 .p-small {
   padding: 20px;
+}
+@media (max-width: 800px) {
+  .p-small {
+    padding: 0;
+  }
 }
 
 .pb-medium {

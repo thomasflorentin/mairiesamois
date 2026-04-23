@@ -76,6 +76,9 @@ $marge_vbig: $marge * 8;
 
 .mb-big {
     margin-bottom: $marge_big;
+    @include up-to(medium) {
+        margin-bottom: calc( $marge_big / 2);
+    }
 }
 
 
@@ -93,7 +96,12 @@ $marge_vbig: $marge * 8;
 }
 
 .mt-big {
-    margin-top: $marge_big !important;
+    @include up-to(medium) {
+        margin-top: calc( $marge_big / 2);
+    }
+    @include at-least(medium) {
+        margin-top: $marge_big !important;
+    }
 }
 
 .mt-vbig {
@@ -109,6 +117,9 @@ $marge_vbig: $marge * 8;
 
 .p-small {
     padding: $marge;
+    @include up-to(medium) {
+        padding: 0;
+    }
 }
 
 .pb-medium{
