@@ -1624,7 +1624,7 @@ button {
 }
 @media (min-width: 1200px) {
   .nav-container a {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 @media (max-width: 800px) {
@@ -1636,12 +1636,12 @@ button {
 }
 @media (min-width: 800px) {
   .nav-container {
-    padding-left: 150px;
+    padding-left: 180px;
   }
 }
 @media (min-width: 1200px) {
   .nav-container {
-    padding-left: 200px;
+    padding-left: 220px;
   }
 }
 
@@ -1667,7 +1667,7 @@ button {
 }
 
 .navigation-links {
-  width: 60%;
+  width: 70%;
 }
 .navigation-links li, .navigation-links a {
   text-align: center;

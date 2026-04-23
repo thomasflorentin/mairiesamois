@@ -94,7 +94,7 @@
             font-size: 1.3rem;
         }  
         @include at-least(large) {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }        
 
     }
@@ -105,10 +105,10 @@
         align-items: flex-end;
     }
     @include at-least(medium) {
-        padding-left: 150px;
+        padding-left: 180px;
     }
     @include at-least(large) {
-        padding-left: 200px;
+        padding-left: 220px;
     }
 }
 
@@ -138,7 +138,7 @@
 }
 
 .navigation-links {
-    width: 60%;
+    width: 70%;
 
     li,a {
         text-align: center;
