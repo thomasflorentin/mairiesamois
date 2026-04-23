@@ -29,10 +29,10 @@
         top: 20px;
     }
     @include at-least(large) {
-        width: $space_left;
+        //width: $space_left;
     }
     @include up-to(medium) {
-        width: 125px;
+        //width: 125px;
         top: 8px;
 
         figure {
@@ -51,6 +51,9 @@
     
     @include up-to(medium) {
         max-width: 80px;
+    }
+    @include up-to(large) {
+        max-width: 151px;
     }
 }
 
