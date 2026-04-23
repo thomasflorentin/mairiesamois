@@ -95,12 +95,12 @@
     }
 
     @include up-to(medium) {
-        padding-left: 100px;
+        padding-left: 20px;
         flex-direction: column;
         align-items: flex-end;
     }
     @include at-least(medium) {
-        padding-left: 100px;
+        padding-left: 20px;
     }
     @include at-least(large) {
         padding-left: 100px;
@@ -145,7 +145,7 @@
     }
     @include up-to(medium) {
         width: 100vw;
-        padding: 0 0 0 125px;
+        padding: 0 0 0 75px;
 
         ul {
             justify-content: flex-end;
