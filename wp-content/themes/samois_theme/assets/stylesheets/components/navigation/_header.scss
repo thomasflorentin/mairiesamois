@@ -97,14 +97,15 @@
             font-size: 1.4rem;
         }    
         
-        .highlighted & {
-            color: $blue;
-            &:hover {
-                color: $red;
-            }
-        }
-
     }
+    
+    .highlighted a {
+        color: $blue;
+        &:hover {
+            color: $red;
+        }
+    }
+
 
     @include up-to(medium) {
         padding-left: 20px;

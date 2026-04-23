@@ -1627,10 +1627,10 @@ button {
     font-size: 1.4rem;
   }
 }
-.highlighted .nav-container a {
+.nav-container .highlighted a {
   color: #1F5DA5;
 }
-.highlighted .nav-container a:hover {
+.nav-container .highlighted a:hover {
   color: #E22B2B;
 }
 @media (max-width: 800px) {
