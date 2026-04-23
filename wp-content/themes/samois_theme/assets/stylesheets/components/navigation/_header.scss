@@ -88,10 +88,10 @@
 
     a {
         @include up-to(medium) {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
         @include at-least(medium) {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }  
         @include at-least(large) {
             font-size: 1.4rem;
