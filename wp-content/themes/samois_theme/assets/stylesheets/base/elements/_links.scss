@@ -26,7 +26,13 @@ a {
 	}
 }
 
-
+.usefull-link,
+.end-link {
+	a {
+		display: inline-flex;
+		gap: 5px;
+	}
+}
 .btn_inline {
 	
 	&:before {

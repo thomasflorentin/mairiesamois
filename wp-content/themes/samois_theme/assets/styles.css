@@ -1202,6 +1202,12 @@ a:hover, a:active {
   outline: 0;
 }
 
+.usefull-link a,
+.end-link a {
+  display: inline-flex;
+  gap: 5px;
+}
+
 .btn_inline:before, .end-link a:before {
   content: "> ";
 }
