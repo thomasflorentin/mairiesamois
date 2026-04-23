@@ -1627,6 +1627,12 @@ button {
     font-size: 1.4rem;
   }
 }
+.nav-container a.highlighted {
+  color: #1F5DA5;
+}
+.nav-container a.highlighted:hover {
+  color: #E22B2B;
+}
 @media (max-width: 800px) {
   .nav-container {
     padding-left: 20px;

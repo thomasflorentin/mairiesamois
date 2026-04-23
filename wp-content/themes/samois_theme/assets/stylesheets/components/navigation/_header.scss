@@ -95,7 +95,14 @@
         }  
         @include at-least(large) {
             font-size: 1.4rem;
-        }        
+        }    
+        
+        &.highlighted {
+            color: $blue;
+            &:hover {
+                color: $red;
+            }
+        }
 
     }
 
