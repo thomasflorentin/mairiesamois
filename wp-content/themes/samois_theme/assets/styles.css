@@ -1847,6 +1847,11 @@ button {
     margin-bottom: 40px;
   }
 }
+@media (max-width: 800px) {
+  .end-link a {
+    font-size: 1.2rem;
+  }
+}
 .end-link li {
   padding-right: 15px;
 }
