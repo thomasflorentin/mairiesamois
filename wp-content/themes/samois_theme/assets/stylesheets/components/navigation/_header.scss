@@ -102,7 +102,7 @@
     .highlighted a {
         color: $blue;
         &:hover {
-            color: $red;
+            color: $red !important;
         }
     }
 

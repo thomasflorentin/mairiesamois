@@ -1631,7 +1631,7 @@ button {
   color: #1F5DA5;
 }
 .nav-container .highlighted a:hover {
-  color: #E22B2B;
+  color: #E22B2B !important;
 }
 @media (max-width: 800px) {
   .nav-container {
