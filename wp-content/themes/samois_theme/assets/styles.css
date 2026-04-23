@@ -2214,7 +2214,7 @@ figure.gallery-item:nth-child(odd) {
 }
 @media (max-width: 800px) {
   .bloc_post .bloc-footer {
-    width: 45%;
+    width: 53%;
   }
 }
 
@@ -2226,7 +2226,7 @@ figure.gallery-item:nth-child(odd) {
 }
 @media (max-width: 800px) {
   .bloc .bloc-footer {
-    width: 45%;
+    width: 53%;
   }
 }
 
