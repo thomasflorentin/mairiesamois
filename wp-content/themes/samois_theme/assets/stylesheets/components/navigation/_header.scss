@@ -49,12 +49,14 @@
     object-fit: contain;
     object-position: top;
     
-    @include up-to(medium) {
-        max-width: 80px;
-    }
     @include up-to(large) {
         max-width: 151px;
     }
+
+    @include up-to(medium) {
+        max-width: 80px;
+    }
+
 }
 
 

@@ -1572,14 +1572,14 @@ button {
   object-fit: contain;
   object-position: top;
 }
-@media (max-width: 800px) {
-  .site_logo {
-    max-width: 80px;
-  }
-}
 @media (max-width: 1200px) {
   .site_logo {
     max-width: 151px;
+  }
+}
+@media (max-width: 800px) {
+  .site_logo {
+    max-width: 80px;
   }
 }
 
@@ -2471,7 +2471,7 @@ figure.gallery-item:nth-child(odd) {
 @media (max-width: 1200px) {
   .shortcuts {
     position: fixed;
-    transform: translateY(100vh);
+    transform: translateY(110vh);
     background-color: #707070;
     color: white;
     right: 0;
