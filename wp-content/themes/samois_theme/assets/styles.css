@@ -1636,12 +1636,12 @@ button {
 }
 @media (min-width: 800px) {
   .nav-container {
-    padding-left: 20px;
+    padding-left: 150px;
   }
 }
 @media (min-width: 1200px) {
   .nav-container {
-    padding-left: 100px;
+    padding-left: 200px;
   }
 }
 
