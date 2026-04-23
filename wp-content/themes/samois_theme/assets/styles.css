@@ -2210,29 +2210,6 @@ figure.gallery-item:nth-child(odd) {
   width: 100%;
   object-fit: cover;
 }
-@media (max-width: 800px) {
-  .bloc_post figure {
-    width: 45%;
-    margin-right: 10px;
-  }
-}
-@media (max-width: 800px) {
-  .bloc_post .bloc-footer {
-    width: 53%;
-  }
-}
-
-@media (max-width: 800px) {
-  .bloc figure {
-    width: 45%;
-    margin-right: 10px;
-  }
-}
-@media (max-width: 800px) {
-  .bloc .bloc-footer {
-    width: 53%;
-  }
-}
 
 .bloc-search {
   border-bottom: 1px solid #e7e7e7;
