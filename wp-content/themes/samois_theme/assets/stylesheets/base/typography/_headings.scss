@@ -64,6 +64,9 @@ h6 {
     &:hover, a:hover{
         color: #3DFA05;
     }
+    @include up-to(medium) {
+        font-size: 3.4rem;
+    }
 }
 
 .FS24_B {
