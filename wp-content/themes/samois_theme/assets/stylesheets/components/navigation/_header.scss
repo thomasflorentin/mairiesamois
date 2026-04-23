@@ -83,13 +83,13 @@
 
     a {
         @include up-to(medium) {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
         @include at-least(medium) {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
         }  
         @include at-least(large) {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
         }        
 
     }
@@ -103,7 +103,7 @@
         padding-left: $space_left * .6;
     }
     @include at-least(large) {
-        padding-left: $space_left;
+        padding-left: 100px;
     }
 }
 
