@@ -104,6 +104,9 @@
         &:hover {
             color: $red !important;
         }
+        @include up-to(medium) {
+            display: none;
+        }
     }
 
 
@@ -116,7 +119,7 @@
         padding-left: 180px;
     }
     @include at-least(large) {
-        padding-left: 220px;
+        padding-left: $space_left;
     }
 }
 

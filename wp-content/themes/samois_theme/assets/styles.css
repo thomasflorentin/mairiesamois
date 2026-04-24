@@ -1362,12 +1362,12 @@ button {
 }
 @media (min-width: 800px) {
   .nav_thematiques {
-    left: 240px;
+    left: 204px;
   }
 }
 @media (min-width: 1200px) {
   .nav_thematiques {
-    left: 400px;
+    left: 340px;
   }
 }
 @media (max-width: 800px) {
@@ -1437,7 +1437,7 @@ button {
 
 .searchbar_wrapper {
   position: absolute;
-  left: 400px;
+  left: 340px;
   padding: 10px 0;
   opacity: 0;
   transform: scale(0);
@@ -1473,12 +1473,12 @@ button {
 }
 @media (min-width: 800px) {
   .searchbar_wrapper {
-    left: 240px;
+    left: 204px;
   }
 }
 @media (min-width: 1200px) {
   .searchbar_wrapper {
-    left: 440px;
+    left: 374px;
   }
 }
 .searchbar_wrapper.open {
@@ -1560,7 +1560,7 @@ button {
 }
 @media (min-width: 800px) {
   .header-branding {
-    width: 240px;
+    width: 204px;
     top: 20px;
   }
 }
@@ -1598,7 +1598,7 @@ button {
 .nav-container {
   display: flex;
   align-items: center;
-  padding: 10px 20px 10px 400px;
+  padding: 10px 20px 10px 340px;
   justify-content: flex-start;
 }
 .nav-container i {
@@ -1634,6 +1634,11 @@ button {
   color: #E22B2B !important;
 }
 @media (max-width: 800px) {
+  .nav-container .highlighted a {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
   .nav-container {
     padding-left: 20px;
     flex-direction: column;
@@ -1647,7 +1652,7 @@ button {
 }
 @media (min-width: 1200px) {
   .nav-container {
-    padding-left: 220px;
+    padding-left: 340px;
   }
 }
 
@@ -1791,7 +1796,7 @@ button {
 }
 @media (min-width: 1200px) {
   .site-footer.wrapper {
-    padding-left: 400px;
+    padding-left: 340px;
   }
 }
 
@@ -2310,13 +2315,13 @@ figure.gallery-item:nth-child(odd) {
 }
 @media (min-width: 800px) {
   .breadcrumb {
-    padding-left: 240px;
+    padding-left: 204px;
   }
 }
 @media (min-width: 1200px) {
   .breadcrumb {
     top: 155px;
-    padding-left: 400px;
+    padding-left: 340px;
   }
 }
 
@@ -2478,7 +2483,7 @@ figure.gallery-item:nth-child(odd) {
 }
 @media (min-width: 1200px) {
   .shortcuts {
-    width: 400px;
+    width: 340px;
     top: auto;
     flex: 0 0 auto;
   }
@@ -2532,7 +2537,7 @@ figure.gallery-item:nth-child(odd) {
 
 @media (min-width: 1200px) {
   .searchResults_container {
-    padding-left: 400px;
+    padding-left: 340px;
   }
 }
 
