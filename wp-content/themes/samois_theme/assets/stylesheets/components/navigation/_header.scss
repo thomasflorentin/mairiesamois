@@ -99,10 +99,12 @@
         
     }
     
-    .highlighted a {
-        color: $blue;
-        &:hover {
-            color: $red !important;
+    .highlighted {
+        a {
+            color: $blue;
+            &:hover {
+                color: $red !important;
+            }
         }
         @include up-to(medium) {
             display: none;

@@ -1634,7 +1634,7 @@ button {
   color: #E22B2B !important;
 }
 @media (max-width: 800px) {
-  .nav-container .highlighted a {
+  .nav-container .highlighted {
     display: none;
   }
 }
