@@ -4,8 +4,8 @@ Donate link: https://yoa.st/1up
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: SEO, XML sitemap, Content analysis, Readability, Schema
-Tested up to: 6.9
-Stable tag: 27.0
+Tested up to: 7.0
+Stable tag: 27.5
 Requires PHP: 7.4
 
 Improve your SEO with real-time feedback, schema, and clear guidance. Upgrade for AI tools, Google Docs integration, and 24/7 support, no hidden fees.
@@ -303,48 +303,43 @@ Your question has most likely been answered on our help center: [yoast.com/help/
 
 == Changelog ==
 
-= 27.0 =
+= 27.5 =
 
-Release date: 2026-02-17
+Release date: 2026-04-28
 
-Yoast SEO 27.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+Introduces Yoast SEO Abilities API, allowing AI tools, dashboards, and automated workflows to automatically read SEO, readability, and inclusive language scores from your most recent posts. Read more in the [release post](https://yoa.st/56j). 
 
 #### Enhancements
 
-* Adds `html-react-parser` dependency for improved HTML string handling in React components.
-* Adds `images` array to FAQ and How-to blocks attributes for explicit image handling.
-* Migrates FAQ block's question/answer fields from array-based formats to HTML strings for better compatibility with WordPress components.
-* Migrates How-to block's step name/text fields from array-based formats to HTML strings for better compatibility with WordPress components.
-* Updates the design for the search appearance mode switcher.
+* Adds a Yoast ability for retrieving scores for Yoast analyses for recent posts, using the Abilities API.
+* Adds Qatar to the list of available countries for the Semrush related keyphrase suggestions.
 
 #### Bugfixes
 
-* Fixes a bug where inline link icon was missing when editing a sync pattern in the block editor with WordPress 6.9.
-* Fixes a bug where the AI Optimize buttons remained active even when another button had been pressed.
-* Fixes a bug where the _subheading distribution assessment_ threw an error when there was some text with no subheadings plus a block containing a subheading (like the Yoast Table of contents block).
+* Fixes a bug where the AI Generator's "Generate with AI" feature failed after a site's domain was changed, because stale callback URLs remained registered with the Yoast API from the original domain.
 
 #### Other
 
-* Changes the AI Generator `Generate 5 more` button design and preview background.
-* Modernizes how translations of the plugin work by removing the unneeded `load_plugin_textdomain()` calls.
-* Restores the suggestions title and `Generate 5 more` button when the suggestions are loading.
-* Updates the name of the Yoast SEO AI+ card on the plans page.
+* Introduces a performance increase when calculating if the SEO optimization is completed for internal links. Props to [@adconecto](https://github.com/adconecto).
+* Removes the schemamap line from the `robots.txt` file.
 
-= 26.9 =
+= 27.4 =
 
-Release date: 2026-02-03
+Release date: 2026-04-14
 
-Yoast SEO 26.9 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+Yoast SEO 27.4 adds new tasks to the Task List, improves navigation within the editor, and fixes a bug where tasks were displaying in the wrong language. [Read the full release post here.](https://yoa.st/task-list)  
 
-#### Other
+#### Enhancements
 
-* Ensures no deprecated props are used for WordPress components `ToggleControl` and `TextControl` for How-to block.
-* Improves performance in large sites with lots of inbound links by adding appropriate database indices.
-* Improves the general security of the plugin via sanitization and escaping.
-* Replaces deprecated standard WordPress components with their modern variants.
-* WooCommerce introduced a [new logic for permalinks in version 10.5](https://developer.woocommerce.com/2026/01/13/product-permalink-changes-coming-in-woocommerce-10-5/). Since this update could result in mismatching Yoast SEO metadata (such as Schema.org data), this version of Yoast SEO temporarily restores the old behavior. Note that for users of Yoast WooCommerce SEO the new permanent link structure will apply.
-* Sets the minimum supported WordPress version to 6.8.
-* Updates the OAuth2 Client library for improved compatibility with PHP 8.5.
+* Adds a "Yoast" tab to the WordPress Plugins screen that groups all installed Yoast plugins when two or more are present. Requires WordPress 7.0+.
+* Enhances the task list with a task about customizing meta descriptions in recent content.
+* Enhances the task list with a task about deleting the "Sample Page".
+* Improves the UX of completing tasks that require users to go to specific part of the post editor, by redirecting them to the exact spot they need to be.
+
+#### Bugfixes
+
+* Fixes a bug where alt text changes made via the inline image editor in How-to and FAQ blocks were not being reflected on the frontend. Props to [@param-chandarana](https://github.com/param-chandarana).
+* Fixes a bug where the task list copies were displayed in the site language instead of the user language.
 
 = Earlier versions =
 For the changelog of earlier versions, please refer to [the changelog on yoast.com](https://yoa.st/yoast-seo-changelog).
