@@ -1,11 +1,12 @@
 {
     "key": "group_61b9b4cb1fc41",
-    "title": "Header",
+    "title": "Haut de page (logos, alerte...)",
     "fields": [
         {
             "key": "field_61b9b4ffb9def",
             "label": "Logo du site",
             "name": "website_logo",
+            "aria-label": "",
             "type": "image",
             "instructions": "Logo qui s'affichera dans le header du site",
             "required": 0,
@@ -30,6 +31,7 @@
             "key": "field_61b9b5bd8fc98",
             "label": "Logo de subsitution",
             "name": "website_logo_sub",
+            "aria-label": "",
             "type": "image",
             "instructions": "Second logo qui s'affichera dans le header du site.",
             "required": 0,
@@ -54,6 +56,7 @@
             "key": "field_61b9b6ef99cfc",
             "label": "Bannière du site",
             "name": "banner",
+            "aria-label": "",
             "type": "image",
             "instructions": "Bannière qui sera affiché dans le header",
             "required": 0,
@@ -78,6 +81,7 @@
             "key": "field_61b9b67c9e07c",
             "label": "Alerte",
             "name": "alert",
+            "aria-label": "",
             "type": "post_object",
             "instructions": "",
             "required": 0,
@@ -92,7 +96,8 @@
             "allow_null": 1,
             "multiple": 0,
             "return_format": "object",
-            "ui": 1
+            "ui": 1,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -113,5 +118,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1640775661
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1778500230
 }

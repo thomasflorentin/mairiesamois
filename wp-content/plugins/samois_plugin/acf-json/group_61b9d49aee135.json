@@ -1,11 +1,12 @@
 {
     "key": "group_61b9d49aee135",
-    "title": "Footer",
+    "title": "Pied de page (liens utiles...)",
     "fields": [
         {
             "key": "field_61b9d49fcc602",
             "label": "Numéro indispensable",
             "name": "number_indispensable",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_61b9d4cdd922e",
             "label": "Liens utiles",
             "name": "util_link",
+            "aria-label": "",
             "type": "relationship",
             "instructions": "",
             "required": 0,
@@ -44,12 +46,14 @@
                 "taxonomy"
             ],
             "elements": [],
-            "return_format": "object"
+            "return_format": "object",
+            "bidirectional_target": []
         },
         {
             "key": "field_61b9d5d9a39b6",
             "label": "Logo",
             "name": "logo",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -74,6 +78,7 @@
             "key": "field_61cc3884c8140",
             "label": "QrCode de notifications",
             "name": "qrcode_notif",
+            "aria-label": "",
             "type": "image",
             "instructions": "Qr Code pour les notifications dans le footer",
             "required": 0,
@@ -98,6 +103,7 @@
             "key": "field_61cdb8e8ac2a4",
             "label": "Logo footer",
             "name": "logo_footer",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -137,5 +143,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1640872186
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1778500252
 }
