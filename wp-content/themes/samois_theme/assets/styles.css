@@ -1355,7 +1355,7 @@ button {
   box-shadow: 0 4px 6px -2px rgba(134, 133, 133, 0.368627451);
 }
 .nav_thematiques a:hover {
-  color: #08FCF2;
+  color: #1F5DA5;
 }
 .nav_thematiques.open {
   transform: none;
@@ -1610,7 +1610,7 @@ button {
   text-transform: uppercase;
 }
 .nav-container li a:hover, .nav-container li a:focus {
-  color: #08FCF2 !important;
+  color: #1F5DA5 !important;
 }
 @media (max-width: 800px) {
   .nav-container a {
@@ -1902,7 +1902,7 @@ button {
   font-size: 3rem;
 }
 .footer_menu a:hover {
-  color: #3DFA05;
+  color: #1F5DA5;
 }
 
 .footer_alert {
@@ -2270,7 +2270,7 @@ figure.gallery-item:nth-child(odd) {
   color: #1F5DA5;
 }
 .mod_featured .mod_title a:hover {
-  color: #3DFA05;
+  color: #1F5DA5;
 }
 
 /*
@@ -2425,7 +2425,7 @@ figure.gallery-item:nth-child(odd) {
   position: relative;
 }
 .item_related a:hover {
-  color: #3DFA05;
+  color: #1F5DA5;
 }
 .item_related .item_inner {
   padding: 20px 20px 0 20px;
@@ -2596,7 +2596,7 @@ figure.gallery-item:nth-child(odd) {
   border: none;
 }
 .structure-infos a:hover {
-  color: #08FCF2;
+  color: #1F5DA5;
 }
 
 .flat_black {
